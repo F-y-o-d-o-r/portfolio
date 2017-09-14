@@ -1,0 +1,140 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: rgba(0, 124, 162, 0.15);
+
+
+}
+
+.div1 {
+    width: 960px;
+    margin: auto;
+    min-height: 1000px;
+    overflow: hidden;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    position: relative;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-weight: 900;
+}
+
+footer {
+    height: 100px;
+    background-color: #007CA2;
+    position: absolute;
+    bottom: 0;
+    width: 960px;
+}
+
+footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    /*    line-height: 2px;*/
+    /*    margin-top: 25px;*/
+}
+
+footer > div {
+    border-left: solid 3px white;
+    margin-left: 150px;
+    padding-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.inside {
+    background-color: rgba(0, 124, 162, 0.15);
+    min-height: 1200px;
+}
+
+img[alt=logo] {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+footer > p {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    color: white;
+}
+
+table, table td {
+    margin-top: -2px;
+    border-collapse: collapse;
+    border: 0px;
+    margin-left: -1px;
+}
+
+table td {
+    border: solid 1px #FEA201;
+}
+
+table {
+    min-width: 960px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+ol {
+    margin: 0;
+    padding-left: 15px;
+}
+
+ul[class="tabs"] {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul[class="tabs"] li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ul[class="tabs"] li a {
+    display: block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #FEA201;
+}
+
+.tabs_content {
+    height: 2500px;
+    overflow: hidden;
+    padding-top: 1px;
+    border: solid 1px #FEA201;
+    margin-top: -1px;
+}
+
+.razdeli {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 2500px;
+}
+
+.dlink {
+    font-size: 80%;
+    font-style: italic;
+    color: #005A8E;
+    border-bottom: solid 1px #989898;
+}

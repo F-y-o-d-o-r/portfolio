@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lesson 17.04.09</title>
+</head>
+
+<body>
+    <a href="../index.html">Main page</a>
+    <p></p>
+    <form>
+        <p><b>Поля ввода</b></p>
+        Введите данные: <br>
+        <input type="text" name="fio" size="30" maxlength="5" placeholder="something" required><br> Введите пароль: <br>
+        <input type="password" name="pass" placeholder="password" size="30" required><br>
+        <br>
+        <input type="submit" value="ok">
+        <input type="reset" value="cancel">
+    </form>
+    <br>
+
+    <form>
+        <b>Курсы</b><br>
+        <input type="checkbox" name="1" value="yes" checked disabled> курс 1<br>
+        <input type="checkbox" name="2" value="yes"> курс 2<br>
+        <input type="checkbox" name="3" value="yes"> курс 3<br>
+        <input type="submit" value="записаться">
+    </form>
+    <br>
+
+    <form>
+        <b>Какой диск получить?</b><br>
+        <input type="radio" name="disc" value="cd" checked>CD
+        <br>
+        <input type="radio" name="disc" value="cd" >CD-RW
+        <br>
+        <input type="radio" name="disc2" value="dvd">DVD
+        <br>
+        <input type="radio" name="disc2" value="dvd" checked>DVD-RW
+        <br>
+        <input type="submit" value="Выбрать"/>
+        <input type="reset" value="Сбросить"/>
+    </form>
+    <br>
+
+    <form>
+      <b>Выберите способ доставки: </b>
+      <select name="dostavka" size="1">
+      <option value="null" selected></option>
+      <option value="srochno">Срочная</option>
+      <option value="ne srochno" >Не срочная</option>
+      <option value="kurjerom">Курьером</option>
+      </select>
+    </form>
+    <br>
+
+
+    <form>
+      <b>Выберите способ доставки: </b><br>(зажмите ctrl для выбора нескольких позиций)
+      <select name="dostavka" size="3" multiple>
+      <option value="null" selected></option>
+      <option value="srochno">Срочная</option>
+      <option value="ne srochno" >Не срочная</option>
+      <option value="kurjerom">Курьером</option>
+      </select>
+    </form>
+    <br>
+
+    <form>
+        <b>Веедите имейл: </b>
+        <input type="email" required>
+        <input type="submit" value="ok">
+    </form>
+    <br>
+
+    <form>
+        <b>Date: </b>
+        <input type="date">
+        <input type="submit" value="ok">
+    </form>
+    <br>
+
+    <form>
+        <b>Tel:</b>
+        <input type="tel">
+        <input type="submit" value="ok">
+    </form>
+    <br>
+
+    <form>
+        <input type="button" value="ok">
+    </form>
+    <br>
+
+    <form>
+        <input type="file">
+    </form>
+    <br>
+
+    <form>
+        <input type="color" value="#fff333">
+    </form>
+    <br>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+body {
+    background-color:lightgreen;
+}
+img {
+   border: solid 1px white; 
+}
+a {
+    text-decoration:none;
+    color: black;
+    font-size: 20px;
+}

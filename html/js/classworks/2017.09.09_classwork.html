@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../css/js/classworks/2017.09.09_classswork.css">
+    <script src="../../../js/classworks/2017.09.09_classwork.js"></script>
+</head>
+<body>
+
+<!--1-->
+
+<button onclick="vvod()">Кнопка</button>
+<h1 style="text-align:center">Анкета пользователя</h1>
+<br>
+<h2 id="fio" style="margin-left:40px">Ф.И.О.:</h2>
+<h2 id="age" style="margin-left:40px">Возраст:</h2>
+<h2 id="email" style="margin-left:40px">e-mail: </h2>
+
+<hr>
+
+<!--2-->
+
+
+<h1 style="text-align:center">Анкета пользователя</h1>
+<br>
+<h2 id="fio1" style="margin-left:40px">Ф.И.О.:</h2>
+<h2 id="age1" style="margin-left:40px">Возраст:</h2>
+<h2 id="email1" style="margin-left:40px">e-mail: </h2>
+<button onclick="vvod2()">Кнопка</button>
+
+<hr>
+
+<!--3-->
+
+<form action="" name="my">
+    Ф.И.О.<input type="text" id="fio">
+    <br>
+    <!-- Возраст<input type="text" id="age">          age 1st variant -->
+    <br>
+    <select name="" id="age">
+        <option value="до 18">до 18</option>
+        <option value="18 - 21">18 - 21</option>
+        <option value="22 - 25">22 - 25</option>
+        <option value="за 25">за 25</option>
+    </select>
+    <br>
+    <input type="checkbox" id="Checkbox1" value="english">Английский
+    <br>
+    <input type="checkbox" id="Checkbox2" value="franch">Французский
+    <br>
+    <input type="checkbox" id="Checkbox3" value="german">Немецкий
+    <br>
+
+    <input type="radio" name="gender" id="Radio1" value="Мужской">Мужской
+    <input type="radio" name="gender" id="Radio2" value="Женский">Женский<br>
+
+    <input type="button" id="Button1" value="OK" onclick="add();"><br>
+
+    &nbsp;&nbsp;&nbsp;
+    <input id="Reset1" type="reset" value="Cancel" disabled="">
+
+    <br>Данные о пользователе<br>
+    <textarea name="" id="inf" cols="50" rows="5"></textarea>
+</form>
+
+<hr>
+
+<!--4-->
+
+<p>Отметьте правильные утверждения:</p>
+
+<form action="">
+    <input type="checkbox" id="c1" name="c1">2*2=4 <br>
+    <input type="checkbox" id="c2" name="c2">2*5=30 <br>
+    <input type="checkbox" id="c3" name="c3">6*8=48 <br>
+    <input type="button" value="Проверить" onClick="checkAll();">
+    <input type="text" id="result" name="result" value="">
+</form>
+
+</body>
+</html>

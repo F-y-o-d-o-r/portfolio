@@ -1,0 +1,111 @@
+/*type 1*/
+
+a {
+  text-decoration: none;
+}
+
+#modal_window1 {
+  display: none;
+}
+
+#modal_window1:target {
+  display: block;
+  position: fixed;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: grey;
+  padding: 10px;
+  top: 300px;
+}
+
+
+/*type 1*/
+
+
+/*type 2*/
+
+#zatemnenie2 {
+  position: absolute;
+  background-color: rgba(167, 120, 238, 0.76);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#modal_window2 {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 200px;
+  height: 50px;
+  width: 50px;
+  background-color: grey;
+  padding: 10px;
+}
+
+#zatemnenie2:target {
+  display: block;
+  pointer-events: auto;
+}
+
+
+/*type 2*/
+
+
+/*type 3*/
+
+.viezgaugee_yarlik {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100px;
+  width: 150px;
+  background-color: rgb(67, 230, 188);
+  transition: 1s ease all;
+}
+
+.viezgaugee_yarlik::after {
+  content: 'Открыть модальное окно 3 (выезжающее)';
+  font: normal 18px/1 FontAwesome;
+}
+
+#viezgaugee_yarlik:checked~.viezgaugee_yarlik::after {
+  content: '\f255';
+  font: normal 18px/1 FontAwesome;
+}
+
+.viezgaugee_inside {
+  position: absolute;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(25, 55, 168);
+  color: #fff;
+  text-align: center;
+  top: -100px;
+  transition: 1s ease all;
+}
+
+.viezgaugee_inside p {
+  margin: 0;
+}
+
+#viezgaugee_yarlik:checked~.viezgaugee_inside {
+  top: 0;
+}
+
+#viezgaugee_yarlik:checked~.viezgaugee_yarlik {
+  top: 50px;
+}
+
+
+/*type 3*/
+
+/*type 4*/
+
+/*type 4*/

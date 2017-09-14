@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #b1d8cf;
+    background-image: url(../../../img/js/bg_big.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: large;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+article {
+    max-width: 900px;
+    background-color: rgba(169, 212, 203, 0.8);
+    margin: 30px auto;
+    padding: 20px;
+    padding-left: 100px;
+    min-height: 80vh;
+    border-radius: 10px;
+    box-shadow:inset 0 0 10px #6d6d6d;
+/*    background-image: url(../../../img/js/pf_white.png);
+    background-repeat:no-repeat;
+    background-position: 35px 45px;*/
+    position: relative;
+}
+
+/*.logo {*/
+    /*position: absolute;*/
+    /*left: 35px;*/
+    /*top: 45px;*/
+/*}*/

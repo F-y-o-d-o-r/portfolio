@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>accordion</title>
+	<link href="../css/Style_accordeon.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="accordion">
+		<ul>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2 class="title_block">Описание</h2>
+				<div class="msg">
+					<p>Текст или пункты меню </p>
+				</div>
+			</li>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2 class="title_block">Миниатюра слева</h2>
+				<div class="msg">
+					<p><img src="http://pravlife.org/sites/default/files/field/image/225353843.jpg" class="img-left"></p>
+					<p>Миниатюре задан размер в 25% от базового размера изображений используемых в аккордноне, 100% от родительского контейнера, так что изображения будут легко подстраиваться под любые размеры базового блока.</p>
+				</div>
+			</li>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2 class="title_block">Миниатюра справа</h2>
+				<div class="msg">
+					<p><img src="http://pravlife.org/sites/default/files/field/image/225353843.jpg" class="img-right">Чтобы отправить миниатюру вправо достаточно в тег img прописать <strong>class="img-right</strong>, если влево соответственно добавляем <strong>class="img-left</strong>.</p>
+				</div>
+			</li>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2 class="title_block">Полноразмерная картинка</h2>
+				<div class="msg">
+					<p><img src="http://www.almasalah.com/MediaStorage/GalleryImages/75294.jpg" class="large-img"> Встроенному изображению, размер которого 100% от родительского контейнера прописываем <strong>class="large-img"</strong>.
+					</p>
+				</div>
+			</li>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2 class="title_block">Встроенное видео</h2>
+				<div class="msg">
+					<div class="video-responsive">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/4NkyG-iu7ZE" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+
+</html>

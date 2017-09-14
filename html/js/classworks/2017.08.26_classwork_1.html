@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Слайдшоу</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="../../../js/classworks/2017.08.26_classwork_1.js"></script>
+    <link rel="stylesheet" href="../../../css/js/classworks/2017.08.26_classwork_1.css">
+
+</head>
+
+<body onLoad="succpict()">
+
+<!--1  next & previous slide-->
+<a href="JavaScript:slideshowBack()">Предыдущий слайд</a>
+<img src="https://www.jssor.com/demos/img/landscape/01.jpg" NAME="slides" BORDER=1>
+<a href="JavaScript:slideshow()">Следующий слайд</a>
+<br><br><br>
+<hr>
+<br><br>
+<!--2 auto slider-->
+<img src="https://www.jssor.com/demos/img/landscape/01.jpg" name=mypict>
+<form name="form1">
+    <input type="reset" value=stop onClick="ref()"><hr>
+    <input type="button" value=start onClick="k=1; succpict()"><hr>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+document.write ("<ol><li>Освоить новую специальность.</li><li>Да могу.</li><li>Не угас, готов продолжать.</li><li>Немного.</li><li>В первой тройке.</li></ol>");
+document.write ("<img style='position: absolute;left:35px;top:45px;' class='logo' src='../../../img/js/pf_white.png' alt=''>");

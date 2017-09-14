@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/css1_17.04.23.css">
+    <title>Homework - css 1</title>
+</head>
+
+<body>
+
+        <table border="0" cellspacing="0px" cellpadding="5px" width="1100">
+          <div>
+          <thead>
+            <tr>
+                <td colspan="2" width="">
+                    <a href="../index.html" title="main page"><img src="../img/forms/nova–poshta-15-long_320px.png" alt="Nova poshta" width="320px" height="54px"></a> &nbsp&nbsp&nbsp
+                    <img src="../img/forms/enter.png" alt="enter" width="80px" height="24px" /> и <u>регистрация</u> &nbsp&nbsp
+                </td>
+                <td>
+                    <form action="">
+                        <input type="search" name="search" size="25" maxlength="30" placeholder="Поиск по сайту" />
+                        <input type="image" src="../img/forms/button.png">
+                    </form>
+                    <p id="lang_color">&nbsp&nbsp Рус &nbsp&nbsp Укр &nbsp&nbsp Eng</p>
+                </td>
+                <td>
+                    <img src="../img/forms/help.png" alt="help" width="42px" height="40px" />
+                    <p>Центр поддержки </p> клиентов <br>
+                </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <center><img src="../img/forms/red_line.png" alt="red_line" width="936px" height="4px"></center>
+              </td>
+            </tr>
+            <tr>
+              <td  colspan="4" bgcolor="#f2f2f2">
+                <p class="menu">О компании &nbsp&nbsp&nbsp Частным Клиентам &nbsp&nbsp&nbsp Бизнес-Клиентам &nbsp&nbsp&nbsp Международная доставка &nbsp&nbsp&nbsp Отделения &nbsp&nbsp&nbsp Программа лояльности &nbsp&nbsp&nbsp Контакты</p>  <hr>
+              </td>
+            </tr>
+          </thead>
+      </div>
+
+        <div>
+          <tbody>
+            <tr>
+              <td colspan="4">
+                <p class="menu"><u>Главня</u> / <u>Контакты</u> / Обратная связь</p>
+                <p id="back">Обратная связь</p>
+                <p>Вопросы? Жалобы? Предложения? Сообщите нам об этом!</p>
+              </td>
+            </tr>
+            <tr>
+                <td colspan="" width="" class="perechen centr">
+                    <br><br><br>
+                    Обратиться как<br><br>
+                    Фамилия <br><br>
+                    Имя<br><br>
+                    Отчество<br><br>
+                    Телефон<br><br>
+                    Email<br><br>
+                    Номер накладной<br><br>
+                    Номер карты лояльности<br><br>
+                    Тема сообщения<br><br>
+                    Текст сообщения<br><br>
+                </td>
+                <td class="centr" colspan="2" width="">
+                    <form action="" class="perechen">
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <input type="radio" name="type" value="fl" required>Физическое лицо <br>
+                        <input type="radio" name="type" value="ul" required>Юридическое лицо <br>
+                        <input type="text" name="FeedbackForm[LastName]" maxlength="100" size="25" required /><br /><br>
+                        <input type="text" name="FeedbackForm[FirstName]" maxlength="100" size="25" required /><br /><br>
+                        <input type="text" name="FeedbackForm[MiddleName]" maxlength="100" size="25" required /><br /><br>
+                        <input type="text" name="FeedbackForm[PhoneNumber]" maxlength="14" value="+38" required  size="25">
+                        <img src="../img/forms/question.png" alt="question" width="19" height="24"><br><br>
+                        <input type="email" name="FeedbackForm[Email]" maxlength="100" required  size="25">
+                        <img src="../img/forms/question.png" alt="question" width="19" height="24"><br><br>
+                        <input type="text" name="FeedbackForm[InvoiceNumber]" maxlength="14"  size="25">
+                        <img src="../img/forms/question.png" alt="question" width="19" height="24"><br> (поле не является обязательным для заполнения) <br>
+                        <input type="text" maxlength="14" name="FeedbackForm[LoyaltyCard]"  size="25"><br> (поле не является обязательным для заполнения) <br>
+                        <select name="FeedbackForm[Subject]" size="1" required >
+                        <option value="null" selected></option>
+                        <option value="konsultation">Консультация</option>
+                        <option value="program">Программа лояльности</option>
+                        <option value="predlogenie">Предложение</option>
+                        <option value="galoba">Жалоба</option>
+                        <option value="other">Другое</option>
+                      </select>
+                      <img src="../img/forms/question.png" alt="question" width="19" height="24"><br><br>
+                        <textarea name="FeedbackForm[Message]" maxlength="2000" cols="50" rows="10"></textarea>
+                        <img src="../img/forms/question.png" alt="question" width="19" height="24"><br>
+                        <input type="submit" value="Отправить">
+                        <input type="reset" value="Очистить">
+                    </form>
+                </td>
+                <td class="centr" colspan="" id="centr">
+                    <form action="">
+                    Отследить <br>
+                    <img src="../img/forms/lupa.png" alt="lupa">
+                    <input type="text" name="cargo_number" placeholder="номер накладной" required>
+                    <input type="image" src="../img/forms/button_red.png"><br>
+                    </form>
+                    <a href="https://novaposhta.ua/ru/delivery"><img src="../img/forms/calculator.png" alt="price"> Стоимость доставки</a> <br>
+                    <a href="https://novaposhta.ua/ru/onlineorder/estimatedate"><img src="../img/forms/clock.png" alt="sroki"> Сроки доставки</a> <br>
+                    <a href="https://novaposhta.ua/ru/office"><img src="../img/forms/where.png" alt="sroki"> Ближайшее отделение</a> <br>
+                    <a href="https://novaposhta.ua/ru/timetable"><img src="../img/forms/time.png" alt="sroki"> График работы отделений</a> <br>
+                    <a href="https://novaposhta.ua/ru/onlineorder"><img src="../img/forms/letter.png" alt="sroki"> Вызов курьера</a> <br>
+                </td>
+            </tr>
+          </tbody>
+          </div>
+
+          <div>
+          <tfoot >
+            <tr>
+              <td>
+                <div id="footer"><p>Скачать мобильное приложение для:</p></div>
+                <img src="../img/forms/os.png" alt="os">
+              </td>
+              <td>
+                <p><u>Портал разработчика API</u></p>
+                <p><u>2.0</u></p>
+                <img src="../img/forms/api.png" alt="api">
+              </td>
+              <td>
+                <p>Контакт-центр:</p>
+                <p>0-800-500-609 <sup>1</sup></p>
+                <img src="../img/forms/social media.png" alt="social_media">
+              </td>
+              <td width="250px">
+                <p>&copy; 2006–2017 ООО «Нова пошта»</p>
+                <p>Все права защищены. Использование материалов данного сайта только с указанием ссылки на источник.</p>
+                <p><a href="https://novaposhta.ua/ru/biznes_klientam/internet_magazinam">доставка товаров</a><a href="https://novaposhta.ua/ru/site/aboutus"> грузоперевозки</a></p>
+                <p><sup>1</sup> Звонки по всей территории Украины бесплатные</p>
+              </td>
+            </tr>
+          </tfoot>
+          </div>
+
+        </table>
+        <a href="https://novaposhta.ua/ru/contact">ССЫЛКА НА ОРИГИНАЛ СТРАНИЦЫ</a>
+</body>
+
+</html>

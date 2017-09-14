@@ -1,0 +1,79 @@
+.corner-ribbon{
+  width: 200px;
+  background: #e43;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+}
+
+.corner-ribbon.sticky{
+  position: fixed;
+}
+.corner-ribbon.shadow{
+  box-shadow: 0 0 60px 5px #e20c0c;
+}
+.corner-ribbon.top-left{
+  top: 25px;
+  left: -50px;
+  transform: rotate(-45deg);
+}
+.corner-ribbon.top-right{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+}
+.corner-ribbon.bottom-left{
+  top: auto;
+  bottom: 25px;
+  left: -50px;
+  transform: rotate(45deg);
+}
+.corner-ribbon.bottom-right{
+  top: auto;
+  right: -50px;
+  bottom: 25px;
+  left: auto;
+  transform: rotate(-45deg);
+
+}
+/* выбор цвета */
+.corner-ribbon.white{background: #f0f0f0; color: #555;}
+.corner-ribbon.black{background: #333;}
+.corner-ribbon.grey{background: #999;}
+.corner-ribbon.blue{background: #39d;}
+.corner-ribbon.green{background: #2c7;}
+.corner-ribbon.turquoise{background: #1b9;}
+.corner-ribbon.purple{background: #95b;}
+.corner-ribbon.red{background: #e43;}
+.corner-ribbon.orange{background: #e82;}
+.corner-ribbon.yellow{background: #ec0;}
+
+header {
+  text-align: center;
+  margin:20px;
+}
+header a {
+  text-decoration: none;
+  color: #f0f0f0;
+  background-color: #95b;
+  padding: 20px;
+  letter-spacing: 1px;
+  box-shadow: 40px 40px 50px 20px #07dda9;
+  border-radius: 0 0 5px 5px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+header a:hover {
+  font-size: 1.5em;
+}
+
+/*CSS
+Класс corner-ribbon общий для всех лент, в нём формируем макет, определяем абсолютное позиционирование, параметры шрифта и задаём значения трансформации под определённым углом( в примере это 45°). В классе sticky, который присутствует в каждой ленте, мы определим фиксированное позиционирование position: fixed;, а сторону к которой прилепим наши ленточки определяем в отдельных классах: top-left для верхнего левого угла, top-right для правого угла сверху, bottom-left и bottom-right для нижних углов соответственно.*/

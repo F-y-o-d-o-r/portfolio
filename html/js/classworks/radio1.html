@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>radio</title>
+</head>
+<body>
+<h3>Сделайте свой выбор...</h3>
+<form name="form1">
+    <input type="radio" name="radio1" value="Вариант 1" /> Вариант 1<br />
+    <input type="radio" name="radio1" value="Вариант 2" /> Вариант 2<br />
+    <input type="radio" name="radio1" value="Вариант 3" /> Вариант 3<br />
+    <input type="radio" name="radio1" value="Вариант 4" /> Вариант 4<br />
+    <input type="radio" name="radio1" value="Вариант 5" /> Вариант 5<br />
+    <input type="button" value="Выбрать" onClick="choose()" />
+</form>
+<script>
+    function choose() {
+        var i;
+        for (i=0; i<form1.radio1.length; i++)
+            if (form1.radio1[i].checked)
+                break;
+        if (i<form1.radio1.length)
+            alert ("Выбран: "+form1.radio1[i].value);
+        else
+            alert ("Сделайте ваш выбор!");
+    }
+</script>
+</body>
+</html>

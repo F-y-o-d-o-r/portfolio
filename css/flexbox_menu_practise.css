@@ -1,0 +1,27 @@
+.wrapper {
+	border: 1px solid green;
+	max-height: 300px;
+	max-width: 1020px;
+	display: flex;
+	flex-wrap: wrap;
+}
+ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}
+li {
+	width: 200px;
+	height: 200px;
+	background-color: #434343;
+	list-style: none;
+	text-align: center;
+	outline: 1px solid rgb(189, 152, 147);
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 200px;
+}

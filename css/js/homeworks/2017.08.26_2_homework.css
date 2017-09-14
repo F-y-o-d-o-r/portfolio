@@ -1,0 +1,23 @@
+body {
+    background-color: #955aff;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}
+.section {
+    max-width: 500px;
+    margin: 10px auto;
+}
+img {
+    display: block;
+    margin: 50px auto;
+    animation: image_rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes image_rotate {
+    to {
+        transform: rotate(360deg);
+        transform-origin: 50% 100%;
+    }
+}

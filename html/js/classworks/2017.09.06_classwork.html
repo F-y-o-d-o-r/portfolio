@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../../js/classworks/2017.09.06_classwork.js"></script>
+</head>
+
+<body>
+<!--1-->
+
+       <h1>Настройка интерфейса</h1>
+   <form action="" name="my">
+       <p>
+           Цвет фона
+           <select name="" id="color">
+               <option value="Yellow">Желтый</option>
+               <option value="Pink">Розовый</option>
+               <option value="Green">Зелёный</option>
+           </select>
+       </p><br>
+       <p>
+           Цвет текста
+           <select name="" id="color_text">
+               <option value="Orange">Оранжевый</option>
+               <option value="Pink">Розовый</option>
+               <option value="Green">Зелёный</option>
+           </select>
+       </p><br>
+       <p><input type="text" id="size" size="3" value="15"/>px</p>
+        <input type="button" id="Button1" value="Применить" onclick="change_interface()">
+   </form>
+
+    <!--2 Калькулятор_1-->
+
+    <form action="" name="calc1">
+    <h2>Калькулятор</h2>
+    <h3>Ведите два числа. Дробные числа вводите через точку. Выберите операцию</h3>
+    <h3>Для получения результата кликните по полю после знака "равно"</h3>
+    <input type="text" id = "x1" value="0">
+    <select name="" id="op1">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input id = "y1" type="text" value="1">
+    <input id = "res1" type="text" value="0" onclick="execute1();">
+</form>
+
+    <!--3 Калькулятор_2-->
+
+<form action="" name="calc">
+    <h2>Калькулятор</h2>
+    <h3>Ведите два числа. Дробные числа вводите через точку. Выберите операцию</h3>
+    <h3>Для получения результата кликните по полю после знака "равно"</h3>
+    <input type="text" id="x" value="0"><br>
+    <input type="radio" id="Radio1" name="op" value="+">+
+    <input type="radio" id="Radio2" name="op" value="-">-
+    <input type="radio" id="Radio3" name="op" value="*">*
+    <input type="radio" id="Radio4" name="op" value="/">/<br>
+    <input id="y" type="text" value="1"><br><br>
+    <input id="res" type="text" value="0" onclick="execute();">
+</form>
+
+    <!--4-->
+    <form name="dataentry" action="">
+        <h2>Подтверждение данных (спрятано)</h2>
+    
+  <!--  Enter your name:<br>
+    <input type="text" name="fn" onblur="validfn(fn.value)"><br>
+    <script languge="JavaScript">
+        document.dataentry.fn.focus()
+    </script>
+    Введите номер телефона (ххх-ххх-ххх):<br>
+    <input type="text" name="phone" size="10"><br>
+    <input type="button" value="Send" onclick="validphone(phone.value)">
+</form>
+<ul>
+    <li>Курсор стоит в поле для ввода имени. Ничего не пишите, нажмите tab или щелкните по странице.</li>
+    <li>Теперь введите имя и переходите к следующей строке.</li>
+    <li>Напечатайте 123 и нажмите «Отправить». </li>
+    <li>После сообщения об ошибке курсор снова стоит в поле для телефонного номера. Напечатайте 12д или /12 и нажмите «Отправить». </li>
+    <li>Напечатайте 1234567 и нажмите «Отправить».</li>
+</ul>-->
+</body>
+
+</html>

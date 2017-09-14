@@ -1,0 +1,34 @@
+.top {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	/*align-items: center;*/
+  border: 1px solid #444;
+}
+
+.main-menu {
+	width: 100%;
+	display: flex;
+	/*flex-direction: row;*/
+	justify-content: space-around;
+	margin-top: 25px;
+	/*overflow: visible;*/
+	flex-wrap: wrap;
+	max-width: 700px;
+}
+
+
+/*@media (min-width: 850px).top {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 160px;
+}
+@media (min-width: 550px).top{
+    height: 200px;
+    justify-content: space-between;
+}
+@media (min-width: 550px).top {
+    width: 90%;
+}*/

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/17.06.17-2.css">
+  <title>17.06.17_2 (modal window 3)</title>
+</head>
+
+<body>
+  <a href="../index.html" title="main page">Main Page</a><br>
+
+  <label class="btn" for="modal-1">Открыть</label>
+  <div class="modal">
+    <input class="modal-open" id="modal-1" type="checkbox" hidden>
+    <div class="modal-wrap" aria-hidden="true" role="dialog">
+      <label class="modal-overlay" for="modal-1"></label>
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <!-- <h2>Заголовок </h2> -->
+          <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+        </div>
+        <div class="modal-body">
+          <img src="../img/1.jpg" alt="">
+          <img src="../img/red1.jpg" alt="">
+          <div class="video-responsive">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/aTMb4oo2fHo?rel=0" frameborder="0" allowfullscreen class="video"></iframe>
+          </div>
+          <form>
+            <input name="name" placeholder="Укажите ваше имя!" class="textbox" required />
+            <input name="emailaddress" placeholder="Укажите ваш Email!" class="textbox" type="email" required />
+            <textarea rows="4" cols="50" name="subject" placeholder="Введите ваше сообщение:" class="message" required></textarea>
+            <input name="submit" class="button" type="submit" value="Отправить" />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <label class="btn btn-primary" for="modal-1">Отлично!</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

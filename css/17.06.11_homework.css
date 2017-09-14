@@ -1,0 +1,147 @@
+.button {
+    display: inline-block;
+    height: 76px;
+    width: 76px;
+    background-color: #00905c;
+    border-radius: 50%;
+    position: absolute;
+    left: 350px;
+    top: 500px;
+    background-image: url(../img/discuss-issue.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 3px 3px 7px #7f938c;
+    z-index: 9999;
+}
+
+.button:hover {
+    box-shadow: 0 0 0 #000;
+    transition: 2s;
+}
+
+p {
+    position: absolute;
+    color: #00905c;
+    left: 250px;
+    top: 517px;
+}
+
+.div {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.window_form {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
+/*    display: none;*/
+    opacity: 0;
+/*    visibility: hidden;*/
+    
+}
+
+.window_form>div {
+    position: relative;
+    left: 450px;
+    top: 200px;
+    box-shadow: 3px 3px 7px #7f938c;
+    z-index: 9999;
+    width: 191px;
+    border-radius: 10px;
+}
+
+.window_form:target {
+
+    display: block;
+    opacity: 1;
+    transition: all 5s ease;
+    visibility: visible;
+}
+
+.inside {
+    position: absolute;
+    left: 70px;
+    top: 0;
+    color: #fff;
+    font-size: 10px;
+}
+
+.face {
+    position: absolute;
+    left: 14px;
+    top: 9px;
+}
+
+.input {
+    position: absolute;
+    left: 14px;
+    top: 56px;
+}
+
+.input_name {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 162px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.input_question {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 162ps;
+    height: 79px;
+    border-radius: 10px;
+    border: none;
+}
+
+.submit {
+    position: absolute;
+    top: 143px;
+    left: 45px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    height: 25px;
+}
+
+
+
+.close {
+    position: fixed;
+    top:50px;
+    left:50px;
+    width: 80px;
+    height: 40px;
+    display: block;
+    background: linear-gradient(rgba(0, 0, 0, 0), #00905c);
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow:  3px 3px 7px #fff;
+    color: #fff;
+}
+.close:hover {
+    box-shadow:0 0 0 #000;
+    transition: ease 2s;
+    color: aquamarine;
+}
+input {
+    text-align: center
+}

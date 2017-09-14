@@ -1,0 +1,38 @@
+table {
+    border-collapse: separate;
+    border: 1px solid white;
+    border-spacing: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: inset -2px -2px 5px 5px #8f8c8c;
+    margin: auto;
+}
+
+table:hover {
+    animation: rotate-colors 2s linear infinite;
+    cursor: none;
+}
+
+div.block:hover > p {
+    letter-spacing: 5px;
+}
+
+@keyframes rotate-colors {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+td {
+    width: 50px;
+    height: 50px;
+}
+
+.yellow {
+    background-color: #FFA600;
+}
+
+.blue {
+    background-color: #000084;
+}
+

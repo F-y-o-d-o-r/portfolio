@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox main menu</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="../css/17.06.24_2weeks_homework+flexbox_menu_2.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="body">
+	<div id="callback">
+		<form action="" class="input">
+			<input type="text" class="input_name" placeholder="Ваше имя" maxlength="15" required>
+			<input type="text" class="input_phonenumber" placeholder="Ваш номер телефона" required maxlength="15">
+			<input type="submit" class="submit" name="" value="Перезвоните мне">
+		</form>
+		<a href="#close" class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
+	</div>
+
+	<div id="top">
+		<ul>
+			<li><a href="17.06.24_2weeks_homework.html" class="active">ГЛАВНАЯ</a></li>
+			<li><a href="#1">ПРОДУКЦИЯ</a></li>
+			<li><a href="#">О НАС</a></li>
+			<li><a href="17.06.24_2weeks_homework_contacts.html">КОНТАКТЫ</a></li>
+			<li><a href="#callback" class="callback_enter">ПЕРЕЗВОНИМ<i class="fa fa-phone" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
+
+	<!-- <input type="checkbox" class="modal_open" id="modal_open_video" name="" value="" hidden="">
+	<div id="video">
+		<h4>Инструкция по монтажу системы скрепленной теплоизоляции ANSERGLOB (отделка мозаичной штукатуркой)</h4>
+		<div class="modal_video">
+			<iframe width="280" height="157.5" src="https://www.youtube.com/embed/qyOCtvQJi-I?rel=0&amp;controls=0&amp;controls=0&amp;showinfo=0?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="close_video">
+			<label for="modal_open_video"><i class="fa fa-times" aria-hidden="true"></i></label>
+		</div>
+	</div>
+
+	<div id="ugol">Cтроителям скидки до 20%!</div>
+
+<label for="zatemnenie"></label>
+<input type="checkbox" id="closeme" hidden>
+	<div class="zatemnenie" id="zatemnenie">
+		<div class="modal_central">
+			<form>
+				<p>Узнай наши акции и новости первым!</p>
+				<input type="text" placeholder="Электронная почта" autofocus required maxlength="20" size="20"><br><br>
+				<input type="text" maxlength="20" required placeholder="Номер телефона" size="20"><br><br>
+				<input type="submit" value="Подписаться">
+			</form>
+			<label for="closeme" class="closeme"><i class="fa fa-times" aria-hidden="true"></i></label>
+		</div>
+	</div> -->
+
+	<header>
+		<nav>
+			<div><img src="../img/logo_up.png" alt="logo_up"></div>
+			<div>
+				<a href="#">СМЕСИ ДЛЯ СИСТЕМЫ УТЕПЛЕНИЯ</a>
+				<a href="#">СМЕСИ ДЛЯ ОБЛИЦОВКИ</a>
+				<a href="#">СМЕСИ ДЛЯ СИСТЕМЫ УТЕПЛЕНИЯ</a>
+				<a href="#">СМЕСИ ДЛЯ ОБЛИЦОВКИ</a>
+			</div>
+			<div>
+				<a href="#">СМЕСИ ПОЛА</a>
+				<a href="#">СМЕСИ ГИДРОИЗОЛЯЦИОННЫЕ</a>
+				<a href="#">СМЕСИ ШТУКАТУРНЫЕ</a>
+				<a href="#">ЭМУЛЬСИИ</a>
+			</div>
+			<div>
+				<a href="#">КРАСКИ</a>
+				<a href="#">ПЛИТЫ ПЕНОПОЛИСТИРОЛЬНЫЕ</a>
+				<a href="#">ДОПОЛНИТЕЛЬНАЯ ПРОДУКЦИЯ</a>
+				<a href="#">ВЕСЬ АССОРТИМЕНТ</a>
+			</div>
+			<div>
+				<p>08:00 - 17:00 <br>Пнд - Птн</p>
+				<p><b>+38 (066) 213 86 07</b></p>
+				<p><b>+38 (096) 817 57 22</b></p>
+			</div>
+		</nav>
+	</header>
+	<div id="grey">
+		<div id="slider">
+			<input type="radio" name="control" id="button1" checked>
+			<label for="button1"></label>
+			<input type="radio" name="control" id="button2">
+			<label for="button2"></label>
+			<input type="radio" name="control" id="button3">
+			<label for="button3"></label>
+			<div id="slider_inside">
+				<ul>
+					<li id="slider1"><img src="../img/slider3.jpg" alt="slider1">
+						<div class="description">
+							<div class="description_text">
+								<p>Продажа строительных материалов<br>ТМ ANSERGLOB</p>
+								<p>По оптовым ценам с доставкой по Украине</p>
+							</div>
+							<img src="../img/anser logo.png" alt="anserglob_logo">
+						</div>
+					</li>
+					<li id="slider2"><img src="../img/sl_comp2.jpg" alt="slider2">
+						<div class="description">
+							<div class="description_text">
+								<p>Lorem ipsum dolor sit amet, consecte adipisicing.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quas, quia consequuntur, exercitationem ducimus repudiandae cumque sit ipsa deleniti dicta recusandae, iure modi.</p>
+							</div><img src="../img/anser logo.png" alt="anserglob_logo">
+						</div>
+					</li>
+					<li id="slider3"><img src="../img/Construction-Company.jpg" alt="slider3">
+						<div class="description">
+							<div class="description_text">
+								<p>Lorem ipsum dolor sit amet, consec adipisicing elit. Expedita.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad similique quos reprehenderit ut at dolore dicta placeat nihil, labore fugit.</p>
+							</div>
+							<img src="../img/anser logo.png" alt="anserglob_logo">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<article>
+		<div id="menu">
+			<ul class="tabs">
+				<li><a href="#1" checked>Для внутренних работ</a></li>
+				<li><a href="#2">Для наружных работ</a></li>
+				<li><a href="#3">Универсальные</a></li>
+			</ul>
+		</div>
+		<div class="tabs-content">
+			<ul>
+				<li id="1">
+					<div class="tovar"><img src="../img/BCM-10.jpg" alt="anserglob_tovar">
+						<p>Cмеси кладочные</p>
+					</div>
+					<div class="tovar"><img src="../img/BCX-33-3D.jpg" alt="anserglob_tovar">
+						<p>Cмеси для облицовки</p>
+					</div>
+					<div class="tovar"><img src="../img/BCX-39-3D.jpg" alt="anserglob_tovar">
+						<p>Cмеси для системы утепления</p>
+						<div id="ugol2">Акция</div>
+					</div>
+					<div class="tovar"><img src="../img/TMK-110-3D.jpg" alt="anserglob_tovar">
+						<p>Cмеси штукатурные декоративные</p>
+					</div>
+				</li>
+				<li id="2">
+					<div class="tovar"><img src="../img/LFS-70-3D.jpg" alt="anserglob_tovar">
+						<p>Cмеси для пола</p>
+					</div>
+					<div class="tovar"><img src="../img/WSR-56-3D.jpg" alt="anserglob_tovar">
+						<p>Cмеси гидроизоляционные</p>
+					</div>
+					<div class="tovar"><img src="../img/BCT-20-3D.jpg" alt="anserglob_tovar">
+						<p>Cмеси штукатурные</p>
+					</div>
+					<div class="tovar"><img src="../img/EG-62-acryl.jpg" alt="anserglob_tovar">
+						<p>Эмульсии</p>
+					</div>
+				</li>
+				<li id="3">
+					<div class="tovar"><img src="../img/farba.jpg" alt="anserglob_tovar">
+						<p>Краски</p>
+					</div>
+					<div class="tovar"><img src="../img/EPS-30.jpg" alt="anserglob_tovar">
+						<p>Плиты пенополистирольные</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</article>
+
+
+	<footer>
+		<div>
+			<img src="../img/logo_down.png" alt="logo"></div>
+		<div>
+			<p>Помощь</p>
+			<a href="#">Доставка</a>
+			<a href="#">Оплата</a>
+			<a href="#">Гарантия</a>
+			<a href="#">Обмен и возврат</a>
+			<a href="#">Проверить статус заказа</a>
+		</div>
+		<div>
+			<p>Компания</p>
+			<a href="#">О компании</a>
+			<a href="17.06.24_contacts.html">Контакты</a>
+			<a href="#">Вакансии</a>
+			<a href="#">Оптовым покупателям</a>
+			<a href="#">Контакты заводов</a>
+		</div>
+		<div>
+			<p>Позвоните нам</p>
+			<p>08:00 - 17:00 <br>Пнд - Птн<br>
+				<b>+38 (066) 213 86 07</b><br>
+				<b>+38 (096) 817 57 22</b></p>
+		</div>
+		<div><a href="#"><i class="fa fa-facebook fa-4x" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a></div>
+		<!-- <p>Copyright (c) 2017 Copyright Fyodor All Rights Reserved.</p> -->
+	</footer>
+	<p>Ещё одна галерея</p>
+	<div class="gal2">
+    <ul>
+        <li><a href=""><img src="../img/BCM-10.jpg" alt="">
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, pariatur?</p>
+        </a></li>
+        <li><a href=""><img src="../img/BCX-33-3D.jpg" alt="">
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, qui?</p>
+        </a></li>
+        <li><a href=""><img src="../img/BCX-39-3D.jpg" alt="">
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, obcaecati?</p>
+        </a></li>
+        <li><a href=""><img src="../img/TMK-110-3D.jpg" alt="">
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, libero?</p>
+        </a></li>
+        <li><a href=""><img src="../img/LFS-70-3D.jpg" alt="">
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quo!</p>
+        </a></li>
+        <li><a href=""><img src="../img/WSR-56-3D.jpg" alt="">
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, laudantium?</p>
+        </a></li>
+        <li><a href=""><img src="../img/BCT-20-3D.jpg" alt="">
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, laudantium?</p>
+        </a></li>
+        <li><a href=""><img src="../img/EG-62-acryl.jpg" alt="" >
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, laudantium?</p>
+        </a></li>
+        <li><a href=""><img src="../img/farba.jpg" alt="" >
+            <h3>Lorem ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, laudantium?</p>
+        </a></li>
+    </ul>
+</div>
+	</div>
+</body>
+
+</html>
