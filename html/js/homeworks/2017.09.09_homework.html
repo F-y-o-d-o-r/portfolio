@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2017.09.09_homework</title>
+    <script src="../../../js/homeworks/2017.09.09_homework.js"></script>
+    <link rel="stylesheet" href="../../../css/js/homeworks/2017.09.09_homework.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<input type="checkbox" id="for_flow" hidden>
+<label for="for_flow" class="for_flow"></label>
+<section id="top_form_window">
+    <form action="" id="form_top" name="my">
+
+        <div class="header">
+            <h1>Регистрация</h1>
+            <span>Введите ваши данные для регистрации у нас на сайте. </span>
+            <hr>
+        </div>
+        <div class="content">
+            <label for="login">Введите имя: </label>
+            <input type="text" class="input username" placeholder="Логин" id="login" required><br>
+            <label for="pass">Введите пароль: </label>
+            <input required type="password" class="input username" placeholder="Пароль" id="pass">
+            <label for="town">Выберите ваш город: </label>
+            <select name="town" id="town">
+                <option value=""></option>
+                <option value="Киев">Киев</option>
+                <option value="Чернигов">Чернигов</option>
+                <option value="Славутич">Славутич</option>
+                <option value="Саки">Саки</option>
+                <option value="Челябинск">Челябинск</option>
+            </select><br>
+            <label>Вы любите:</label>
+            <div id="checkbox">
+                Кошек <input type="checkbox" id="cat" value="cat">Собак <input type="checkbox" id="dog" value="dog">
+            </div>
+            <br>
+            <label>Выберите ваш пол:</label>
+            Мужской<input type="radio" id="man" name="gender" value="Мужчина">Женский<input type="radio" id="woman"
+                                                                                            name="gender"
+                                                                                            value="Женщина">
+        </div>
+        <div class="footer">
+            <input type="button" value="Сохранить" onclick="todo()">
+            <button id="reset" value="reset" type="reset">
+                Сбросить
+            </button>
+        </div>
+    </form>
+</section>
+<section id="res">
+    <textarea name="result" id="result1" cols="60" rows="10"></textarea>
+</section>
+
+</body>
+</html>

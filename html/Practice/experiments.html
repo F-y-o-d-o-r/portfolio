@@ -9,5 +9,31 @@
 </head>
 <body>
 
+<form name="my">
+    <input type="button" value="button" onclick="todo()">
+
+    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+</form>
+<button onclick="todo2()">button 2</button>
+<script>
+    function todo() {
+        my.text.value = "5456465456";
+    }
+    function todo2() {
+        document.getElementById("demo").innerHTML = "Hello World";
+    }
+</script>
+<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+    }
+</script>
+
 </body>
 </html>
