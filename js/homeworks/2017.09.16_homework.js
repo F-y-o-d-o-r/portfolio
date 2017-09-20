@@ -15,6 +15,34 @@ for (var i = 100; i <= 199; i++) {
     mass[i] = 2;
 }
 
+for (var i = 200; i <= 299; i++) {
+    mass[i] = 3;
+}
+
+for (var i = 300; i <= 399; i++) {
+    mass[i] = 3;
+}
+
+for (var i = 400; i <= 499; i++) {
+    mass[i] = 4;
+}
+
+for (var i = 500; i <= 599; i++) {
+    mass[i] = 5;
+}
+
+for (var i = 600; i <= 699; i++) {
+    mass[i] = 6;
+}
+
+for (var i = 700; i <= 799; i++) {
+    mass[i] = 7;
+}
+
+for (var i = 800; i <= 899; i++) {
+    mass[i] = 8;
+}
+
 for (var i = 899; i <= 999; i++) {
     mass[i] = 9;
 }
