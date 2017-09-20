@@ -47,10 +47,21 @@ for (var i = 899; i <= 999; i++) {
     mass[i] = 9;
 }
 
-
 for (var i = 0; i < mass.length; i++) {
     document.writeln(mass[i])
 }
+
+/*
+document.writeln("<br>" + "Вариант 2" + "<br>");
+
+mass_1 = new Array(1000);
+
+for (var i = 0; i < mass_1.length; 100 + i) {
+    if
+        }
+*/
+
+
 document.writeln("</p> <hr>")
 document.writeln("<br>")
 
@@ -58,7 +69,7 @@ document.writeln("<br>")
 
 document.writeln("<b>" + "Создайте функцию, которая сравнивает два массива на предмет отсутствия одинаковых значений." + "</b>" + "<br>");
 var mass1 = ["Сентябрь", "Октябрь", "Ноябрь", 11, 12, 13];
-var mass2 = ["Пушкин", "Лермонтов", "Октябрь", 125, "Муровей", 11];
+var mass2 = ["Пушкин", "Лермонтов", "Октябрь", 125, "Муравей", 11];
 var mass3 = [];
 
 /*var mass1 = [1, 3, 2];
@@ -87,7 +98,7 @@ document.writeln("<b>" + "Массив 2: " + "</b>" + mass2 + "<br>");
 
 function diff() {
     var mass1 = ["Сентябрь", "Октябрь", "Ноябрь", 11, 12, 13];
-    var mass2 = ["Пушкин", "Лермонтов", "Октябрь", 125, "Муровей", 11];
+    var mass2 = ["Пушкин", "Лермонтов", "Октябрь", 125, "Муравей", 11];
     for (var i = 0; i < mass1.length; ++i) {
         for (var j = 0; j < mass2.length; ++j) {
             if (mass1[i] == mass2[j]) {
