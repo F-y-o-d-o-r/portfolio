@@ -4,13 +4,39 @@
     <meta charset="UTF-8">
     <title>2017.09.17_homework</title>
     <script src="../../../js/homeworks/2017.09.16_homework.js"></script>
-    <script>
-        var mass = []
-    </script>
+    <style>
+        body {background-color: #fbf6b3;}
+        button { position: relative;
+            display: inline-block;
+            line-height: 2em;
+            vertical-align: middle;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            outline: none;
+            border-radius: 5px;
+            box-shadow: 0 0 0 1px #ddd inset, 0 1px 1px #fff; }
+        button:hover {
+            background: #dcdcdc linear-gradient(#fff, #dcdcdc);
+            box-shadow: 0 0 0 1px #aaa inset, 0 1px 1px #aaa;
+        }
+        button:active {
+            background: none;
+            box-shadow: 0 0 0 1px #bbb inset, 0 1px 3px rgba(0,0,0,.5) inset, 0 1px 2px #fff;
+        }
+    </style>
 </head>
 <body>
-<script>
+<button onclick="same()">Одинаковые значения</button>
 
-</script>
+<button onclick="diff()">Разные значения - вариант 1</button>
+
+<button onclick="diff2()">Разные значения - вариант 2</button>
+
+<a href="practic.html">Ещё цветные кубики</a>
+<br>
+
+
+
 </body>
 </html>

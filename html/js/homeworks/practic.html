@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: separate;
+            border: 1px solid white;
+            border-spacing: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: inset -2px -2px 5px 5px #8f8c8c;
+            margin: auto;
+        }
+
+        table:hover {
+            animation: rotate-colors 2s linear infinite;
+            cursor: none;
+        }
+
+        div.block:hover > p {
+            letter-spacing: 5px;
+        }
+
+        @keyframes rotate-colors {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+        }
+
+        .yellow {
+            background-color: #FFA600;
+        }
+
+        .blue {
+            background-color: #000084;
+        }
+
+        .r1 {
+            background-color: red;
+        }
+
+        .r2 {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<script>
+
+    //1 for
+
+    document.write("<section>");
+
+    document.write("<div class='block'>");
+    document.write("<p style='text-align: center; font-weight: bold'>For</p>");
+
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            if (j <= i) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+    //2nd
+    document.write("<div class='block'>");
+
+    document.write("<p style='text-align: center; font-weight: bold' class='p1'>While</p>");
+
+    var n = 10;
+    var s;
+    var i = 1;
+    var j;
+
+    document.write("<table>");
+
+    while (i <= n) {
+        i++;
+        document.write("<tr>");
+
+        j = 1;
+        while (j <= n) {
+            j++;
+            if (j <= i) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+    document.write("</div>");
+
+    //3d
+    document.write("<div class='block'>");
+
+    document.write("<p style='text-align: center; font-weight: bold' class='p1'>Do...While</p>");
+
+    var n = 10;
+    var s;
+    var i = 1;
+    var j;
+
+    document.write("<table>");
+
+    do {
+        document.write("<tr>");
+
+        j = 1;
+
+        do {
+            if (j <= i) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+            j++
+        } while (j <= n);
+
+        document.write("</tr>");
+        i++;
+    } while (i <= n);
+
+
+    document.write("</table>");
+    document.write("<div>");
+
+    document.write("</section>");
+
+    //one more (puh)
+
+    document.write("<section>");
+
+    document.write("<div class='block'>");
+    document.write("<p style='text-align: center; font-weight: bold'>For (2nd variant)</p>");
+
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (j - i) < 0;
+            document.writeln(st);
+            if (st == 0) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+    // 4
+
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (i + j) % 3;
+            if (st == 0) s = "class='r1'";
+            else s = "class='r2'";
+            document.write("<td " + s + "></td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    //5
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (9 - i);
+            document.writeln(st);
+            if (j <= st) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+    //6
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (i + j) % 4;
+            if (st == 0) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+    //7
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (10-i);
+            document.writeln(st);
+            if (j > st && j < st+2) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+    //8
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (i + j) % 5;
+            if (st == 0) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+    //9
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (i + j) % 6;
+            if (st == 0) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+    //10
+    var n = 10;
+    var s;
+
+    document.write("<table>");
+
+    for (i = 1; i <= n; i = i + 1) {
+        document.write("<tr>");
+        for (j = 1; j <= n; j = j + 1) {
+            st = (i + j) % 2;
+            if (st == 0) s = "class='yellow'";
+            else s = "class='blue'";
+            document.write("<td " + s + "></td>");
+        }
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+    document.write("</div>");
+
+
+</script>
+</body>
+</html>

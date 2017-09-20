@@ -69,7 +69,7 @@ for (var i = 0; i <= nameStudents.length - 1; i++) {
 document.write("<hr>" + 8 + "_Цикл For in и массивы - homework<br>");
 
 var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var arr2 = ["Chernigov", 2, "3", "Odessa", "Cheboksri", 5, "Irkytsk"];
+var arr2 = ["Chernigov", 2, "3", "Odessa", "Cheboksri", "Irkytsk", 5];
 var str = "";
 
 for (var i in arr1) {
