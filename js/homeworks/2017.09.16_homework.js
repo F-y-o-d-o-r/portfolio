@@ -68,7 +68,7 @@ function diff() {
             }
         }
     }
-    mass3 = mass1 + mass2
+    mass3 = mass1 + "," + mass2;
     alert("Разные значения в двух масивах: " + "\n" + mass3)
 }
 
