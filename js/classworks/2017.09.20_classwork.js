@@ -98,14 +98,22 @@ human.go = function () {
 
 human.sit = function () {
     document.write(this.name + " sit.<br/>");
-    var a = true;
+    flag = true;
 }
 
 human.think = function () {
     if (flag == true)
         document.write(this.name + "start thinking <br>");
     else
-        document.write(this.name + "cant start thinking ")
+        document.write(this.name + " cant start thinking on the go.<br>")
+}
+
+human.about = function() {
+    document.write("Object name <b>" + this.name + "</b> he works <b>" + this.job + "</b> and he is <b>" + this.age + "</b> years.")
 }
 
 human.go();
+human.think();
+human.sit();
+human.think();
+human.about();

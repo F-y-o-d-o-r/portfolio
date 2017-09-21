@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var goods = [5, 6, 7, 8, 9];
+    var last = goods[goods.length - 1];
+    console.log(last);
+    //
+    goods[goods.length] = 0;//добавим в конец
+    console.log(goods)
+    //
+    var style = ["Джаз", "Блюз"];
+
+    style[style.length] = "Рок-н-Ролл";
+
+    console.log(style.shift());
+
+    style.unshift("Рэп", "Регги");
+    console.log(style);
+    //
+    var arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+
+    var rand = Math.floor(Math.random() * arr.length);
+    console.log(arr[rand]);
+    //
+    var numbers = [];
+
+    while (true) {
+
+        var value = prompt("Введите число", 0);
+
+        if (value === "" || value === null || isNaN(value)) break;
+
+        numbers.push(+value);
+    }
+
+    var sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    alert(sum);
+    //
+    arr = ["test", 2, 1.5, false];
+
+    function search(a, b) {
+        for (i = 0; i < a.length; i++) {
+            if (b == a[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    console.log(search(arr, 2));
+    //
+
+
+</script>
+</body>
+</html>
