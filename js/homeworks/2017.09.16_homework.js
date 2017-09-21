@@ -51,19 +51,38 @@ for (var i = 0; i < mass.length; i++) {
     document.writeln(mass[i])
 }
 
-/*
-document.writeln("<br>" + "Вариант 2" + "<br>");
+document.writeln("</p> <hr><p>");
 
-mass_1 = new Array(1000);
+//1_2 вариант правильный через функцию
 
-for (var i = 0; i < mass_1.length; 100 + i) {
-    if
-        }
-*/
+function arr(start, num, value) {
+    var start = 0;
+    var num = 100;
+    var value = 1;
 
+    var i;
+    var tmp = [];
 
-document.writeln("</p> <hr>")
-document.writeln("<br>")
+    for (i = start; i <= num; i++) {
+        tmp.push(value)
+    }
+    for (var i = 0; i < mass.length; i++) {
+        document.writeln(mass[i])
+    }
+}
+
+document.writeln("<br>");
+
+//1_3
+
+var arr = new Array(999);
+arr.fill(0,0,99);
+arr.fill(1,99,199);
+//...
+console.log(arr);
+
+document.writeln("</p> <hr>");
+document.writeln("<br>");
 
 //2. Создайте функцию, которая сравнивает два массива на предмет отсутствия одинаковых значений.
 
@@ -122,4 +141,25 @@ function diff2() {
         }
     }
     document.body.innerHTML += answer3;
+}
+
+//2 - разные значения - вариант 3 (правельный) только не понятно как передать значения, поэтому записал внутри
+
+function diff3(a, b) {
+    a = mass1.slice(0);
+    b = mass2.slice(0);
+
+    var result = [];
+
+    for (var i = 0; i < a.length; i++) {
+        if (b.indexOf(a[i]) === -1) {
+            result.push(a[i]);
+        }
+    }
+    for (var i = 0; i < b.length; i++) {
+        if (a.indexOf(b[i]) === -1) {
+            result.push(b[i]);
+        }
+    }
+    alert("Разные значения в двух масивах: " + "\n" + result)
 }
