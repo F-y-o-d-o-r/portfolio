@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <P>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam saepe repellat id soluta dolor quo aliquid quibusdam expedita, eaque, eum molestiae? Iure eos modi nisi quam eaque, voluptas architecto.</span>
+        <h3 name = "one">Заголовок 1</h3>
+        <span>Laboriosam molestiae quis laborum impedit officiis, quibusdam optio! Natus obcaecati, nesciunt! Animi accusamus, nobis consectetur tenetur quaerat quos quo eaque, quae deleniti aliquid laborum ab iusto voluptate, atque id eveniet.</span>
+        <span>Quibusdam amet, ipsam aspernatur et facilis cupiditate, reprehenderit qui placeat suscipit assumenda perspiciatis accusamus, ea illo quasi, culpa eaque odio necessitatibus. Eveniet ad nesciunt quas dolore rem, quae sapiente explicabo.</span>
+        <span>Neque aspernatur ex provident eveniet laborum deserunt, labore, consequuntur? Possimus molestias voluptas blanditiis hic alias eaque maiores ea, velit perspiciatis quos assumenda soluta, facilis odit iste unde quod distinctio. Vel.</span>
+        <h3 name="three">Заголовок 2</h3>
+        <span>Provident consectetur aliquid possimus, ipsa vel iusto, ab odio perspiciatis atque, eos illo. Vero cupiditate itaque eveniet commodi consequuntur quae vel hic eius corporis, cumque dolorem, provident incidunt nobis ea.</span>
+    </P>
+    <h3 name = "five">Заголовок 3</h3>
+    <div class="ddd">
+        <h3 name = "four">Заголовок 3</h3>
+    </div>
+<button onclick="find()">Показать все заголовки H3</button>
+</body>
+
+<script>
+
+var massH3 = document.getElementsByTagName('h3');
+//alert(massH3.length);
+    
+    function find() {
+        var vivod ="";
+    for(var i = 0; i < massH3.length; i++) {
+        vivod = vivod + massH3[i].innerHTML + "   ";
+    }
+    alert(vivod);
+}
+    
+</script>
+
+</html>
