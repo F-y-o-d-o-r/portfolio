@@ -1,0 +1,30 @@
+@font-face {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+body {
+    background-color: #91edc6;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    border-radius: 3px;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+    display: block;
+}
+
+#for input:focus {
+    border: 2px solid blue;
+}
+
+label {
+    display: none;
+}
+
+#for input:focus + label {
+    display: block;
+}

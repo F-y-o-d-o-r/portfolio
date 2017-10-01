@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Информация про HTML</title>
+</head>
+<body>
+<h1>Общий заголовок</h1>
+<p>Предполагаемая аудитория: шифровальщики XHTML / HTML (используя редакторы или скрипты), разработчики скриптов (PHP,
+    JSP, и т.д.), шифровальщики CSS, Менеджеры веб-проектов, и те, кто не знаком с нормализацией Unicode, и как это
+    может повлиять на разработку HTML и CSS.</p>
+<div id="rem">
+    <ul>
+        <li>Microsoft</li>
+        <li>Google</li>
+        <li>Apple</li>
+        <li>IBM</li>
+    </ul>
+</div>
+<hr>
+<div name="surnames">
+    <dl>
+        <dt>Режиссер:</dt>
+        <dd>Петр Точилин</dd>
+        <dt>В ролях:</dt>
+        <dd>Андрей Гайдулян</dd>
+        <dd>Алексей Гаврилов</dd>
+        <dd>Виталий Гогунский</dd>
+        <dd>Мария Кожевникова</dd>
+    </dl>
+</div>
+<hr>
+<div class="firstclass">
+    <ul>
+        <li>Пункт 1.</li>
+        <li>Пункт 2.
+            <ul>
+                <li>Подпункт 2.1.</li>
+                <li>Подпункт 2.2.</li>
+                    <ul>
+                        <li>Подпункт 2.2.1.</li>
+                        <li>Подпункт 2.2.2.</li>
+                    </ul>
+                </li>
+                <li>Подпункт 2.3.</li>
+            </ul>
+        </li>
+        <li>Пункт 3.</li>
+    </ul>
+</div>
+<hr>
+<form>
+    <p><b>Как по вашему мнению расшифровывается аббревиатура &quot;ОС&quot;?</b></p>
+    <p><input type="radio" name="answer" value="a1">Офицерский состав<Br>
+        <input type="radio" name="answer" value="a2">Операционная система<Br>
+        <input type="radio" name="answer" value="a3">Большой полосатый мух</p>
+    <p><input type="submit"></p>
+</form>
+<script>
+    //1. Настроить вывод результатов В ПОСЛЕДНИЙ DIV на странице. Именно так, как сказано. Все последующие результаты выводить туда.
+    var div = document.createElement('div');
+    div.className = "result";
+    document.body.appendChild(div);
+
+    //2. Найти в приложенном примере все названия мировых компаний и вывести их в нумерованный список
+    var one = document.querySelectorAll('#rem ul li');
+    var one_result = "";
+    for (var i = 0; i < one.length; i++) {
+        one_result += i + 1 + ". " + one[i].innerHTML + "<br>";
+    }
+
+    //3. Из списка режиссера и «в ролях» получить все имена с фамилиями и создать select со списком людей.
+    var three = document.querySelectorAll('div[name = surnames] dd');
+    var three_result = "";
+    var selectWithNames = document.createElement('select');
+    for (var i = 0; i < three.length; i++) {
+        three_result += "<option>" + three[i].innerHTML + "</option>";
+    }
+
+    //4. Из списка с подпунктами собрать всё содержимое элементов <li> и вывести их в абзац через запятую.
+    var fore = document.querySelectorAll('.firstclass ul li ul li:nth-child(1), .firstclass ul li ul li:nth-child(2), .firstclass ul li ul li:last-child, .firstclass ul li ul li ul li');
+    var fore_result = "";
+    var lishki = document.createElement('p');
+    for (var i = 0; i < fore.length; i++) {
+        fore_result += fore[i].innerHTML + ", ";
+    }
+
+    //5. Из формы получить все значения value и тексты инпутов и создать объект OC со свойствами из value и значениями из текстов. Вывести в таблицу свойства и значения объекта.
+
+    //6. Собрать в абзац все теги, дочерние к BODY, перечислить их через запятую.
+
+    //7. Собрать в span все родительские к элементу «Подпункт 2.2.1.»
+
+
+    //записываем результат задания 2
+    document.querySelector('.result').innerHTML = '<hr>' + one_result + '<hr>';
+    //записываем результат задания 3
+    document.body.querySelector('.result').appendChild(selectWithNames);
+    document.querySelector('.result select').innerHTML += three_result + '<hr>';
+    //записываем результат задания 4
+    document.body.querySelector('.result').appendChild(lishki);
+    document.querySelector('.result p').innerHTML +='<hr>' + fore_result + '<hr>';
+</script>
+</body>
+</html>

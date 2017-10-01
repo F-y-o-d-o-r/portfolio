@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+
+<HEAD>
+    <TITLE>Использование рисунка в качестве маркера списка с использованием таблицы</TITLE>
+    <meta charset="UTF-8">
+</HEAD>
+
+<BODY background="paper05.gif">
+
+
+    <center><img src="books03.gif" width=34 height=34 hspace=5 vspace=5 border=0>
+        <font size="+1" color="Green"><b>Список рекомендуемой литературы</b></font>
+    </center>
+    <font size="-1">
+
+        <table id="table">
+            <tr>
+                <td valign="top"><img src="book.gif" border=0></td>
+                <td>
+                    <B>Сапенаур С., Куэрсиа</B>
+                    <B>В. </B>Справочник Web-мастера: Пер. с англ. - К.: BHV, 1997.</LI>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><img src="book.gif" border=0></td>
+                <td>
+                    <B>Якушина Е.В.</B> Internet для школьников и начинающих пользователей (под ред. к.п.н. А.А. Журина) - М.:Аквариум, 1997.</LI>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><img src="book.gif" border=0></td>
+                <td>
+                    <B>Клименко С., Уразметов</B>
+                    <B>В. </B>INTERNET: Среда обитания информационного общества. – Протвино: Российский Центр Физико-Технической Информатики, 1995.</LI>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><img src="book.gif" border=0></td>
+                <td>
+                    <B>Уланофф</B>
+                    <B>Л.</B> Художественное оформление для узла Web// PC MAGAZINE, № 4, 1996. – с. 34-37.</LI>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><img src="book.gif" border=0></td>
+                <td>
+                    <B>Уланофф</B>
+                    <B>Л.</B> Создайте свой информационный узел Web // PC MAGAZINE, № 4, 1996. – с. 29 – 37.</LI>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><img src="book.gif" border=0></td>
+                <td>
+                    <B>Ли-Рон Й.</B> Публикация на Web становится легче// Мир ПК, ноябрь-декабрь 1996, – с.131 – 136.</LI>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><img src="book.gif" border=0></td>
+                <td>Мир Internet Журнал для пользователей сети. (Подписной индекс по каталогу ФСПС 78 586) (http://www.piter-press.ru.)</LI>
+                    </OL>
+                </td>
+            </tr>
+
+        </table>
+        <span></span>
+        <script>
+            var x = [];
+            var y = "";
+            var result = [];
+            x = document.body.getElementsByTagName('table')[0];
+            for (var i = 0; i < x.rows.length; i++) {
+                result.push((x.rows[i].cells[1].innerHTML));
+            }
+            for (var i = 0; i < result.length; i++) {
+                y += result[i] + "<br>";
+            }
+            document.getElementsByTagName('span')[0].innerHTML = y;
+
+        </script>
+        <hr>
+
+</BODY>
+
+</HTML>
