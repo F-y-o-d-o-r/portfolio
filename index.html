@@ -6,40 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hi there!</title>
-    <style media="screen">
-        body {
-            width: 80%;
-            margin: 200px auto;
-            background-color: rgb(108, 96, 156);
-        }
-
-        h1 {
-            text-align: center;
-            color: rgb(95, 214, 103);
-        }
-
-        a {
-            position: fixed;
-            right: 0;
-            top: 10px;
-            opacity: 0;
-        }
-
-        img {
-            display: block;
-            margin: 50px auto;
-            animation: image_rotate;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes image_rotate {
-            to {
-                transform: rotate(360deg);
-                transform-origin: 50% 100%;
-            }
-        }
-    </style>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -55,16 +21,46 @@
         ga('create', 'UA-102662546-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="js/index.js"></script>
 </head>
 
 <body>
 <div>
-    <h1>HELLO! YAHOO! HEHEY!<br>HAVE A GOOD DAY!</h1></div>
-<img src="../../../img/js/pf_white.png" alt="logo">
-<a href="index1.html">enter</a>
-<div>
+    <div class="wraper">
+        <header>
+            <img class="logo" src="img/js/pf_white.png" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="about()">About</a></li>
+                    <li><a href="#" onclick="portfolio()">Portfolio</a></li>
+                    <li><a href="#" onclick="contacts()">Contacts</a></li>
+                    <li class="menu"><a href="#"><i class="fa fa-bars" aria-hidden="true"></a></i></li>
+                </ul>
+            </nav>
+        </header>
 
-</div>
+        <section class="about">
+            <p>Привет! Меня зовут Фёдор. <br>Я изучаю веб разработку в школе ШАГ.<br>На этом сайте я выкладываю свои
+                учебные
+                материалы и практику. <br></p>
+        </section>
+
+        <section class="portfolio">
+            <p>Will be soon here</p>
+        </section>
+
+        <section class="contacts">
+            <p>Мне можно написать в скайп: <a href="skype:F-y-o-d-o-r"><i class="fa fa-skype" aria-hidden="true"></i></a><br>Мне можно написать на почту:
+                <a href="mailto:fyodor.work@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a><br>Я на GitHub:
+                <a href="https://github.com/F-y-o-d-o-r"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+        </section>
+
+        <div>
+
+        </div>
+    </div>
 </body>
 </html>
   
