@@ -36,7 +36,7 @@
         <li>Пункт 2.
             <ul>
                 <li>Подпункт 2.1.</li>
-                <li>Подпункт 2.2.</li>
+                <li>Подпункт 2.2.
                     <ul>
                         <li>Подпункт 2.2.1.</li>
                         <li>Подпункт 2.2.2.</li>
@@ -57,19 +57,19 @@
     <p><input type="submit"></p>
 </form>
 <script>
-    //1. Настроить вывод результатов В ПОСЛЕДНИЙ DIV на странице. Именно так, как сказано. Все последующие результаты выводить туда.
+    //+1. Настроить вывод результатов В ПОСЛЕДНИЙ DIV на странице. Именно так, как сказано. Все последующие результаты выводить туда.
     var div = document.createElement('div');
     div.className = "result";
     document.body.appendChild(div);
 
-    //2. Найти в приложенном примере все названия мировых компаний и вывести их в нумерованный список
+    //+2. Найти в приложенном примере все названия мировых компаний и вывести их в нумерованный список
     var one = document.querySelectorAll('#rem ul li');
     var one_result = "";
     for (var i = 0; i < one.length; i++) {
         one_result += i + 1 + ". " + one[i].innerHTML + "<br>";
     }
 
-    //3. Из списка режиссера и «в ролях» получить все имена с фамилиями и создать select со списком людей.
+    //+3. Из списка режиссера и «в ролях» получить все имена с фамилиями и создать select со списком людей.
     var three = document.querySelectorAll('div[name = surnames] dd');
     var three_result = "";
     var selectWithNames = document.createElement('select');
@@ -77,29 +77,112 @@
         three_result += "<option>" + three[i].innerHTML + "</option>";
     }
 
-    //4. Из списка с подпунктами собрать всё содержимое элементов <li> и вывести их в абзац через запятую.
-    var fore = document.querySelectorAll('.firstclass ul li ul li:nth-child(1), .firstclass ul li ul li:nth-child(2), .firstclass ul li ul li:last-child, .firstclass ul li ul li ul li');
-    var fore_result = "";
+    //+4. Из списка с подпунктами собрать всё содержимое элементов <li> и вывести их в абзац через запятую.
+
+    //НЕ выходит сделать тк вложеная li
+    /*var fore = document.querySelectorAll('.firstclass ul li ul li:nth-child(1), .firstclass ul li ul li:nth-child(2), .firstclass ul li ul li:last-child, .firstclass ul li ul li ul li');
+     var fore_result = "";
+     var lishki = document.createElement('p');
+     for (var i = 0; i < fore.length; i++) {
+     fore_result += fore[i].innerHTML + ", ";
+     }*/
+
+    //НЕ выходит сделать тк вложеная li
     var lishki = document.createElement('p');
-    for (var i = 0; i < fore.length; i++) {
+    var fore = document.getElementsByClassName('firstclass')[0].children[0].children[1].getElementsByTagName('li');
+    var fore_result = "";
+    for (i = 0; i < fore.length; i++) {
         fore_result += fore[i].innerHTML + ", ";
     }
 
-    //5. Из формы получить все значения value и тексты инпутов и создать объект OC со свойствами из value и значениями из текстов. Вывести в таблицу свойства и значения объекта.
+    //+5. Из формы получить все значения value и тексты инпутов и создать объект OC со свойствами из value и значениями из текстов. Вывести в таблицу свойства и значения объекта.
+    //get value
+    /*var five = document.querySelectorAll('form input[name = answer]');
+     for (var i = 0; i < five.length; i++) {
+     test += five[i].value;
+     }*/
+    //get text
+    /*var five = document.querySelectorAll('form input[name = answer]');
+     for (var i = 0; i < five.length; i++) {
+     test += five[i].nextSibling.data; //textContent or nodeValue
+     }*/
 
-    //6. Собрать в абзац все теги, дочерние к BODY, перечислить их через запятую.
+    var OC = {};
+    var five_result = '';
+    var table = document.createElement('table');
+    var tr = document.createElement('tr');
+    var td = document.createElement('td');
+
+    var five = document.querySelectorAll('form input[name = answer]');
+    for (i = 0; i < five.length; i++) {
+        OC[five[i].value] = five[i].nextSibling.data;
+
+    }
+    for (var key in OC) {
+        five_result += "<tr><td> " + key + "</td><td>" + OC[key] + "</td>"
+    }
+
+    //+6. Собрать в абзац все теги, дочерние к BODY, перечислить их через запятую.
+    var six_p = document.createElement('p');//создадим абзац
+    //вывести все потомки:
+    /*var six = document.body.getElementsByTagName('*');
+     var six_result = "";
+     for (var i = 0; i < six.length; i++) {
+     six_result += six[i].tagName + ", ";
+     }*/
+    var six_result = "";
+    for (var i = 0; i < document.body.children.length; i++) {
+        six_result += document.body.children[i].tagName + ", "; // Text, DIV, Text, UL, ..., SCRIPT
+    }
 
     //7. Собрать в span все родительские к элементу «Подпункт 2.2.1.»
+    var seven_span = document.createElement('span');//создадим span
+    var to_span = document.body.getElementsByClassName('firstclass')[0].children[0].children[1].children[0].children[1].children[0].children[0];
 
+    var res1 = "";
+
+    while (to_span.parentElement !== null) {
+        res1 += to_span.parentElement.tagName + ', ';
+        to_span = to_span.parentElement;
+    }
+
+    /*var f1 = to_span.parentNode;
+    res1 += f1.tagName + ", ";
+    var f2 = f1.parentNode;
+    res1 += f2.tagName + ", ";
+    var f3 = f2.parentNode;
+    res1 += f3.tagName + ", ";
+    var f4 = f3.parentNode;
+    res1 += f4.tagName + ", ";
+    var f5 = f4.parentNode;
+    res1 += f5.tagName + ", ";
+    var f6 = f5.parentNode;
+    res1 += f6.tagName + ", ";
+    var f7 = f6.parentNode;
+    res1 += f7.tagName + ", ";
+    var f8 = f7.parentNode;
+    res1 += f8.tagName + ".";*/
 
     //записываем результат задания 2
-    document.querySelector('.result').innerHTML = '<hr>' + one_result + '<hr>';
+    document.querySelector('.result').innerHTML = '<hr>' + "<h2>Решения:</h2><br>" + one_result + '<hr>';
     //записываем результат задания 3
     document.body.querySelector('.result').appendChild(selectWithNames);
-    document.querySelector('.result select').innerHTML += three_result + '<hr>';
+    document.querySelector('.result select').innerHTML += three_result;
     //записываем результат задания 4
     document.body.querySelector('.result').appendChild(lishki);
-    document.querySelector('.result p').innerHTML +='<hr>' + fore_result + '<hr>';
+    document.querySelector('.result p').innerHTML += '<hr>' + fore_result + '<hr>';
+    document.querySelector('.result p ul').remove();
+    //записываем результат задания 6
+    document.body.querySelector('.result').appendChild(six_p);
+    document.querySelector('.result p').nextElementSibling.innerHTML += six_result + '<hr>';
+    //записываем результат задания 5
+    document.body.querySelector('.result').appendChild(table);
+    document.querySelector('.result table').innerHTML += five_result;
+    document.querySelector("table").style.border = '1px solid green';
+    //записываем результат задания 7
+    document.body.querySelector('.result').appendChild(seven_span);
+    document.querySelector('.result span').innerHTML += '<hr>' + res1;
+
 </script>
 </body>
 </html>
