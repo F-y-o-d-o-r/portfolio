@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" value="Имя">
+        <input type="hidden" value="35">
+        <input type="text" value="Фамилия">
+        <input type="hidden" value="43">
+        <input type="text" value="Отчество">
+        <input type="hidden" value="11">
+        <input type="button" value="Кнопка">
+        <input type="hidden" value="35">
+    </form>
+
+    <script>
+        var result1 = "";
+        var result2 = "";
+        var result3 = "";
+
+
+        var inputs = document.getElementsByTagName('input');
+
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].type == 'text') {
+                result1 += inputs[i].value;
+            } else if (inputs[i].type == 'hidden') {
+                result2 += inputs[i].value;
+            } else if (inputs[i].type == 'button') {
+                result3 += inputs[i].value;
+            }
+        }
+
+        //в первый узел документа
+        document.body.firstChild.data = result1 + result2 + result3;
+
+    </script>
+</body>
+
+</html>
