@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by pfyod on 03.10.2017.
  */
 function about() {

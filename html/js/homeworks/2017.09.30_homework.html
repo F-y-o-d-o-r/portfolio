@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -95,6 +95,9 @@
         fore_result += fore[i].innerHTML + ", ";
     }
 
+    //2й простой вариант
+    console.log(document.getElementsByClassName('firstclass')[0].children[0].children[1].children[0].innerText);
+
     //+5. Из формы получить все значения value и тексты инпутов и создать объект OC со свойствами из value и значениями из текстов. Вывести в таблицу свойства и значения объекта.
     //get value
     /*var five = document.querySelectorAll('form input[name = answer]');
@@ -182,6 +185,8 @@
     //записываем результат задания 7
     document.body.querySelector('.result').appendChild(seven_span);
     document.querySelector('.result span').innerHTML += '<hr>' + res1;
+
+
 
 </script>
 </body>
