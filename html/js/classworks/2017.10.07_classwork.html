@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>Span</span>
+    <p>Параграф</p>
+    
+    <select name="" id="towns">
+        <option value="">Кишинёв</option>
+        <option value="">Славутич</option>
+        <option value="">Чебоксары</option>
+        <option value="">Челябинск</option>
+        <option value="">Саки</option>
+    </select>
+    
+    <script>
+        
+        //1
+        //document.body.querySelector('span').setAttribute('a1', 10);
+        //document.body.querySelector('span').setAttribute('a2', 20);
+        //document.body.querySelector('span').setAttribute('a3', 40);
+
+
+        var x = document.body.querySelector('span');
+
+        function attribute(y) {
+            for (var i = 1; i <= y; i++) {
+                x.setAttribute('a' + i, i * 10);
+            }
+        }
+        
+        //attribute(prompt('Введите количество атрибутов', 0));
+        
+
+        console.log(x.attributes);
+        
+        //2
+        document.querySelector('p').setAttribute('data-test', 'value');
+        console.log(document.querySelector('p').dataset.test);
+        
+        //3
+                
+        //var towns = document.getElementById('towns');
+        
+        //create
+        var option1 = document.createElement('option');
+        option1.innerHTML = 'Чернигов';
+        option1.className = 'town'
+        
+        var option2 = document.createElement('option');
+        option2.innerHTML = 'Kiev';
+        option2.className = 'town'
+        
+        //insert
+        document.getElementById('towns').insertBefore(option1, towns.children[0]);
+        document.getElementById('towns').insertBefore(option2, towns.lastChild);
+        
+        
+
+    </script>
+</body>
+
+</html>
