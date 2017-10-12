@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+    </ul>
+
+    <script>
+        var ul = document.getElementsByTagName('ul')[0];
+
+        function insert(number) {
+            for (i = 2; i <= number; i++) {
+                if (i % 2 == 0) {
+                    ul.insertAdjacentHTML('beforeEnd', '<li>' + i + '</li>');
+                } else if (i % 2 == 1) {
+                    ul.insertAdjacentHTML('afterBegin', '<li>' + i + '</li>');
+
+                }
+            }
+        }
+
+        insert(prompt('enter number', 'x'));
+
+    </script>
+</body>
+
+</html>

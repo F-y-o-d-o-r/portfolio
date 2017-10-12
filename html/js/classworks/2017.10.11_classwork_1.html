@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2017.10.11_classwork</title>
+</head>
+
+
+<body>
+    <table id="table">
+        <tr>
+            <td>Это</td>
+            <td>Все</td>
+            <td>Элементы DOM</td>
+        </tr>
+    </table>
+    <ol id="ol">
+        <li>Вася</li>
+        <li>Петя</li>
+        <li>Маша</li>
+        <li>Даша</li>
+    </ol>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+
+
+    <script>
+        function removeChildren(elem) {
+            //удаляет весь узел
+            //elem.parentElement.removeChild(elem)
+
+            //1 вариант удаляет внутренности
+            while (elem.lastChild) {
+                elem.removeChild(elem.lastChild)
+            };
+
+            //2й вариант 
+            //elem.innerHTML = '';
+        };
+
+        removeChildren(table);
+
+        var lll = document.body.children[2];
+        lll.insertAdjacentHTML('beforeEnd', '<li>3</li><li>4</li><li>5</li>')
+    </script>
+</body>
+
+</html>
