@@ -1,4 +1,4 @@
-//1
+﻿//1
 document.write("<hr>" + 1 + "<br>");
 
 var ar = new Array(1.2, 3, 4);
