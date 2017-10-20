@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var target = {
+            country: "Ukraine",
+            city: "Chernigov",
+            street: "Myra",
+            house: "32",
+            flat: [12, 18, 36, 24, 11, 8, 65, 19],
+            community: {
+                "master": "Ivanov",
+                "exmaster": "Petrov",
+                "total_price": 2680,
+                "elevator": true,
+                "total_users": 118
+            }
+        }
+        var json = JSON.stringify(target, "", 4);
+        var p1 = document.createElement('p');
+        p1.innerHTML = json;
+        document.body.appendChild(p1);
+
+        var out = document.body.getElementsByTagName('p')[0];
+        var aaa = JSON.parse(out.textContent);
+        var out2 = '';
+
+        for (var key in aaa) {
+            if (typeof aaa[key] == 'object') {
+                for (var key2 in aaa[key]) {
+                    out2 += "Ключ: " + key2 + " значение: " + aaa[key][key2] + "<br>";
+                }
+            } else out2 += "Ключ: " + key + " значение: " + aaa[key] + "<br>";
+        }
+
+        var p2 = document.createElement('p');
+        p2.innerHTML = out2;
+        document.body.appendChild(p2);
+
+    </script>
+
+</body>
+
+</html>
