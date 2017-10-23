@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 900px;
+    outline: 1px solid greenyellow;
+    position: relative;
+}
+
+#circle {
+    height: 20px;
+    width: 20px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    left:10px;/*позиция по х*/
+    top:10px;/*позиция по у*/
+    background: -webkit-gradient(linear, right top, left bottom, from(yellowgreen), to(rgb(101, 136, 35)));
+    background: -webkit-linear-gradient(top right, yellowgreen, rgb(101, 136, 35));
+    background: -o-linear-gradient(top right, yellowgreen, rgb(101, 136, 35));
+    background: linear-gradient(to bottom left, yellowgreen, rgb(101, 136, 35));
+    position: absolute;
+}
+
+#rect {
+    height:20px;
+    width:150px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #ffa500), to(rgba(154, 205, 50, 0.05)));
+    background: -webkit-linear-gradient(top, #ffa500 90%, rgba(154, 205, 50, 0.05));
+    background: -o-linear-gradient(top, #ffa500 90%, rgba(154, 205, 50, 0.05));
+    background: linear-gradient(to bottom, #ffa500 90%, rgba(154, 205, 50, 0.05));
+    left:50px;/*позиция по х*/
+    top:97%;/*позиция по у*/
+    position: absolute;
+    -webkit-border-bottom-left-radius: 40%;
+            border-bottom-left-radius: 40%;
+    -webkit-border-bottom-right-radius: 40%;
+            border-bottom-right-radius: 40%;
+    -webkit-border-top-right-radius: 10%;
+            border-top-right-radius: 10%;
+    -webkit-border-top-left-radius: 10%;
+            border-top-left-radius: 10%;
+}

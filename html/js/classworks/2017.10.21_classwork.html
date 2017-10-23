@@ -1,0 +1,66 @@
+<style>
+    .error {
+        background: red;
+    }
+
+</style>
+
+
+<div>Возраст: <input type="text" id="age"></div>
+<div id="age1" class="error" style="display:none">Введите цифру</div>
+
+<div>Имя: <input type="text" id="nameA"></div>
+<div id="name1" class="error" style="display:none">Введите первую букву большой</div>
+
+<div>Имейл: <input type="text" id="mailA"></div>
+<div id="mail1" class="error" style="display:none">Введите ваш имейл!</div>
+
+<div>WebSite: <input type="text" id="webA"></div>
+<div id="web1" class="error" style="display:none">Введите ваш сайт!</div>
+
+<script>
+    age.onblur = function() {
+        if (isNaN(this.value)) { // ввод не число, показать ошибку
+            this.classList.add("error");
+            age.focus(); //... и вернуть фокус обратно
+            age1.style.display = '';
+        } else {
+            this.classList.remove("error");
+            age1.style.display = 'none';
+        }
+    };
+    nameA.onblur = function() {
+        if (this.value[0].toLowerCase() == this.value[0]) { // ввод не число, показать ошибку
+            this.classList.add("error");
+            nameA.focus(); //... и вернуть фокус обратно
+            name1.style.display = '';
+        } else {
+            this.classList.remove("error");
+            name1.style.display = 'none';
+        }
+    };
+    mailA.onblur = function() {
+        if (this.value.indexOf("@") != -1) {
+            this.classList.remove("error");
+            mail1.style.display = 'none';
+        } else {
+            this.classList.add("error");
+            mailA.focus(); //... и вернуть фокус обратно
+            mail1.style.display = '';
+        }
+    };//include == true
+    webA.onblur = function() {
+
+        for (var i = 0; i < this.value.length; i++) {
+            if (this.value[0] !== 'h' || this.value[1] !== 't' || this.value[2] !== 't' || this.value[3] !== 'p') { // ввод не число, показать ошибку
+                this.classList.add("error");
+                webA.focus(); //... и вернуть фокус обратно
+                web1.style.display = '';
+            } else {
+                this.classList.remove("error");
+                web1.style.display = 'none';
+            }
+        }
+    };
+
+</script>
