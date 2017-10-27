@@ -24,11 +24,11 @@ var z = true;//отслежуем с какой стороны летит шар
 var timerId = setInterval(function () {
     //ищем совпадение шарика с битой
     for(var i = 0; i < 150; i++) {
-        if(((parseInt(getComputedStyle(circle).left)) == parseInt(getComputedStyle(rect).left) + i) && (parseInt(getComputedStyle(circle).top) > 840) && z === true){
+        if(((parseInt(getComputedStyle(circle).left)) == parseInt(getComputedStyle(rect).left) + i) && (parseInt(getComputedStyle(circle).top) > 855) && z === true){
             console.log('true');
             x = false;
             y = true;
-        } else if (((parseInt(getComputedStyle(circle).left)) == parseInt(getComputedStyle(rect).left) + i) && (parseInt(getComputedStyle(circle).top) > 840) && z === false){
+        } else if (((parseInt(getComputedStyle(circle).left)) == parseInt(getComputedStyle(rect).left) + i) && (parseInt(getComputedStyle(circle).top) > 855) && z === false){
             console.log('false');
             x = false;
             y = false;
@@ -37,33 +37,35 @@ var timerId = setInterval(function () {
     console.log(parseInt(getComputedStyle(rect).left));
 
     //летаем шарик по x
-    if (parseInt(getComputedStyle(circle).left) > 970) {
+    if (parseInt(getComputedStyle(circle).left) > 980) {
         y = false;
         z = false;
     }
-    if (parseInt(getComputedStyle(circle).left) < 10) {
+    if (parseInt(getComputedStyle(circle).left) < 0) {
         y = true;
         z = true;
     }
     if (y === true) {
-        circle.style.left = (parseInt(getComputedStyle(circle).left) + 10) + 'px';
+        circle.style.left = (parseInt(getComputedStyle(circle).left) + 1) + 'px';
     } else if (y === false) {
-        circle.style.left = (parseInt(getComputedStyle(circle).left) - 10) + 'px';
+        circle.style.left = (parseInt(getComputedStyle(circle).left) - 1) + 'px';
     }
 //летаем шарик по y
-    if (parseInt(getComputedStyle(circle).top) > 870) {
+    if (parseInt(getComputedStyle(circle).top) > 900) {
         x = false;
-        alert("Ты проиграл")
+        alert("Ты проиграл");
+        circle.style.top = '30px';
+        circle.style.left = '30px';
     }
-    if (parseInt(getComputedStyle(circle).top) < 10) {
+    if (parseInt(getComputedStyle(circle).top) < 0) {
         x = true;
     }
     if (x === true) {
-        circle.style.top = (parseInt(getComputedStyle(circle).top) + 10) + 'px';
+        circle.style.top = (parseInt(getComputedStyle(circle).top) + 1) + 'px';
     } else if (x === false) {
-        circle.style.top = (parseInt(getComputedStyle(circle).top) - 10) + 'px';
+        circle.style.top = (parseInt(getComputedStyle(circle).top) - 1) + 'px';
     }
-}, 50);
+}, 5);
 //перемещение платформы
 document.onkeydown = function (e) {
     if (e.keyCode === 39 && (parseInt(getComputedStyle(rect).left) < 840)) {//направо
