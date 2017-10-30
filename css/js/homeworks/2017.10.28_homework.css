@@ -1,0 +1,20 @@
+body {
+    background-color: #8e8e8e;
+}
+
+div {
+    background-color: #fff5ea;
+    width: 500px;
+    margin-bottom: 10px;
+    padding: 20px;
+    -webkit-box-shadow: 5px 5px 1px black;
+            box-shadow: 5px 5px 1px black;
+    -webkit-border-radius: 1.5px;
+            border-radius: 1.5px;
+}
+
+b {
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 2px black;
+}
