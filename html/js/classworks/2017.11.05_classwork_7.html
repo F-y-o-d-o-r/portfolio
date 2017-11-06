@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>Untitled</title>
+    <style>
+        #div0 {
+            width: 500px;
+            height: 500px;
+            background-color: gold;
+            position: relative;
+        }
+
+        #div1 {
+            width: 250px;
+            height: 250px;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+        #div2 {
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            position: absolute;
+            top: 0px;
+            left: 250px;
+            display: none;
+        }
+
+        #div3 {
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            position: absolute;
+            top: 250px;
+            left: 0px;
+            display: none;
+        }
+
+        #div4 {
+            width: 250px;
+            height: 250px;
+            background-color: silver;
+            position: absolute;
+            top: 250px;
+            left: 250px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="div0">
+    <div id="div1" onclick="clearInterval(int)"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+</div>
+
+<script>
+    setTimeout(
+        "div1.style.display = 'block'",
+        1000
+    );
+    setTimeout(
+        "div2.style.display = 'block'",
+        2000
+    );
+    setTimeout(
+        "div3.style.display = 'block'",
+        3000
+    );
+    setTimeout(
+        "div4.style.display = 'block'",
+        4000
+    );
+    //clock
+    var int = setInterval('funcTime()', 1000);//int for stopping interval!
+    function funcTime() {
+        var d = new Date();
+        div1.innerHTML = funcFormat(d.getHours()) + ':' + funcFormat(d.getMinutes()) + ':' + funcFormat(d.getSeconds());
+    }
+    //add 0 to time if < 10
+    function funcFormat(time) {
+        if (time < 10) {
+            time = '0' + time;
+        }
+        return time
+    }
+
+</script>
+
+</body>
+
+</html>

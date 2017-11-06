@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Untitled</title>
+
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+
+    </script>
+
+    <style>
+        #example {
+            width: 200px;
+            height: 200px;
+            background-color: silver;
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body onkeyup="key(event)">
+
+<a href="#" id="link" onclick="display(example, this)">Open</a>
+
+<div id="example">Hello... Hello... Hello... Hello... Hello... Hello... Hello... Hello...</div>
+
+<script>
+    /*function display(el, ell) {
+     if (el.style.display != 'block') {
+     el.style.display = 'block';
+     //ell.innerHTML = 'close';
+
+     event.srcElement.innerHTML = 'close';
+     } else {
+     el.style.display = 'none';
+     //ell.innerHTML = 'open';
+     event.target.innerHTML = 'open';
+     }
+     }*/
+    //c клавиатуры
+    function key(e) {
+        if (e.which == 49) {
+            example.style.display = 'block';
+            //alert(event.which)
+        } else if (e.which == 50) {
+            example.style.display = 'none';
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

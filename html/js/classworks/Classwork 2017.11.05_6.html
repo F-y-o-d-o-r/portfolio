@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Untitled</title>
+
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+        var arr = new Array("pear.jpg", "cherry.jpg", "raspberry.jpg", "strawberry.jpg");
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<img src="pear.jpg" name="imm" onclick="nextImage('imm')" alt/>
+<script>
+    var i = 0;
+    function nextImage(img) {
+        i++;
+        if (i === arr.length) i = 0;
+        document.images[img].src = arr[i];
+    }
+</script>
+</body>
+</html>

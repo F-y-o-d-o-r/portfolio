@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<!--<body onload="alert('hi')" id="page">-->
+<body id="page">
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, reprehenderit facilis tempore tenetur! Culpa
+    praesentium recusandae rerum incidunt, enim ipsam vitae iste asperiores animi maxime, omnis a provident
+    reprehenderit aperiam?</p>
+
+
+<script>
+    function functDown() {
+        page.style.backgroundColor = 'black';
+        page.style.color = 'white';
+    }
+    function functUp() {
+        page.style.backgroundColor = 'white';
+        page.style.color = 'black';
+    }
+    /* page.onmousedown = functDown
+     page.onmouseup = functUp*/
+
+    page.onmousedown = function () {
+        page.style.backgroundColor = 'black';
+        page.style.color = 'white';
+    }
+    page.onmouseup = function () {
+        page.style.backgroundColor = 'white';
+        page.style.color = 'black';
+    }
+
+
+</script>
+
+</body>
+
+</html>

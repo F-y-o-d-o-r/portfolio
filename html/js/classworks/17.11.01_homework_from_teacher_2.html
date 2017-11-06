@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="texthtml; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function func_mouse(over_out, li_select) {
+            var a, a1, a2, a3;
+            if (over_out == 'over') {
+                switch (li_select) {
+                    case "computer":
+                        a1 = "Lenovo";
+                        a2 = "Acer";
+                        a3 = "Asus";
+                        break;
+                    case "printer":
+                        a1 = "HP";
+                        a2 = "Samsung";
+                        a3 = "Epson";
+                        break;
+                    case "router":
+                        a1 = "TP-Link";
+                        a2 = "D-Link";
+                        a3 = "Ericsson";
+                        break;
+                }
+                a = '<ol style="list-style-type:none;"><li>' + a1 + '</li><br><li>' + a2 + '</li><br><li>' + a3 + '</li></ol>';
+            } else if (over_out == 'out') {
+                a = '';
+            }
+            container_right.innerHTML = a;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="container_left" style="padding:10px;">
+            <ul>
+                <li style="cursor:pointer;" onmouseover="func_mouse('over', 'computer');" onmouseout="func_mouse('out');">Компьютеры</li>
+                <br>
+                <li style="cursor:pointer;" onmouseover="func_mouse('over', 'printer');" onmouseout="func_mouse('out');">Принтеры</li>
+                <br>
+                <li style="cursor:pointer;" onmouseover="func_mouse('over', 'router');" onmouseout="func_mouse('out');">Сетевое оборудование</li>
+            </ul>
+        </div>
+
+        <div id="container_right" style="padding:10px;">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

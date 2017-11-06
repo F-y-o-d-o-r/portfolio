@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Untitled</title>
+
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+
+    </script>
+
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            position: relative;
+        }
+
+        #div2 {
+            width: 100px;
+            height: 100px;
+            background-color: whitesmoke;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+
+</head>
+
+<body id="div0" onclick="func_color(this)">
+
+<div id="div1" onclick="func_color(this)">
+    <div id="div2" onclick="func_color(this)"></div>
+</div>
+
+
+<script>
+    function func_color(el) {
+        el.style.backgroundColor = 'green';
+        //alert(1)
+        event.cancelBubble = true;
+    }
+</script>
+
+</body>
+
+</html>

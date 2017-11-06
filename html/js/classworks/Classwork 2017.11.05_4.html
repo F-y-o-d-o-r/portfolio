@@ -1,0 +1,49 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+
+    </script>
+
+    <style>
+        .div0 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body onmousemove="funcMove()">
+
+<div class="div0" onmousedown="funcDown(this)" onmouseup="funcUp()" ></div>
+
+<script>
+    var toElem = null,
+        offX,
+        offY;
+    function funcDown(el) {
+        toElem = el;
+        offX = event.offsetX;//центрируем щелчок мыши
+        offY = event.offsetY;//центрируем щелчок мыши
+    }
+    function funcUp() {
+        toElem = null;
+    }
+    function funcMove() {
+        if(toElem) {
+            toElem.style.left = event.clientX -offX + 'px';
+            toElem.style.top = event.clientY - offY + 'px';
+        }
+    }
+
+
+</script>
+
+</body>
+
+</html>

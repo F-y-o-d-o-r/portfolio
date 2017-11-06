@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="texthtml; charset=utf-8" />
+  <title>Untitled</title>
+</head>
+
+<body>
+<form name="forma1">
+<input type="text" name="text1">
+<input type="button" value="Go" onclick="error.style.display='none'; alf(text1.value);">
+</form>
+<span id="error" style="color:red; display:none;">Недопустимые символы!!!</span>
+
+<script>
+var alf_buk='а, б, в, г, д, е, ё, ж, з, и, й, к, л, м, н, о, п, р, с, т, у, ф, х, ц, ч, ш, щ, ъ, ы, ь, э, ю, я';
+var alf_mas=alf_buk.split(', ');
+function alf(val) {
+    //error.style.display="none";
+    for(var i=0; i<alf_mas.length; i++) {
+      if(val.indexOf(alf_mas[i])!=-1) {
+         error.style.display="block";
+      }
+    }
+}
+</script>
+
+</body>
+
+</html>

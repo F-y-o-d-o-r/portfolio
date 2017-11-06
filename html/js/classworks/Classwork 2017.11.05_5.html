@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Untitled</title>
+
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+
+    </script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+<img src="pear.jpg" id="im" name="imm" onmouseover="funcOver('imm')" onmouseout="funcOut('imm')" alt/>
+
+<script>
+    im.onmousedown = function () {
+        im.style.border = '2px solid green';
+    };
+    im.onmouseup = function () {
+        im.style.border = 'none';
+    };
+    function funcOver(el) {
+        document.images[el].style.width = '250px';
+        //document.images[el].width = 250; без style
+    };
+    function funcOut(el) {
+        document.images[el].style.width = '';
+    };
+
+</script>
+
+</body>
+
+</html>

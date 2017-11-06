@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01.11.17</title>
+</head>
+
+<body>
+<p id="abz1">1</p>
+<p id="abz2">2</p>
+<p id="abz3">3</p>
+
+<p id="button"></p>
+
+<a href="#" id='a1'>Увеличить размер шрифта абзацев</a><br>
+<a href="#" id='b'>Появление кнопки и изменение цвета при нажатии</a>
+
+<form name="form1">
+    <input type="text" name="text1">
+    <input type="button" value="validate" onclick="funVal()"><br>
+    <span style="visibility:hidden; color:red" id="error1">ERROR</span>
+</form>
+<p>Можно только с @ в середине</p>
+<script>
+    abz1.style.color = 'red';
+    a1.onclick = function funksize() {
+        for (var i = 1; i < 4; i++) {
+            document.getElementById('abz' + i).style.fontSize = i + '0px';
+        }
+        return false;
+    };
+
+    b.onclick = function () {
+        button.innerHTML = '<input type="button" value="button" onclick="this.style.color = \'red\'">';
+        return false;
+    };
+
+    for (var i = 1; i <= 3; ++i) {
+        document.write('<br><span style="font-size:' + i + '0px">Text</span><br>');
+    }
+
+    var str = 'Hello mr Serg';
+    var a = str.split(" ");
+
+    for (var i = 0; i < a.length; ++i) {
+        if (a[i].indexOf('e') != -1) {
+            document.write(a[i] + ' ')
+        }
+    }
+
+    function funVal() {
+        var val1 = form1.text1.value;
+        if (val1.indexOf("@") == -1 || val1.indexOf("@") == 0 || val1.indexOf("@") == val1.length - 1) {
+            error1.style.visibility = 'visible';
+        } else error1.style.visibility = 'hidden';
+        console.log(val1)
+    }
+</script>
+</body>
+
+</html>
