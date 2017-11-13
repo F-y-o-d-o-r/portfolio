@@ -8,7 +8,7 @@ body {
     margin: 0;
     font-family: 'Cuprum', sans-serif;
     min-width: 445px;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .wraper {
@@ -113,8 +113,6 @@ nav ul {
 }
 
 .about {
-    margin-left: auto;
-    margin-right: auto;
     width: 80%;
     height: 80%;
     min-height: 700px;
@@ -126,7 +124,7 @@ nav ul {
     color: #dbdbdb;
     font-size: 17px;
     position: absolute;
-    left: -50%;
+    left: -1000px;
     top: 30px;
     bottom: 30px;
     -webkit-transform: translateX(-50%);
@@ -150,8 +148,6 @@ nav ul {
 }
 
 .contacts {
-    margin-left: auto;
-    margin-right: auto;
     width: 80%;
     height: 80%;
     min-height: 700px;
@@ -163,7 +159,7 @@ nav ul {
     color: #dbdbdb;
     font-size: 17px;
     position: absolute;
-    left: -50%;
+    left: -1000px;
     top: 30px;
     bottom: 30px;
     -webkit-transform: translateX(-50%);
@@ -186,8 +182,6 @@ nav ul {
 }
 
 .portfolio {
-    margin-left: auto;
-    margin-right: auto;
     width: 80%;
     height: 80%;
     min-height: 700px;
@@ -199,7 +193,7 @@ nav ul {
     color: #dbdbdb;
     font-size: 17px;
     position: absolute;
-    left: -50%;
+    left: -1000px;
     top: 30px;
     bottom: 30px;
     -webkit-transform: translateX(-50%);
@@ -243,7 +237,7 @@ nav ul {
     color: #dbdbdb;
     font-size: 17px;
     position: absolute;
-    left: -80%;
+    left: -1000px;
     top: 30px;
     bottom: 30px;
     -webkit-transform: translateX(-50%);
@@ -322,7 +316,8 @@ table td {
     border-radius: 25px;
 }
 
-#to_bottom {
+#to_bottom,
+.n_page {
     position: fixed;
     right: 10px;
     top: 10px;
@@ -333,4 +328,9 @@ table td {
     border-radius: 5px;
     line-height: 50px;
     text-align: center;
+}
+
+.n_page {
+    left: 10px;
+    width: 150px;
 }

@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+    <title>Untitled</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+    </style>
+</head>
+<body>
+
+<div style="color:blue;">Элемент 1</div>
+<span style="color:red;">Элемент 2</span>
+<div style="color:green;">Элемент 3</div>
+
+<a href="#" onclick="span_search();return false;">Найди span и выдели bold...</a>
+
+<script>
+    function span_search() {
+        var el_body = document.body;
+        for (var i = 0; i < el_body.childNodes.length; i++) {
+            if (el_body.childNodes[i].nodeName === 'SPAN') {
+                el_body.childNodes[i].style.fontWeight = 'bold';
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+        function func_table() {
+            var arr_span = document.getElementById('tovar').getElementsByTagName('span');
+            var arr_inner = new Array();
+            for (var i = 0; i < arr_span.length; i++) {
+                arr_inner[i] = arr_span[i].innerHTML;
+            }
+            var el_tbody = document.getElementById('tbody');
+            for (var j = 0; j < arr_inner.length; j++) {
+                var el_tr = document.createElement('tr');
+                var el_td = '<td>' + arr_inner[j] + '</td>';
+                el_tr.innerHTML = el_td;
+                el_tbody.appendChild(el_tr)
+            }
+        }
+
+
+    </script>
+
+    <style>
+        td {
+            background-color: whitesmoke;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="tovar">
+    <span>Компьютеры</span>
+    <span>Принтеры</span>
+    <span>Аудио-видео</span>
+</div>
+
+<a href="#" onclick="func_table();return false;">func_table</a>
+
+<table>
+    <tbody>
+    <tr>
+        <td style="text-align:center;font-weight:bold;background-color:silver;">ТОВАР</td>
+    </tr>
+    </tbody>
+    <tbody id="tbody">
+    </tbody>
+</table>
+
+<script>
+
+</script>
+
+</body>
+
+</html>

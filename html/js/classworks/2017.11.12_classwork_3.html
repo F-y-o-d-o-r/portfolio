@@ -1,0 +1,39 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+        function func_reverse() {
+        }
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+<div style="width:100px;height:100px;background-color:blue;"></div>
+<div style="width:200px;height:200px;background-color:green;"></div>
+<div style="width:300px;height:300px;background-color:red;"></div>
+
+<a href="#" onclick="func_reverse();return false;">func_reverse</a>
+
+<script>
+    function func_reverse() {
+        var arr_div = document.body.getElementsByTagName('div');
+        var arrStyle = new Array;
+        for (var i = 0; i < arr_div.length; i++) {
+            arrStyle[i] = arr_div[i].getAttribute('style');
+        }
+        arrStyle.reverse();
+        for (var i = 0; i < arrStyle.length; i++) {
+            arr_div[i].setAttribute('style', arrStyle[i]);
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

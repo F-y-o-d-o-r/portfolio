@@ -1,0 +1,43 @@
+﻿body {
+    background-color: #b4b4b4;
+}
+
+.ball {
+    background-color: #3a6193;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+.border {
+    border: 2px solid #3a6193;
+    height: 100px;
+    width: 700px;
+    margin: 20px auto;
+    padding: 0;
+    background-color: #ededed;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+section {
+    width: 100%;
+}
+
+.loading {
+    line-height: 100px;
+    left:270px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #658823;
+    position: absolute;
+}
+
+.loader {
+    height: 100px;
+    width: 50px;
+    background-color: rgba(255, 162, 0, 0.38);
+    transform: skewX(-15deg);
+    position: absolute;
+    left: -90px;
+}

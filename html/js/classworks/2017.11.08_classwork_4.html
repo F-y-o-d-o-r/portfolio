@@ -1,0 +1,37 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#link").click(function () {
+                $("#sp1").fadeOut(2000);
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+<span id="sp1">Я исчезающий абзац</span>
+<br><a href="#" id="link">jq</a>
+<br><a href="#" onclick="int = setInterval('funcInt()', 100)">js-Interval</a>
+<script>
+    //медленное пропадание элемента по нажатию на ссылку
+    var int;
+    var j = 1;
+    function funcInt() {
+        if (j > 0.5) {
+            sp1.style.opacity = j;
+            j -= 0.1;
+        } else {
+            clearInterval(int);
+            sp1.style.visibility = 'hidden';
+        }
+    }
+</script>
+</body>
+</html>

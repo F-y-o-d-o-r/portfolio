@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+    <title>Untitled</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+    </style>
+</head>
+<body>
+
+Найди red-Элемент и увеличь size...
+<div style="color:blue;" onclick="elem_red(this);">Элемент 1</div>
+<span style="color:red;" onclick="elem_red(this);">Элемент 2</span>
+<div style="color:green;" onclick="elem_red(this);">Элемент 3</div>
+
+
+<script>
+    function elem_red(el) {
+        if (el.getAttribute('style').indexOf('red') != -1) {
+            //el.setAttribute('style', 'font-size:25px');
+            el.style.fontSize = '25px';
+            el.setAttribute('onclick', 'this.style.backgroundColor = "yellow"');
+            el.click()
+        }
+    }
+    function yell(el) {
+        //el.style.backgroundColor = 'yellow';
+        //el.setAttribute('onmouseover', 'this.style.backgroundColor = "yellow"')
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+    <style>
+
+    </style>
+    <script>
+        var arr = new Array("pear.jpg", "strawberry.jpg", "raspberry.jpg", "cherry.jpg");
+        var i = 0;
+        function nextImage(elem) {
+            i++;
+            if (i == arr.length) {
+                //i = 0;
+                clearInterval(int)
+            } else document.images[elem].src = arr[i];//или просто if (i == arr.length - 1)
+        }
+        var int = setInterval('nextImage("imm")', 1500)
+    </script>
+</head>
+
+<body>
+
+<img src="pear.jpg" alt="" name="imm"/>
+
+<script>
+
+</script>
+
+</body>
+
+</html>

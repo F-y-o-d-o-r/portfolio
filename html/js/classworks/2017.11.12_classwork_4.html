@@ -1,0 +1,69 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+        function func_color() {
+        }
+    </script>
+
+    <style>
+        .class1 {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            position: relative;
+        }
+
+        .class2 {
+            width: 100px;
+            height: 100px;
+            background-color: whitesmoke;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="class1">
+    <span>AAA</span>
+    <div class="class2">
+        <span>BBB<a href="#">CCC</a>DDD</span>
+    </div>
+</div>
+
+<a href="#" onclick="func_color();return false;">func_color</a>
+
+<script>
+    //get  elements method
+    /*function func_color() {
+        var class2 = document.body.getElementsByClassName('class2');
+        for (var i = 0; i < class2.length; i++) {
+            var tag = class2[i].getElementsByTagName('*');
+            for (var j = 0; j < tag.length; j++) {
+                if (tag[j].nodeName === "SPAN") {
+                    tag[j].style.backgroundColor = 'silver';
+                } else if (tag[j].nodeName === "A") {
+                    tag[j].style.backgroundColor = 'red';
+                }
+            }
+        }
+    }*/
+    //child method
+    function func_color() {
+        var class2 = document.body.getElementsByClassName('class2');
+        for (var i = 0; i < class2.length; i++) {
+            for (var j = 0; j < class2[i].childNodes.length; j++) {
+                if (class2[i].childNodes[j].nodeName == 'SPAN'){
+                    class2[i].childNodes[j].style.backgroundColor = 'silver';
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

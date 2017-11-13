@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17.11.08_homework_2</title>
+    <link rel="stylesheet" href="17.11.08_homework_2.css">
+</head>
+<body>
+
+<a href="#" id="link" onclick="funcChild(); return false;">See children</a> <!--сколько детей-->
+<br><br>
+<a href="#" id="link1" onclick="funcInsert()">1. Вставить перед ссылкой текст</a><br>
+<a href="#" id="link2" onclick="funcInsert2()">2. Вставить после ссылки текст</a><br><br>
+<a href="#" id="link3" onclick="funcInsert3()">3. Вставить картинку в ссылку (после)</a><br>
+<a href="#" id="link4" onclick="funcInsert4()">4. Вставить картинку в ссылку (до)</a><br><br>
+<a href="#" id="link5" onclick="funcInsert5()">5. Изменение текста в ссылке 1</a><br><br>
+<a href="#" id="link6" onclick="funcInsert6()">6. Удаление добавленного в ссылке 4 в.1 (удаляем только nodeType !== 3)</a><br>
+<a href="#" id="link7" onclick="funcInsert7()">7. Удаление добавленного в ссылке 4 в.2 (удаляем только textContent !== 'See children')</a><br>
+<a href="#" id="link8" onclick="funcInsert8()">8. Удаление добавленного в ссылке 4 в.3 (копируем то что было до изменения и потом вставляем)</a><br>
+<a href="#" id="link8" onclick="func_dell_all()"><b>9. Удаление добавленного в ссылке 4 в.4 (универсальный)</b></a><br>
+<a href="#" id="link8" onclick="func_dell_all_2()"><b>9. Удаление добавленного в ссылке 4 в.5 (переделаный на push)</b></a><br>
+
+<br>
+<ul id="list">
+    <li>one</li>
+    <li>two</li>
+</ul>
+
+<script src="17.11.08_homework_2.js"></script>
+</body>
+</html>

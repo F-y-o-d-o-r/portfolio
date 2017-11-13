@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="texthtml; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script>
+var int=setInterval("func_int();", 1000);
+function func_int() {
+var d=new Date();
+if(d.getSeconds()%2) {          //!!!3.
+div2_null.style.color="red";
+}
+else {
+div2_null.style.color="blue";
+}
+}
+function func_tim() {
+clearInterval(int);
+div2_null.innerHTML="One moment...";
+setTimeout("div1_null.style.display='none'", 1000);;
+}
+var i1=0;
+var arr1=new Array("pk.jpg", "pk1.jpg", "pk2.jpg");
+function menu_img(elem) {
+document.images["menu_image"].src=elem;
+}
+function nextImage1(elem) {
+i1++;
+if(i1==arr1.length) {i1=0;}
+document.images[elem].src=arr1[i1];
+}
+</script>
+<body>
+<div id="container">
+
+<div id="div1_null"><div id="div2_null" onclick="func_tim();">Click me</div></div>
+
+<div id="left"  style="padding:10px;">
+
+<div style="display:table-row;" onmouseout="menu_img('nofoto.jpg');" onmouseover="menu_img('pk.jpg');">
+<div style="display:table-cell;width:200px;vertical-align:middle;cursor:pointer;">Компьютеры</div>
+<div style="display:table-cell;vertical-align:middle;cursor:pointer;"><img name="go_image_pk" src="go.png" style="width:30px;" alt="Рисунок-go" onclick="nextImage1('menu_image');"></div>
+</div>
+
+<div style="display:table-row;" onmouseout="menu_img('nofoto.jpg');" onmouseover="menu_img('pr.jpg');">
+<div style="display:table-cell;width:200px;vertical-align:middle;cursor:pointer;">Принтеры</div>
+<div style="display:table-cell;vertical-align:middle;cursor:pointer;"></div>
+</div>
+
+<div style="display:table-row;" onmouseout="menu_img('nofoto.jpg');" onmouseover="menu_img('se.jpg');">
+<div style="display:table-cell;width:200px;vertical-align:middle;cursor:pointer;">Сетевое оборудование</div>
+<div style="display:table-cell;vertical-align:middle;cursor:pointer;"></div>
+</div>
+
+</div>
+
+<div id="right">
+
+<div style="display:table-cell; text-align:center; vertical-align:middle;">
+<img name="menu_image" src="nofoto.jpg" alt="Рисунок">
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

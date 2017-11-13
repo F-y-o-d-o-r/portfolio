@@ -1,0 +1,162 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Шарик вокруг круга</title>
+    <style>
+        #elemTo1 {
+            position: absolute;
+            left: 100;
+            top: 100;
+            z-index: 1;
+            width: 200px;
+            height: 200px;
+        }
+
+        #elemTo2 {
+            position: absolute;
+            left: 100;
+            top: 100;
+            z-index: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        #elemTo3 {
+            position: absolute;
+            left: 100;
+            top: 100;
+            z-index: -1;
+            width: 200px;
+            height: 200px;
+        }
+
+        #im11 {
+            position: absolute;
+            left: 100;
+            top: 0;
+        }
+
+        #im12 {
+            position: absolute;
+            left: 100;
+            top: 100;
+        }
+
+        #im13 {
+            position: absolute;
+            left: 0;
+            top: 100;
+        }
+
+        #im14 {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #im21 {
+            position: absolute;
+            left: 100;
+            top: 0;
+        }
+
+        #im22 {
+            position: absolute;
+            left: 100;
+            top: 100;
+        }
+
+        #im23 {
+            position: absolute;
+            left: 0;
+            top: 100;
+        }
+
+        #im24 {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body style="margin:0px;">
+<span style="color:red; font-weight:bold;">Наведите на большой шар и подержите... Надоест - сведите...</span>
+<div id="osnova" style="position:relative;">
+    <div id="elemTo1" onmouseover="int=setInterval('moveElem()', delay);" onmouseout="clearInterval(int);">
+        <div id="im11"><img src="krug11.png" style="width:100px; height:100px;"></div>
+        <div id="im12"><img src="krug12.png" style="width:100px; height:100px;"></div>
+        <div id="im13"><img src="krug13.png" style="width:100px; height:100px;"></div>
+        <div id="im14"><img src="krug14.png" style="width:100px; height:100px;"></div>
+    </div>
+    <div id="elemTo2">
+        <div id="im21"><img src="krug21.png" style="width:100px; height:100px;"></div>
+        <div id="im22"><img src="krug22.png" style="width:100px; height:100px;"></div>
+        <div id="im23"><img src="krug23.png" style="width:100px; height:100px;"></div>
+        <div id="im24"><img src="krug24.png" style="width:100px; height:100px;"></div>
+    </div>
+    <div id="elemTo3">
+        <img src="krug3.png" style="width:200px; height:200px;">
+    </div>
+    <div id="elemToMove" style="position: absolute; left: 310; top: 192;">
+        <img src="sharik.png" style="width:20px; height:20px;">
+    </div>
+</div>
+
+<script type="text/javascript">
+    var int;
+    var R = 120,
+        a = 0,
+        da = 3 * Math.PI / 180,   //0.0174
+        delay = 30,
+        img1 = ["im12", "im13", "im14", "im11"],
+        img2 = ["im22", "im23", "im24", "im21"],
+        imgg = img1;
+    for (var i = 0; i < img1.length; i++) {
+        document.getElementById("" + img1[i]).style.opacity = 1.0;
+        document.getElementById("" + img2[i]).style.opacity = 1.0;
+    }
+    function moveElem() {
+        elemToMove.style.left = 190 + R * Math.cos(a) + "px";
+        elemToMove.style.top = 192 + R * Math.sin(a) + "px";
+        a += da;
+        if (a > 0 && a < 1.566) {
+            document.getElementById("" + imgg[0]).style.opacity -= a / 30;
+        }
+
+        else if (a > 1.566 && a < 3.132) {
+            document.getElementById("" + imgg[1]).style.opacity -= a / 90;
+        }
+        else if (a > 3.132 && a < 4.698) {
+            document.getElementById("" + imgg[2]).style.opacity -= a / 120;
+        }
+        else if (a > 4.698 && a < 6.264) {
+            document.getElementById("" + imgg[3]).style.opacity -= a / 150;
+        }
+        if (a > 1.566 && a < 3.132) {       //90*0.0174 - 1.566
+            document.getElementById("" + imgg[0]).style.opacity = 0.0;
+        }
+        else if (a > 3.132 && a < 4.698) {  //180*0.0174 - 3.132
+            document.getElementById("" + imgg[1]).style.opacity = 0.0;
+        }
+        else if (a > 4.698 && a < 6.264) {  //270*0.0174 - 4.698
+            document.getElementById("" + imgg[2]).style.opacity = 0.0;
+        }
+        else if (a > 6.264) {             //360*0.0174 - 6.264
+            document.getElementById("" + imgg[3]).style.opacity = 0.0;
+            a = 0;
+            if (imgg == img2) {
+                imgg = img1;
+                for (var i = 0; i < img1.length; i++) {
+                    document.getElementById("" + img1[i]).style.opacity = 1.0;
+                    document.getElementById("" + img2[i]).style.opacity = 1.0;
+                }
+            }
+            else {
+                imgg = img2;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

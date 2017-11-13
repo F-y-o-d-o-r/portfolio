@@ -1,0 +1,37 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+<span id="sp1" style="position:absolute;font-size:25px;font-weight:bold;color:red;" onmouseover="clearInterval(int);">Text</span>
+<script>
+    //20 degrees go div
+    var R = 0;
+    var a = 20 * Math.PI / 180;
+    var dR = 5;
+    var int = setInterval('func_span();', 50);
+    function func_span() {
+        sp1.style.left = R * Math.cos(a) + "px"; //движение под углом 20%
+        sp1.style.top = R * Math.sin(a) + "px";
+        R += dR;
+    }
+    //circle go div
+    var R = 80;
+    var a = 0;
+    var da = 3 * Math.PI / 180;
+    var int = setInterval('func_span();', 50);
+    function func_span() {
+        sp1.style.left = R * Math.cos(a) + 100 + "px";
+        sp1.style.top = R * Math.sin(a) + 100 + "px";
+        a += da;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+<head>
+    <!-- <script src="mine.js"></script>-->
+    <script>
+        //var arr=new Array("pear.jpg", "cherry.jpg", "raspberry.jpg", "strawberry.jpg");
+        var arr = new Array();
+        i = 0;
+        function nextImage(el) {
+            arr_img[i].style.opacity = '0.5';
+            i++;
+            if (i === arr.length) {
+                i = 0;
+            }
+            document.images[el].src = arr[i];
+            arr_img[i].style.opacity = '1';
+        }
+    </script>
+    <style>
+        #div_img {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .img1 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 1;
+        }
+
+        .img2 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            opacity: 0.5;
+        }
+
+        .img3 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            opacity: 0.5;
+        }
+
+        .img4 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+<img src="pear.jpg" alt name="imm" onclick="nextImage('imm');"/>
+
+<div id="div_img">
+    <img src="pear.jpg" alt class="img1"/>
+    <img src="cherry.jpg" alt class="img2"/>
+    <img src="raspberry.jpg" alt class="img3"/>
+    <img src="strawberry.jpg" alt class="img4"/>
+</div>
+
+<script>
+    var arr_img = document.getElementById('div_img').getElementsByTagName('img');
+    for (var j = 0; j < arr_img.length; j++) {
+        arr[j] = arr_img[j].getAttribute('src');
+    }
+
+</script>
+</body>
+</html>

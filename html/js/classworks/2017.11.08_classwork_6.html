@@ -1,0 +1,106 @@
+﻿<html>
+
+<head>
+    <title>Untitled</title>
+
+    <!-- <script src="script.js"></script> -->   <!-- ... -->
+    <script>
+
+    </script>
+
+    <style>
+
+    </style>
+</head>
+
+<body id="body">
+
+<a href="#" id="link" onclick="funcChild(); return false;">See children</a> <!--сколько детей-->
+<br><br>
+<a href="#" id="link1" onclick="funcInsert()">1. Вставить перед ссылкой текст</a><br>
+<a href="#" id="link2" onclick="funcInsert2()">2. Вставить после ссылки текст</a><br>
+<a href="#" id="link3" onclick="funcInsert3()">3. Вставить картинку в ссылку (после)</a><br>
+<a href="#" id="link4" onclick="funcInsert4()">4. Вставить картинку в ссылку (до)</a><br>
+<a href="#" id="link5" onclick="funcInsert5()">5. Изменение текста в ссылке 1</a><br>
+<a href="#" id="link6" onclick="funcInsert6()">6. Удаление добавленного в ссылке 4 (не до конца сделано, в дз
+    доделать)</a><br>
+
+<br>
+<ul id="list">
+    <li>one</li>
+    <li>two</li>
+</ul>
+
+<script>
+    var el = document.getElementById('list');
+    function funcChild() {
+        for (var i = 0; i < el.childNodes.length; i++) {
+            alert(el.childNodes[i].nodeName + el.childNodes[i].textContent)
+        }
+    }
+    function funcInsert() {
+        var bod = document.getElementById('body');
+        var el_insert = document.getElementById('link');
+        var span = document.createElement('span');
+        span.innerText = 'span one';
+        span.setAttribute('style', 'color:red; font-weight:bold');
+        span.setAttribute('id', 'span1');
+        body.insertBefore(span, el_insert)
+    }
+
+    function funcInsert2() {
+        var bod = document.getElementById('body');
+        var el_insert = document.getElementById('link');
+        var span = document.createElement('span');
+        span.innerText = 'span two';
+        span.setAttribute('style', 'color:green; font-weight:bold');
+        span.setAttribute('id', 'span2');
+        body.insertBefore(span, el_insert.nextSibling)
+    }
+    function funcInsert3() {
+        var bod = document.getElementById('body');
+        var el_insert = document.getElementById('link');
+        var span = document.createElement('img');
+        span.setAttribute('id', 'img1');
+        span.setAttribute('height', '100px');
+        span.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Blue_Tiger_Im_IMG_9450.jpg');
+        el_insert.appendChild(span);
+    }
+    var i = 2;
+    function funcInsert4() {
+        var bod = document.getElementById('body');
+        var el_insert = document.getElementById('link');
+        var span = document.createElement('img');
+        span.setAttribute('id', 'img' + i);
+        span.setAttribute('height', '70px');
+        span.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Blue_Tiger_Im_IMG_9450.jpg');
+        el_insert.insertBefore(span, el_insert.firstChild);//childNodes[0]
+        i++;
+    }
+    function funcInsert5() {
+        if (document.getElementById('span1')) {
+            span1.innerText = 'new text'
+        } else {
+            funcInsert();
+            funcInsert5();
+        }
+    }
+    // «неправильный» подход – ВСЕГДА БУДУТ ОСТАВАТЬСЯ узлы (за счет «ПЕРЕМЕЩЕНИЯ» ОСТАВШИХСЯ ЭЛЕМЕНТОВ «ВВЕРХ»)
+    /*function funcInsert6() {
+     var el_parent = document.getElementById('link');
+     for (var i = 0; i < el_parent.childNodes.length; i++) {//можно поставить i = 1 и решит проблему
+     el_parent.removeChild(el_parent.childNodes[i])
+     }
+     }*/
+    function funcInsert6() {
+        var el_parent = document.getElementById('link');
+        while (el_parent.childNodes.length) { //-1 оставит ссылку
+            el_parent.removeChild(el_parent.childNodes[0])
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

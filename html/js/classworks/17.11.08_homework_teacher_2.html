@@ -1,0 +1,58 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <style>
+    </style>
+    <script>
+        var j = 1;
+        function func_insert3() {
+            var el_a = document.getElementById("link");
+            var el_new = document.createElement('img');
+            el_new.setAttribute("id", "img1" + j);
+            j++;
+            el_new.setAttribute("src", "raspberry.jpg");
+            el_new.setAttribute("alt", "");
+            el_a.appendChild(el_new);
+        }
+        var i = 1;
+        function func_insert4() {
+            var el_a = document.getElementById("link");
+            var el_new = document.createElement('img');
+            el_new.setAttribute("id", "img2" + i);
+            i++;
+            el_new.setAttribute("src", "cherry.jpg");
+            el_new.setAttribute("alt", "");
+            el_a.insertBefore(el_new, el_a.firstChild);   //el_a.childNodes[0]
+        }
+        function func_dell_all() {
+            var el_a = document.getElementById("link");
+            var arr_img = new Array();
+            var arr_img_count = 0;
+            for (var i = 0; i < el_a.childNodes.length; i++) {
+                if (el_a.childNodes[i].nodeName == "IMG") {
+                    arr_img[arr_img_count] = el_a.childNodes[i];
+                    arr_img_count++;
+                }
+            }
+            for (var i = 0; i < arr_img.length; i++) {
+                el_a.removeChild(arr_img[i]);
+            }
+        }
+    </script>
+</head>
+
+<body>
+<a href="#" id="link">Link</a>
+<br><a href="#" onclick="func_insert3();return false;">Insert3 - appendChild</a>
+<br><a href="#" onclick="func_insert4();return false;">Insert4 - insertBefore</a>
+<br><a href="#" onclick="func_dell_all();return false;">Dell_all</a>
+
+<script>
+
+</script>
+
+</body>
+
+</html>

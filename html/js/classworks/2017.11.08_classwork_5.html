@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+    <title>Untitled</title>
+    <style>
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+<div id="div0">&nbsp;</div>
+<a href="#" onclick="div0.innerHTML='<span id=\'sp1\'>Text</span>'; return false;">create span to div0</a>
+
+<script>
+    var int = setInterval('funcDiv()', 100);
+    function funcDiv() {
+        if(document.getElementById('div0')) {//проверка есть ли элемент на странице
+            div0.style.color = 'red';
+            clearInterval(int);
+        }
+    }
+</script>
+</body>
+</html>
