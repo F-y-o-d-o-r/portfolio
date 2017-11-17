@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+td {background-color:whitesmoke; border:1px solid blue;}
+</style>
+</head>
+<body>
+
+<div id="tovar" style="display:block;">
+  <span>Компьютеры</span>
+  <span>Принтеры</span>
+  <span>Аудио-видео</span>
+</div>
+
+<div id="vid" style="display:block;">
+  <img src="pk.jpg"><img src="pr.jpg"><img src="vi.jpg">
+</div>
+
+<div id="cena" style="display:block;">
+  <span>4000</span>
+  <span>2000</span>
+  <span>3000</span>
+</div>
+
+<table>
+<tbody>
+<tr>
+<td style="background-color:silver; font-weight:bold; text-align:center;">ВИД</td>
+<td style="background-color:silver; font-weight:bold; text-align:center;">ТОВАР</td>
+<td style="background-color:silver; font-weight:bold; text-align:center;">ЦЕНА</td>
+</tr>
+</tbody>
+<tbody id="tbody">
+</tbody>
+</table>
+
+<script>
+// МАССИВ «ТОВАР» - innerHTML
+var r_tovar=document.getElementById('tovar');
+var r_tovar_span=r_tovar.getElementsByTagName('span');
+var mass_span=new Array();
+for(var i=0; i<r_tovar_span.length; i++) {
+    mass_span[i]=r_tovar_span[i].innerHTML;
+}
+
+// МАССИВ «ВИД» - src
+var r_vid=document.getElementById('vid');
+var r_vid_img=r_vid.getElementsByTagName('img');
+var mass_img=new Array();
+for(var i=0; i<r_vid_img.length; i++) {
+    mass_img[i]=r_vid_img[i].getAttribute('src');
+}
+
+// МАССИВ «ЦЕНА» - innerHTML
+var r_cena=document.getElementById('cena');
+var r_cena_span=r_cena.getElementsByTagName('span');
+var mass_span_=new Array();
+for(var i=0; i<r_cena_span.length; i++) {
+    mass_span_[i]=r_cena_span[i].innerHTML;
+}
+
+var r_tbody=document.getElementById('tbody');
+// УДАЛЕНИИ СТРОК ТАБЛИЦЫ (ПРИ НЕОБХОДИМОСТИ)
+while(r_tbody.childNodes.length) {
+    r_tbody.removeChild(r_tbody.childNodes[0]);
+}
+
+// ФОРМИРОВАНИЕ НОВЫХ СТРОК (createElement('tr') + innerHTML В НЕЕ СТРОКИ, ОПИСЫВАЮЩЕЙ НОВОЕ СОДЕРЖИМОЕ) И ДОБАВКА ИХ В ТАБЛИЦУ
+var mass_tr=new Array();
+var mass_trr=new Array();
+for(var i=0; i<r_vid_img.length; i++) {
+    mass_tr[i]=document.createElement('tr');
+    mass_trr[i]='<td>'+mass_span[i]+'</td><td><img src="'+mass_img[i]+'"></td><td>'+mass_span_[i]+'</td>'
+    mass_tr[i].innerHTML=mass_trr[i];
+    r_tbody.appendChild(mass_tr[i]);
+}
+</script>
+
+</body>
+</html>

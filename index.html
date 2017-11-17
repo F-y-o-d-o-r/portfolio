@@ -2,800 +2,841 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hi there!</title>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-102662546-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script async src="js/index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hi there!</title>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-102662546-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script async src="js/index.js"></script>
 </head>
 
 <body>
 <div>
-    <div class="wraper">
-        <header>
-            <img class="logo" src="img/js/pf_key_white.png" alt="logo">
-            <nav>
-                <ul>
-                    <li><a href="#About" onclick="about()">About</a></li>
-                    <li><a href="#Portfolio" onclick="portfolio()">Portfolio</a></li>
-                    <li><a href="#Contacts" onclick="contacts()">Contacts</a></li>
-                    <li onclick="menu()"><a href="#Menu"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="out_here">
-            <section class="about" style="opacity: 0;">
-                <p>Привет! Меня зовут Фёдор. <br>Я изучаю веб разработку в школе ШАГ.<br>На этом сайте я выкладываю свои
-                    учебные
-                    материалы и практику.<br>Также тут можно увидеть моё портфолио. <br>Буду рад любым отзывам.</p>
-            </section>
-            <section class="portfolio" style="opacity: 0;">
-                <div class="portfolio_inside">
-                    <a href="img/PS-end-2.png" class="portf_photoshop1"><img src="img/portfolio_psh1.jpg" alt=""
-                                                                             height="200px"></a>
-                </div>
-            </section>
-            <section class="contacts" style="opacity: 0;">
-                <p>Мне можно написать в скайп: <a href="skype:F-y-o-d-o-r"><i class="fa fa-skype"
-                                                                              aria-hidden="true"></i></a><br>Мне можно
-                    написать на почту:
-                    <a href="mailto:fyodor.work@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a><br>
-                    Мне можно написать в Viber: <a href="viber://chat?number=%2B380997962215"><img src="img/viber.png"
-                                                                                                   height="15px" alt=""></a><br>Я
-                    на
-                    GitHub:
-                    <a href="https://github.com/F-y-o-d-o-r"><i class="fa fa-github" aria-hidden="true"></i></a></p>
-            </section>
-            <section class="menu" style="opacity: 0;">
-                <!--<a target="_blank" href="#" class="n_page">На новой странице</a>-->
-                <a href="#bottom" id="to_bottom">down</a>
-                <table cellspacing="0px" cellpadding="10px">
-                    <tr>
-                        <td colspan="3" style="text-align: center; background-color: rgba(160,160,160,0.93);"><h3>HTMl &
-                            CSS</h3></td>
-                    </tr>
-                    <tr style="background-color: rgba(127,127,127,0.93);">
-                        <td><b>Date</b></td>
-                        <td><b>Lessons</b></td>
-                        <td><b>Homework</b></td>
-                    </tr>
-                    <tr>
-                        <td>17.03.12</td>
-                        <td><a class="dlink" href="/doc/DZ_XHTML_registratsiya_akkaunta.Pervyy_sayt.docx"
-                               target="_blank">Регистрация аккаунта на бесплатном виртуальном хостинге (doc)</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>17.03.19</td>
-                        <td></td>
-                        <td><a href="html/tags.html">Tags training page</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.03.24</td>
-                        <td><a class="dlink" href="/doc/Kompoziciya_na_osnove_tablic.docx" title="kompoziciya"
-                               target="_blank">Композиция на основе таблиц + ссылки (doc)</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>17.03.26</td>
-                        <td><a href="html/table-lesson260317.html">Lesson - html (
-                            <it>17.03.26</it>
-                            )</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>17.03.26</td>
-                        <td><a href="html/table.html" title="Табличная вёрстка">Таблична вёрстка (26.03.17,
-                            24.04.17)</a>
-                        <td><a href="html/table.html" title="Табличная вёрстка">Таблична вёрстка (26.03.17,
-                            24.04.17)</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.04.09</td>
-                        <td><a href="html/lesson_17.04.09.html" title="Forms">Lesson - Forms (17.04.09)</a><br><a
-                                href="/doc/FORMY_v_HTML_1491728490.pptx" title="Formi v html" class="dlink">Формы в
-                            HTML (doc)</a></td>
-                        <td>
-                            <ol>
-                                <li><a href="html/homework_17.04.09.html" title="Forms">Домашняя работа - формы
-                                    (17.04.09)</a></li>
-                                <br>
-                                <li><a href="html/homework-with_table_17.04.09.html" title="Forms">Домашняя работа -
-                                    формы в табличной вёрстке (17.04.09)</a></li>
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.04.23</td>
-                        <td><a class="dlink" href="/doc/vvedenie_css_1492938117.ppt" title="Vvedenie v CSS">Введение в
-                            CSS (ppt)</a></td>
-                        <td><a href="html/css1_17.04.23.html" title="css1">Домашняя работа - первый урок по CSS
-                            (17.04.23)</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.04.30</td>
-                        <td><a href="html/classwork_17.04.30_css2_text.html" title="CSS">Lesson - CSS 2 - text
-                            (17.04.30)</a><br><a class="dlink" href="/doc/CSS_svoystva_texta.pptx">CSS свойства
-                            текста (doc)</a></td>
-                        <td><a href="html/css.homework.2_17.04.30.html" title="css1">Домашняя работа - второй урок по
-                            CSS (17.04.30)</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.05.07</td>
-                        <td><a href="html/classwork_17.05.07.html" title="CSS">Lesson - CSS 3 - Списки
-                            (17.05.07)</a><br><a class="dlink"
-                                                 href="/doc/Spiski_blokovaya_model_margin_padding_1494147380.pptx">Списки,
-                            блоковая модель, марджинг, падинг (doc)</a><br><a class="dlink"
-                                                                              href="/doc/Cvetnye_ugolki_1494147468.doc"
-                                                                              title="Cvetnie ugolki">Цветные углки
-                            (doc)</a></td>
-                        <td>
-                            <ol>
-                                <li><a href="html/17.05.07_homework_1.html" title="css3-1">Домашняя работа - третий урок
-                                    по CSS (17.05.07) - задание №1 (квадраты)</a></li>
-                                <li><a href="html/17.05.07_homework_2.html" title="css3-2">Домашняя работа - третий урок
-                                    по CSS (17.05.07) - задание №2 (уголки)</a></li>
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.05.14</td>
-                        <td><a href="html/17.05.14_Classwork_blocks.html" title="vkladki">Блоки меню</a><br><a
-                                class="dlink" href="/doc/bloki_menu.ppt" title="Bloki menu (vkladki)">Блоки меню
-                            (вкладки) (doc)</a><br><a class="dlink" href="/doc/Verstka_PSD_maketa.doc"
-                                                      title="Verstka PSD maketa">Вёрстка PSD макета (doc)</a></td>
-                        <td><a href="html/17.05.07_homework_2.html" title="css3-2">Домашняя работа - первая верстка по
-                            образцу (17.05.14) - задание №2</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.05.21</td>
-                        <td></td>
-                        <td><a href="http://korporateblue.popov.zzz.com.ua/" title="Korporate Blue">Домашняя работа -
-                            Korporate Blue</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.05.28</td>
-                        <td>
-                            <ol>
-                                <li><a href="html/classwork_17.05.28.html" title="position">Lesson - Позиционирование
-                                    (17.05.28)</a></li>
-                                <li><a href="html/classwork_17.05.28-2.html" title="position">Lesson - Позиционирование
-                                    2 (17.05.28)</a></li>
-                                <li><a href="html/experiment_2.html" title="menu">Эксперимент - кнопки меню</a></li>
-                            </ol>
-                            <a class="dlink" href="doc/Position.pptx">Размещение элементов, позиционирование (doc)</a>
-                        </td>
-                        <td>
-                            <ol>
-                                <li><a href="html/index_team.html" title="teamwork">Домашняя работа - верстка по образцу
-                                    в команде(17.05.21-28)</a></li>
-                                <li><a href="html/index_team_button.html" title="button">Домашняя работа - кнопка
-                                    (17.05.28)</a></li>
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.06.11</td>
-                        <td><a href="html/17.06.11.html" title="modal 1">Модальное окно</a><br><a class="dlink"
-                                                                                                  href="doc/Modal1.docx">Модальное
-                            окно</a></td>
-                        <td>
-                            <a href="html/17.06.11_homework.html" title="modal_window">Домашняя работа - модальные окна
-                                (17.06.11)</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.06.17</td>
-                        <td><a href="html/17.06.17_classwork.html" title="modal 2">Модальное окно 2</a><br><a
-                                class="dlink" href="doc/Vidbvognoe_modalnoe_okno.doc">Выдвижное модальное окно (doc)</a><br><a
-                                class="dlink" href="doc/CSS.Gradient,podklychenieShriftov,inlineBlock....pptx">Шрифты и
-                            их подключение, цвета, Градиентб инлайн блок, размещение (позиционирование). модель бокса,
-                            фон, границы (doc)</a><br>
-                            <a class="dlink" href="doc/Oznakomlenie.zip">Дkя ознакомления</a><br><a class="dlink"
-                                                                                                    href="doc/Modal_noe_okno_3_1497694743.doc"
-                                                                                                    title="modal 3">Модальное
-                                окно 3 - начать выполнять</a></td>
-                        <td>
-                            <ol>
-                                <li><a href="html/17.06.17.html" title="modal_window2">Домашняя работа - модальные окна
-                                    2 (17.06.17)</a></li>
-                                <li><a href="html/17.06.17-2.html" title="modal_window3">Домашняя работа - модальные
-                                    окна 3 - доделаем позже (17.06.17)</a></li>
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.06.24</td>
-                        <td><a href="html/17.06.24.html" title="slider_type1">Классический слайдер</a><br><a
-                                class="dlink" href="doc/Slider.doc" title="Slider">Слайдер (doc)</a><br><a class="dlink"
-                                                                                                           href="doc/Blochnaya%20verstka.doc">Блочная
-                            вёрстка - заключительная работа</a><br>
-                            <a href="doc/Blochnaya%20verstka.zip" class="dlink" title="obrazci">Образец заключительной
-                                блочной вёрстки</a>
-                        </td>
-                        <td>
-                            <ol>
-                                <li><a href="html/17.06.24_homework_slider.html#enter" title="block_finale">Внедрение
-                                    слайдера</a></li>
-                                <li><a href="html/17.06.24_2weeks_homework.html" title="block_finale">Заключительная
-                                    работа по блочной вёрстке (2 недели)</a></li>
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.07.01</td>
-                        <td>
-                            <ol>
-                                <li><a href="html/17.07.01.html">Адаптивная верстка</a></li>
-                                <li><a href="html/adap_index.html">Адаптивная верстка</a></li>
-                                <li><a href="html/accordeon.html">Аккордеон меню</a></li>
-                                <li><a href="html/Slider2min.html">Слайдер с миниатюрами</a></li>
-                            </ol>
-                            <a href="doc/simple-css3-transitions.zip" class="dlink">Примеры CSS Transition (doc)</a><br><a
-                                href="doc/Accordion.docx" class="dlink">Аккордеон меню (doc)</a><br>
-                            <a href="doc/Adaptive.doc" class="dlink">Адоптивная верстка (doc)</a><br>
-                        </td>
-                        <td><a href="html/17.06.24_homework_slider2.html">Аккордеон меню</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.07.08</td>
-                        <td><a href="html/17.07.08.class1.html">Flexbox меню</a><br>
-                            <a href="doc/flexbox.doc" class="dlink">Flexbox (doc)</a><br>
-                            <a href="doc/FlexBox_menu.doc" class="dlink">Flexbox меню выпадающее (doc)</a>
-                            <br>
-                            <a href="doc/FlexBox1.pdf" class="dlink">Flexbox (pdf)</a><br>
-                            <a href="doc/FLEXBOX2.ppt" class="dlink">Flexbox (ppt)</a><br>
-                            <a href="doc/Shpargalka flexbox.pdf" class="dlink">Flexbox шпаргалка (pdf)</a><br>-------------
-                            <br>
-                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6"
-                               class="dlink" target="_blank">A Complete Guide to Flexbox (link)</a><br>
-                            <a href="http://html5.by/blog/flexbox/" class="dlink" target="_blank">Что такое Flexbox?
-                                Описание всех css свойств, основные принципы, преимущества и недостатки. (link)</a><br>
-                            <a class="dlink" href="https://pepelsbey.net/pres/flexbox-gotcha/" target="_blank">Flexbox,
-                                теперь понятно (Opera) (link)</a><br>
-                            <a href="https://autoprefixer.github.io/ru/" class="dlink" target="_blank">Автопрефиксер CSS
-                                онлайн (link)</a><br>
-                            <a href="http://www.xanthir.com/blog/b4580" class="dlink" target="_blank">Why Flexboxes
-                                Aren't Good for Page Layout (link)</a><br><a href="img/flex-help.jpg" class="dlink">Flex-box
-                                help JPG (link)</a><br><a href="http://callmenick.com/post/flexbox-examples"
-                                                          class="dlink">Building
-                                With Flexbox (to read) (link)</a>
+  <div class="wraper">
+    <header>
+      <img class="logo" src="img/js/pf_key_white.png" alt="logo">
+      <nav>
+        <ul>
+          <li><a href="#About" onclick="about()">About</a></li>
+          <li><a href="#Portfolio" onclick="portfolio()">Portfolio</a></li>
+          <li><a href="#Contacts" onclick="contacts()">Contacts</a></li>
+          <li onclick="menu()"><a href="#Menu"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="out_here">
+      <section class="about" style="opacity: 0;">
+        <p>Привет! Меня зовут Фёдор. <br>Я изучаю веб разработку в школе ШАГ.<br>На этом сайте я выкладываю свои
+          учебные
+          материалы и практику.<br>Также тут можно увидеть моё портфолио. <br>Буду рад любым отзывам.</p>
+      </section>
+      <section class="portfolio" style="opacity: 0;">
+        <div class="portfolio_inside">
+          <a href="img/PS-end-2.png" class="portf_photoshop1"><img src="img/portfolio_psh1.jpg" alt=""
+                                                                   height="200px"></a>
+        </div>
+      </section>
+      <section class="contacts" style="opacity: 0;">
+        <p>Мне можно написать в скайп: <a href="skype:F-y-o-d-o-r"><i class="fa fa-skype"
+                                                                      aria-hidden="true"></i></a><br>Мне можно
+          написать на почту:
+          <a href="mailto:fyodor.work@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a><br>
+          Мне можно написать в Viber: <a href="viber://chat?number=%2B380997962215"><img src="img/viber.png"
+                                                                                         height="15px" alt=""></a><br>Я
+          на
+          GitHub:
+          <a href="https://github.com/F-y-o-d-o-r"><i class="fa fa-github" aria-hidden="true"></i></a></p>
+      </section>
+      <section class="menu" style="opacity: 0;">
+        <!--<a target="_blank" href="#" class="n_page">На новой странице</a>-->
+        <a href="#bottom" id="to_bottom">down</a>
+        <table cellspacing="0px" cellpadding="10px">
+          <tr>
+            <td colspan="3" style="text-align: center; background-color: rgba(160,160,160,0.93);"><h3>HTMl &
+              CSS</h3></td>
+          </tr>
+          <tr style="background-color: rgba(127,127,127,0.93);">
+            <td><b>Date</b></td>
+            <td><b>Lessons</b></td>
+            <td><b>Homework</b></td>
+          </tr>
+          <tr>
+            <td>17.03.12</td>
+            <td><a class="dlink" href="/doc/DZ_XHTML_registratsiya_akkaunta.Pervyy_sayt.docx"
+                   target="_blank">Регистрация аккаунта на бесплатном виртуальном хостинге (doc)</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>17.03.19</td>
+            <td></td>
+            <td><a href="html/tags.html">Tags training page</a></td>
+          </tr>
+          <tr>
+            <td>17.03.24</td>
+            <td><a class="dlink" href="/doc/Kompoziciya_na_osnove_tablic.docx" title="kompoziciya"
+                   target="_blank">Композиция на основе таблиц + ссылки (doc)</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>17.03.26</td>
+            <td><a href="html/table-lesson260317.html">Lesson - html (
+              <it>17.03.26</it>
+              )</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>17.03.26</td>
+            <td><a href="html/table.html" title="Табличная вёрстка">Таблична вёрстка (26.03.17,
+              24.04.17)</a>
+            <td><a href="html/table.html" title="Табличная вёрстка">Таблична вёрстка (26.03.17,
+              24.04.17)</a></td>
+          </tr>
+          <tr>
+            <td>17.04.09</td>
+            <td><a href="html/lesson_17.04.09.html" title="Forms">Lesson - Forms (17.04.09)</a><br><a
+                href="/doc/FORMY_v_HTML_1491728490.pptx" title="Formi v html" class="dlink">Формы в
+              HTML (doc)</a></td>
+            <td>
+              <ol>
+                <li><a href="html/homework_17.04.09.html" title="Forms">Домашняя работа - формы
+                  (17.04.09)</a></li>
+                <br>
+                <li><a href="html/homework-with_table_17.04.09.html" title="Forms">Домашняя работа -
+                  формы в табличной вёрстке (17.04.09)</a></li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>17.04.23</td>
+            <td><a class="dlink" href="/doc/vvedenie_css_1492938117.ppt" title="Vvedenie v CSS">Введение в
+              CSS (ppt)</a></td>
+            <td><a href="html/css1_17.04.23.html" title="css1">Домашняя работа - первый урок по CSS
+              (17.04.23)</a></td>
+          </tr>
+          <tr>
+            <td>17.04.30</td>
+            <td><a href="html/classwork_17.04.30_css2_text.html" title="CSS">Lesson - CSS 2 - text
+              (17.04.30)</a><br><a class="dlink" href="/doc/CSS_svoystva_texta.pptx">CSS свойства
+              текста (doc)</a></td>
+            <td><a href="html/css.homework.2_17.04.30.html" title="css1">Домашняя работа - второй урок по
+              CSS (17.04.30)</a></td>
+          </tr>
+          <tr>
+            <td>17.05.07</td>
+            <td><a href="html/classwork_17.05.07.html" title="CSS">Lesson - CSS 3 - Списки
+              (17.05.07)</a><br><a class="dlink"
+                                   href="/doc/Spiski_blokovaya_model_margin_padding_1494147380.pptx">Списки,
+              блоковая модель, марджинг, падинг (doc)</a><br><a class="dlink"
+                                                                href="/doc/Cvetnye_ugolki_1494147468.doc"
+                                                                title="Cvetnie ugolki">Цветные углки
+              (doc)</a></td>
+            <td>
+              <ol>
+                <li><a href="html/17.05.07_homework_1.html" title="css3-1">Домашняя работа - третий урок
+                  по CSS (17.05.07) - задание №1 (квадраты)</a></li>
+                <li><a href="html/17.05.07_homework_2.html" title="css3-2">Домашняя работа - третий урок
+                  по CSS (17.05.07) - задание №2 (уголки)</a></li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>17.05.14</td>
+            <td><a href="html/17.05.14_Classwork_blocks.html" title="vkladki">Блоки меню</a><br><a
+                class="dlink" href="/doc/bloki_menu.ppt" title="Bloki menu (vkladki)">Блоки меню
+              (вкладки) (doc)</a><br><a class="dlink" href="/doc/Verstka_PSD_maketa.doc"
+                                        title="Verstka PSD maketa">Вёрстка PSD макета (doc)</a></td>
+            <td><a href="html/17.05.07_homework_2.html" title="css3-2">Домашняя работа - первая верстка по
+              образцу (17.05.14) - задание №2</a></td>
+          </tr>
+          <tr>
+            <td>17.05.21</td>
+            <td></td>
+            <td><a href="http://korporateblue.popov.zzz.com.ua/" title="Korporate Blue">Домашняя работа -
+              Korporate Blue</a></td>
+          </tr>
+          <tr>
+            <td>17.05.28</td>
+            <td>
+              <ol>
+                <li><a href="html/classwork_17.05.28.html" title="position">Lesson - Позиционирование
+                  (17.05.28)</a></li>
+                <li><a href="html/classwork_17.05.28-2.html" title="position">Lesson - Позиционирование
+                  2 (17.05.28)</a></li>
+                <li><a href="html/experiment_2.html" title="menu">Эксперимент - кнопки меню</a></li>
+              </ol>
+              <a class="dlink" href="doc/Position.pptx">Размещение элементов, позиционирование (doc)</a>
+            </td>
+            <td>
+              <ol>
+                <li><a href="html/index_team.html" title="teamwork">Домашняя работа - верстка по образцу
+                  в команде(17.05.21-28)</a></li>
+                <li><a href="html/index_team_button.html" title="button">Домашняя работа - кнопка
+                  (17.05.28)</a></li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>17.06.11</td>
+            <td><a href="html/17.06.11.html" title="modal 1">Модальное окно</a><br><a class="dlink"
+                                                                                      href="doc/Modal1.docx">Модальное
+              окно</a></td>
+            <td>
+              <a href="html/17.06.11_homework.html" title="modal_window">Домашняя работа - модальные окна
+                (17.06.11)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17.06.17</td>
+            <td><a href="html/17.06.17_classwork.html" title="modal 2">Модальное окно 2</a><br><a
+                class="dlink" href="doc/Vidbvognoe_modalnoe_okno.doc">Выдвижное модальное окно (doc)</a><br><a
+                class="dlink" href="doc/CSS.Gradient,podklychenieShriftov,inlineBlock....pptx">Шрифты и
+              их подключение, цвета, Градиентб инлайн блок, размещение (позиционирование). модель бокса,
+              фон, границы (doc)</a><br>
+              <a class="dlink" href="doc/Oznakomlenie.zip">Дkя ознакомления</a><br><a class="dlink"
+                                                                                      href="doc/Modal_noe_okno_3_1497694743.doc"
+                                                                                      title="modal 3">Модальное
+                окно 3 - начать выполнять</a></td>
+            <td>
+              <ol>
+                <li><a href="html/17.06.17.html" title="modal_window2">Домашняя работа - модальные окна
+                  2 (17.06.17)</a></li>
+                <li><a href="html/17.06.17-2.html" title="modal_window3">Домашняя работа - модальные
+                  окна 3 - доделаем позже (17.06.17)</a></li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>17.06.24</td>
+            <td><a href="html/17.06.24.html" title="slider_type1">Классический слайдер</a><br><a
+                class="dlink" href="doc/Slider.doc" title="Slider">Слайдер (doc)</a><br><a class="dlink"
+                                                                                           href="doc/Blochnaya%20verstka.doc">Блочная
+              вёрстка - заключительная работа</a><br>
+              <a href="doc/Blochnaya%20verstka.zip" class="dlink" title="obrazci">Образец заключительной
+                блочной вёрстки</a>
+            </td>
+            <td>
+              <ol>
+                <li><a href="html/17.06.24_homework_slider.html#enter" title="block_finale">Внедрение
+                  слайдера</a></li>
+                <li><a href="html/17.06.24_2weeks_homework.html" title="block_finale">Заключительная
+                  работа по блочной вёрстке (2 недели)</a></li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>17.07.01</td>
+            <td>
+              <ol>
+                <li><a href="html/17.07.01.html">Адаптивная верстка</a></li>
+                <li><a href="html/adap_index.html">Адаптивная верстка</a></li>
+                <li><a href="html/accordeon.html">Аккордеон меню</a></li>
+                <li><a href="html/Slider2min.html">Слайдер с миниатюрами</a></li>
+              </ol>
+              <a href="doc/simple-css3-transitions.zip" class="dlink">Примеры CSS Transition (doc)</a><br><a
+                href="doc/Accordion.docx" class="dlink">Аккордеон меню (doc)</a><br>
+              <a href="doc/Adaptive.doc" class="dlink">Адоптивная верстка (doc)</a><br>
+            </td>
+            <td><a href="html/17.06.24_homework_slider2.html">Аккордеон меню</a></td>
+          </tr>
+          <tr>
+            <td>17.07.08</td>
+            <td><a href="html/17.07.08.class1.html">Flexbox меню</a><br>
+              <a href="doc/flexbox.doc" class="dlink">Flexbox (doc)</a><br>
+              <a href="doc/FlexBox_menu.doc" class="dlink">Flexbox меню выпадающее (doc)</a>
+              <br>
+              <a href="doc/FlexBox1.pdf" class="dlink">Flexbox (pdf)</a><br>
+              <a href="doc/FLEXBOX2.ppt" class="dlink">Flexbox (ppt)</a><br>
+              <a href="doc/Shpargalka flexbox.pdf" class="dlink">Flexbox шпаргалка (pdf)</a><br>-------------
+              <br>
+              <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6"
+                 class="dlink" target="_blank">A Complete Guide to Flexbox (link)</a><br>
+              <a href="http://html5.by/blog/flexbox/" class="dlink" target="_blank">Что такое Flexbox?
+                Описание всех css свойств, основные принципы, преимущества и недостатки. (link)</a><br>
+              <a class="dlink" href="https://pepelsbey.net/pres/flexbox-gotcha/" target="_blank">Flexbox,
+                теперь понятно (Opera) (link)</a><br>
+              <a href="https://autoprefixer.github.io/ru/" class="dlink" target="_blank">Автопрефиксер CSS
+                онлайн (link)</a><br>
+              <a href="http://www.xanthir.com/blog/b4580" class="dlink" target="_blank">Why Flexboxes
+                Aren't Good for Page Layout (link)</a><br><a href="img/flex-help.jpg" class="dlink">Flex-box
+                help JPG (link)</a><br><a href="http://callmenick.com/post/flexbox-examples"
+                                          class="dlink">Building
+                With Flexbox (to read) (link)</a>
 
-                            <br>------------- <br>
-                            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="dlink">A Complete
-                                Guide to <b>Grid</b> (link)</a>
-                        </td>
-                        <td>
-                            <ol>
-                                <li><a href="html/modal_practice.html">Практика по модальным окнам</a></li>
-                                <li><a href="html/Flexbox_practice2.html">Практика по Flexbox 2</a></li>
-                                <li><a href="html/flexbox_menu_practise.html">flexbox menu практика</a></li>
-                                <li><a href="html/17.06.24_2weeks_homework+flexbox_menu.html">Главное меню на
-                                    флексбоксе</a></li>
-                                <li><a href="html/17.06.24_2weeks_homework+flexbox_menu_2.html">Главное меню на
-                                    флексбоксе_резиновое</a></li>
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.05.15</td>
-                        <td>
-                            <ol>
-                                <li><a href="html/17.07.15_classwork_1.html" title="flex page">Страница полностью на
-                                    флексбоксе</a></li>
-                                <li><a href="html/17.07.15_classwork_2.html">Галерея на флексбоксе</a></li>
-                            </ol>
-                            <a href="doc/Flexbox1+2.docx" class="dlink">Описание - галерея на флексбоксе + флексовый
-                                сайт (doc)</a><br><a href="doc/ТЕСТ CSS_Popov F S.docx" class="dlink">test (doc)</a><br>
-                            <a href="http://shpargalkablog.ru/2016/05/flexbox.html" class="dlink">Порядок следования
-                                flex-элементов (link)</a><br><a href="http://shpargalkablog.ru/2016/05/flex.html"
-                                                                class="dlink"
-                                                                title="если сумма размеров всех flex-элементов меньше размера flex-контейнера, то применяется flex-grow.
+              <br>------------- <br>
+              <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="dlink">A Complete
+                Guide to <b>Grid</b> (link)</a>
+            </td>
+            <td>
+              <ol>
+                <li><a href="html/modal_practice.html">Практика по модальным окнам</a></li>
+                <li><a href="html/Flexbox_practice2.html">Практика по Flexbox 2</a></li>
+                <li><a href="html/flexbox_menu_practise.html">flexbox menu практика</a></li>
+                <li><a href="html/17.06.24_2weeks_homework+flexbox_menu.html">Главное меню на
+                  флексбоксе</a></li>
+                <li><a href="html/17.06.24_2weeks_homework+flexbox_menu_2.html">Главное меню на
+                  флексбоксе_резиновое</a></li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>17.05.15</td>
+            <td>
+              <ol>
+                <li><a href="html/17.07.15_classwork_1.html" title="flex page">Страница полностью на
+                  флексбоксе</a></li>
+                <li><a href="html/17.07.15_classwork_2.html">Галерея на флексбоксе</a></li>
+              </ol>
+              <a href="doc/Flexbox1+2.docx" class="dlink">Описание - галерея на флексбоксе + флексовый
+                сайт (doc)</a><br><a href="doc/ТЕСТ CSS_Popov F S.docx" class="dlink">test (doc)</a><br>
+              <a href="http://shpargalkablog.ru/2016/05/flexbox.html" class="dlink">Порядок следования
+                flex-элементов (link)</a><br><a href="http://shpargalkablog.ru/2016/05/flex.html"
+                                                class="dlink"
+                                                title="если сумма размеров всех flex-элементов меньше размера flex-контейнера, то применяется flex-grow.
 если сумма размеров всех flex-элементов равна размеру flex-контейнера, то не применяются ни flex-grow, ни flex-shrink.
 если сумма размеров всех flex-элементов больше размера flex-контейнера, то применяется flex-shrink.">Размер
-                            flex-элемента (link)</a><br><a
-                                href="https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/"
-                                class="dlink">Flexbox Playground (link)</a></td>
-                        <td><a href="html/17.06.24_2weeks_homework+flexbox_menu_2.html">Внедрение галереи на флексбоксе
-                            в ранее сверстанный сайт</a></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="text-align: center; background-color: rgba(160,160,160,0.93);"><h3>Java
-                            Script</h3></td>
-                    </tr>
-                    <tr style="background-color: rgba(127,127,127,0.93);">
-                        <td><b>Date</b></td>
-                        <td><b>Lessons</b></td>
-                        <td><b>Homework</b></td>
-                    </tr>
-                    <tr>
-                        <td>17.07.22</td>
-                        <td><a href="html/js/classworks/17.07.22_cw.html">JS вступление</a><br>
-                            <a href="doc/DZ_JavaScript_Kratkaya_spravkaplusDZNo1_1500719386.docx" class="dlink">Переменные
-                                и типы данных (doc)</a><br><a class="dlink"
-                                                              href="https://learn.javascript.ru/operators">Операторы</a><br><a
-                                    href="https://learn.javascript.ru/" class="dlink">Современный учебник Javascript 1
-                                (новее) (link)</a><br><a
-                                    href="http://javascript.ru/tutorial" class="dlink">Современный учебник Javascript 1
-                                (старее) (link)</a></td>
-                        <td><a href="html/js/homeworks/17.07.22_hw.html">JS вступление</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.08.22</td>
-                        <td><a href="html/js/classworks/2017.08.19_1_classwork.html">Classwork</a><br><a
-                                href="html/js/classworks/2017.08.19_3_classwork.html">Alert + prompt</a><br><a
-                                href="html/js/classworks/2017.08.19_4_classwork--made_home.html">2017.08.19_4_classwork--made_home</a><br><a
-                                href="doc/js/DZ_JavaScript_Obekt_document.docx" class="dlink">Объект document
-                            (doc)</a><br><a class="dlink"
-                                            href="https://learn.javascript.ru/document-write">document.write
-                            (link)</a><br><a
-                                href="http://javascript.ru/w3c/DOM2-Core/core.html" class="dlink">Document Object Model
-                            Core (link)</a><br><a class="dlink"
-                                                  href="doc/js/DZ_JavaScript_Dialogovye_okna.docx">Ввод/вывод данных.
-                            Диалоговые окна (doc)</a><br><a class="dlink"
-                                                            href="doc/js/DZ_JavaScript_(Date).doc">Объект Date и его
-                            методы (doc)</a><br><a class="dlink"
-                                                   href="https://learn.javascript.ru/datetime">Дата и Время (link)</a>
-                        </td>
-                        <td><a href="html/js/homeworks/2017.08.19_1_homework.html">Homework 1 (опрос)</a><br><a
-                                href="html/js/homeworks/2017.08.19_2_homework.html">Homework 2 (знакомство + время +
-                            калькулятор)</a><br>
-                            <a href="html/js/homeworks/2017.08.19_3_homework.html">Homework 3 (запросить у пользователя
-                                полное количество лет.
-                                Вывести его год рождения.
-                                запросить у пользователя дату рождения.
-                                Вывести количество лет.
-                                )</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.08.26</td>
-                        <td><a href="html/js/classworks/2017.08.26_classwork_1.html">Переключение слайдеров, if else,
-                            switch, циклы</a><br><a class="dlink" href="doc/js/literali.pptx">Литералы (pptx)</a><br><a
-                                class="dlink"
-                                href="doc/js/yslovnie_operatori_i_cikli.doc">Условные литералы и циклы (doc)</a><br><a
-                                class="dlink"
-                                href="https://learn.javascript.ru/ifelse">Условные операторы: if, '?' (link)</a><br><a
-                                href="https://learn.javascript.ru/switch" class="dlink">Конструкция switch
-                            (link)</a><br><a class="dlink"
-                                             href="https://learn.javascript.ru/while-for">Циклы while, for
-                            (link)</a><br><a class="dlink"
-                                             href="doc/js/slaider_js.doc">Слайдер JavaScript (doc)</a></td>
-                        <td><a href="html/js/homeworks/2017.08.26_1_homework.html">Слайдер на js</a><br><a
-                                href="html/js/homeworks/2017.08.26_2_homework.html">If else</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.09.02</td>
-                        <td><a href="html/js/classworks/2017.09.02_1_classwork.html">Classwork_Циклы + Начало Функции
-                            (передача в переменные)</a><br><a href="doc/js/JS.doc"
-                                                              class="dlink">JavaScript - Циклы (doc)</a><br><a
-                                href="https://learn.javascript.ru/while-for" class="dlink">Циклы while, for
-                            (link)</a><br><a
-                                href="http://www.dikarka.ru/javascript/06.shtml" class="dlink">Операторы цикла: for
-                            (link)</a><br><a
-                                href="http://www.dikarka.ru/lesson_javascript.shtml" class="dlink">Уроки JavaScript от
-                            Самоделкина (link)</a><br><a
-                                href="doc/js/Funkcii(start).doc" class="dlink">Функции. Начало (doc)</a><br><a
-                                href="https://learn.javascript.ru/function-basics"
-                                class="dlink">Функции (link)</a></td>
-                        <td><a href="html/js/homeworks/2017.09.02_1_homework.html">Homewok (желто-белые квадраты)</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.09.06</td>
-                        <td><a href="html/js/classworks/2017.09.06_classwork.html">Classwork_Функции продолжение (брать
-                            из инпутов)</a><br><a href="doc/js/DZ_JavaScript_JS(prilozheniya_na_osnove_form).doc"
-                                                  class="dlink">Элементы формы как инструмент настройки
-                            интерфейса (doc)</a><br><a href="doc/js/Proverka%20dannih.doc" class="dlink">Проверка
-                            данных,
-                            введенных в форму (doc)</a></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>19.09.09</td>
-                        <td><a href="html/js/classworks/2017.09.09_classwork.html">Classwork</a><br><a
-                                href="html/js/classworks/maxChecked.html">Не больше трёх чекбоксов</a><br><a
-                                href="html/js/classworks/radio1.html">Радиокнопки - алерт</a><br><a href=""
-                                                                                                    class="dlink">Формы
-                            и события js (doc)</a><br><a
-                                href="https://learn.javascript.ru/form-elements" target="_blank" class="dlink">Навигация
-                            и свойства элементов формы (link)</a><br><a
-                                href="doc/js/document.write(),%20innerText,%20innerHTML.docx" class="dlink">Изменение
-                            содержимого объектов: document.write(), innerText, innerHTML (doc)</a><br><a
-                                href="https://learn.javascript.ru/basic-dom-node-properties#innerhtml-содержимое-элемента"
-                                class="dlink" target="_blank">innerText, innerHTML (link)</a><br><a
-                                href="http://innerhtml.ru/"
-                                class="dlink">Свойство innerHTML (link)</a><br><a
-                                href="doc/js/vidvignor_modalnoe_okno.doc" class="dlink">Выдвижное модальное окно js
-                            (doc)</a></td>
-                        <td><a href="html/js/homeworks/2017.09.09_homework.html">Homework Выдвижное меню с формами и
-                            сбором информации через JS</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.09.16</td>
-                        <td><a href="html/js/classworks/2017.09.16_classwork.html">Classswork</a><br><a
-                                href="doc/js/Ob_ekt_Array__nacalo__1490424802.docx"
-                                class="dlink">Объект Array - начало (массивы) (doc)</a><br><a
-                                href="doc/js/Ob_ekt_Array__prodolzenie__Metody__1490719210.docx" class="dlink">Объект
-                            Array (продолжение) - Методы (doc)</a><br><a
-                                href="https://ru.wikipedia.org/wiki/%D0%90%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9_%D1%82%D0%B8%D0%BF_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85"
-                                class="dlink">Абстрактный тип данных (link)</a><br><a
-                                href="https://ru.wikipedia.org/wiki/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)"
-                                class="dlink">Очередь (программирование) (link)</a><br><a
-                                href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D0%BA" class="dlink">Стек
-                            (link)</a><br><a
-                                href="https://learn.javascript.ru/array" class="dlink">Массивы с числовыми индексами
-                            (link)</a><br><a
-                                href="https://learn.javascript.ru/onload-onerror" class="dlink">Загрузка скриптов,
-                            картинок, фреймов: onload и onerror (link)</a></td>
-                        <td><a href="html/js/homeworks/2017.09.16_homework.html">Создайте массив из 1000 элементов.
-                            Первые 100 элементов =0, вторая сотня =2 ….последняя сотня =9. Создайте функцию, которая
-                            сравнивает два массива на предмет отсутствия одинаковых значений.</a><br><a
-                                href="html/js/homeworks/practic.html">Практика с квадратами (циклы)</a><br><a
-                                href="html/js/homeworks/2017.09.21_practic.html">Практика</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.09.20</td>
-                        <td><a href="html/js/classworks/2017.09.20_classwork.html">Classwork_Array массивы
-                            продолжение</a><br><a
-                                href="doc/js/Ob_ekt_Object_DZ__1492537973.docx" class="dlink">Объект Object()
-                            (doc)</a><br><a
-                                href="https://learn.javascript.ru/object" class="dlink">Объекты как ассоциативные
-                            массивы (link)</a><br><a href="https://learn.javascript.ru/constructor-new"
-                                                     class="dlink">Создание объектов через "new"
-                            (+конструктор)(link)</a></td>
-                        <td><a href="html/js/homeworks/2017.09.20_homework.html">Homework - Создайте объект Чашка и
-                            несколько его экземпляров.</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.09.23</td>
-                        <td>Новый преподаватель <br>
-                            <a href="doc/js/01%20Основы%20JavaScript.pptx" class="dlink">01 Основы JavaScript.pptx</a>
-                            <a href="doc/js/02%20Основы%20JavaScript.pptx" class="dlink">02 Основы JavaScript.pptx</a>
-                            <a href="doc/js/03%20Выражения%20и%20операторы.pptx" class="dlink">03 Выражения и
-                                операторы.pptx</a>
-                            <a href="doc/js/04%20Инструкции,%20объекты%20и%20массивы.pptx" class="dlink">04 Инструкции,
-                                объекты и массивы.pptx</a>
-                            <a href="doc/js/05%20Инструкции,%20объекты%20и%20массивы.pptx" class="dlink">05 Инструкции,
-                                объекты и массивы.pptx</a>
-                            <a href="doc/js/06%20Функции.pptx" class="dlink">06 Функции.pptx</a>
-                            <a href="doc/js/07%20Динамическое%20добавление%20содержимого,%20доступ%20к%20формам,%20работа%20с%20датой.pptx"
-                               class="dlink">07 Динамическое добавление содержимого, доступ к формам, работа с
-                                датой.pptx</a>
-                            <a href="doc/js/08%20Методы%20объектов,%20this.pptx" class="dlink">08 Методы объектов,
-                                this.pptx</a>
-                            <a href="doc/js/09%20События%20и%20обработчики%20событий.pptx" class="dlink">09 События и
-                                обработчики событий.pptx</a>
-                        </td>
-                        <td><a href="html/js/homeworks/2017.09.23_homework.html">1. Создать на странице несколько
-                            числовых надписей (абзацы, заголовки, span и другие). Создать функции, заполняющие массив
-                            значениями элементов, на которых кликают мышкой (при клике на 15 добавить в массив 15). При
-                            клике на «вывести массив» сделать вывод всех значений.
-                            <br>2. Создать событие при нажатии на кнопку. Меняет надпись на кнопке и создает рядом еще
-                            одну кнопку.
-                            <br>. Создать событие, меняющее фон и надпись строчного элемента при наведении мышки.</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.09.27</td>
-                        <td><a href="html/js/classworks/2017.09.27_classwork.html">События и обработчики
-                            событий.</a><br><a
-                                href="doc/js/10%20События%20и%20обработчики%20событий..pptx" class="dlink">События и
-                            обработчики событий</a></td>
-                        <td><a href="html/js/homeworks/2017.09.27_homework.html">1. Создать элемент с текстом и кнопкой
-                            вручную. Создать джаваскрипт, который при клике на кнопку заставляет текст исчезнуть (не
-                            удаляет). При этом кнопка становится выше и/или шире.
-                            Можно использовать метод style выбранного элемента для изменения стилей.
-                            2. При нажатии кнопки отобразить на кнопке дату и время.
-                            3. Создать вручную форму из нескольких текстовых полей, при помещении курсора на которые
-                            поле выделяется синим бордюром и подписывается снизу или сбоку описанием поля</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.09.30</td>
-                        <td><a href="html/js/classworks/2017.09.30_classwork.html">Взять и вывести</a><br>
-                            <a href="doc/js/11%20DOM.pptx" class="dlink">DOM (doc)</a><br><a
-                                    href="https://learn.javascript.ru/document" class="dlink">Документ и объекты
-                                страницы(link)</a>
-                        </td>
-                        <td><a href="html/js/homeworks/2017.09.30_homework.html">Написать JavaScript программы (для
-                            файла JS11example.html):
-                            <br>1. Настроить вывод результатов В ПОСЛЕДНИЙ DIV на странице. Именно так, как сказано. Все
-                            последующие результаты выводить туда.
-                            <br>2. Найти в приложенном примере все названия мировых компаний и вывести их в нумерованный
-                            список
-                            <br>3. Из списка режиссера и «в ролях» получить все имена с фамилиями и создать select со
-                            списком людей.
-                            <br>4. Из списка с подпунктами собрать всё содержимое элементов
-                            и вывести их в абзац через запятую.
-                            <br>5. Из формы получить все значения value и тексты инпутов и создать объект OC со
-                            свойствами из value и значениями из текстов. Вывести в таблицу свойства и значения
-                            объекта.
-                            <br>6. Собрать в абзац все теги, дочерние к BODY, перечислить их через запятую.
-                            <br>7. Собрать в span все родительские к элементу «Подпункт 2.2.1.»
-                        </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>17.10.05</td>
-                        <td><a href="html/js/classworks/2017.10.04_classwork.html">Выбираем разные типы инпутов и
-                            выводим их поочереди</a><br><a
-                                href="doc/js/12%20DOM.%20Свойства%20узлов%20-%20тип,%20тег%20и%20содержимое.pptx"
-                                class="dlink">12 DOM. Свойства узлов - тип, тег и содержимое. (doc)</a><br><a
-                                href="https://learn.javascript.ru/attributes-and-custom-properties"
-                                class="dlink">Атрибуты и DOM-свойства(link)</a></td>
-                        <td><a href="html/js/homeworks/2017.10.04_homework.html">1. Собрать со страницы элементы с
-                            одинаковым именем и вывести маркированными списками во второй по порядку элемент &lt;p&gt;
-                            (по списку на каждое имя).
-                            <br>2. Собрать все текстовые узлы со страницы, склеить их и поставить их в место первого
-                            узла, добавив всей надписи полужирный вариант начертания.</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.10.07</td>
-                        <td><a href="html/js/classworks/2017.10.07_classwork.html">1. Вывксти нужное количество
-                            атрибутов и их значений
-                            <br> 2. Создать новые элементы и вставить в нужное место</a><br><a
-                                href="doc/js/13%20Атрибуты%20и%20DOM-свойства.pptx"
-                                class="dlink">Атрибуты и DOM-свойства(doc)</a><br><a
-                                href="https://learn.javascript.ru/modifying-document" class="dlink">Добавление и
-                            удаление узлов(link)</a></td>
-                        <td><a href="html/js/homeworks/2017.10.07_homework.html">Создать вручную HTML с разными
-                            элементами на странице (p,div,span,a,h1..h6,img,pre и т.п.) и добавленными у некоторых
-                            классами.
-                            Написать JavaScript программу для:
-                            <br>1. Проставления атрибутов тегам на странице с названием тега (pAtr,divAtr,spanAtr,aAtr и
-                            т.п.) со значением количества символов в имени тега х4 (pAtr=“4”,divAtr=“12” и т.п.). А
-                            также всем добавить атрибут alt со значением “custom”. Добавить классы тегам по имени тега
-                            (pclass, divclass…)
-                            <br>2. Пройти по всем элементам и если у элемента есть класс – добавить еще один класс (с
-                            именем bestclass). Перед каждым элементом &lt;a &gt; разместить элемент &lt;hr &gt; с
-                            атрибутом line=“long”.
-                        </a></td>
-                    </tr>
-                    <tr>
-                        <td>17.10.12</td>
-                        <td><a href="html/js/classworks/2017.10.11_classwork_1.html">Удалить дочерние элементы</a><br><a
-                                href="html/js/classworks/2017.10.11_classwork_1.html">Вставить в список с разных сторон
-                            поочереди</a><br><a
-                                href="doc/js/14%20Атрибуты%20и%20DOM-свойства.pptx" class="dlink">Атрибуты и
-                            DOM-свойства
-                            (doc)</a><br><a href="https://learn.javascript.ru/multi-insert" class="dlink">Мультивставка:
-                            insertAdjacentHTML и DocumentFragment(link)</a></td>
-                        <td><a href="html/js/homeworks/2017.10.11_homework.html">1_0. Написать JavaScript программы для
-                            создания длинных списков.</a><br><a
-                                href="html/js/homeworks/2017.10.11_homework_2.html">1. Создать страницу с пустым
-                            содержимым. Джаваскриптом установить на ней элементы &lt;h3&gt;,&lt;p&gt;, &lt;ul&gt;список
-                            с элементами списка. Склонировать список в элемент &lt;p&gt;. Склонировать получившийся
-                            элемент &lt;p&gt; в элемент &lt;h3&gt;. Создать клон получившегося &lt;h3&gt; в конце
-                            документа с добавлением ему атрибутов name и id. Создать ниже еще один клон последнего &lt;h3&gt;
-                            без дочерних элементов и с измененным id.
-                            <br>2. Создать вручную документ с пустым списком &lt;ul&gt;. Джаваскриптом после списка
-                            вставить N (запрос у пользователя) элементов &lt;hr&gt; множественной вставкой с помощью
-                            insertAdjacent. Между этими элементами вставить текстовые узлы и комментарии с нумерацией
-                            (например «текст 1» и «комментарий 1»). В конце вставить список городов элементами &lt;li&gt;
-                            в существующий пустой список &lt;ul&gt; с помощью DocumentFragment.</a><br><a
-                                href="html/js/homeworks/Practice_new_teacher_01-08.html">Домашние задания по урокам
-                            когда у нас был другой учитель</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.10.16</td>
-                        <td><a href="html/js/classworks/2017.10.16_classworks.html">1.Создать кнопку, добавить стили
-                            через js сначала все вместе потом по одному, лесенку из кнопок через цикл + изменение цвета
-                            каждый раз<br>2.Создать функцию, которая
-                            показывает сообщение в указанном месте (x, y, ширина, текст) на 3 секунды и убирает его.</a><br><a
-                                href="doc/js/15%20Стили%20+%20Размеры%20и%20прокрутка%20элементов.pptx"
-                                class="dlink">Стили + Размеры и прокрутка элементов(doc)</a><br><a
-                                href="https://learn.javascript.ru/styles-and-classes"
-                                class="dlink">Стили, getComputedStyle(link)</a><br><a
-                                href="https://learn.javascript.ru/metrics" class="dlink">Размеры и прокрутка
-                            элементов(link)</a></td>
-                        <td><a href="html/js/homeworks/2017.10.16_homework.html">1. Создать функцию, которая показывает
-                            сообщение в указанном месте (x, y, ширина,
-                            текст) на 3 секунды и убирает его. Для задания временного промежутка:
-                            setTimeout(
-                            function() { }, 3000);
-                            }
-                            <br>2. Создать страницу с различными элементами и прописать по ним CSS. Выводить в див
-                            список стилей при наведении мышки на любой элемент на странице и очищать див при потере
-                            фокуса.
-                            <br>3. Создать на странице блок див и назначить ему все отступы. Получить по заданному
-                            элементу все метрики. Вычислить размеры полезного содержимого при задании ему ширины и
-                            высоты.</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.10.16</td>
-                        <td><a href="html/js/classworks/2017.10.18_classwork1.html">1. JSON - строка - абзац -
-                            JSON</a><br><a
-                                href="html/js/classworks/2017.10.18_classwork2.html">2. Выбор инпута из js..</a><br><a
-                                href="doc/js/16%20JSON,%20формы,%20элементы%20управления.pptx" class="dlink">JSON,
-                            формы, элементы управления.pptx (doc)</a></td>
-                        <td><a href="html/js/homeworks/2017.10.18_homework.html">1. Разобрать JSON получить объект и
-                            вывести его содержимое. Определить количество вложенных объектов и вывести их. Собрать
-                            вложенные объекты и перевести их в JSON формат по отдельности.
-                            <br>2. Создать форму с разными элементами (input, select, textbox, radio, checkbox).
-                            Заполнить элементы формы джаваскриптом. Все поля должны быть задействованы при заполнении.
-                            Добавить кнопку на форму для очистки формы. Действие – очистка всех полей, приведение их к
-                            пустым значениям.</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.10.21</td>
-                        <td><a href="html/js/classworks/2017.10.21_classwork.html">Форма. При неправильном вводе дальше
-                            не пускает и показывает ошибку</a><br><a
-                                href="doc/js/17%20Формы,%20элементы%20управления.pptx" class="dlink">Формы, элементы
-                            управления (doc)</a></td>
-                        <td><a href="html/js/homeworks/2017.10.21_homework.html">Арканоид (Нужно выбрать вариант,
-                            составить план выполнения задания и выполнить задание по плану.)</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.10.25</td>
-                        <td><a href="html/js/classworks/2017.10.25_classwork.html">
-                            Создать обработчики событий для поля INPUT, один из которых
-                            ставит "." после каждой вводимой буквы, второй ожидает пробел и
-                            меняет его на "_".</a><br><a class="dlink" href="doc/js/18%20События.pptx">События (doc)</a>
-                        </td>
-                        <td><a href="html/js/homeworks/2017.10.25_homework_1.html">1. Создать страницу с блоком DIV
-                            имеющим возможность установки фокуса. При фокусе на этом блоке принимать и обрабатывать
-                            различные события: клик мышки (какая кнопка, координаты), нажатия клавиш (определять букву
-                            клавиши, код клавиши, дополнительные клавиши: Ctrl, Alt, Shift), скроллинг (вывести свойства
-                            события), установка и снятие фокуса. Всю информацию выдавать в другой див с прокруткой или в
-                            TEXTAREA.
-                            <br>
-                            2. Перехватить события мышки и при движении мышки отображать круг под стрелкой курсора. Не
-                            давать поставить курсор в поля формы.
-                            <br>
-                            3. В текстовом поле при вводе вместо цифр выводить названия цифр (вместо 1 писать
-                            «один»).</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.10.28</td>
-                        <td><a href="html/js/classworks/2017.10.28_classwork.html">
-                            Рекурсия + рекурсия факториала + циклом</a><br><a class="dlink"
-                                                                              href="doc/js/19%20Рекурсия.%20Регулярные%20выражения.pptx">19
-                            Рекурсия. Регулярные выражения. (doc)</a>
-                        </td>
-                        <td><a href="html/js/homeworks/2017.10.28_homework.html">1. Распарсить файл json.txt в объект с
-                            вложенными объектами. Создать программу с использованием рекурсии для прохода по всем
-                            вложенным объектам и вывода информации из них. Попробуйте организовать красивый вывод данных
-                            с отступами в зависимости от количества вложений (чем глубже – тем больше отступ).
-                            <br>
-                            2. Создать программу для вывода данных из вложенных массивов (создать массив
-                            самостоятельно).
-                        </a></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" style="text-align: center; background-color: rgba(160,160,160,0.93);"><h3>Java
-                            Script New teacher</h3></td>
-                    </tr>
-                    <tr>
-                        <td>17.11.01</td>
-                        <td><a href="html/js/classworks/2017.11.01_classwork_1.html">
-                            1. Увеличение текста циклом. <br>Появление кнопки и изменение цвета при нажатии. <br>Проверка
-                            формы.<br>Вывод циклом увеличивающегося текста.</a><br><a
-                                href="html/js/classworks/2017.11.01_classwork_2.html">
-                            2. События. <br>Меняется цвет и фон при нажатии.</a><br><a class="dlink"
-                                                                                       href="doc/js/plakat1.doc">1.Способы
-                            размещения сценариев JavaScript, оформление комментариев. Проверка отключения в браузере
-                            пользователя поддержки сценариев JavaScript... Отладка сценариев JavaScript (на примере
-                            использования встроенных возможностей браузера Google Chrome). Переменный, их объявление и
-                            инициализация. Типы данных. (doc)</a><br><a class="dlink"
-                                                                        href="doc/js/plakat2.doc">2.
-                            Арифметические операторы. Конкатенация. (doc)</a><br><a class="dlink"
-                                                                                    href="doc/js/plakat3.doc">3.Ввод –
-                            вывод данных, диалоговые окна. Конструкция ветвления "if ... else ...switch ... case ...
-                            default ...". Цикл со счетчиком for, цикл с предусловием while. (doc)</a><br><a
-                                class="dlink"
-                                href="doc/js/plakat4.doc">4.Функции без
-                            параметров (описание, вызов из head или внешнего файла) (doc)</a><br><a class="dlink"
-                                                                                                    href="doc/js/plakat5.doc">5.Основы
-                            DOM : доступ к элементу по идентификатору (обычный и с применением метода
-                            document.getElementById). Строки. Свойство строк length. Методы работы с содержимым строк
-                            indexOf и substr. (doc)</a><br><a
-                                href="html/js/classworks/17.11.01_homework_from_teacher_1.html">Домашняя работа
-                            1</a><br><a href="html/js/classworks/17.11.01_homework_from_teacher_2.html">Домашняя работа
-                            2</a>
-                        </td>
-                        <td><a href="html/js/homeworks/2017.11.01_homework.html">1. При наведении курсора мыши на любой
-                            из следующих пунктов «блока меню» в «блоке подменю» должен «открываться» соответствующий
-                            список именно данной «товарной группы». При сведении курсора мыши со всех пунктов «блока
-                            меню» в «блок подменю» опять должен быть пустым.
-                            <br>2. ПРОВЕРКА КОРРЕКТНОСТИ ВВЕДЕННОГО E-MAIL (ОТСУТСТВИЕ КИРИЛЛИЧЕСКИХ БУКВ)</a></td>
-                    </tr>
-                    <tr>
-                        <td>2017.11.05</td>
-                        <td><a href="html/js/classworks/2017.11.05_classwork_1.html">1. Запрет всплывания
-                            событий</a><br><a href="html/js/classworks/2017.11.05_classwork_2.html">2. События return
-                            false</a><br><a href="html/js/classworks/2017.11.05_classwork_3.html">3. Открыть - закрыть
-                            див по ссылке или по клавише</a><br><a
-                                href="html/js/classworks/2017.11.05_classwork_4.html">4. Пердвижение дива по странице
-                            мышкой</a><br><a href="html/js/classworks/2017.11.05_classwork_5.html">5. Увеличение
-                            картинки при наведении</a><br><a href="html/js/classworks/2017.11.05_classwork_6.html">6.
-                            Следующая картинка при клике по картинке</a><br><a
-                                href="html/js/classworks/2017.11.05_classwork_7.html">7. SetInterval, SetTimeout, Date,
-                            интервал и дата</a><br><a href="html/js/classworks/2017.11.05_classwork_8.html">8.
-                            Сетинтервал и клеаринтервал</a><br><a
-                                href="doc/js/plakat6.doc" class="dlink">1.Обработка событий, Объект event, Работаем с
-                            мышью -перетаскивание элементов, наведения и нажатия (doc)</a><a href="doc/js/plakat7_1.doc"
-                                                                                             class="dlink"><br>2. Объект
-                            Image, Дата и время, Задержки и интервалы (doc)</a><a
-                                href="doc/js/ТЗ_ШКОЛА_АНГЛИЙСКОГО_IE8.doc"
-                                class="dlink"><br>3. Техническое задание
-                            на модернизацию и редизайн сайта - живой пример (doc)</a><br><a
-                                href="doc/js/dz_1509872961.zip" class="dlink">Homework - задание (zip)</a>
-                        </td>
-                        <td><a href="homeworks/js/17.11.05/2017.11.05_homework.html">Меню, при наведении изменяется
-                            подменю, появляются картинки, при нажатии на стрелку меняются картинки</a></td>
-                    </tr>
-                    <tr>
-                        <td>2017.11.08</td>
-                        <td><a href="html/js/classworks/2017.11.08_classwork_1.html">1. Летающий текст по кругу и тд,
-                            при наведении останавливается</a><br><a
-                                href="html/js/classworks/2017.11.08_classwork_2.html">2. Автоматическая смена
-                            картинок</a><br><a href="html/js/classworks/2017.11.08_classwork_3.html">3. Див движется
-                            вверх до конца сетинтервалом</a><br><a
-                                href="html/js/classworks/2017.11.08_classwork_4.html">4. Медленное пропадание элемента
-                            по нажатию на ссылку</a><br><a href="html/js/classworks/2017.11.08_classwork_5.html">5.
-                            Проверка есть ли элемент на странице и добавление если есть стиля</a><br><a
-                                href="html/js/classworks/2017.11.08_classwork_6.html">6. Вставление элементов
-                            динамически на страницу, отображение потомков</a><br><a
-                                href="html/js/classworks/2017.11.08_classwork_krug_1.html">7. Наведите на большой шар и
-                            подержите - 1</a><br><a
-                                href="html/js/classworks/2017.11.08_classwork_krug_2.html">8. Наведите на большой шар и
-                            подержите 2 + изменение круга</a><br><a
-                                href="html/js/classworks/2017.11.08_classwork_show_old_homework.html">Решение прошлого
-                            дз
-                            по версии преподавателя</a><br><a href="doc/js/plakat7_2.doc" class="dlink">1.
-                            Математические функции, math, Формулы для определения катетов (смещения left, top),
-                            Анимация, Применение интервалов для анимированного перемещения,
-                            постепенное скрытие элемента (аналог функции fadeOut jQuery), </a><br><a
-                                href="doc/js/plakat8_1.doc"
-                                class="dlink">2. Иерархия узлов DOM. Стандартное дерево DOM. Работа с узлами DOM.</a>
-                        </td>
-                        <td><a href="homeworks/js/17.11.08/1/17.11.08_homework_1.html">1. Используя мeтод setInterval
-                            реализуйте алгоритм движения шарика внутри некого блока, окно загрузки с изменением через
-                            интервал</a><br><a href="homeworks/js/17.11.08/2/17.11.08_homework_2.html">2. Вставить
-                            картинки в ссылку и дальнейший вызов функции их одновременного удаления таким образом, чтобы
-                            текст ссылки (Link) при данном удалении сохранялся</a></td>
-                    </tr>
-                    <tr>
-                        <td>17.11.12</td>
-                        <td>
-                            <a href="html/js/classworks/2017.11.12_classwork_1.html">Найди span и выдели bold</a><br>
-                            <a href="html/js/classworks/2017.11.12_classwork_2.html">Найди red-Элемент и увеличь size</a><br>
-                            <a href="html/js/classworks/2017.11.12_classwork_2_2.html">Из строки через массив в таблицу</a><br>
-                            <a href="html/js/classworks/2017.11.12_classwork_3.html">Меняем местами цветные квадраты (берём стили в массивы и переопределяем)</a><br>
-                            <a href="html/js/classworks/2017.11.12_classwork_4.html">Меняем цвет внутренним элементам (вложеным) elements method, child method</a><br>
-                            <a href="html/js/classworks/2017.11.12_classwork_5.html">Переключаем картинки нажатиеам на картинку, превью меняют прозрачность</a><br>
-                            <a href="html/js/classworks/2017.11.12_classwork_6.html">Выводим из элементов на странице таблицу</a><br>
-                            <a href="html/js/classworks/17.11.08_homework_teacher_1.html">Решение прошлого дз 1 (шарик туда сюда)</a><br>
-                            <a href="html/js/classworks/17.11.08_homework_teacher_2.html">Решение прошлого дз 2 (удаляем картинки)</a><br>
-                            <a href="doc/js/plakat8_2.doc" class="dlink">Примеры алгоритмов с использованием childNodes, setAttribute, getAttribute. (doc)
-                            </a><br>
-                            <a href="doc/js/plakat9.doc" class="dlink">getElementsByTagName, getAttribute, setAttribute,  getElementsByClassName+ getElementsByTagName("*") + nodeName для доступа к ЛЮБОМУ ЭЛЕМЕНТУ ЛЮБОГО УРОВНЯ ВЛОЖЕННОСТИ. getElementsByTagName, getAttribute, setAttribute - галерея (смена img) – ФОРМИРОВАНИЕ МАССИВА СО СТРАНИЦЫ + ЭФФЕКТ «ПОДСВЕТКИ».ФОРМИРОВАНИЯ ТАБЛИЦЫ «НА ЛЕТУ» - ИЗ СОДЕРЖИМОГО ЭЛЕМЕНТОВ СТРАНИЦЫ (ИМИТАЦИЯ ИЗ БД). (doc) </a><br>
-                        </td>
-                        <td></td>
-                    </tr>
-                </table>
-                <span style="font-size: 0"><a id="bottom">The end</a></span>
-            </section>
-        </div>
+              flex-элемента (link)</a><br><a
+                href="https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/"
+                class="dlink">Flexbox Playground (link)</a></td>
+            <td><a href="html/17.06.24_2weeks_homework+flexbox_menu_2.html">Внедрение галереи на флексбоксе
+              в ранее сверстанный сайт</a></td>
+          </tr>
+          <tr>
+            <td colspan="3" style="text-align: center; background-color: rgba(160,160,160,0.93);"><h3>Java
+              Script</h3></td>
+          </tr>
+          <tr style="background-color: rgba(127,127,127,0.93);">
+            <td><b>Date</b></td>
+            <td><b>Lessons</b></td>
+            <td><b>Homework</b></td>
+          </tr>
+          <tr>
+            <td>17.07.22</td>
+            <td><a href="html/js/classworks/17.07.22_cw.html">JS вступление</a><br>
+              <a href="doc/DZ_JavaScript_Kratkaya_spravkaplusDZNo1_1500719386.docx" class="dlink">Переменные
+                и типы данных (doc)</a><br><a class="dlink"
+                                              href="https://learn.javascript.ru/operators">Операторы</a><br><a
+                  href="https://learn.javascript.ru/" class="dlink">Современный учебник Javascript 1
+                (новее) (link)</a><br><a
+                  href="http://javascript.ru/tutorial" class="dlink">Современный учебник Javascript 1
+                (старее) (link)</a></td>
+            <td><a href="html/js/homeworks/17.07.22_hw.html">JS вступление</a></td>
+          </tr>
+          <tr>
+            <td>17.08.22</td>
+            <td><a href="html/js/classworks/2017.08.19_1_classwork.html">Classwork</a><br><a
+                href="html/js/classworks/2017.08.19_3_classwork.html">Alert + prompt</a><br><a
+                href="html/js/classworks/2017.08.19_4_classwork--made_home.html">2017.08.19_4_classwork--made_home</a><br><a
+                href="doc/js/DZ_JavaScript_Obekt_document.docx" class="dlink">Объект document
+              (doc)</a><br><a class="dlink"
+                              href="https://learn.javascript.ru/document-write">document.write
+              (link)</a><br><a
+                href="http://javascript.ru/w3c/DOM2-Core/core.html" class="dlink">Document Object Model
+              Core (link)</a><br><a class="dlink"
+                                    href="doc/js/DZ_JavaScript_Dialogovye_okna.docx">Ввод/вывод данных.
+              Диалоговые окна (doc)</a><br><a class="dlink"
+                                              href="doc/js/DZ_JavaScript_(Date).doc">Объект Date и его
+              методы (doc)</a><br><a class="dlink"
+                                     href="https://learn.javascript.ru/datetime">Дата и Время (link)</a>
+            </td>
+            <td><a href="html/js/homeworks/2017.08.19_1_homework.html">Homework 1 (опрос)</a><br><a
+                href="html/js/homeworks/2017.08.19_2_homework.html">Homework 2 (знакомство + время +
+              калькулятор)</a><br>
+              <a href="html/js/homeworks/2017.08.19_3_homework.html">Homework 3 (запросить у пользователя
+                полное количество лет.
+                Вывести его год рождения.
+                запросить у пользователя дату рождения.
+                Вывести количество лет.
+                )</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17.08.26</td>
+            <td><a href="html/js/classworks/2017.08.26_classwork_1.html">Переключение слайдеров, if else,
+              switch, циклы</a><br><a class="dlink" href="doc/js/literali.pptx">Литералы (pptx)</a><br><a
+                class="dlink"
+                href="doc/js/yslovnie_operatori_i_cikli.doc">Условные литералы и циклы (doc)</a><br><a
+                class="dlink"
+                href="https://learn.javascript.ru/ifelse">Условные операторы: if, '?' (link)</a><br><a
+                href="https://learn.javascript.ru/switch" class="dlink">Конструкция switch
+              (link)</a><br><a class="dlink"
+                               href="https://learn.javascript.ru/while-for">Циклы while, for
+              (link)</a><br><a class="dlink"
+                               href="doc/js/slaider_js.doc">Слайдер JavaScript (doc)</a></td>
+            <td><a href="html/js/homeworks/2017.08.26_1_homework.html">Слайдер на js</a><br><a
+                href="html/js/homeworks/2017.08.26_2_homework.html">If else</a></td>
+          </tr>
+          <tr>
+            <td>17.09.02</td>
+            <td><a href="html/js/classworks/2017.09.02_1_classwork.html">Classwork_Циклы + Начало Функции
+              (передача в переменные)</a><br><a href="doc/js/JS.doc"
+                                                class="dlink">JavaScript - Циклы (doc)</a><br><a
+                href="https://learn.javascript.ru/while-for" class="dlink">Циклы while, for
+              (link)</a><br><a
+                href="http://www.dikarka.ru/javascript/06.shtml" class="dlink">Операторы цикла: for
+              (link)</a><br><a
+                href="http://www.dikarka.ru/lesson_javascript.shtml" class="dlink">Уроки JavaScript от
+              Самоделкина (link)</a><br><a
+                href="doc/js/Funkcii(start).doc" class="dlink">Функции. Начало (doc)</a><br><a
+                href="https://learn.javascript.ru/function-basics"
+                class="dlink">Функции (link)</a></td>
+            <td><a href="html/js/homeworks/2017.09.02_1_homework.html">Homewok (желто-белые квадраты)</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17.09.06</td>
+            <td><a href="html/js/classworks/2017.09.06_classwork.html">Classwork_Функции продолжение (брать
+              из инпутов)</a><br><a href="doc/js/DZ_JavaScript_JS(prilozheniya_na_osnove_form).doc"
+                                    class="dlink">Элементы формы как инструмент настройки
+              интерфейса (doc)</a><br><a href="doc/js/Proverka%20dannih.doc" class="dlink">Проверка
+              данных,
+              введенных в форму (doc)</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>19.09.09</td>
+            <td><a href="html/js/classworks/2017.09.09_classwork.html">Classwork</a><br><a
+                href="html/js/classworks/maxChecked.html">Не больше трёх чекбоксов</a><br><a
+                href="html/js/classworks/radio1.html">Радиокнопки - алерт</a><br><a href=""
+                                                                                    class="dlink">Формы
+              и события js (doc)</a><br><a
+                href="https://learn.javascript.ru/form-elements" target="_blank" class="dlink">Навигация
+              и свойства элементов формы (link)</a><br><a
+                href="doc/js/document.write(),%20innerText,%20innerHTML.docx" class="dlink">Изменение
+              содержимого объектов: document.write(), innerText, innerHTML (doc)</a><br><a
+                href="https://learn.javascript.ru/basic-dom-node-properties#innerhtml-содержимое-элемента"
+                class="dlink" target="_blank">innerText, innerHTML (link)</a><br><a
+                href="http://innerhtml.ru/"
+                class="dlink">Свойство innerHTML (link)</a><br><a
+                href="doc/js/vidvignor_modalnoe_okno.doc" class="dlink">Выдвижное модальное окно js
+              (doc)</a></td>
+            <td><a href="html/js/homeworks/2017.09.09_homework.html">Homework Выдвижное меню с формами и
+              сбором информации через JS</a></td>
+          </tr>
+          <tr>
+            <td>17.09.16</td>
+            <td><a href="html/js/classworks/2017.09.16_classwork.html">Classswork</a><br><a
+                href="doc/js/Ob_ekt_Array__nacalo__1490424802.docx"
+                class="dlink">Объект Array - начало (массивы) (doc)</a><br><a
+                href="doc/js/Ob_ekt_Array__prodolzenie__Metody__1490719210.docx" class="dlink">Объект
+              Array (продолжение) - Методы (doc)</a><br><a
+                href="https://ru.wikipedia.org/wiki/%D0%90%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9_%D1%82%D0%B8%D0%BF_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85"
+                class="dlink">Абстрактный тип данных (link)</a><br><a
+                href="https://ru.wikipedia.org/wiki/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)"
+                class="dlink">Очередь (программирование) (link)</a><br><a
+                href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D0%BA" class="dlink">Стек
+              (link)</a><br><a
+                href="https://learn.javascript.ru/array" class="dlink">Массивы с числовыми индексами
+              (link)</a><br><a
+                href="https://learn.javascript.ru/onload-onerror" class="dlink">Загрузка скриптов,
+              картинок, фреймов: onload и onerror (link)</a></td>
+            <td><a href="html/js/homeworks/2017.09.16_homework.html">Создайте массив из 1000 элементов.
+              Первые 100 элементов =0, вторая сотня =2 ….последняя сотня =9. Создайте функцию, которая
+              сравнивает два массива на предмет отсутствия одинаковых значений.</a><br><a
+                href="html/js/homeworks/practic.html">Практика с квадратами (циклы)</a><br><a
+                href="html/js/homeworks/2017.09.21_practic.html">Практика</a></td>
+          </tr>
+          <tr>
+            <td>17.09.20</td>
+            <td><a href="html/js/classworks/2017.09.20_classwork.html">Classwork_Array массивы
+              продолжение</a><br><a
+                href="doc/js/Ob_ekt_Object_DZ__1492537973.docx" class="dlink">Объект Object()
+              (doc)</a><br><a
+                href="https://learn.javascript.ru/object" class="dlink">Объекты как ассоциативные
+              массивы (link)</a><br><a href="https://learn.javascript.ru/constructor-new"
+                                       class="dlink">Создание объектов через "new"
+              (+конструктор)(link)</a></td>
+            <td><a href="html/js/homeworks/2017.09.20_homework.html">Homework - Создайте объект Чашка и
+              несколько его экземпляров.</a></td>
+          </tr>
+          <tr>
+            <td>17.09.23</td>
+            <td>Новый преподаватель <br>
+              <a href="doc/js/01%20Основы%20JavaScript.pptx" class="dlink">01 Основы JavaScript.pptx</a>
+              <a href="doc/js/02%20Основы%20JavaScript.pptx" class="dlink">02 Основы JavaScript.pptx</a>
+              <a href="doc/js/03%20Выражения%20и%20операторы.pptx" class="dlink">03 Выражения и
+                операторы.pptx</a>
+              <a href="doc/js/04%20Инструкции,%20объекты%20и%20массивы.pptx" class="dlink">04 Инструкции,
+                объекты и массивы.pptx</a>
+              <a href="doc/js/05%20Инструкции,%20объекты%20и%20массивы.pptx" class="dlink">05 Инструкции,
+                объекты и массивы.pptx</a>
+              <a href="doc/js/06%20Функции.pptx" class="dlink">06 Функции.pptx</a>
+              <a href="doc/js/07%20Динамическое%20добавление%20содержимого,%20доступ%20к%20формам,%20работа%20с%20датой.pptx"
+                 class="dlink">07 Динамическое добавление содержимого, доступ к формам, работа с
+                датой.pptx</a>
+              <a href="doc/js/08%20Методы%20объектов,%20this.pptx" class="dlink">08 Методы объектов,
+                this.pptx</a>
+              <a href="doc/js/09%20События%20и%20обработчики%20событий.pptx" class="dlink">09 События и
+                обработчики событий.pptx</a>
+            </td>
+            <td><a href="html/js/homeworks/2017.09.23_homework.html">1. Создать на странице несколько
+              числовых надписей (абзацы, заголовки, span и другие). Создать функции, заполняющие массив
+              значениями элементов, на которых кликают мышкой (при клике на 15 добавить в массив 15). При
+              клике на «вывести массив» сделать вывод всех значений.
+              <br>2. Создать событие при нажатии на кнопку. Меняет надпись на кнопке и создает рядом еще
+              одну кнопку.
+              <br>. Создать событие, меняющее фон и надпись строчного элемента при наведении мышки.</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17.09.27</td>
+            <td><a href="html/js/classworks/2017.09.27_classwork.html">События и обработчики
+              событий.</a><br><a
+                href="doc/js/10%20События%20и%20обработчики%20событий..pptx" class="dlink">События и
+              обработчики событий</a></td>
+            <td><a href="html/js/homeworks/2017.09.27_homework.html">1. Создать элемент с текстом и кнопкой
+              вручную. Создать джаваскрипт, который при клике на кнопку заставляет текст исчезнуть (не
+              удаляет). При этом кнопка становится выше и/или шире.
+              Можно использовать метод style выбранного элемента для изменения стилей.
+              2. При нажатии кнопки отобразить на кнопке дату и время.
+              3. Создать вручную форму из нескольких текстовых полей, при помещении курсора на которые
+              поле выделяется синим бордюром и подписывается снизу или сбоку описанием поля</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17.09.30</td>
+            <td><a href="html/js/classworks/2017.09.30_classwork.html">Взять и вывести</a><br>
+              <a href="doc/js/11%20DOM.pptx" class="dlink">DOM (doc)</a><br><a
+                  href="https://learn.javascript.ru/document" class="dlink">Документ и объекты
+                страницы(link)</a>
+            </td>
+            <td><a href="html/js/homeworks/2017.09.30_homework.html">Написать JavaScript программы (для
+              файла JS11example.html):
+              <br>1. Настроить вывод результатов В ПОСЛЕДНИЙ DIV на странице. Именно так, как сказано. Все
+              последующие результаты выводить туда.
+              <br>2. Найти в приложенном примере все названия мировых компаний и вывести их в нумерованный
+              список
+              <br>3. Из списка режиссера и «в ролях» получить все имена с фамилиями и создать select со
+              списком людей.
+              <br>4. Из списка с подпунктами собрать всё содержимое элементов
+              и вывести их в абзац через запятую.
+              <br>5. Из формы получить все значения value и тексты инпутов и создать объект OC со
+              свойствами из value и значениями из текстов. Вывести в таблицу свойства и значения
+              объекта.
+              <br>6. Собрать в абзац все теги, дочерние к BODY, перечислить их через запятую.
+              <br>7. Собрать в span все родительские к элементу «Подпункт 2.2.1.»
+            </a>
+            </td>
+          </tr>
+          <tr>
+            <td>17.10.05</td>
+            <td><a href="html/js/classworks/2017.10.04_classwork.html">Выбираем разные типы инпутов и
+              выводим их поочереди</a><br><a
+                href="doc/js/12%20DOM.%20Свойства%20узлов%20-%20тип,%20тег%20и%20содержимое.pptx"
+                class="dlink">12 DOM. Свойства узлов - тип, тег и содержимое. (doc)</a><br><a
+                href="https://learn.javascript.ru/attributes-and-custom-properties"
+                class="dlink">Атрибуты и DOM-свойства(link)</a></td>
+            <td><a href="html/js/homeworks/2017.10.04_homework.html">1. Собрать со страницы элементы с
+              одинаковым именем и вывести маркированными списками во второй по порядку элемент &lt;p&gt;
+              (по списку на каждое имя).
+              <br>2. Собрать все текстовые узлы со страницы, склеить их и поставить их в место первого
+              узла, добавив всей надписи полужирный вариант начертания.</a></td>
+          </tr>
+          <tr>
+            <td>17.10.07</td>
+            <td><a href="html/js/classworks/2017.10.07_classwork.html">1. Вывксти нужное количество
+              атрибутов и их значений
+              <br> 2. Создать новые элементы и вставить в нужное место</a><br><a
+                href="doc/js/13%20Атрибуты%20и%20DOM-свойства.pptx"
+                class="dlink">Атрибуты и DOM-свойства(doc)</a><br><a
+                href="https://learn.javascript.ru/modifying-document" class="dlink">Добавление и
+              удаление узлов(link)</a></td>
+            <td><a href="html/js/homeworks/2017.10.07_homework.html">Создать вручную HTML с разными
+              элементами на странице (p,div,span,a,h1..h6,img,pre и т.п.) и добавленными у некоторых
+              классами.
+              Написать JavaScript программу для:
+              <br>1. Проставления атрибутов тегам на странице с названием тега (pAtr,divAtr,spanAtr,aAtr и
+              т.п.) со значением количества символов в имени тега х4 (pAtr=“4”,divAtr=“12” и т.п.). А
+              также всем добавить атрибут alt со значением “custom”. Добавить классы тегам по имени тега
+              (pclass, divclass…)
+              <br>2. Пройти по всем элементам и если у элемента есть класс – добавить еще один класс (с
+              именем bestclass). Перед каждым элементом &lt;a &gt; разместить элемент &lt;hr &gt; с
+              атрибутом line=“long”.
+            </a></td>
+          </tr>
+          <tr>
+            <td>17.10.12</td>
+            <td><a href="html/js/classworks/2017.10.11_classwork_1.html">Удалить дочерние элементы</a><br><a
+                href="html/js/classworks/2017.10.11_classwork_1.html">Вставить в список с разных сторон
+              поочереди</a><br><a
+                href="doc/js/14%20Атрибуты%20и%20DOM-свойства.pptx" class="dlink">Атрибуты и
+              DOM-свойства
+              (doc)</a><br><a href="https://learn.javascript.ru/multi-insert" class="dlink">Мультивставка:
+              insertAdjacentHTML и DocumentFragment(link)</a></td>
+            <td><a href="html/js/homeworks/2017.10.11_homework.html">1_0. Написать JavaScript программы для
+              создания длинных списков.</a><br><a
+                href="html/js/homeworks/2017.10.11_homework_2.html">1. Создать страницу с пустым
+              содержимым. Джаваскриптом установить на ней элементы &lt;h3&gt;,&lt;p&gt;, &lt;ul&gt;список
+              с элементами списка. Склонировать список в элемент &lt;p&gt;. Склонировать получившийся
+              элемент &lt;p&gt; в элемент &lt;h3&gt;. Создать клон получившегося &lt;h3&gt; в конце
+              документа с добавлением ему атрибутов name и id. Создать ниже еще один клон последнего &lt;h3&gt;
+              без дочерних элементов и с измененным id.
+              <br>2. Создать вручную документ с пустым списком &lt;ul&gt;. Джаваскриптом после списка
+              вставить N (запрос у пользователя) элементов &lt;hr&gt; множественной вставкой с помощью
+              insertAdjacent. Между этими элементами вставить текстовые узлы и комментарии с нумерацией
+              (например «текст 1» и «комментарий 1»). В конце вставить список городов элементами &lt;li&gt;
+              в существующий пустой список &lt;ul&gt; с помощью DocumentFragment.</a><br><a
+                href="html/js/homeworks/Practice_new_teacher_01-08.html">Домашние задания по урокам
+              когда у нас был другой учитель</a></td>
+          </tr>
+          <tr>
+            <td>17.10.16</td>
+            <td><a href="html/js/classworks/2017.10.16_classworks.html">1.Создать кнопку, добавить стили
+              через js сначала все вместе потом по одному, лесенку из кнопок через цикл + изменение цвета
+              каждый раз<br>2.Создать функцию, которая
+              показывает сообщение в указанном месте (x, y, ширина, текст) на 3 секунды и убирает его.</a><br><a
+                href="doc/js/15%20Стили%20+%20Размеры%20и%20прокрутка%20элементов.pptx"
+                class="dlink">Стили + Размеры и прокрутка элементов(doc)</a><br><a
+                href="https://learn.javascript.ru/styles-and-classes"
+                class="dlink">Стили, getComputedStyle(link)</a><br><a
+                href="https://learn.javascript.ru/metrics" class="dlink">Размеры и прокрутка
+              элементов(link)</a></td>
+            <td><a href="html/js/homeworks/2017.10.16_homework.html">1. Создать функцию, которая показывает
+              сообщение в указанном месте (x, y, ширина,
+              текст) на 3 секунды и убирает его. Для задания временного промежутка:
+              setTimeout(
+              function() { }, 3000);
+              }
+              <br>2. Создать страницу с различными элементами и прописать по ним CSS. Выводить в див
+              список стилей при наведении мышки на любой элемент на странице и очищать див при потере
+              фокуса.
+              <br>3. Создать на странице блок див и назначить ему все отступы. Получить по заданному
+              элементу все метрики. Вычислить размеры полезного содержимого при задании ему ширины и
+              высоты.</a></td>
+          </tr>
+          <tr>
+            <td>17.10.16</td>
+            <td><a href="html/js/classworks/2017.10.18_classwork1.html">1. JSON - строка - абзац -
+              JSON</a><br><a
+                href="html/js/classworks/2017.10.18_classwork2.html">2. Выбор инпута из js..</a><br><a
+                href="doc/js/16%20JSON,%20формы,%20элементы%20управления.pptx" class="dlink">JSON,
+              формы, элементы управления.pptx (doc)</a></td>
+            <td><a href="html/js/homeworks/2017.10.18_homework.html">1. Разобрать JSON получить объект и
+              вывести его содержимое. Определить количество вложенных объектов и вывести их. Собрать
+              вложенные объекты и перевести их в JSON формат по отдельности.
+              <br>2. Создать форму с разными элементами (input, select, textbox, radio, checkbox).
+              Заполнить элементы формы джаваскриптом. Все поля должны быть задействованы при заполнении.
+              Добавить кнопку на форму для очистки формы. Действие – очистка всех полей, приведение их к
+              пустым значениям.</a></td>
+          </tr>
+          <tr>
+            <td>17.10.21</td>
+            <td><a href="html/js/classworks/2017.10.21_classwork.html">Форма. При неправильном вводе дальше
+              не пускает и показывает ошибку</a><br><a
+                href="doc/js/17%20Формы,%20элементы%20управления.pptx" class="dlink">Формы, элементы
+              управления (doc)</a></td>
+            <td><a href="html/js/homeworks/2017.10.21_homework.html">Арканоид (Нужно выбрать вариант,
+              составить план выполнения задания и выполнить задание по плану.)</a></td>
+          </tr>
+          <tr>
+            <td>17.10.25</td>
+            <td><a href="html/js/classworks/2017.10.25_classwork.html">
+              Создать обработчики событий для поля INPUT, один из которых
+              ставит "." после каждой вводимой буквы, второй ожидает пробел и
+              меняет его на "_".</a><br><a class="dlink" href="doc/js/18%20События.pptx">События (doc)</a>
+            </td>
+            <td><a href="html/js/homeworks/2017.10.25_homework_1.html">1. Создать страницу с блоком DIV
+              имеющим возможность установки фокуса. При фокусе на этом блоке принимать и обрабатывать
+              различные события: клик мышки (какая кнопка, координаты), нажатия клавиш (определять букву
+              клавиши, код клавиши, дополнительные клавиши: Ctrl, Alt, Shift), скроллинг (вывести свойства
+              события), установка и снятие фокуса. Всю информацию выдавать в другой див с прокруткой или в
+              TEXTAREA.
+              <br>
+              2. Перехватить события мышки и при движении мышки отображать круг под стрелкой курсора. Не
+              давать поставить курсор в поля формы.
+              <br>
+              3. В текстовом поле при вводе вместо цифр выводить названия цифр (вместо 1 писать
+              «один»).</a></td>
+          </tr>
+          <tr>
+            <td>17.10.28</td>
+            <td><a href="html/js/classworks/2017.10.28_classwork.html">
+              Рекурсия + рекурсия факториала + циклом</a><br><a class="dlink"
+                                                                href="doc/js/19%20Рекурсия.%20Регулярные%20выражения.pptx">19
+              Рекурсия. Регулярные выражения. (doc)</a>
+            </td>
+            <td><a href="html/js/homeworks/2017.10.28_homework.html">1. Распарсить файл json.txt в объект с
+              вложенными объектами. Создать программу с использованием рекурсии для прохода по всем
+              вложенным объектам и вывода информации из них. Попробуйте организовать красивый вывод данных
+              с отступами в зависимости от количества вложений (чем глубже – тем больше отступ).
+              <br>
+              2. Создать программу для вывода данных из вложенных массивов (создать массив
+              самостоятельно).
+            </a></td>
+          </tr>
+          <tr>
+            <td colspan="3" style="text-align: center; background-color: rgba(160,160,160,0.93);"><h3>Java
+              Script New teacher</h3></td>
+          </tr>
+          <tr>
+            <td>17.11.01</td>
+            <td><a href="html/js/classworks/2017.11.01_classwork_1.html">
+              1. Увеличение текста циклом. <br>Появление кнопки и изменение цвета при нажатии. <br>Проверка
+              формы.<br>Вывод циклом увеличивающегося текста.</a><br><a
+                href="html/js/classworks/2017.11.01_classwork_2.html">
+              2. События. <br>Меняется цвет и фон при нажатии.</a><br><a class="dlink"
+                                                                         href="doc/js/plakat1.doc">1.Способы
+              размещения сценариев JavaScript, оформление комментариев. Проверка отключения в браузере
+              пользователя поддержки сценариев JavaScript... Отладка сценариев JavaScript (на примере
+              использования встроенных возможностей браузера Google Chrome). Переменный, их объявление и
+              инициализация. Типы данных. (doc)</a><br><a class="dlink"
+                                                          href="doc/js/plakat2.doc">2.
+              Арифметические операторы. Конкатенация. (doc)</a><br><a class="dlink"
+                                                                      href="doc/js/plakat3.doc">3.Ввод –
+              вывод данных, диалоговые окна. Конструкция ветвления "if ... else ...switch ... case ...
+              default ...". Цикл со счетчиком for, цикл с предусловием while. (doc)</a><br><a
+                class="dlink"
+                href="doc/js/plakat4.doc">4.Функции без
+              параметров (описание, вызов из head или внешнего файла) (doc)</a><br><a class="dlink"
+                                                                                      href="doc/js/plakat5.doc">5.Основы
+              DOM : доступ к элементу по идентификатору (обычный и с применением метода
+              document.getElementById). Строки. Свойство строк length. Методы работы с содержимым строк
+              indexOf и substr. (doc)</a><br><a
+                href="html/js/classworks/17.11.01_homework_from_teacher_1.html">Домашняя работа
+              1</a><br><a href="html/js/classworks/17.11.01_homework_from_teacher_2.html">Домашняя работа
+              2</a>
+            </td>
+            <td><a href="html/js/homeworks/2017.11.01_homework.html">1. При наведении курсора мыши на любой
+              из следующих пунктов «блока меню» в «блоке подменю» должен «открываться» соответствующий
+              список именно данной «товарной группы». При сведении курсора мыши со всех пунктов «блока
+              меню» в «блок подменю» опять должен быть пустым.
+              <br>2. ПРОВЕРКА КОРРЕКТНОСТИ ВВЕДЕННОГО E-MAIL (ОТСУТСТВИЕ КИРИЛЛИЧЕСКИХ БУКВ)</a></td>
+          </tr>
+          <tr>
+            <td>2017.11.05</td>
+            <td><a href="html/js/classworks/2017.11.05_classwork_1.html">1. Запрет всплывания
+              событий</a><br><a href="html/js/classworks/2017.11.05_classwork_2.html">2. События return
+              false</a><br><a href="html/js/classworks/2017.11.05_classwork_3.html">3. Открыть - закрыть
+              див по ссылке или по клавише</a><br><a
+                href="html/js/classworks/2017.11.05_classwork_4.html">4. Пердвижение дива по странице
+              мышкой</a><br><a href="html/js/classworks/2017.11.05_classwork_5.html">5. Увеличение
+              картинки при наведении</a><br><a href="html/js/classworks/2017.11.05_classwork_6.html">6.
+              Следующая картинка при клике по картинке</a><br><a
+                href="html/js/classworks/2017.11.05_classwork_7.html">7. SetInterval, SetTimeout, Date,
+              интервал и дата</a><br><a href="html/js/classworks/2017.11.05_classwork_8.html">8.
+              Сетинтервал и клеаринтервал</a><br><a
+                href="doc/js/plakat6.doc" class="dlink">1.Обработка событий, Объект event, Работаем с
+              мышью -перетаскивание элементов, наведения и нажатия (doc)</a><a href="doc/js/plakat7_1.doc"
+                                                                               class="dlink"><br>2. Объект
+              Image, Дата и время, Задержки и интервалы (doc)</a><a
+                href="doc/js/ТЗ_ШКОЛА_АНГЛИЙСКОГО_IE8.doc"
+                class="dlink"><br>3. Техническое задание
+              на модернизацию и редизайн сайта - живой пример (doc)</a><br><a
+                href="doc/js/dz_1509872961.zip" class="dlink">Homework - задание (zip)</a>
+            </td>
+            <td><a href="homeworks/js/17.11.05/2017.11.05_homework.html">Меню, при наведении изменяется
+              подменю, появляются картинки, при нажатии на стрелку меняются картинки</a></td>
+          </tr>
+          <tr>
+            <td>2017.11.08</td>
+            <td><a href="html/js/classworks/2017.11.08_classwork_1.html">1. Летающий текст по кругу и тд,
+              при наведении останавливается</a><br><a
+                href="html/js/classworks/2017.11.08_classwork_2.html">2. Автоматическая смена
+              картинок</a><br><a href="html/js/classworks/2017.11.08_classwork_3.html">3. Див движется
+              вверх до конца сетинтервалом</a><br><a
+                href="html/js/classworks/2017.11.08_classwork_4.html">4. Медленное пропадание элемента
+              по нажатию на ссылку</a><br><a href="html/js/classworks/2017.11.08_classwork_5.html">5.
+              Проверка есть ли элемент на странице и добавление если есть стиля</a><br><a
+                href="html/js/classworks/2017.11.08_classwork_6.html">6. Вставление элементов
+              динамически на страницу, отображение потомков</a><br><a
+                href="html/js/classworks/2017.11.08_classwork_krug_1.html">7. Наведите на большой шар и
+              подержите - 1</a><br><a
+                href="html/js/classworks/2017.11.08_classwork_krug_2.html">8. Наведите на большой шар и
+              подержите 2 + изменение круга</a><br><a
+                href="html/js/classworks/2017.11.08_classwork_show_old_homework.html">Решение прошлого
+              дз
+              по версии преподавателя</a><br><a href="doc/js/plakat7_2.doc" class="dlink">1.
+              Математические функции, math, Формулы для определения катетов (смещения left, top),
+              Анимация, Применение интервалов для анимированного перемещения,
+              постепенное скрытие элемента (аналог функции fadeOut jQuery), </a><br><a
+                href="doc/js/plakat8_1.doc"
+                class="dlink">2. Иерархия узлов DOM. Стандартное дерево DOM. Работа с узлами DOM.</a>
+            </td>
+            <td><a href="homeworks/js/17.11.08/1/17.11.08_homework_1.html">1. Используя мeтод setInterval
+              реализуйте алгоритм движения шарика внутри некого блока, окно загрузки с изменением через
+              интервал</a><br><a href="homeworks/js/17.11.08/2/17.11.08_homework_2.html">2. Вставить
+              картинки в ссылку и дальнейший вызов функции их одновременного удаления таким образом, чтобы
+              текст ссылки (Link) при данном удалении сохранялся</a></td>
+          </tr>
+          <tr>
+            <td>17.11.12</td>
+            <td>
+              <a href="html/js/classworks/2017.11.12_classwork_1.html">Найди span и выдели bold</a><br>
+              <a href="html/js/classworks/2017.11.12_classwork_2.html">Найди red-Элемент и увеличь size</a><br>
+              <a href="html/js/classworks/2017.11.12_classwork_2_2.html">Из строки через массив в таблицу</a><br>
+              <a href="html/js/classworks/2017.11.12_classwork_3.html">Меняем местами цветные квадраты (берём стили в
+                массивы и переопределяем)</a><br>
+              <a href="html/js/classworks/2017.11.12_classwork_4.html">Меняем цвет внутренним элементам (вложеным)
+                elements method, child method</a><br>
+              <a href="html/js/classworks/2017.11.12_classwork_5.html">Переключаем картинки нажатиеам на картинку,
+                превью меняют прозрачность</a><br>
+              <a href="html/js/classworks/2017.11.12_classwork_6.html">Выводим из элементов на странице таблицу</a><br>
+              <a href="html/js/classworks/17.11.08_homework_teacher_1.html">Решение прошлого дз 1 (шарик туда
+                сюда)</a><br>
+              <a href="html/js/classworks/17.11.08_homework_teacher_2.html">Решение прошлого дз 2 (удаляем картинки)</a><br>
+              <a href="doc/js/plakat8_2.doc" class="dlink">Примеры алгоритмов с использованием childNodes, setAttribute,
+                getAttribute. (doc)
+              </a><br>
+              <a href="doc/js/plakat9.doc" class="dlink">getElementsByTagName, getAttribute, setAttribute,
+                getElementsByClassName+ getElementsByTagName("*") + nodeName для доступа к ЛЮБОМУ ЭЛЕМЕНТУ ЛЮБОГО УРОВНЯ
+                ВЛОЖЕННОСТИ. getElementsByTagName, getAttribute, setAttribute - галерея (смена img) – ФОРМИРОВАНИЕ
+                МАССИВА СО СТРАНИЦЫ + ЭФФЕКТ «ПОДСВЕТКИ».ФОРМИРОВАНИЯ ТАБЛИЦЫ «НА ЛЕТУ» - ИЗ СОДЕРЖИМОГО ЭЛЕМЕНТОВ
+                СТРАНИЦЫ (ИМИТАЦИЯ ИЗ БД). (doc) </a><br>
+            </td>
+            <td>
+              <a href="homeworks/js/17.11.12/1/17.11.12_homework_1.html">1. При нажатии на закрашенный квадратик – внизу
+                появляется пустой div. При нажатии на пустой div он окрашивается в цвет ранее нажатого вверху. При
+                повторном нажатии на закрашенный квадратик вверху – нижний приобретает «исходный» цвет (белый) (здесь
+                термин «приобретает» может означать, например, не изменение его стиля, а его удаление и создание
+                заново). При повторном нажатии на пустой div он опять окрашивается в цвет ранее нажатого вверху.</a><br>
+              <a href="homeworks/js/17.11.12/2/17.11.12_homework_2.html">2. Начальная таблица (элементы table, tr, td)
+                присутствует на странице. 2.Количество строк = количеству столбцов. 3.Отсутствуют любые id (начальные
+                стили можете оформить селектором td в секции style элемента head). 4.Их число - значения не имеет
+                (!!!т.е., алгоритм должен работать при добавке новой tr (но с соблюдением условия п.2 - количество строк
+                = количеству столбцов (т.е., при такой добавке добавьте еще по одной td в каждую из строк))). 5.При
+                загрузке страницы (или при вызове соответствующей функции) «диагональ» должна получать отличительный
+                фоновый цвет. 6.Алгоритм необходимо реализовать на основе getElements-модели.</a><br>
+              <a href="homeworks/js/17.11.12/3/17.11.12_homework_3.html">3. В продолжение примера, рассмотренного на
+                занятии (формирование контента таблицы из span) На странице разместите еще 2-а блока div (+ к div с 3-мя
+                span с названием товара) с некоторыми id, в которых :</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>17.11.15</td>
+            <td><a href="html/js/classworks/17.11.15_classwork_1.htm">1. Сортировка товара по клику и выпадающему
+              меню</a><br><a href="html/js/classworks/17.11.15_classwork_2.htm">2. Range выделение</a><br><a
+                href="html/js/classworks/17.11.12_homework_teacher_1.html">Прошлое дз (выбор цвета квадрата)</a><br><a
+                href="html/js/classworks/17.11.12_homework_teacher_2_диагональ.html">Прошлое дз (диагональ 1)</a><br><a
+                href="html/js/classworks/17.11.12_homework_teacher_3_диагональ_class.html">Прошлое дз (диагональ 2)</a><br><a
+                href="html/js/classworks/17.11.12_homework_teacher_4_диагональ_наоборот.html">Прошлое дз (диагональ наоборон)</a><br><a
+                href="html/js/classworks/17.11.12_homework_teacher_5.html">Прошлое дз (в таблицу)</a><br><a
+                href="html/js/classworks/17.11.12_homework_teacher_6.html">Прошлое дз (в таблицу 2)</a><br><a
+                href="doc/js/plakat10.doc" class="dlink">СОРТИРОВКА КОНСТРУКЦИИ МАССИВ. (2-А И БОЛЕЕ СВЯЗАННЫХ ЯЧЕЕК), С ВОЗМОЖНОСТЬЮ СОРТИРОВКИ ПО РАЗНЫМ СТОЛБЦАМ, «SELECT» - СОРТИРОВКА – ДОБАВКА ОПЦИИ СОРТИРОВКИ ПО ПУНКТАМ МЕНЮ. (doc)</a><br><a
+                href="doc/js/plakat11.doc" class="dlink">Range – объект (выделение) - метод createRange (создание), методы selectNode, selectNodeContents (установка верхней и нижней границ - ДЛЯ 1-ГО УЗЛА – ТЕГА и ЕГО СОДЕРЖИМОГО), методы toString() (копирует ТЕКСТОВОЕ содержимое в переменную) surroundContents (помещает всё содержимое текущего Range-объекта в новый элемент). методы setStartBefore (setEndAfter) (установка верхней и нижней границ - ДЛЯ НЕСКОЛЬКИХ ТЕГОВ, методы deleteContents (УДАЛИТЬ КОНТЕНТ – ЛЮБОЙ!!!), extractContents (ВЫРЕЗАТЬ КОНТЕНТ – ЛЮБОЙ!!! (МОЖНО ПОМЕСТИТЬ В ПЕРЕМЕННУЮ)).методы setStart (setEnd) (БОЛЕЕ «ТОНКАЯ» НАСТРОЙКА - установка верхней и нижней границ ДЛЯ ЧАСТИ (СЛОВА) СОДЕРЖИМОГО ТЕГОВ – ТЕКСТОВЫХ УЗЛОВ).ПОИСК в тексте и ВЫДЕЛЕНИЕ (ОБОРАЧИВАНИЕ) ССЫЛКОЙ (doc)</a><br></td>
+            <td><a href="homeworks/js/17.11.15/1/17.11.15_homework_1.html">1. Данная дополнительная строка должна быть добавлена таким образом, чтобы сортировка по столбцу (в данном случае - «Товар») происходила в обычном порядке (визуально + отсутствие ошибок в отладчике), а добавленная строка так и оставалась в конце таблицы</a><br><a
+                href="homeworks/js/17.11.15/11/17.11.15_homework_1.1.html">1.1 Подключите рассмотренную на занятии функцию сортировки к шапке столбика «Профессия»: по возрастанию и по убыванию</a><br><a
+                href="homeworks/js/17.11.15/2/17.11.15_homework_2.html">2. При щелчке (события onclick не прописываются «жестко» в исходном коде html, а «подвешиваются динамически» при загрузке страницы) на ПЕРВОЙ любой ячейке («ПЕРВАЯ КОНТРОЛЬНАЯ ТОЧКА»), она окрашивается, например, в желтый цвет : При щелчке на ВТОРОЙ любой ячейке («ВТОРАЯ КОНТРОЛЬНАЯ ТОЧКА»), она окрашивается, например, в красный цвет. …и через, например, 1 секунду запускается функция, которая удаляет все столбцы между выбранными контрольными точками</a><br></td>
+          </tr>
+        </table>
+        <span style="font-size: 0"><a id="bottom">The end</a></span>
+      </section>
     </div>
+  </div>
 </div>
 </body>
 </html>

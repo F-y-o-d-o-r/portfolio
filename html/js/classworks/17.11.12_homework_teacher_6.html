@@ -1,0 +1,133 @@
+﻿<html>
+
+<head>
+  <title>HomeWork</title>
+
+  <!-- <script src="script.js"></script> -->   <!-- ... -->
+  <script>
+
+  </script>
+
+<style>
+td {
+background-color:whitesmoke;
+border:1px solid blue;
+}
+</style>
+</head>
+
+<body>
+
+<div id="tovar">
+<span>Компьютеры</span>
+<span>Принтеры</span>
+<span>Аудио-видео</span>
+</div>
+
+<div id="imgs">
+<span>pk.jpg</span>
+<span>pr.jpg</span>
+<span>vi.jpg</span>
+</div>
+
+<div id="prices">
+<span>10000.00</span>
+<span>6000.00</span>
+<span>700.00</span>
+</div>
+
+<div id="zagolovok">
+<span>ВИД</span>
+<span>ТОВАР</span>
+<span>ЦЕНА</span>
+</div>
+
+  <!--<a href="#" onclick="func_table();return false;">func_table</a>-->
+
+<table>
+<tbody>
+<!--<tr><td style="text-align:center;font-weight:bold;background-color:silver;">ТОВАР</td></tr>-->
+</tbody>
+<tbody id="tbody">
+</tbody>
+</table>
+
+  <script>
+
+var arr_inner = new Array();
+var ArTovar = new Array();
+var ArImgs = new Array();
+var ArPrices = new Array();
+var MyArray = new Array();
+window.onload = function () {
+
+	var MyZag = document.getElementsByTagName('tbody')[0]
+	func_stroka(MyZag, 'zagolovok');
+
+	var MyTab = document.getElementById('tbody');
+	func_strokaT(MyTab, 'tovar', 'imgs', 'prices');
+
+}
+
+function func_stroka(el_tbody, Myid) {
+
+	var arr_span = document.getElementById(Myid).getElementsByTagName('span');
+	var arr_inner = new Array();
+	for (var i = 0; i < arr_span.length; i++) {
+		arr_inner[i] = arr_span[i].innerHTML;
+	}
+
+		var el_tr = document.createElement('tr');
+		var el_td = '';
+
+		for (var j=0;j<arr_inner.length;j++){
+			el_td += '<td>' + arr_inner[j] + '</td>';
+		}
+		el_tr.innerHTML = el_td;
+		el_tbody.appendChild(el_tr);
+	
+}
+
+function func_strokaT(el_tbody, Id1, Id2, Id3) {
+
+var arr_span_length=0;
+
+	function MyArr(Myid, MyArray) {
+			
+		var arr_span = document.getElementById(Myid).getElementsByTagName('span');
+        arr_span_length=arr_span.length;
+		arr_inner[Myid]=new Array();
+		for (var i = 0; i < arr_span.length; i++) {
+			arr_inner[Myid][i] = arr_span[i].innerHTML;
+		}
+	}
+
+	MyArr(Id1, ArTovar);
+	
+	MyArr(Id2, ArImgs);
+
+	MyArr(Id3, ArPrices);
+
+    for(var j=0; j<arr_span_length; j++) {
+        var el_tr = document.createElement('tr');
+		var el_td = '';
+        for(var i in arr_inner) {
+           if(i=='imgs') {
+              el_td+='<td><img src="' + arr_inner[i][j] + '" alt="PHOTO"></td>';
+           }
+           else {
+              el_td+='<td>' + arr_inner[i][j] + '</td>';
+           }
+        }
+		el_tr.innerHTML = el_td;
+		el_tr.setAttribute('onclick','alert(this.childNodes[1].innerHTML)')
+		el_tbody.appendChild(el_tr);
+    }
+
+}
+
+  </script>
+
+</body>
+
+</html>

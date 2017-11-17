@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Untitled</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <style>
+    #div1 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0px;
+      left: 0px;
+      cursor: pointer;
+    }
+
+    #div2 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50px;
+      left: 0px;
+      cursor: pointer;
+    }
+
+    #div3 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0px;
+      left: 50px;
+      cursor: pointer;
+    }
+
+    #div4 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50px;
+      left: 50px;
+      cursor: pointer;
+    }
+
+    #div_res {
+      width: 50px;
+      height: 50px;
+      margin-top: 50px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body id="bod">
+Щелкните на "окрашенный" квадратик, потом на "пустой" и он "получит" этот цвет.
+<div id="div_color" style="width:100px; height:100px; position:relative;">
+  <div id="div1" style="background-color:red;" onclick="cvet_vibor(this);"></div>
+  <div id="div2" style="background-color:green;" onclick="cvet_vibor(this);"></div>
+  <div id="div3" style="background-color:blue;" onclick="cvet_vibor(this);"></div>
+  <div id="div4" style="background-color:gold;" onclick="cvet_vibor(this);"></div>
+</div>
+<script>
+  var cvet_vib;
+  function cvet_vibor(elem) {
+    cvet_vib = elem.getAttribute('style');
+    //
+    var rbod = document.getElementById("bod");
+    if (document.getElementById("div_res")) {
+      var el_dev_res = document.getElementById("div_res");
+      rbod.removeChild(el_dev_res);
+    }
+    var div_new = document.createElement("div");
+    div_new.setAttribute("id", "div_res");
+    div_new.setAttribute("onclick", "cvet_ustan(this);");
+    //div_new.setAttribute("onclick", "cvet_ustan(div_res);"); //...ИЛИ
+    rbod.appendChild(div_new);
+    //
+  }
+  function cvet_ustan(elem) {
+    elem.setAttribute('style', cvet_vib);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+<style>
+.tr {display:table-row;}
+.td {display:table-cell; background-color:silver; border:1px solid white; width:20px; height:20px; text-align:center;}
+</style>
+</head>
+
+<body>
+
+<div class="tr"><div class="td">11</div><div class="td">12</div><div class="td">13</div><div class="td">14</div></div>
+<div class="tr"><div class="td">21</div><div class="td">22</div><div class="td">23</div><div class="td">24</div></div>
+<div class="tr"><div class="td">31</div><div class="td">32</div><div class="td">33</div><div class="td">34</div></div>
+<div class="tr"><div class="td">41</div><div class="td">42</div><div class="td">43</div><div class="td">44</div></div>
+
+<script>
+/*
+var mas = document.body.children[0];
+for (var i = 0; i < mas.rows.length; i++) {
+var row = mas.rows[i];
+row.cells[i].style.backgroundColor = 'yellow';
+}
+*/
+  var r_tr=document.body.getElementsByClassName('tr'); //получаем все строки
+  for (var i=0; i<r_tr.length; i++) {  //перебираем их
+     var r_td=r_tr[i].getElementsByClassName('td'); //при переборе каждой строки получаем все столбцы в ней
+     for(var j=0; j<r_td.length; j++) {  //перебираем их
+        if(j==i) {r_td[j].setAttribute('style', 'background-color:gold;');} //если при переборе столбцов из конкретной строки, его номер совпадает с номером самой строки (это и есть диагональ), ставим новый фон столбцу
+     }
+  }
+</script>
+
+</body>
+
+</html>

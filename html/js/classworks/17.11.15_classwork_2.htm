@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Untitled</title>
+</head>
+<script>
+
+</script>
+<body id="body">
+
+<span id="sp1">Здесь будет ссылка</span>
+
+<br><a href="#" onclick="func_rng1();return false;">Range-span</a>
+<br><a href="#" onclick="func_rng3();return false;">Range-world in span</a>
+
+
+<br><br>
+<img src="pear.jpg" id="img1" alt/>
+<img src="cherry.jpg" id="img2" alt/>
+<img src="raspberry.jpg" alt/>
+
+<br><a href="#" onclick="func_rng2();return false;">Range-two img</a>
+
+<form name="form1">
+    <input type="text" name="text1"/>
+    <input type="button" value="Search" onclick="div0.innerHTML = content; func_search(text1.value)"/>
+</form>
+
+<div id="div0">Это, в первую очередь, объясняется принципами их работы. Здесь можно упомянуть и крос- сплатформенность,
+    и преимущества интернета, как средства доступа к веб приложению из любой точки мира, и небольшие затраты на
+    разворачивание инфраструктуры, и мириады интернет пользователей, готовых потреблять услуги веб-приложений и
+    обогащать их создателей.
+</div>
+
+<script>
+    function func_rng1() {
+        var el_sp = document.getElementById('sp1');
+        var el_new = document.createElement('a');
+        el_new.setAttribute('href', '#');
+        var rng = document.createRange();
+        //rng.selectNode(el_sp);//c тегами
+        rng.selectNodeContents(el_sp);//внутри тегов
+        rng.surroundContents(el_new);
+    }
+    function func_rng2() {
+        var el_img1 = document.getElementById('img1');
+        var el_img2 = document.getElementById('img2');
+        var el_new = document.createElement('a');
+        el_new.setAttribute('href', '#');
+        var rng = document.createRange();
+        rng.setStartBefore(el_img1);
+        rng.setEndAfter(el_img2);
+        //rng.surroundContents(el_new);
+        //rng.deleteContents();
+        var ex = rng.extractContents();
+        body.appendChild(ex);
+    }
+    function func_rng3() {
+        var el_sp = document.getElementById('sp1').childNodes[0];//текстовый узел
+        var el_new = document.createElement('a');
+        el_new.setAttribute('href', '#');
+        var rng = document.createRange();
+        rng.setStart(el_sp, 12);
+        rng.setEnd(el_sp, 18);
+        rng.surroundContents(el_new);
+    }
+
+    var content = div0.innerHTML;
+    function func_search(val) {
+        var pos = content.indexOf(val);
+        var i = 0;
+        /*if (pos !== -1) {
+            var el_sp = document.getElementById('div0').childNodes[0];
+            var el_new = document.createElement('a');
+            el_new.setAttribute('href', '#');
+            var rng = document.createRange();
+            rng.setStart(el_sp, pos);
+            rng.setEnd(el_sp, pos + val.length);
+            rng.surroundContents(el_new);
+        }*/
+        while (pos !== -1) {
+            var el_sp = document.getElementById('div0').childNodes[i];
+            var el_new = document.createElement('a');
+            el_new.setAttribute('href', '#');
+            var rng = document.createRange();
+            rng.setStart(el_sp, pos);
+            rng.setEnd(el_sp, pos + val.length);
+            rng.surroundContents(el_new);
+            i += 2;
+            var el_new = document.getElementById('div0').childNodes[i];
+            var content_new = el_new.textContent;
+            pos = content_new.indexOf(val);
+        }
+    }
+</script>
+
+</body>
+
+</html>

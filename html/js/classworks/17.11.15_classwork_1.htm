@@ -1,0 +1,96 @@
+﻿<html>
+<head>
+    <style>
+        td {
+            background-color: whitesmoke;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<form name="form1">
+    <select name="select1" onchange="cng()">
+        <option>Сортировать по</option>
+        <option>Товару</option>
+        <option>Цене</option>
+    </select>
+</form>
+<table>
+    <tbody>
+
+    <tr><!--обязательно без пробелов-->
+        <td style="background-color:silver;font-weight:bold;text-align:center;">ВИД</td>
+        <td style="background-color:silver;font-weight:bold;text-align:center;">ТОВАР</td>
+        <td style="background-color:silver;font-weight:bold;text-align:center;">ЦЕНА</td>
+    </tr>
+    </tbody>
+    <tbody id="price">
+    <tr><td><img src="pk.jpg" alt=""></td><td>Компьютеры</td><td>5000</td></tr>
+    <tr><td><img src="pr.jpg" alt=""></td><td>Принтеры</td><td>2000</td></tr>
+    <tr><td><img src="vi.jpg" alt=""></td><td>Аудио-видео</td><td>600</td></tr>
+    </tbody>
+</table>
+
+<script>
+    function sortTable(num) {
+        var arr = document.getElementById('price').getElementsByTagName('tr');
+        var arr_sort = new Array();
+        for (var i = 0; i < arr.length; i++) {
+            arr_sort[i] = arr[i];
+        }
+        arr_sort.sort(sortTr);
+        /*function sortT(a1, a2) {
+         if(!isNaN(a1.childNodes[num].innerHTML) && !isNaN(a2.childNodes[num].innerHTML)){
+
+         }
+
+         if (a1.childNodes[num].innerHTML > a2.childNodes[num].innerHTML) {//change a1<a2 naoborot sortirovka
+         return 1;
+         } else if (a1.childNodes[num].innerHTML === a2.childNodes[num].innerHTML) {
+         return 0;
+         } else return -1;
+         }*/
+        function sortTr(tr1, tr2) {
+            if (isNaN(tr1.childNodes[num].innerHTML) && isNaN(tr2.childNodes[num].innerHTML)) {
+                tr1 = tr1.childNodes[num].innerHTML;
+                tr2 = tr2.childNodes[num].innerHTML
+            }
+            else {
+                tr1 = parseInt(tr1.childNodes[num].innerHTML);
+                tr2 = parseInt(tr2.childNodes[num].innerHTML);
+            }
+            if (tr1 > tr2) {
+                return 1;
+            }
+            else if (tr1 == tr2) {
+                return 0;
+            }
+            else {
+                return -1;
+            }
+        }
+
+        for (var i = 0; i < arr_sort.length; i++) {
+            //arr[i].innerHTML = arr_sort[i];//arr[i] - dom objects
+            price.appendChild(arr_sort[i]);//переносит старые, не дублирует
+        }
+    }
+    function cng() {
+        if (form1.select1.selectedIndex !== 0) {
+            sortTable(form1.select1.selectedIndex)
+        }
+    }
+    function one() {
+        var title = 'Hello';
+        var two = function () {
+            alert(title);
+        };
+        title = 'Hi';
+        return two;
+    }
+    var t = one();
+    t();
+    //one()();
+</script>
+</body>
+</html>

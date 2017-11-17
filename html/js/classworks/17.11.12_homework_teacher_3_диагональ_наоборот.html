@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+<style>
+td {background-color:silver; border:1px solid green;}
+</style>
+</head>
+
+<body>
+<table>
+<tbody id="tb">
+<tr><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+<tr><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+<tr><td>31</td><td>32</td><td>33</td><td>34</td></tr>
+<tr><td>41</td><td>42</td><td>43</td><td>44</td></tr>
+</tbody>
+</table>
+
+<script>
+  var r_tr=document.getElementById('tb').getElementsByTagName('tr'); //получаем все строки
+  var k=0; //некий НОВЫЙ СЧЕТЧИК
+  for (var i=r_tr.length-1; i>=0; i--) {  //перебор строк, НО В ОБРАТНОМ ПОРЯДКЕ (СНИЗУ-ВВЕРХ)
+     var r_td=r_tr[i].getElementsByTagName('td'); //при переборе каждой строки получаем все столбцы в ней
+     for(var j=0; j<r_td.length; j++) {  //перебираем их
+        if(j==k) {r_td[j].setAttribute('style', 'background-color:gold;');} //если при переборе столбцов из конкретной строки, его номер совпадает с номером ЗНАЧЕНИЯ НОВОГО СЧЕТЧИКА (ТЕПЕРЬ это будет диагональ), ставим новый фон столбцу
+     }
+     k++; // НОВЫЙ СЧЕТЧИК НАРАЩИВАЕМ - КАК БЫ ИМИТАЦИЯ ТОГО, ЧТО БЫЛО В ПРЕДЫДУЩЕМ ВАРИАНТЕ (ТАМ БЫЛО - НАПРИМЕР, 0-Я СТРОКА - 0-Я ЯЧЕЙКА, 1-Я СТРОКА - 1-Я ЯЧЕЙКА...), А ТУТ ТЕПЕРЬ НАДО ПОСЛЕДНЯЯ СТРОКА - 0-Я ЯЧЕЙКА, ПРЕДПОСЛЕДНЯЯ СТРОКА - 1-Я ЯЧЕЙКА..., ПОЭТОМУ НОВЫЙ СЧЕТЧИК k КАК БЫ "ДЕЛАЕТ" ТО, ЧТО БЫЛО РАНЕЕ (0-Я СТРОКА - 0-Я ЯЧЕЙКА, 1-Я СТРОКА - 1-Я ЯЧЕЙКА...), НО С КОНЦА
+  }
+</script>
+
+</body>
+
+</html>
