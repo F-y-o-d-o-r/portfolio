@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+<style>
+td {background-color:silver; border:1px solid green;}
+</style>
+</head>
+
+<body>
+<table>
+<tbody id="tb">
+<tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+<tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+<tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td></tr>
+<tr><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td></tr>
+</tbody>
+</table>
+
+<script>
+var elem_start=null, elem_end=null;
+var rtd=document.getElementById("tb").getElementsByTagName("td");
+for(var i=0; i<rtd.length; i++) {
+   rtd[i].setAttribute("onclick", "cl(this);");
+   rtd[i].setAttribute("id", i);
+   rtd[i].style.cursor="pointer";
+}
+function cl(elem) {
+if(!elem_start && !elem_end) {
+   elem_start=elem;
+   elem.style.backgroundColor="gold";
+}
+else if(elem_start && !elem_end) {
+   elem_end=elem;
+   elem_end.style.backgroundColor="red";
+   setTimeout('rng_go()', 1000);
+}
+}
+function rng_go() {
+var rng=document.createRange();
+if(parseInt(elem_start.getAttribute("id"))<=parseInt(elem_end.getAttribute("id"))) {
+   rng.setStartBefore(elem_start);
+   rng.setEndAfter(elem_end);
+}
+else {
+   rng.setStartBefore(elem_end);
+   rng.setEndAfter(elem_start);
+}
+rng.deleteContents();
+//...
+var rtr=document.getElementById("tb").getElementsByTagName("tr");
+var arr_tr_null=new Array();
+var count_tr_null=0;
+for(var i=0; i<rtr.length; ++i) {
+if(!rtr[i].childNodes.length) {
+   arr_tr_null[count_tr_null]=rtr[i];
+   count_tr_null++;
+}
+}
+for(var i=0; i<arr_tr_null.length; ++i) {
+tb.removeChild(arr_tr_null[i]);
+}
+//...
+elem_start=null;
+elem_end=null;
+}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+    <!-- <script src="mine.js"></script>-->
+    <script>
+    </script>
+    <style>
+        #site {
+            width: 1024px;
+            height: 1000px;
+            border: 1px solid silver;
+            background-color: whitesmoke;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0px auto;
+
+            /*position: absolute;*/
+        }
+    </style>
+</head>
+<body>
+<div id="site">
+    <!-- <script>
+         site.style.margin = '0px ' + (screen.width - 1024)/2 + 'px';
+     </script>-->
+    <div id="video"></div>
+    <script>
+        //какой браузер
+        if (navigator.userAgent.indexOf('Chrome') !== -1 && navigator.userAgent.indexOf('OPR') === -1) {
+            video.innerHTML = '<video src="bear.mp4" controls></video>';
+        }
+    </script>
+    <img src="button.png" onclick="location.href = 'https://www.ukr.net/'" alt/><!--переход на другую страницу-->
+    <br><br>
+    <form name="form5" target="ifr">
+        <input type="text" name="text1"/><br><br>
+        <input type="text" name="text2"/>
+        <input type="button" value="Go" onclick="func_validate(text1.value, text2.value);"/>
+    </form>
+    <iframe frameborder="0" name="ifr" style="width: 200px; height: 100px;"></iframe>
+</div>
+<script>
+    //document.write(navigator.userAgent);
+    //переход на другую страницу - location
+    function func_validate(value1, value2) {
+        /*if (value !== '' && value.indexOf("'") === -1) {
+            form5.method = 'get';
+            form5.action = '17.11.19_classwork_2_1.html';
+            //form5.elements[1].type = 'submit';
+            //или
+
+            form5.submit();
+        }*/
+        if (value1 !== '' && value1.indexOf("'") === -1) {
+            location.href = '17.11.19_classwork_2_1.html?param1=' + value1 + '&param2=' + value2;
+        }
+    }
+</script>
+</body>
+</html>

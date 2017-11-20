@@ -1,0 +1,68 @@
+﻿<html>
+  <head>
+    <style>
+      td {background-color:whitesmoke; border:1px solid blue;}
+    </style>
+  </head>
+  <body>
+
+<form name="form1">
+<select name="select1" onchange="cng()">
+<option>Сортировать по</option>
+<option>Товару</option>
+<option>Цене</option>
+</select>
+</form>
+
+   <table>
+      <tbody>
+      <tr><td style="background-color:silver;font-weight:bold;text-align:center;">ССЫЛКА</td><td style="background-color:silver;font-weight:bold;text-align:center;cursor:pointer;">ТОВАР</td><td style="background-color:silver;font-weight:bold;text-align:center;cursor:pointer;">ЦЕНА</td></tr>
+      </tbody>
+      <tbody id="price">
+      <tr><td><img src="pk.jpg"></td><td>Компьютеры</td><td>5000</td></tr>
+      <tr><td><img src="pr.jpg"></td><td>Принтеры</td><td>2000</td></tr>
+      <tr><td><img src="vi.jpg"></td><td>Аудио-видео</td><td>600</td></tr>
+      <!-- НЕ ВЕРНО...<tr><td colspan="2"><a href="#">Перейти на другую страницу</a></td></tr> -->
+      </tbody>
+      <tbody> <!-- ВЕРНО... -->
+      <tr><td colspan="3"><a href="#">Перейти на другую страницу</a></td></tr>
+      </tbody>
+    </table>
+
+<script>
+function cng() {
+  if(form1.select1.selectedIndex!=0 ) {
+       sortTable(form1.select1.selectedIndex);
+  }
+}
+function sortTable(num) {
+  var r_tbody=document.getElementById('price');
+  var ar_tr=r_tbody.getElementsByTagName('tr');
+  var ar_tr_dom=new Array();
+
+  for(var i=0; i<ar_tr.length; i++) {
+        ar_tr_dom[i]=ar_tr[i];
+  }
+
+function sortTr (tr1, tr2) {
+         if (isNaN(tr1.childNodes[num].innerHTML) && isNaN(tr2.childNodes[num].innerHTML)) {
+             tr1=tr1.childNodes[num].innerHTML; tr2=tr2.childNodes[num].innerHTML
+         }
+         else {
+             tr1=parseInt(tr1.childNodes[num].innerHTML); tr2=parseInt(tr2.childNodes[num].innerHTML);
+         }
+         if(tr1>tr2) {return 1;}
+         else if(tr1==tr2) {return 0;}
+         else {return -1;}
+}
+  ar_tr_dom.sort(sortTr);
+  while(r_tbody.childNodes.length) {
+       r_tbody.removeChild(r_tbody.childNodes[0]);
+   }
+  for(var i=0; i<ar_tr_dom.length; i++) {
+        r_tbody.appendChild(ar_tr_dom[i]);
+  }
+}
+</script>
+</body>
+</html>

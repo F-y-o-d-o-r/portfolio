@@ -1,0 +1,109 @@
+<html>
+<head>
+  <!-- <script src="mine.js"></script>-->
+  <script>
+
+  </script>
+  <style>
+
+  </style>
+</head>
+<body>
+
+<form name="form1">
+  <input type="text" name="text1" onfocus="func_focus(this)" oninput="func_up(this)"/>
+  <input type="button" value="Go" onclick="func_click1();"/>
+</form>
+
+<form name="form2">
+  <input type="checkbox" name="ch" value="Variant1"/> Variant1<br>
+  <input type="checkbox" name="ch" value="Variant2"/> Variant2<br>
+  <input type="checkbox" name="ch" value="Variant3"/> Variant3<br>
+  <input type="button" value="Go" onclick="func_click2();"/>
+</form>
+
+<form name="form3">
+  <input type="radio" name="rd" value="Variant1"/> Variant1<br>
+  <input type="radio" name="rd" value="Variant2"/> Variant2<br>
+  <input type="radio" name="rd" value="Variant3"/> Variant3<br>
+  <input type="button" value="Go" onclick="func_click3();"/>
+</form>
+
+<form name="form4">
+  <select name="select4" onchange="func_change()">
+    <option>http://google.com</option>
+    <option>http://bing.com</option>
+    <option>http://ukr.net</option>
+  </select>
+</form>
+
+<form name="form5" target="ifr"><!--name iframe-->
+  <input type="text" name="text1" onkeypress="if(event.which === 13){func_validate(text1.value)}"/>
+  <!--убираем стандартный обработчик - отправка формы-->
+  <input type="button" value="Go" onclick="func_validate(text1.value);"/>
+</form>
+<iframe frameborder="0" name="ifr" style="width: 200px; height: 100px;"></iframe>
+
+<script>
+  function func_click1() {
+    form1.text1.disabled = false;
+    document.forms['form1'].elements['text1'].value = 'hello';
+    document.forms['form1'].elements['text1'].focus();
+  }
+  function func_focus(el) {
+    el.style.color = 'blue';
+  }
+  function func_up(el) {//не вводить одиночные кавычки
+    var simvol = el.value.substr(el.value.length - 1);//последний символ
+    if (simvol === "'") {
+      var val = el.value.substr(0, el.value.length - 1);
+      el.value = val;
+      el.style.color = 'red';
+    } else {
+      el.style.color = 'blue';
+    }
+  }
+  /*function cl(el) {
+   el.disabled = true;
+   }*/
+  form1.text1.disabled = true;
+  //checbox
+  function func_click2() {
+    var variant = '';
+    for (var i = 0; i < form2.length; i++) {
+      if (form2.elements[i].checked) {
+        if (form2.elements[i].type === 'checkbox') {
+          variant += form2.elements[i].value;
+        }
+      }
+    }
+    alert(variant);
+  }
+  form2.elements[1].checked = true;
+  form2.elements[1].disabled = true;
+  //radio
+  function func_click3() {
+    for (var i = 0; i < form3.rd.length; i++) {//rd name не берёт кнопку в массив
+      if (form3.rd[i].checked) {
+        alert(form3.rd[i].value);
+      }
+    }
+  }
+  function func_change() {
+    window.open(form4.select4.options[form4.select4.selectedIndex].text);
+  }
+  form4.select4.options[1].selected = true;
+
+  function func_validate(value) {
+    if (value !== '' && value.indexOf("'") === -1) {
+      form5.method = 'get';
+      form5.action = '17.11.19_classwork_1_1.html';
+      //form5.elements[1].type = 'submit';
+      //или
+      form5.submit();
+    }
+  }
+</script>
+
+</body>
+</html>
