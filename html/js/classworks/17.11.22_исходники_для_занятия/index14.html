@@ -1,0 +1,55 @@
+<html>
+<head>
+  <!-- <script src="mine.js"></script>-->
+  <script>
+    var win;
+    function func_window() {
+      win = window.open('', 'win1', 'width = 400, height = 400, left =' + (screen.width - 400) / 2 + ' top =' + (screen.height - 400) / 2 + ' scrollbars = 1');
+      win.focus();
+    }
+
+    function func_button() {
+      win = window.open('', '', 'scrollbars = 1');
+      win.document.write('<html><head></head><body>');
+      win.document.write('<button value="button" id="button" onmouseover="func_color()" onclick="window.opener.document.getElementById(\'link\').style.backgroundColor = \'red\'">button</button>');
+      win.document.write('<script>');
+      win.document.write('function func_color() {document.getElementById("button").style.color = "red"}');
+      win.document.write('</scr' + 'ipt>');
+      win.document.write('</body></html>')
+      //win.doc..getElementById...innerHTML...
+    }
+
+    function func_validate(value) {//открытие в новом окне win2
+      win = window.open('','win2','scrollbars = 1');//открытие в новом окне win2
+      form5.method = "get";
+      form5.action = "program.html";
+      form5.submit();
+    }
+
+  </script>
+  <style>
+
+  </style>
+</head>
+<!--<body onfocus="if (win) win.close()">--><!--check if window is-->
+<body>
+<a href="#" onclick="func_window();return false;">window (new, in new page)</a>
+<br><br>
+<a href="#" onclick="win = window.open('http://ukr.net', '', 'scrollbars = 1'); return false;">window-http</a>
+<br><br>
+<a href="#" onclick="func_button();return false;">window-child-button</a>
+<br><br>
+<a href="#" id="link"
+   onclick="if (win) if (win.document.getElementById('button')) win.document.getElementById('button').style.color = 'blue'; win.focus(); return false;">window-child-button-style</a>
+<br><br>
+<form name="form5" target="win2"><!--открытие в новом окне win2-->
+  <input type="text" name="text1"/>
+  <input type="button" value="Go" onclick="func_validate(text1.value);"/>
+</form>
+
+<script>
+
+</script>
+
+</body>
+</html>

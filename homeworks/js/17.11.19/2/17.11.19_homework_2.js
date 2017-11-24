@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by fyodor popov on 19.11.2017. fyodor.work@gmail.com
  */
 //При вводе поискового параметра – поиск и выделение соответствия на этой странице + появление ранее скрытой гиперссылки
@@ -43,3 +43,5 @@ document.getElementById('link').addEventListener('click', redirect);//вешае
 function redirect() {//передаем введённый текст в инпуте на другую страниц
   location.href = '17.11.19_homework_2_2.html?textVal=' + textVal;
 }
+
+console.log('1');

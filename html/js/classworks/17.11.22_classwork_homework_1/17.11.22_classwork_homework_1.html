@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Скрипты JavaScript</title>
+    <!-- <script type="text/javascript" src="script.js"></script>-->
+    <style type="text/css">
+
+
+    </style>
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+
+<body>
+    <h3>Выберите <u>ТОЛЬКО</u> три варианта...</h3>
+    <form name="form1">
+        <input type="checkbox" name="variant" value="var1" onclick="func_check(this);">Вариант 1<br>
+        <input type="checkbox" name="variant" value="var2" onclick="func_check(this);">Вариант 2<br>
+        <input type="checkbox" name="variant" value="var3" onclick="func_check(this);">Вариант 3<br>
+        <input type="checkbox" name="variant" value="var4" onclick="func_check(this);">Вариант 4<br>
+        <input type="checkbox" name="variant" value="var5" onclick="func_check(this);">Вариант 5<br>
+    </form>
+    <script type="text/javascript">
+        var numCheck = 0,
+            maxCheck = 3;
+
+        function func_check(elem) {
+            if (!elem.id) {
+                numCheck++;
+                elem.setAttribute("id", "select_" + elem.getAttribute("value"));
+            } else {
+                numCheck--;
+                elem.setAttribute("id", "");
+            }
+            for (i = 0; i < form1.variant.length; i++) {
+                if (numCheck == maxCheck) {
+                    if (!form1.variant[i].checked) {
+                        form1.variant[i].disabled = true;
+                    }
+                } else if (numCheck < maxCheck) {
+                    form1.variant[i].disabled = false;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

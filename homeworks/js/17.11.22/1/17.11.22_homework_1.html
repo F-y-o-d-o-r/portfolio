@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>17.11.22_homework_1</title>
+  <link rel="stylesheet" href="17.11.22_homework_1.css">
+
+</head>
+<body onload="func_table();">
+<div id="demo" style="width:1024px;margin:0px auto;">
+  <table>
+    <tbody>
+    <tr>
+      <td style="background-color:lavender; font-weight:bold; text-align:center; width:200px;">
+        Изображение
+      </td>
+      <td style="background-color:white; font-weight:bold; text-align:center; width:119px;">
+        <table style="margin:0px auto;">
+          <tr>
+            <td rowspan="2" style="border:none; font-weight:bold; background-color:white;">Профессия</td>
+            <td style="border:none; background-color:white;"><img src="top.jpg" style="cursor:pointer;"
+                                                                  onclick="top_bottom='bottom'; sortTable(1);"></td>
+          </tr>
+          <tr>
+            <td style="border:none; background-color:white;"><img src="bottom.jpg" style="cursor:pointer;"
+                                                                  onclick="top_bottom='top'; sortTable(1);"></td>
+          </tr>
+        </table>
+      </td>
+      <td style="background-color:lavender; font-weight:bold; text-align:center; width:350px;">
+        Пример фразы (английский)
+      </td>
+      <td style="background-color:lavender; font-weight:bold; text-align:center; width:350px;">
+        Пример фразы (русский)
+      </td>
+    </tr>
+    </tbody>
+    <tbody id="tbod">
+    </tbody>
+  </table>
+  <script src="17.11.22_homework_1.js"></script>
+</div>
+</body>
+</html>

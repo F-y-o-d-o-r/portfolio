@@ -1,0 +1,11 @@
+﻿body {
+  background-color: #e8ffc3;
+}
+
+#exit {
+  border: 1px solid green;
+  display: block;
+  height: 50px;
+  width: 210px;
+  margin-top: 10px;
+}

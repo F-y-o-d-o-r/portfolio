@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <script src="mine.js"></script>-->
+    <script>
+        //
+        function func_validate_login(value) {
+            var r = /\W/;
+            if (value.search(r) === -1) {
+                alert('Success')
+            } else alert('Error')
+        }
+
+        //    /(\(0\d{2}\))?\d{3}((-| |)\d{2}){2}/
+
+        function func_validate_phone(value) {
+            var r = /^(\(0\d{2}\))?\d{3}((-| |)\d{2}){2}$/;
+            if (r.test(value)) {
+                alert('saccess')
+            } else alert('error')
+        }
+
+        var str1 = "Регулярные выражения";
+        document.write(str1.replace(/р/, '_') + '<br>');
+        document.write(str1.replace(/р/g, '_') + '<br>');
+        document.write(str1.replace(/р/gi, '_') + '<br>');
+
+    </script>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <form name="form1">
+        Login <input type="text" name="text1" />
+        <input type="button" value="Go" onclick="func_validate_login(text1.value);" />
+    </form>
+
+    <iframe name="ifr" frameborder="0"></iframe>
+
+    <form name="form2">
+        Phone <input type="text" name="text2" />
+        <input type="button" value="Go" onclick="func_validate_phone(text2.value);" />
+    </form>
+
+    <script>
+        var str2 = 'alex Alex Alexandr alexey';
+        var r2 = /\balex\b/ig;
+        document.write(str2.replace(r2, '<b>serg</b>'));
+
+        var str3 = '2016 2017 1812';
+        var r3 = /(\d{4})/g;
+        document.write(str3.replace(r3, '<br>$1<b> year</b>'));
+
+    </script>
+
+</body>
+
+</html>
