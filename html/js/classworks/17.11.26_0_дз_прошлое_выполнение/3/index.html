@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Untitled</title>
+<script>
+//js-АНАЛОГ trim
+function js_trim(s) {
+var trim_left=/^\s+/;
+//var trim_left=/^ +/;
+var trim_right=/\s+$/;
+//var trim_right=/ +$/; 
+s=s.replace(trim_left, '');
+s=s.replace(trim_right, '');
+s='a'+s+'a'; //ПРОВЕРКА –ДОЛЖНО БЫТЬ ВЫВЕДЕНО aHello, Alexa
+return s;
+}
+</script>
+</head>
+<body>
+<script>
+var str='  Hello, Alex  ';  //ПРОВЕРКА – В ФУНКЦИЮ ПОСТУПАЕТ СТРОКА С «ПРОБЕЛАМИ» (НЕВАЖНО, СКОЛЬКО) С ОБОИХ СТОРОН
+alert(js_trim(str));
+</script>
+</body>
+</html>

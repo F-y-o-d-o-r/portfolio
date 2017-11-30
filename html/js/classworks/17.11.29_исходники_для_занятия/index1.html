@@ -1,0 +1,44 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="mine.js"></script>-->
+  <script>
+
+
+  </script>
+  <style>
+
+
+  </style>
+</head>
+<body>
+<script>
+  //abz1.style.color="red";
+  $(document).ready(function () {
+    $('#link').click(function () {
+      $("#abz2").css({"color": "red", "font-size": '30px'});
+    });
+    $('#link').mouseover(function () {
+      $("#abz2").css("font-weight", "bold");
+    });
+  });
+</script>
+<p id="abz1">Abzac 1</p>
+<p id="abz2">Abzac 2</p>
+<p class="cl1">Abzac 3<span>Span 1</span></p><br>
+<span class="cl1">Span 2</span><br>
+<a href="#">#</a><br>
+<a href="http://google.com">google.com</a><br>
+<input type="text" name="text1"/><br>
+<input type="button" value="Button"/><br>
+<a href="#" onclick="$(this).css('background-color', 'gold');return false;">jq</a><br>
+<a href="#" id="link">link</a>
+
+<script>
+  //abz1.style.color="red";
+  //$("#abz2").css("color","red");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+  <title>Untitled</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <style>
+    #div1 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0px;
+      left: 0px;
+    }
+
+    #div2 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50px;
+      left: 0px;
+    }
+
+    #div3 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0px;
+      left: 50px;
+    }
+
+    #div4 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50px;
+      left: 50px;
+    }
+
+    #div_res {
+      width: 50px;
+      height: 50px;
+      margin-top: 50px;
+      margin-left: 40px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+Щелкните на "окрашенный" квадратик, потом на "пустой" квадратик и он "получит" этот цвет.
+<div style="width:100px; height:100px; position:relative; margin-left:15px;">
+  <div id="div1" style="background-color:red;" onclick="color_select(this);"></div>
+  <div id="div2" style="background-color:green;" onclick="color_select(this);"></div>
+  <div id="div3" style="background-color:blue;" onclick="color_select(this);"></div>
+  <div id="div4" style="background-color:gold;" onclick="color_select(this);"></div>
+</div>
+<div id="div_res" onclick="color_change(this);"></div>
+
+<script>
+  var color;
+  function color_select(elem) {
+    color = elem.getAttribute('style');
+  }
+  function color_change(elem) {
+    elem.setAttribute('style', color);
+  }
+</script>
+</body>
+</html>

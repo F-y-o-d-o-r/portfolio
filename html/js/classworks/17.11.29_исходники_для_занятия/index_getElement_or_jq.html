@@ -1,0 +1,74 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="mine.js"></script>-->
+  <script>
+
+    function func_color() {
+      var arr_cl2 = document.body.getElementsByClassName("class2");
+      for (var i = 0; i < arr_cl2.length; i += 2) {
+        var arr_tag = arr_cl2[i].getElementsByTagName("*");
+        for (var j = 0; j < arr_tag.length; ++j) {
+          if (arr_tag[j].nodeName === "SPAN") {
+            arr_tag[j].style.backgroundColor = "silver";
+          }
+          if (arr_tag[j].nodeName === "A") {
+            arr_tag[j].style.backgroundColor = "red";
+          }
+        }
+      }
+    }
+
+  </script>
+  <style>
+    .class1 {
+      width: 200px;
+      height: 200px;
+      background-color: gold;
+      position: relative;
+    }
+
+    .class2 {
+      width: 100px;
+      height: 100px;
+      background-color: whitesmoke;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="class1"><span>AAA</span>
+  <div class="class2"><span>BBB<a href="#">CCC</a>DDD</span></div>
+</div>
+<div class="class1"><span>AAA</span>
+  <div class="class2"><span>BBB<a href="#">CCC</a>DDD</span></div>
+</div>
+<div class="class1"><span>AAA</span>
+  <div class="class2"><span>BBB<a href="#">CCC</a>DDD</span></div>
+</div>
+
+<br><a href="#" onclick="func_color();return false;">func_color-js</a>
+<br><a href="#" id="link">func_color-jq</a>
+
+<script>
+
+  $(document).ready(function () {
+    $("#link").click(function () {
+      $('.class2 span').css('background-color', 'silver');
+      $('.class2 a').css('background-color', 'red');
+      $('.class2 span').css('font-weight', 'bold');
+      return false;
+    });
+    $("#link").mouseover(function () {
+      $('.class2 span').css('color', 'green');
+      $('.class2 a').css('color', 'blue');
+    });
+  });
+
+</script>
+
+</body>
+</html>

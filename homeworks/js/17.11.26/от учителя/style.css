@@ -1,0 +1,13 @@
+﻿.class1 {
+  position: relative;
+  background-color: gold;
+  width: 100px;
+  height: 100px;
+}
+
+.class2 {
+  position: relative;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}

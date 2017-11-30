@@ -1,0 +1,6 @@
+@media (max-width: 691px) {
+  .item-wrapper {
+    justify-content: center;
+    align-content: flex-start;
+  }
+}

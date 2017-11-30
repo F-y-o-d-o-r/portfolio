@@ -1,0 +1,80 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="mine.js"></script>-->
+  <script>
+
+    $(document).ready(function () {
+      $("#link1").click(function () {
+        $('#sp1').html('<input type="button" value="button1" id="but1">');
+        //навешивание событий
+        //1
+        /*$('#but1').click(function () {
+          $(this).css('color', 'blue');
+        });*/
+        //2
+        //$('#but1').attr('onclick', 'this.style.color = "blue"');
+        //3
+        $('body').on('click', '#but1', function () {
+          $(this).css('color', 'blue');
+        });
+        return false;
+      });
+      $("#link2").click(function () {
+        $('#sp1').after('<input type="button" value="button2" id="but2">');
+        return false;
+      });
+      $("#link3").click(function () {
+        $(':button').remove();
+        return false;
+      });
+      $("#link4").click(function () {
+        $(':button').attr('value', 'button new');
+        return false;
+      });
+      $("#link5").click(function () {
+        $('#sp1').wrap('<a href="#"></a>');
+        return false;
+      });
+      $("#link6").click(function () {
+        $('#sp1').addClass('cl2');
+        $('#sp1').removeClass('cl1');
+        return false;
+      });
+      $("#link7").click(function () {
+        $('#sp1').parent().css('background-color', 'gold');
+        return false;
+      });
+      $("#link8").click(function () {
+        $('#sp1').children('input').css('color', 'red');
+        return false;
+      });
+    });
+  </script>
+  <style>
+    .cl1 {
+      font-style: italic;
+    }
+    .cl2 {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<span id="sp1" class="cl1">Button</span><br>
+<a href="#" id="link1">link1 - html</a><br>
+<a href="#" id="link2">link2 - after</a><br>
+<a href="#" id="link3">link3 - remove</a><br>
+<a href="#" id="link4">link4 - attr</a><br>
+<a href="#" id="link5">link5 - wrap</a><br>
+<a href="#" id="link6">link6 - class</a><br>
+<a href="#" id="link7">link7 - parentNode analog - parent</a><br>
+<a href="#" id="link8">link8 - children</a><br>
+
+<script>
+
+</script>
+
+</body>
+</html>

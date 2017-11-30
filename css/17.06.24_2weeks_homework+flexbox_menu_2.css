@@ -2,10 +2,12 @@ body {
   margin: 0 auto;
   padding: 0;
 }
+
 .body {
   margin: 0 auto;
   padding: 0;
   width: 80%;
+  min-width: 365px;
   max-width: 1020px;
   box-shadow: 0 2px 10px #929395;
   font-family: 'Roboto', sans-serif;
@@ -29,6 +31,7 @@ body {
   transform: none;
   transition: transform 0.1s ease-out, background-color 0.1s ease-out;
   margin: auto;
+  margin: 10px;
 }
 
 #top ul {
@@ -37,7 +40,7 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-content: space-around;
 }
@@ -67,6 +70,7 @@ body {
   background-color: red;
   pointer-events: none;
 }
+
 #video {
   position: fixed;
   right: 0;
@@ -79,21 +83,25 @@ body {
   padding: 5px;
   display: block;
 }
+
 #video h4 {
   font-size: 10px;
   width: 80%;
   text-align: center;
   margin-left: 30px;
 }
+
 .modal_open {
   position: absolute;
 }
-#modal_open_video:checked~#video {
+
+#modal_open_video:checked ~ #video {
   display: none;
 }
+
 .close_video {
   position: absolute;
-  left:5px;
+  left: 5px;
   top: 5px;
   cursor: pointer;
   height: 17px;
@@ -102,6 +110,7 @@ body {
   background-color: #009158;
   transition: 3s ease background-color 15s;
 }
+
 .close_video i {
   display: block;
   position: absolute;
@@ -110,11 +119,12 @@ body {
   left: 2px;
   bottom: 1px;
 }
+
 .modal_central {
   display: block;
-/*!!!!!!!!!!!!!!*/
+  /*!!!!!!!!!!!!!!*/
   margin: 100% auto;
-/*!!!!!!!!!!!!!!*/
+  /*!!!!!!!!!!!!!!*/
   position: relative;
   height: 200px;
   width: 200px;
@@ -126,6 +136,7 @@ body {
   transition-delay: 30s;
   box-shadow: 0 2px 10px #fff;
 }
+
 .modal_central i {
   color: #009158;
 }
@@ -134,24 +145,26 @@ body {
   padding: 10px 15px;
   text-align: center;
 }
+
 .zatemnenie {
   display: block;
   position: absolute;
   z-index: 1000;
-/*!!!!!!!!!!!!!!*/
+  /*!!!!!!!!!!!!!!*/
   top: -100%;
   right: 0;
   width: 100%;
-/*!!!!!!!!!!!!!!*/
+  /*!!!!!!!!!!!!!!*/
   background-color: rgba(146, 147, 149, 0.75);
   pointer-events: auto;
   transition: all 5s ease-out;
   transition-delay: 30s;
 }
 
-#closeme:checked~.zatemnenie {
+#closeme:checked ~ .zatemnenie {
   display: none;
 }
+
 .closeme {
   cursor: pointer;
   position: absolute;
@@ -168,15 +181,16 @@ nav {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-nav>div   {
+
+nav > div {
   margin: 20px auto;
 }
 
-nav>div>img {
+nav > div > img {
   height: 100%;
 }
 
-nav>div a {
+nav > div a {
   text-decoration: none;
   color: #000000;
   font-size: 10px;
@@ -186,17 +200,17 @@ nav>div a {
   line-height: 18px;
 }
 
-nav>div a:hover {
+nav > div a:hover {
   color: #009158;
   text-decoration: underline;
   transition: color 0.5s ease;
 }
 
-nav>div>img+div {
+nav > div > img + div {
   margin-left: 180px;
 }
 
-nav>div {
+nav > div {
   float: left;
   margin-top: 28px;
   border-left: solid 3px #fff;
@@ -205,7 +219,7 @@ nav>div {
   height: 72px;
 }
 
-nav>div p {
+nav > div p {
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -223,7 +237,8 @@ nav p:first-child {
   background-color: #c9ccce;
   box-shadow: 0 2px 10px #929395;
 }
-@media screen and (max-width:1000px) {
+
+@media screen and (max-width: 1000px) {
   #grey {
     display: none;
   }
@@ -254,7 +269,7 @@ nav p:first-child {
   box-shadow: 0 2px 10px #929395;
 }
 
-#slider_inside>ul {
+#slider_inside > ul {
   list-style: none;
   height: 100%;
   width: 300%;
@@ -266,7 +281,7 @@ nav p:first-child {
   left: 0px;
 }
 
-#slider_inside>ul>li {
+#slider_inside > ul > li {
   float: left;
   position: relative;
   width: 33.33%;
@@ -292,15 +307,15 @@ nav p:first-child {
   box-shadow: 0 2px 10px #929395;
 }
 
-#slider input[type=radio]#button1:checked~label[for=button1] {
+#slider input[type=radio]#button1:checked ~ label[for=button1] {
   background-color: #e2f5f0;
 }
 
-#slider input[type=radio]#button2:checked~label[for=button2] {
+#slider input[type=radio]#button2:checked ~ label[for=button2] {
   background-color: #e2f5f0;
 }
 
-#slider input[type=radio]#button3:checked~label[for=button3] {
+#slider input[type=radio]#button3:checked ~ label[for=button3] {
   background-color: #e2f5f0;
 }
 
@@ -312,15 +327,15 @@ nav p:first-child {
   margin-left: 36px;
 }
 
-#slider input[type=radio]#button1:checked~#slider_inside>ul {
+#slider input[type=radio]#button1:checked ~ #slider_inside > ul {
   left: 0;
 }
 
-#slider input[type=radio]#button2:checked~#slider_inside>ul {
+#slider input[type=radio]#button2:checked ~ #slider_inside > ul {
   left: -100%;
 }
 
-#slider input[type=radio]#button3:checked~#slider_inside>ul {
+#slider input[type=radio]#button3:checked ~ #slider_inside > ul {
   left: -200%;
 }
 
@@ -340,18 +355,18 @@ nav p:first-child {
   top: 0;
 }
 
-.description_text>p:first-child {
+.description_text > p:first-child {
   font-size: 30px;
   line-height: 40px;
   font-weight: 500;
 }
 
-.description_text>p {
+.description_text > p {
   margin-top: 10px;
   margin-bottom: 40px;
 }
 
-.description_text>p:last-child {
+.description_text > p:last-child {
   font-size: 15px;
   padding-top: 40px;
   border-top: 1px solid black;
@@ -359,7 +374,7 @@ nav p:first-child {
   font-weight: 500;
 }
 
-.description>img {
+.description > img {
   position: absolute;
   left: 400px;
   top: 75px;
@@ -394,14 +409,16 @@ nav p:first-child {
   opacity: 1;
 }
 
-#menu>ul, #menu>li {
+#menu > ul, #menu > li {
   margin: 0;
   padding: 0;
 }
+
 .tabs {
   display: flex;
   flex-wrap: wrap;
 }
+
 .tabs li {
   display: inline-block;
   margin: 50px 4%;
@@ -433,14 +450,14 @@ nav p:first-child {
   flex-wrap: wrap;
 }
 
-.tabs-content>ul, .tabs-content>li {
+.tabs-content > ul, .tabs-content > li {
   padding: 0;
   margin: 0;
   /*display: flex;
   flex-wrap: wrap;*/
 }
 
-.tabs-content>ul>li {
+.tabs-content > ul > li {
   list-style: none;
   overflow-y: auto;
   height: 550px;
@@ -448,12 +465,11 @@ nav p:first-child {
   flex-wrap: nowrap;
 }
 
-@media screen and (max-width:1270px) {
-    .tabs-content>ul>li {
+@media screen and (max-width: 1270px) {
+  .tabs-content > ul > li {
     flex-wrap: wrap;
-    }
+  }
 }
-
 
 .tovar {
   /*float: left;*/
@@ -478,7 +494,7 @@ nav p:first-child {
   transform: scale(1.05, 1.05);
 }
 
-.tovar>p {
+.tovar > p {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 10px;
@@ -524,7 +540,7 @@ footer img {
   /*position: absolute;*/
 }
 
-footer>div a {
+footer > div a {
   text-decoration: none;
   color: #fff;
   font-size: 10px;
@@ -535,27 +551,29 @@ footer>div a {
   transition: color 1s ease;
 }
 
-footer>div a:hover {
+footer > div a:hover {
   text-decoration: underline;
   color: #E10100;
 }
 
-footer>div {
+footer > div {
   padding-left: 15px;
   font-family: 'Roboto', sans-serif;
   flex-basis: 200px;
   flex-grow: 1;
 }
-@media screen and (max-width:940px) {
+
+@media screen and (max-width: 940px) {
   footer {
     flex-direction: column;
   }
+
   footer div {
-  margin-top: 20px;
+    margin-top: 20px;
   }
 }
 
-footer>div p:first-child {
+footer > div p:first-child {
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -566,7 +584,7 @@ footer>div p:first-child {
   letter-spacing: 5px;
 }
 
-footer div p+a {
+footer div p + a {
   padding-top: 10px;
 }
 
@@ -653,26 +671,73 @@ footer div:last-child {
   text-decoration: none;
   font-size: 10px;
 }
+
 .gal2 {
-    width: 80%;
-    margin: 30px auto;
-    overflow: hidden;
+  width: 80%;
+  margin: 30px auto;
+  overflow: hidden;
 }
+
 .gal2 ul {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .gal2 ul li {
-    flex-grow: 1;
-    flex-basis: 100px;
-    list-style: none;
-    font: 10px/1.5 Verdana, Sans-serif;
-    width: 16%;
-    margin: 2% 2% 40px 2%;
+  flex-grow: 1;
+  flex-basis: 100px;
+  list-style: none;
+  font: 10px/1.5 Verdana, Sans-serif;
+  width: 16%;
+  margin: 2% 2% 40px 2%;
 }
+
 .gal2 ul li a img {
-    max-width: 100%;
+  max-width: 100%;
 }
+
 .gal2 ul li a {
-    color: #5d5f5d;
+  color: #5d5f5d;
 }
+
+/*
+@media only screen and (max-width: 1220px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  nav div:nth-child(1) {
+
+    flex-grow: 1;
+  }
+
+  nav div:nth-child(2) {
+
+    flex-grow: 1;
+    margin-right:10px;
+  }
+
+  nav div:nth-child(3) {
+
+    flex-grow: 1;
+  }
+
+  nav div:nth-child(4) {
+
+    flex-grow: 1;
+  }
+
+  nav div:nth-child(5) {
+
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  #top ul {
+    flex-wrap: wrap;
+  }
+
+  #top li {
+    flex-basis: 250px;
+  }
+}*/

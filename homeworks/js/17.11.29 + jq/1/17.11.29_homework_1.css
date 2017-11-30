@@ -1,0 +1,29 @@
+﻿nav li {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 0;
+  list-style-position: inside;
+  font: 14px 'Oswald', sans-serif;
+  box-sizing: border-box;
+  color: #8f8f8f;
+  margin: 0;
+
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  text-decoration: none;
+  cursor: auto;
+  color: #b2b2b2;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
