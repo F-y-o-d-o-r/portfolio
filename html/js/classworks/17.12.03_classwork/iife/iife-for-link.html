@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Untitled</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<br><a href="#">link0</a>
+<br><a href="#">link1</a>
+<br><a href="#">link2</a>
+<script>
+  var arr_link = document.body.getElementsByTagName("a");
+  for (var i = 0; i < arr_link.length; i++) {
+//1.JQ
+    /*$(arr_link[i]).click(function () {
+     alert("link" + i);
+     return false;
+     });*/
+
+//2.LISTENER
+//arr_link[i].addEventListener('click', function(e) {e.preventDefault();alert("link"+i);}, false);
+
+//3.JS
+//arr_link[i].setAttribute("onclick", 'alert("link'+i+'");return false;');
+
+//4.JQ (OR LISTENER) + IIFE
+    (function (ii) {
+      $(arr_link[i]).click(function () {
+        alert("link" + ii);
+        return false;
+      })
+    })(i)
+  }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+﻿body {
+font-size:14px;
+font-family:arial;
+color:indigo;
+background-color:white;
+}
+#container {
+width:1024px;
+margin:0px auto;
+}
+#container_left {
+width:250px;
+height:150px;
+background-color:lavender;
+border:1px solid silver;
+border-radius:2px;
+box-sizing:border-box;
+float:left;
+}
+#container_right {
+width:200px;
+height:150px;
+background-color:whitesmoke;
+border:1px solid silver;
+border-radius:2px;
+box-sizing:border-box;
+float:left;
+}

@@ -224,6 +224,7 @@ nav ul {
   align-items: flex-start;
   padding: 10px;
   box-sizing: border-box;
+  padding-top:80px;
 }
 
 .menu {
@@ -285,6 +286,7 @@ table td {
   justify-content: space-between;
   align-content: space-around;
   height: 100%;
+  padding: 20px;
 }
 
 .image-box {
@@ -293,8 +295,8 @@ table td {
   overflow: hidden;
   border-radius: 4px;
   position: relative;
-  margin-right:10px;
-  margin-bottom:10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .image-box img {
@@ -339,8 +341,6 @@ table td {
   font-size: 0.9rem;
 }
 
-
-
 #to_bottom,
 .n_page {
   position: fixed;
@@ -358,4 +358,63 @@ table td {
 .n_page {
   left: 10px;
   width: 150px;
+}
+
+#portfolio-5,
+#portfolio-6 {
+  position: absolute;
+  background-color: rgba(0,0,0,.93);
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s ease all;
+}
+
+#portfolio-5:target,
+#portfolio-6:target {
+  pointer-events: auto;
+  opacity: 1;
+  transition: .5s ease all;
+  visibility: visible;
+}
+
+.portfolio__cover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  background-color: rgba(109, 109, 109, 0.5);
+  border-radius: 4px;
+}
+
+.portfolio__close-window {
+  color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.portfolio__inside {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio__inside a[target=_blank] {
+  margin: 10px;
+}
+
+.hidden-elements .image-box {
+  margin-bottom: 0;
+  margin-right:0;
+}
+
+.hidden-elements .fa-times:hover {
+  color:#c4c4c4;
 }

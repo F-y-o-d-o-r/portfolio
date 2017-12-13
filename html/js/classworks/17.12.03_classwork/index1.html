@@ -1,0 +1,127 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="mine.js"></script>-->
+  <script>
+    //classic form - with prototype
+    console.log('-------------classic form - with prototype - constructor---------------');
+    function Auto(aMarka, aModel) {
+      this.marka = aMarka;
+      this.model = aModel;
+      this.name = aName;
+      this.type = aType;
+      //return this; //не обязательно
+    }
+    function aName() {
+      console.log(this.marka + " " + this.model);
+    }
+    function aType() {
+      if (this.model === 'Polo') console.log('It`s a little car');
+    }
+    var myauto = new Auto('VW', 'Polo');
+    myauto.name();
+    myauto.type();
+    if (myauto.marka === "VW") console.log('This car made in Germany');
+
+    /**************************/
+    //other form - no prototype
+    console.log('----------other form - no prototype - object-------------');
+    var myauto = {
+      marka: "VW",
+      model: "Polo",
+      name: function () {
+        console.log(this.marka + " " + this.model);
+      },
+      type: function () {
+        if (this.model === 'Polo') console.log('It`s a little car');
+      }
+    };
+    myauto.name();
+    myauto.type();
+    if (myauto.marka === "VW") console.log('This car made in Germany');
+
+    /**************************/
+    console.log('----------other form - object outside add-------------');
+    var myauto = {};
+    myauto.marka = "VW";
+    myauto.model = "Polo";
+    myauto.name = function () {
+      console.log(this.marka + " " + this.model);
+    };
+    myauto.type = function () {
+      if (this.model === 'Polo') console.log('It`s a little car');
+    };
+    myauto.name();
+    myauto.type();
+    if (myauto.marka === "VW") console.log('This car made in Germany');
+
+    /**************************/
+    console.log('----------other form-------------');
+    var myauto = {};
+    myauto.name = function (marka, model) {
+      this.marka = marka;
+      this.model = model;
+      console.log(this.marka + " " + this.model);
+    };
+    myauto.type = function () {
+      if (this.model === 'Polo') console.log('It`s a little car');
+    };
+    myauto.name('VW', "Polo");
+    myauto.type();
+    if (myauto.marka === "VW") console.log('This car made in Germany');
+
+    /**************************///class + prototype
+    console.log('----------class + prototype-------------');
+    function Auto1(aMarka, aModel) {
+      this.marka = aMarka;
+      this.model = aModel;
+    }
+    Auto1.prototype.name = function () {
+      console.log(this.marka + " " + this.model);
+    };
+    Auto1.prototype.type = function () {
+      if (this.model === 'Polo') console.log('It`s a little car');
+    };
+    var myauto = new Auto1('VW', 'Polo');
+    function Another(aMarka, aModel) {
+      this.marka = aMarka;
+      this.model = aModel;
+    }
+    Another.prototype = Object.create(Auto1.prototype);
+    var another = new Another("Opel", "Astra");
+    another.name();
+  </script>
+  <style>
+  </style>
+</head>
+<body>
+<a href="#" id="link1">OOP pattern model</a><br>
+<a href="#" id="link2">OOP no pattern model</a><br>
+<script>
+  //pattern model
+  var BaseRecord = (function () {
+    $(document).ready(function () {
+      $('body').on('click', '#link1', function () {
+        BaseRecord.color();
+      })
+    });
+    return {
+      color: function () {
+        $('#link1').css('color', 'red');
+      }
+    }
+  })();
+  //без паттерн модели
+  $(document).ready(function () {
+    $('body').on('click', '#link2', function () {
+      BaseRecord1.color();
+    })
+  });
+  var BaseRecord1 = {
+    color: function () {
+      $('#link2').css('color', 'red');
+    }
+  }
+</script>
+</body>
+</html>

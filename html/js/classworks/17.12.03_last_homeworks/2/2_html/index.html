@@ -1,0 +1,64 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="texthtml; charset=utf-8"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="mine.js"></script>
+  <style>
+    body {
+      background-color: white;
+      font-size: 11pt;
+      font-weight: normal;
+      font-style: normal;
+      font-family: verdana;
+      color: gray;
+      position: relative;
+      margin: 0px;
+    }
+
+    td {
+      border: 1px solid silver;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+
+<!-- <body onload="func_table();"> -->
+<body>
+
+<div id="demo" style="width:1024px;margin:0px auto;">
+  <table>
+    <tbody>
+    <tr>
+      <td style="background-color:lavender; font-weight:bold; text-align:center; width:200px;">
+        Изображение
+      </td>
+      <td style="background-color:white; font-weight:bold; text-align:center; width:119px;">
+        <table style="margin:0px auto;">
+          <tr>
+            <td rowspan="2" style="border:none; font-weight:bold; background-color:white;">Профессия</td>
+            <!-- <td style="border:none; background-color:white;"><img src="top.jpg" style="cursor:pointer;" onclick="top_bottom='bottom'; sortTable(1);"> -->
+            <td style="border:none; background-color:white;"><img src="top.jpg" style="cursor:pointer;">
+            </td>
+          </tr>
+          <tr>
+            <!-- <td style="border:none; background-color:white;"><img src="bottom.jpg" style="cursor:pointer;" onclick="top_bottom='top'; sortTable(1);"> -->
+            <td style="border:none; background-color:white;"><img src="bottom.jpg" style="cursor:pointer;">
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td style="background-color:lavender; font-weight:bold; text-align:center; width:350px;">
+        Пример фразы (английский)
+      </td>
+      <td style="background-color:lavender; font-weight:bold; text-align:center; width:350px;">
+        Пример фразы (русский)
+      </td>
+    </tr>
+    </tbody>
+    <tbody id="tbod">
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

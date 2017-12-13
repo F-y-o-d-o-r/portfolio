@@ -6,21 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hi there!</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110466353-1"></script>
   <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-102662546-1', 'auto');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-110466353-1');
   </script>
+
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -43,12 +39,33 @@
     </header>
     <div class="out_here">
       <section class="about" style="opacity: 0;">
-        <p>Привет! Меня зовут Фёдор. <br>Я изучаю веб разработку в школе ШАГ.<br>На этом сайте я выкладываю свои
-          учебные
-          материалы и практику.<br>Также тут можно увидеть моё портфолио. <br>Буду рад любым отзывам.</p>
+        <p>Привет! Меня зовут Фёдор. <br>Я изучаю веб разработку в компьютерной академии ШАГ.<br>На этом сайте я
+          выкладываю свои учебные материалы и практикуюсь.<br>Также тут можно увидеть моё портфолио. <br>Буду рад любым
+          отзывам.</p>
       </section>
       <section class="portfolio" style="opacity: 0;">
         <div class="item-wrapper">
+          <a href="portfolio/6.%20Калькулятор%20окон/index.html" target="_blank">
+            <div class="image-box">
+              <img src="img/portfolio_windows.png" alt="">
+              <h4>7. Калькулятор окон</h4>
+              <p>Java Script, HTML, CSS</p>
+            </div>
+          </a>
+          <a href="#portfolio-6">
+            <div class="image-box">
+              <img src="img/portfolio_cinema.png" alt="">
+              <h4>6. Места в кинотеатре</h4>
+              <p>Java Script, jQuery, ОПП Java Script</p>
+            </div>
+          </a>
+          <a href="#portfolio-5">
+            <div class="image-box">
+              <img src="img/portfolio_4.jpg" alt="">
+              <h4>5. Адаптивная верстка</h4>
+              <p>Html5, css3, Gulp, Sass, Bootstrap</p>
+            </div>
+          </a>
           <a href="portfolio/2.Pricing_table/index.html" target="_blank">
             <div class="image-box">
               <img src="img/portfolio_misocisal.png" alt="">
@@ -1051,25 +1068,173 @@
             <td>17.11.29</td>
             <td>
               <a href="html/js/classworks/17.11.29_исходники_для_занятия/index1.html">1. JQ селекторы</a><br>
-              <a href="html/js/classworks/17.11.29_исходники_для_занятия/index2.html">2. link1 - html, link2 - after, link3 - remove, link4 - attr, link5 - wrap, link6 - class, link7 - parentNode analog - parent, link8 - children</a><br>
-              <a href="html/js/classworks/17.11.29_исходники_для_занятия/index_getElement_or_jq.html">3. Селекторы, замена перебора</a><br>
-              <a href="html/js/classworks/17.11.29_исходники_для_занятия/location.href/index.html">4. События, переделанные старые location.href</a><br>
-              <a href="html/js/classworks/17.11.29_исходники_для_занятия/боковое%20меню/index.html">5. События, меню выпадающее</a><br>
-              <a href="html/js/classworks/17.11.29_исходники_для_занятия/выбор_цвета_блока/выбор_цвета_блока_STYLE_ПЕРЕНОС.html">6. События,переделано выбор цвета</a><br>
-              <a href="html/js/classworks/17.11.29_0_дз_прошлое_выполнение/1/index.html">1. Прошлое дз - 1 (хороший вариант, поиск в таблице текста)</a><br>
-              <a href="html/js/classworks/17.11.29_0_дз_прошлое_выполнение/2/page1.html">2. Прошлое дз - 2.1 (куки)</a><br>
-              <a href="html/js/classworks/17.11.29_0_дз_прошлое_выполнение/2/page2.html">3. Прошлое дз - 2.2 (куки)</a><br>
-              <a href="doc/js/jq/plakat_jq1.doc" class="dlink">1. Библиотека jQuery. Подключение, Общий синтаксис.Селектора. function – предотвращение преждевременного выполнения кода. Обработчики событий. Цепочки команд.Пример упрощения кода jQuery по сравнению с JavaScript (доступ к элементам, события, цепочки команд).DOM – методы html, prepend, append (before, after) (вставка узлов), метод remove (удаление узлов).DOM – метод attr (считать/изменить атрибуты). (doc)</a><br>
-              <a href="doc/js/jq/plakat_jq2.doc" class="dlink">2. Библиотека jQuery. DOM – метод wrap («оборачивание» элемента новыми тегами). CSS – методы css (стили), addClass (добавить класс, НЕ УДАЛЯЯ/ЗАМЕНЯЯ ПРЕДЫДУЩИЙ), removeClass (удаляет класс, ТОЛЬКО УКАЗАННЫЙ).Эффекты – методы fadeOut, fadeIn (постепенное скрытие/появление).Эффекты – методы slideUp, slideDown (плавное изменение высоты).Эффекты – использование методов slideUp, slideDown для создания выпадающего меню. Эффекты – метод animate (создание анимации посредством плавного изменения стилей).(doc)</a><br>
+              <a href="html/js/classworks/17.11.29_исходники_для_занятия/index2.html">2. link1 - html, link2 - after,
+                link3 - remove, link4 - attr, link5 - wrap, link6 - class, link7 - parentNode analog - parent, link8 -
+                children</a><br>
+              <a href="html/js/classworks/17.11.29_исходники_для_занятия/index_getElement_or_jq.html">3. Селекторы,
+                замена перебора</a><br>
+              <a href="html/js/classworks/17.11.29_исходники_для_занятия/location.href/index.html">4. События,
+                переделанные старые location.href</a><br>
+              <a href="html/js/classworks/17.11.29_исходники_для_занятия/боковое%20меню/index.html">5. События, меню
+                выпадающее</a><br>
+              <a href="html/js/classworks/17.11.29_исходники_для_занятия/выбор_цвета_блока/выбор_цвета_блока_STYLE_ПЕРЕНОС.html">6.
+                События,переделано выбор цвета</a><br>
+              <a href="html/js/classworks/17.11.29_0_дз_прошлое_выполнение/1/index.html">1. Прошлое дз - 1 (хороший
+                вариант, поиск в таблице текста)</a><br>
+              <a href="html/js/classworks/17.11.29_0_дз_прошлое_выполнение/2/page1.html">2. Прошлое дз - 2.1
+                (куки)</a><br>
+              <a href="html/js/classworks/17.11.29_0_дз_прошлое_выполнение/2/page2.html">3. Прошлое дз - 2.2
+                (куки)</a><br>
+              <a href="doc/js/jq/plakat_jq1.doc" class="dlink">1. Библиотека jQuery. Подключение, Общий
+                синтаксис.Селектора. function – предотвращение преждевременного выполнения кода. Обработчики событий.
+                Цепочки команд.Пример упрощения кода jQuery по сравнению с JavaScript (доступ к элементам, события,
+                цепочки команд).DOM – методы html, prepend, append (before, after) (вставка узлов), метод remove
+                (удаление узлов).DOM – метод attr (считать/изменить атрибуты). (doc)</a><br>
+              <a href="doc/js/jq/plakat_jq2.doc" class="dlink">2. Библиотека jQuery. DOM – метод wrap («оборачивание»
+                элемента новыми тегами). CSS – методы css (стили), addClass (добавить класс, НЕ УДАЛЯЯ/ЗАМЕНЯЯ
+                ПРЕДЫДУЩИЙ), removeClass (удаляет класс, ТОЛЬКО УКАЗАННЫЙ).Эффекты – методы fadeOut, fadeIn (постепенное
+                скрытие/появление).Эффекты – методы slideUp, slideDown (плавное изменение высоты).Эффекты –
+                использование методов slideUp, slideDown для создания выпадающего меню. Эффекты – метод animate
+                (создание анимации посредством плавного изменения стилей).(doc)</a><br>
             </td>
             <td>
-              <a href="homeworks/js/17.11.29%20+%20jq/1/17.11.29_homework_1.html">1. Домашнее задание. Урок №17-1_1: Библиотека jQuery : селектора. function, обработчики событий, методы css. Используя js - код открытия спойлеров при наведении (файл html.html), перепишите его, только используя  jq.</a><br>
-              <a href="homeworks/js/17.11.29%20+%20jq/2/17.11.29_homework_2.html">2. Все js-события замените на jq-эквиваленты.Перепишите код блока формирования контента таблицы из строки, не используя js-методы(свойства) document.getElementById, document.createElement, innerHTML, appendChild, заменив все их на один jq-метод append.Перепишите код блока формирования контента таблицы из строки, не используя js-методы(свойства) document.getElementById, document.createElement, innerHTML, appendChild, заменив все их на один jq-метод html.</a>
+              <a href="homeworks/js/17.11.29%20+%20jq/1/17.11.29_homework_1.html">1. Домашнее задание. Урок №17-1_1:
+                Библиотека jQuery : селектора. function, обработчики событий, методы css. Используя js - код открытия
+                спойлеров при наведении (файл html.html), перепишите его, только используя jq.</a><br>
+              <a href="homeworks/js/17.11.29%20+%20jq/2/17.11.29_homework_2.html">2. Все js-события замените на
+                jq-эквиваленты.Перепишите код блока формирования контента таблицы из строки, не используя
+                js-методы(свойства) document.getElementById, document.createElement, innerHTML, appendChild, заменив все
+                их на один jq-метод append.Перепишите код блока формирования контента таблицы из строки, не используя
+                js-методы(свойства) document.getElementById, document.createElement, innerHTML, appendChild, заменив все
+                их на один jq-метод html.</a>
+            </td>
+          </tr>
+          <tr>
+            <td>17.12.03</td>
+            <td>
+              <a href="html/js/classworks/17.12.03_classwork/index1.html">1. ООП - классы, прототипы, pattern model (with return)</a><br>
+              <a href="html/js/classworks/17.12.03_classwork/боковое%20меню-jq/index.html">2. Боковое меню переделано на
+                ООП + JQ</a><br>
+              <a href="html/js/classworks/17.12.03_classwork/iife/iife-for-link.html">3. Перебор ссылок
+                правильный</a><br>
+              <a href="html/js/classworks/17.12.03_classwork/Cinema-challenge/index.html">4. Выбор мест в кино на чистом
+                JS - часть 1</a><br>
+              <a href="html/js/classworks/17.12.03_classwork/cinema%202/index.html">5. Выбор мест в кино на чистом JS -
+                вариант учителя для дз</a><br>
+              События,переделано выбор цвета</a><br>
+              <a href="html/js/classworks/17.12.03_last_homeworks/1/html.html">1. Прошлое дз - 1 - выпадающее меню
+                JQ</a><br>
+              <a href="html/js/classworks/17.12.03_last_homeworks/2/2_append/index.html">2. Прошлое дз - 2.1 - JQ
+                append</a><br>
+              <a href="html/js/classworks/17.12.03_last_homeworks/2/2_html/index.html">2. Прошлое дз - 2.1 - JQ html</a><br>
+            </td>
+            <td>
+              <a href="homeworks/js/17.12.03/1/17.12.03_homework_1.html">1. Выбор мест в кино на JS – алгоритм
+                Cinema-challenge (генерация зрительских посадочных мест в кинотеатрах (концертных залах, стадионах…) +
+                автоматизация их выбора («простого - по порядку следования» или «случайного»)). Разделение radio-выбора
+                + валидация на «не число» и «пустоту» (элемент «ошибки» - span id="not_number") Create-функция в tbody
+                id="tbody" - формирование посадочных мест, например, с использованием элементов. Select-функция – если
+                свободных мест достаточно, выделить их . td, tr (на данном этапе – в одну строку).…если их не достаточно
+                (изначально или после предыдущего «достаточного» выбора) – открытие «ошибки» span
+                id="not_enough".Возможность использование Math.random для «случайного» выбора мест.При создании мест они
+                выстаивались бы не в одну строку… а были бы «разделены» на «десятки» </a><br>
+              <a href="homeworks/js/17.12.03/2/17.12.03_homework_2.html">2. Выбор мест в кино JQ - -все js-метод
+                …style…, setAttribute(getAttribute) на необходимые jq-методы; -конструкцию :var
+                el_tbody=document.getElementById("tbody");while(el_tbody.childNodes.length)
+                {el_tbody.removeChild(el_tbody.childNodes[0]);} на необходимый(мые) jq-метод(ы);-конструкцию
+                :el_tr.innerHTML=el_td; el_tbody.appendChild(el_tr); el_tr=document.createElement("tr");на
+                необходимый(мые) jq-метод(ы)</a><br>
+              <a href="homeworks/js/17.12.03/3/17.12.03_homework_3.html">3. Выбор мест в кино ООП - Весь js-код оформите в виде ооп-кода (объект, свойства-переменные, методы-функции).В имеющуюся форму (name="form_seats") добавьте первым элементом :form name="form_seats" select name="select_little_big" option value="10">little option value="20" big option select … и дополните имеющийся алгоритм (ооп-код) таким образом, чтобы :-при выборе в выпадающем меню пункта big – введенное для создания количество мест разбивалось на 20-ки-при выборе в выпадающем меню пункта little (оно же – по умолчанию) – введенное для создания количество мест разбивалось на 10-ки</a>
+              <a href="homeworks/js/17.12.03/Cinema%20от%20учителя%20вернул/17.12.03_homework_3.html">3. От учителя после проверки - Небольшие правки</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="text-align: center; background-color: rgba(160,160,160,0.93);"><h3>PHP</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>17.12.06</td>
+            <td>
+              <a href="html/PHP/17.12.06_classwork/index.php">1. PHP - 1</a><br>
+              <a href="html/js/classworks/17.12.06_дз_прошлое_выполнение/index.html">1. Прошлое дз - 1 - кинотеатр</a><br>
+              <a href="doc/PHP/plakat1.doc" class="dlink">1. Упрощенная схема взаимодействия "клиент-сервер". УСТАНОВКА И КОНФИГУРИРОВАНИЕ «ДЕНВЕР». PHP - Общий синтаксис (сравнение с js).Операторы (сравнение с js). Встраивание php – кода в html – код, встраивание html - кода и js – кода в php – код.ВСТРАИВАНИЕ КОНСТРУЦИИ js В ВИДЕ script…/script В php. ПЕРЕДАЧА ПЕРЕМЕННОЙ ИЗ php В js (НО js ВСТРОЕННЫЙ В php).Встраивание php – кода в js – код, ПЕРЕДАЧА ПЕРЕМЕННЫХ ИЗ php В js. ПЕРЕДАЧА ПЕРЕМЕННЫХ js (html) В php. Ветвления, циклы (сравнение с js). (doc)</a><br>
+              <a href="doc/PHP/plakat2_1.doc" class="dlink">2. Строки. Группа ПРЕОБРАЗОВАНИЙ в строке.Массивы. (doc)</a>
+            </td>
+            <td>
+              <a href="homeworks/PHP/17.12.06/1/index.php">1. синтаксис php, html и js встроенные в php передача значений переменных из php в js, передача значений переменных из js в php, ветвления, циклы</a><br>
+              <a href="homeworks/PHP/17.12.06/Long_homework/index.php">2. Создайте скрипт PHP, реализующий следующий алгоритм – при загрузке страницы вы должны получить заполненную таблицу со значениями из начальной строки 'ACER|ES1|5500||LENOVO|G50|5300||HP|G3|5100' в виде трех строк и трех столбцов:(используйте explode, foreach, echo scripe /script + в данном задании (в отличие от последующего) встраивайте js-скрипты вывода данных в DOM прямо в те же блоки кода, где получаете (explode) и перебираете (foreach) массивы данных, полученных из исходной строки)</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td>17.12.10</td>
+            <td>
+              <a href="html/PHP/17.12.10_classwork/1/index.php">1. PHP - 1</a><br>
+              <a href="html/PHP/17.12.10_classwork/2/index.php">2. PHP - 2</a><br>
+              <a href="html/PHP/17.12.10_classwork/3/index.php">2. PHP - 3</a><br>
+              <a href="html/PHP/17.12.10_last_дз_прошлое_выполнение/1/index.php">1. Last homework - 1</a><br>
+              <a href="html/PHP/17.12.10_last_дз_прошлое_выполнение/2_1/index.php">2. Last homework - 2</a><br>
+              <a href="doc/PHP/plakat2_2.doc" class="dlink">1.  Многомерные массивы.Некоторые функции для работы с массивами.(doc)</a><br>
+            </td>
+            <td>
+              <a href="homeworks/PHP/17.12.10/Long_homework/index.php">1. - формирование двумерного массива из исходной строки;
+                -вывод в DOM в таком же виде, как это было в первом дз, но уже используя ранее сформированный двумерный массив. Используя необходимую функцию, дополните алгоритм таким образом, чтобы данные в DOM были выведены отсортированными по возрастанию цены</a><br>
             </td>
           </tr>
         </table>
         <span style="font-size: 0"><a id="bottom">The end</a></span>
       </section>
+
+    </div>
+  </div>
+</div>
+<div class="hidden-elements">
+  <div class="portfolio-5" id="portfolio-5">
+    <div class="portfolio__cover">
+      <div class="portfolio__inside">
+        <a href="#close" class="portfolio__close-window"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <a href="portfolio/4.Фортис_недвижимост/index.html" target="_blank">
+          <div class="image-box">
+            <img src="img/portfolio_4.jpg" alt="">
+            <h4>5.1 Главная страница</h4>
+            <p>Html5, css3, Gulp, Sass, Bootstrap</p>
+          </div>
+        </a>
+        <a href="portfolio/4.Фортис_недвижимост/inside.html" target="_blank">
+          <div class="image-box">
+            <img src="img/portfolio_4_2.jpg" alt="">
+            <h4>5.2 Вторая страница</h4>
+            <p>Html5, css3, Gulp, Sass, Bootstrap</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-6"  id="portfolio-6">
+    <div class="portfolio__cover">
+      <div class="portfolio__inside">
+        <a href="#close" class="portfolio__close-window"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <a href="portfolio/5.%20Кинотеатр%20-%20js%20-%20jq/1/17.12.03_homework_1.html" target="_blank">
+          <div class="image-box">
+            <img src="img/portfolio_cinema.png" alt="cinema">
+            <h4>6.1 Чистый Java Script</h4>
+            <!--<p>Html5, css3, Gulp, Sass, Bootstrap</p>-->
+          </div>
+        </a>
+        <a href="portfolio/5.%20Кинотеатр%20-%20js%20-%20jq/2/17.12.03_homework_2.html" target="_blank">
+          <div class="image-box">
+            <img src="img/portfolio_cinema.png" alt="cinema">
+            <h4>6.2 jQuery</h4>
+            <!--<p>Html5, css3, Gulp, Sass, Bootstrap</p>-->
+          </div>
+        </a>
+        <a href="portfolio/5.%20Кинотеатр%20-%20js%20-%20jq/3/17.12.03_homework_3.html" target="_blank">
+          <div class="image-box">
+            <img src="img/portfolio_cinema.png" alt="cinema">
+            <h4>3.3 jQuery + ООП</h4>
+            <!--<p>Html5, css3, Gulp, Sass, Bootstrap</p>-->
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>

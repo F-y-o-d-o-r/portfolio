@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>17.12.03_homework_1</title>
+  <link rel="stylesheet" href="17.12.03_homework_1.css">
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  <script src="17.12.03_homework_1.js"></script>
+</head>
+<body>
+<form name="form_seats">
+  <input type="radio" name="rd" value="Create" checked/> Create
+  <input type="radio" name="rd" value="Select"/> Select<br>
+  <input type="text" name="seats_count" class="form_tex"
+         onkeypress="if(event.which===13) {func_go(seats_count.value);return false;}"/>
+  <input type="button" value="Go" class="form_but" onclick="func_go(seats_count.value)"/>
+  <span id="not_number" style="visibility:hidden;color:red;">Not a number...</span>
+</form>
+<span id="not_enough" style="visibility:hidden;color:red;">The seats aren't enough...</span>
+<table>
+  <tbody id="tbody">
+  </tbody>
+</table>
+</body>
+</html>

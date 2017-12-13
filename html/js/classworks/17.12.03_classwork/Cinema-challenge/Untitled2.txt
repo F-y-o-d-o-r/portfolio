@@ -1,0 +1,6 @@
+   count_free=0;
+   for(var i=0; i<seats_select_value; i++) {
+      arr_free[count_free].style.backgroundColor="red";
+      arr_free[count_free].setAttribute("value", "1");
+      count_free++;  
+     }

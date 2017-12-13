@@ -1,0 +1,32 @@
+body {
+font-size:14px;
+font-family:arial;
+color:indigo;
+background-color:white;
+margin:10px;
+}
+
+td {
+border:1px solid blue;
+background-color:lightgreen;
+text-align:center;
+vertical-align:middle;
+}
+
+.form_tex {
+border:1px solid silver;
+border-radius:2px;
+color:indigo;
+font-size:10pt;
+font-family:arial;
+}
+
+.form_but {
+border-radius:4px;
+color:indigo;
+font-size:10pt;
+font-family:arial;
+width:75px;
+cursor:pointer;
+}
+

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script>
+  </script>
+</head>
+
+<body>
+<form name="form_seats">
+  <input type="radio" name="rd" value="Create" checked/> Create
+  <input type="radio" name="rd" value="Select"/> Select<br>
+  <input type="text" name="seats_count" class="form_tex"
+         onkeypress="if(event.which===13) {func_go(seats_count.value);return false;}"/>
+  <input type="button" value="Go" class="form_but" onclick="func_go(seats_count.value)"/>
+  <span id="not_number" style="visibility:hidden;color:red;">Not a number...</span>
+</form>
+<span id="not_enough" style="visibility:hidden;color:red;">The seats aren't enough...</span>
+<table>
+  <tbody id="tbody">
+  </tbody>
+</table>
+</body>
+
+</html>

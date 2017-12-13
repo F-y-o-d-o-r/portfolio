@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<script>
+</script>
+</head>
+
+<body>
+<form name="form_seats">
+<select name="select_little_big">
+<option value="10">little</option>
+<option value="20">big</option>
+</select>
+<input type="radio" name="rd" value="Create" checked /> Create
+<input type="radio" name="rd" value="Select" /> Select<br>
+<input type="text" name="seats_count" id="form_tex" class="form_tex" placeholder="Number of places" />
+<button type="button" id="form_but" class="form_but">Go</button> <span id="not_number" class="title_error">Not a number...</span>
+</form>
+<span id="not_enough" class="title_error">The seats isn't enough...</span>
+<table>
+<tbody id="tbody">
+</tbody>
+</table>
+</body>
+
+</html>

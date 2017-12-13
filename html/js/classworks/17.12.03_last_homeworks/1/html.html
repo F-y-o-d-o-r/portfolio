@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    nav li {
+      display: inline-block;
+      padding: 10px 30px;
+      margin: 0;
+      list-style-position: inside;
+      font: 14px 'Oswald', sans-serif;
+      box-sizing: border-box;
+      color: #8f8f8f;
+    }
+
+    nav li a {
+      text-decoration: none;
+      cursor: auto;
+      color: #b2b2b2;
+    }
+
+    .hide {
+      visibility: hidden;
+
+    }
+
+    .show {
+      visibility: visible;
+
+    }
+  </style>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<nav>
+  <ul class="top-menu">
+    <li><a href="home">HOME
+      <div class="hide" style="background-color:#f1f1f1;">
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+      <br>
+    </li>
+    <li><a href="/yourshop.com/">YOURSHOP.COM
+      <div class="hide" style="background-color:#f1f1f1;"> <!-- </a> - здесь была ошибка верстки - не там закрыто -->
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+      <br>
+    </li>
+    <li><a href="/departaments.com/">DEPARTAMENTS
+      <div class="hide" style="background-color:#f1f1f1;">
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+    </li>
+    <li><a href="/gifts/">GIFTS
+      <div class="hide" style="background-color:#f1f1f1;">
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+    </li>
+    <li><a href="/sales/">SALES <!-- </a> - здесь была ошибка верстки - не там закрыто -->
+      <div class="hide" style="background-color:#f1f1f1;">
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+    </li>
+    <li><a href="/help/">HELP
+      <div class="hide" style="background-color:#f1f1f1;">
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+    </li>
+    <li><a href="/cart/">CART
+      <div class="hide" style="background-color:#f1f1f1;">
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+    </li>
+    <li><a href="/contact/">CONTACT
+      <div class="hide" style="background-color:#f1f1f1;">
+        <a href="shadow_text.php">asdasd</a><br>
+        <a href="gradient.php">123213</a><br>
+        <a href="simple_menu.php">2143</a>
+      </div>
+    </a>
+    </li>
+  </ul>
+</nav>
+<script>
+
+  $("body").on("mouseover", "li", function () {
+    $("li div").css("visibility", "hidden");
+    //$(this.childNodes[1]).css("visibility", "visible");
+    $(this).children("div").css("visibility", "visible");
+  });
+
+  /*
+   var arr_li=document.body.getElementsByTagName("li");
+   for(var i=0; i<arr_li.length; i++) {
+   arr_li[i].setAttribute("onmouseover", "func_over(this);");
+   }
+   function func_over(elem) {
+   for(var i=0; i<arr_li.length; i++) {
+   if(arr_li[i]==elem) {
+   arr_li[i].childNodes[1].style.visibility="visible";
+   }
+   else {
+   arr_li[i].childNodes[1].style.visibility="hidden";
+   }
+   }
+   }
+   */
+
+</script>
+</body>
+</html>

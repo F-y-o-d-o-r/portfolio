@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img id="image" src="img/windows_choose/leaf-x.png" onClick="imgsrc()">
+
+<script>
+    var i = 0;
+    var image = document.getElementById("image");
+    var imgs = new Array('img/windows_choose/leaf-x.png', 'img/windows_choose/leaf-l.png', 'img/windows_choose/leaf-lu.png', 'img/windows_choose/leaf-r.png', 'img/windows_choose/leaf-ru.png'); // Добавте свои картинки через запятую
+    function imgsrc() {
+        if(i < imgs.length-1){
+            i++;
+            image.src = imgs[i];
+        }else i = 0;
+        image.src = imgs[i];
+
+    }
+</script>
+
+<body>
+</html>

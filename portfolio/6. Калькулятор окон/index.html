@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>windows</title>
+    <link rel="stylesheet" href="windows.css">
+</head>
+<body>
+<div class="wrapper">
+    <h1>Калькулятор окон REHAU - размеры и цены</h1>
+    <section class="calc_wrap">
+        <div class="left_column">
+            <div class="what_to_count clearfix">
+                <div>
+                    <span>1</span>
+                    <h2>Что рассчитать?</h2>
+                </div>
+                <div class="what_to_count_inside">
+                    <div class="chose">
+                        <select name="" id="window_door" onchange="what_to_count()">
+                            <option value="windows">Окна</option>
+                            <option value="doors">Двери</option>
+                        </select>
+                    </div>
+                    <div class="choose_window_type">
+                        <ul>
+                            <li>
+                                <input type="radio" id="window_1" name="window_change" checked hidden
+                                       title="Односекционное окно">
+                                <label for="window_1" onclick="num1_win()"><img src="img/win_1.png"
+                                                                                title="Односекционное окно"></label>
+                            </li>
+                            <li>
+                                <input type="radio" id="window_2" name="window_change" hidden
+                                       title="Двухсекционное окно">
+                                <label for="window_2" onclick="num2_win()"><img src="img/win_2.png" alt=""
+                                                                                title="Двухсекционное окно"></label>
+                            </li>
+                            <li>
+                                <input type="radio" id="window_3" name="window_change" hidden
+                                       title="Трёхсекционное окно">
+                                <label for="window_3" onclick="num3_win()"><img src="img/win_3.png" alt=""
+                                                                                title="Трёхсекционное окно"></label>
+                            </li>
+                            <li>
+                                <input type="radio" id="window_4" name="window_change" hidden
+                                       title="Четырёхсекционное окно">
+                                <label for="window_4" onclick="num4_win()"><img src="img/win_4.png" alt=""
+                                                                                title="Четырёхсекционное окно"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="choose_door_type">
+                        <ul>
+                            <li>
+                                <input type="radio" id="door_1" name="door_change" hidden checked title="Дверь">
+                                <label for="door_1" onclick="num1_door()"><img src="img/door_1.png"
+                                                                               title="Дверь"></label></li>
+                            <li><input type="radio" id="door_2" name="door_change" hidden
+                                       title="Односекционное окно и дверь">
+                                <label for="door_2" onclick="num2_door()"><img src="img/door_2.png"
+                                                                               title="Односекционное окно и дверь"></label>
+                            </li>
+                            <li><input type="radio" id="door_3" name="door_change" hidden
+                                       title="Двухсекционное окно и дверь">
+                                <label for="door_3" onclick="num3_door()"><img src="img/door_3.png"
+                                                                               title="Двухсекционное окно и дверь"></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="what_to_count_add clearfix">
+                <div>
+                    <span>2</span>
+                    <h2>Дополнительные характеристики</h2>
+                </div>
+                <div class="what_to_count_add_inside">
+                    <div>
+                        <label for="profil_type">Тип профиля</label>
+                        <select name="" id="profil_type">
+                            <option value="Rehau_Blitz">Rehau Blitz</option>
+                            <option value="Rehau_Sib">Rehau Sib</option>
+                            <option value="Rehau_Delight">Rehau Delight</option>
+                            <option value="Rehau_Brilliant">Rehau Brilliant</option>
+                            <option value="Rehau_Intelio">Rehau Intelio</option>
+                            <option value="Rehau_Geneo">Rehau Geneo</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="glass">Стеклопакет</label>
+                        <select name="" id="glass">
+                            <option value="normal">Стандартный</option>
+                            <option value="heat_protect">Теплосберегающий</option>
+                            <option value="sun_protect">Солнцезащитный</option>
+                            <option value="noise_protect">Шумозащитный</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="furniture">Фурнитура</label>
+                        <select name="" id="furniture">
+                            <option value="roto">Roto</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="width_under">Ширина подоконника</label>
+                        <select name="" id="width_under">
+                            <option value="none">Нет</option>
+                            <option value="w_u150">150</option>
+                            <option value="w_u200">200</option>
+                            <option value="w_u250">250</option>
+                            <option value="w_u300">300</option>
+                            <option value="w_u350">350</option>
+                            <option value="w_u400">400</option>
+                            <option value="w_u450">450</option>
+                            <option value="w_u500">500</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="width_2">Ширина отлива</label>
+                        <select name="" id="width_2">
+                            <option value="none">Нет</option>
+                            <option value="w_o100">менее 100мм</option>
+                            <option value="w_o150">100-150мм</option>
+                            <option value="w_o200">150-200мм</option>
+                            <option value="w_o250">200-250мм</option>
+                            <option value="w_o400">250-400мм</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="install">Установка</label>
+                        <select name="" id="install">
+                            <option value="none">Нет</option>
+                            <option value="wood">Деревянный дом</option>
+                            <option value="brick">Кирпичный дом</option>
+                            <option value="panel">Панельный дом</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right_column">
+            <div class="parameters_name">
+                <div>
+                    <span>3</span>
+                    <h2>Задайте параметры</h2>
+                </div>
+                <img class="img_show" src="img/calc-icon-click.png"/>
+            </div>
+            <div class="choose_pic">
+                <div class="size">
+                    <div class="width"><input type="text" value="800" id="width" title="Ширина окна"></div>
+                    <div id="image_window"><input type="text" value="0" id="height_all_window" title="Общая ширина">
+                        <img class="window_1_out" id="rem0" src="img/windows_choose/leaf-x.png" onclick="imgsrc()">
+                        <img class="window_1_out" id="rem1" src="img/windows_choose/leaf-x.png" onclick="imgsrc1()">
+                        <img class="window_1_out" id="rem2" src="img/windows_choose/leaf-x.png" onclick="imgsrc2()">
+                        <img class="window_1_out" id="rem3" src="img/windows_choose/leaf-x.png" onclick="imgsrc3()">
+                    </div>
+                    <div id="door_window"><input type="text" value="0" id="height_all_door" title="Общая ширина">
+                        <img class="window_1_out" id="rem_door1" src="img/windows_choose/leaf-x.png"
+                             onclick="imgsrc4()">
+                        <img class="window_1_out" id="rem_door2" src="img/windows_choose/leaf-x.png"
+                             onclick="imgsrc5()">
+                        <img class="window_1_out" id="rem_door0" src="img/door_choose/door-l.png" onclick="imgsrc6()">
+                        <input type="text" value="0" id="height_door" title="Высота двери">
+                    </div>
+                    <div class="height"><input type="text" value="1500" id="height" title="Высота окна"></div>
+                </div>
+
+            </div>
+            <div class="price">
+                <button id='price' onclick="price()">Узнать стоимость</button>
+            </div>
+        </div>
+    </section>
+    <p></p>
+</div>
+
+<script src="windows.js"></script>
+</body>
+</html>
