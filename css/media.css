@@ -3,4 +3,40 @@
     justify-content: center;
     align-content: flex-start;
   }
+
+  .out_here .portfolio {
+    padding: 0;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 950px) {
+
+  .hidden-elements .portfolio__inside {
+    flex-direction: column;
+  }
+
+  .hidden-elements .image-box {
+    height: 200px;
+    width: 200px;
+  }
+
+  .hidden-elements .port_all {
+    height: 200%;
+  }
+
+  .hidden-elements .portfolio__cover {
+    margin-top: 130px;
+    overflow-x: auto;
+  }
+  .out_here .portfolio {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1060px) {
+  .out_here .portfolio {
+    padding: 0;
+  }
+
 }
