@@ -1,0 +1,421 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kirumo v0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-03-13 10:42:10+0000\n"
+"Last-Translator: admin <dyba03@yandex.ua>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:15
+#@ kirumo
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "К сожалению, ничего не найдено."
+
+#: 404.php:19
+#@ kirumo
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "К сожалению, ничего не найдено."
+
+#: 404.php:27
+#@ kirumo
+msgid "Most Used Categories"
+msgstr "Популярные рубрики"
+
+#. translators: %1$s: smiley
+#: 404.php:44
+#, php-format
+#@ kirumo
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Архив за месяц: %1$s"
+
+#: archive.php:31
+#, php-format
+#@ kirumo
+msgid "Author: %s"
+msgstr "Автор: %s"
+
+#: archive.php:39
+#, php-format
+#@ kirumo
+msgid "Day: %s"
+msgstr "День: %s"
+
+#: archive.php:42
+#, php-format
+#@ kirumo
+msgid "Month: %s"
+msgstr "Месяц: %s"
+
+#: archive.php:42
+#@ kirumo
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:45
+#, php-format
+#@ kirumo
+msgid "Year: %s"
+msgstr "Год: %s"
+
+#: archive.php:45
+#@ kirumo
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:48
+#@ kirumo
+msgid "Asides"
+msgstr "Формат"
+
+#: archive.php:51
+#@ kirumo
+msgid "Galleries"
+msgstr "Галерея"
+
+#: archive.php:54
+#@ kirumo
+msgid "Images"
+msgstr "Изображения"
+
+#: archive.php:57
+#@ kirumo
+msgid "Videos"
+msgstr "Видео"
+
+#: archive.php:60
+#@ kirumo
+msgid "Quotes"
+msgstr "Цитаты"
+
+#: archive.php:63
+#@ kirumo
+msgid "Links"
+msgstr "Ссылки"
+
+#: archive.php:66
+#@ kirumo
+msgid "Statuses"
+msgstr "Статусы"
+
+#: archive.php:69
+#@ kirumo
+msgid "Audios"
+msgstr "Аудио"
+
+#: archive.php:72
+#@ kirumo
+msgid "Chats"
+msgstr "Чаты"
+
+#: archive.php:75
+#: sidebar.php:17
+#@ kirumo
+msgid "Archives"
+msgstr "Архивы"
+
+#: comments.php:30
+#, php-format
+#@ kirumo
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: comments.php:37
+#: comments.php:57
+#@ kirumo
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: comments.php:38
+#: comments.php:58
+#@ kirumo
+msgid "&larr; Older Comments"
+msgstr "&larr; Предыдущие комментарии"
+
+#: comments.php:39
+#: comments.php:59
+#@ kirumo
+msgid "Newer Comments &rarr;"
+msgstr "Новые комментарии &rarr;"
+
+#: comments.php:69
+#@ kirumo
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: content-aside.php:18
+#: content-audio.php:23
+#: content-chat.php:20
+#: content-gallery.php:20
+#: content-image.php:21
+#: content-link.php:21
+#: content-quote.php:21
+#: content-status.php:20
+#: content-video.php:20
+#@ kirumo
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-aside.php:21
+#: content-audio.php:26
+#: content-chat.php:23
+#: content-gallery.php:23
+#: content-image.php:24
+#: content-link.php:24
+#: content-page.php:21
+#: content-quote.php:24
+#: content-single.php:24
+#: content-status.php:23
+#: content-video.php:23
+#: content.php:25
+#: template-full-width.php:30
+#: template-horiz-widgets.php:30
+#: template-left-sidebar.php:33
+#@ kirumo
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: content-footer-short.php:12
+#: content-footer.php:17
+#@ kirumo
+msgid "Leave a comment"
+msgstr "Комментировать"
+
+#: content-footer-short.php:12
+#: content-footer.php:17
+#@ kirumo
+msgid "1 Comment"
+msgstr "Один комментарий"
+
+#: content-footer-short.php:12
+#: content-footer.php:17
+#@ kirumo
+msgid "% Comments"
+msgstr "Комментариев: %"
+
+#: content-footer-short.php:20
+#: content-footer.php:42
+#: content-page.php:26
+#: inc/template-tags.php:81
+#: inc/template-tags.php:118
+#: template-full-width.php:36
+#: template-horiz-widgets.php:36
+#: template-left-sidebar.php:39
+#@ kirumo
+msgid "Edit"
+msgstr "Изменить"
+
+#. translators: used between list items, there is a space after the comma
+#: content-footer.php:23
+#: content-footer.php:33
+#@ kirumo
+msgid ", "
+msgstr ""
+
+#: content-footer.php:27
+#, php-format
+#@ kirumo
+msgid "Posted in %1$s"
+msgstr "Рубрика: %1$s"
+
+#: content-footer.php:37
+#, php-format
+#@ kirumo
+msgid "Tagged %1$s"
+msgstr "Метки: %1$s"
+
+#: content-none.php:13
+#@ kirumo
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: content-none.php:19
+#, php-format
+#@ kirumo
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Готовы опубликовать свою первую запись? <a href=\"%1$s\">Вперед</a>."
+
+#: content-none.php:23
+#@ kirumo
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "К сожалению, ничего не найдено."
+
+#: content-none.php:28
+#@ kirumo
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Попробуйте воспользоваться поиском."
+
+#: content-single.php:21
+#: content.php:21
+#@ kirumo
+msgid "Continue reading <span class=\"genericon genericon-next\"></span>"
+msgstr "Читать далее <span class=\"genericon genericon-next\"></span>"
+
+#: functions.php:36
+#@ kirumo
+msgid "Mobile Menu"
+msgstr ""
+
+#: functions.php:37
+#@ kirumo
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:38
+#@ kirumo
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:75
+#@ kirumo
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:85
+#@ kirumo
+msgid "Horizontal Widgets"
+msgstr ""
+
+#: functions.php:95
+#@ kirumo
+msgid "Footer Widgets"
+msgstr ""
+
+#: header.php:27
+#: header.php:58
+#@ kirumo
+msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer/custom-color.php:33
+#@ kirumo
+msgid "Primary Link Color"
+msgstr ""
+
+#: inc/customizer/custom-footer.php:33
+#@ kirumo
+msgid "Footer Text"
+msgstr "Текст в футере"
+
+#: inc/customizer/custom-header-footer-color.php:33
+#@ kirumo
+msgid "Header & Footer Color"
+msgstr "Цвет футера и шапки"
+
+#: inc/extras.php:63
+#, php-format
+#@ kirumo
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: inc/template-tags.php:23
+#@ kirumo
+msgid "Posts navigation"
+msgstr "Навигация по записям"
+
+#: inc/template-tags.php:27
+#@ kirumo
+msgid "<span class=\"meta-nav genericon genericon-previous\"></span> Older posts"
+msgstr "<span class=\"meta-nav genericon genericon-previous\"></span> Предыдущие записи"
+
+#: inc/template-tags.php:31
+#@ kirumo
+msgid "Newer posts <span class=\"meta-nav genericon genericon-next\"></span>"
+msgstr "Новые записи <span class=\"meta-nav genericon genericon-next\"></span>"
+
+#: inc/template-tags.php:56
+#@ kirumo
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: inc/template-tags.php:59
+#, php-format
+#@ kirumo
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav genericon genericon-previous\"></span> %title"
+msgstr ""
+
+#: inc/template-tags.php:60
+#, php-format
+#@ kirumo
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav genericon genericon-next\"></span>"
+msgstr ""
+
+#: inc/template-tags.php:81
+#@ kirumo
+msgid "Pingback:"
+msgstr "Пингбек:"
+
+#: inc/template-tags.php:91
+#, php-format
+#@ kirumo
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">пишет:</span>"
+
+#: inc/template-tags.php:95
+#@ kirumo
+msgid "Your comment is awaiting moderation."
+msgstr "Комментарий ожидает проверки."
+
+#: inc/template-tags.php:115
+#, php-format
+#@ kirumo
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: inc/template-tags.php:144
+#, php-format
+#@ kirumo
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr "<span class=\"posted-on\">Опубликовано: %1$s</span><span class=\"byline\"> Автор: %2$s</span>"
+
+#: search.php:16
+#, php-format
+#@ kirumo
+msgid "Search Results for: %s"
+msgstr "Результаты поиска: %s"
+
+#: searchform.php:10
+#@ kirumo
+msgctxt "label"
+msgid "Search for:"
+msgstr "Поиск:"
+
+#: searchform.php:11
+#@ kirumo
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Искать &hellip;"
+
+#: searchform.php:13
+#@ kirumo
+msgctxt "submit button"
+msgid "Search"
+msgstr "Поиск"
+
+#: sidebar.php:24
+#@ kirumo
+msgid "Meta"
+msgstr ""
+
