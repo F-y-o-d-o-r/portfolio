@@ -19,6 +19,7 @@ function tableDOM()
   /************загрузка картинок и пуш их в массив + текущее время в следующий столбик*************/
   if (isset($_FILES)) {
     $dir = "/home/u500387065/public_html/homeworks/PHP/17.12.13";
+    //$dir = "/home/forum/www/";
     for ($i = 0; $i < count($_FILES['file']['tmp_name']); $i++) {
       if (strpos($_FILES['file']['name'][$i], 'jpg') !== false or strpos($_FILES['file']['name'][$i], 'gif') !== false or strpos($_FILES['file']['name'][$i], 'png') !== false) {
         if (copy($_FILES['file']['tmp_name'][$i], $dir . $_FILES['file']['name'][$i])) {
@@ -60,19 +61,17 @@ function tableDOM()
     echo $var1 . $varrr;
     stop_img_change();//останавливаем перебор слайдера при поиске
   } else {
-    if(!isset($_POST['show'])) {
-      foreach ($massData as $massData_index => $massData_value) {
-        $td = '';
-        foreach ($massData_value as $index => $massData_value_inside) {
-          $td .= '<td>' . $massData_value_inside . '</td>';
-        }
-        echo '<script>';
-        echo 'var tbody=document.getElementById("tbody");';
-        echo 'var tr=document.createElement("tr");';
-        echo "tr.innerHTML='$td';";
-        echo 'tbody.appendChild(tr);';
-        echo '</script>';
+    foreach ($massData as $massData_index => $massData_value) {
+      $td = '';
+      foreach ($massData_value as $index => $massData_value_inside) {
+        $td .= '<td>' . $massData_value_inside . '</td>';
       }
+      echo '<script>';
+      echo 'var tbody=document.getElementById("tbody");';
+      echo 'var tr=document.createElement("tr");';
+      echo "tr.innerHTML='$td';";
+      echo 'tbody.appendChild(tr);';
+      echo '</script>';
     }
   }
   /***********************AJAX сортируем по поисковому запросу и выводим - end******************/
@@ -81,9 +80,7 @@ function tableDOM()
 function stop_img_change() {
   ?>
   <script>
-    if(typeof interv !== 'undefined') {
-      clearInterval(interv);
-    }
+    clearInterval(interv);
   </script>
   <?php
 }
@@ -100,27 +97,30 @@ function func_sort($a, $b)
 /************************************************************************/
 tableDOM();
 /***********************change color of the bottons***********************/
-if (isset($_POST['show'])) {
-  switch ($_POST['show']) {
-    case 'search':
+/*
+if (isset($_GET['changeColor'])) {
+  switch ($_GET['changeColor']) {
+    case 'button':
       ?>
       <script>
-        document.getElementsByTagName('button')[0].className = 'button';
-        document.getElementsByTagName('button')[1].className = "button2";
+        document.getElementsByTagName('button')[0].className = 'button2';
+        document.getElementsByTagName('button')[1].className = "<?PHP echo $_GET['changeColor'] ?>";
       </script>
       <?PHP
       break;
-    case 'download':
+    case 'button2':
       ?>
       <script>
-        document.getElementsByTagName('button')[0].className = "button2";
-        document.getElementsByTagName('button')[1].className = "button";
+        document.getElementsByTagName('button')[0].className = "button";
+        document.getElementsByTagName('button')[1].className = "<?PHP echo $_GET['changeColor'] ?>";
       </script>
       <?PHP
   }
 }
+*/
 /***********************change color of the bottons  end******************/
 /***********************Вывод нужного блока при нажатии кнопок ЗАГРУЗКА или ПОИСК******************/
+/*
 if (isset($_POST['show'])) {
   switch ($_POST['show']) {
     case 'download':
@@ -133,4 +133,5 @@ if (isset($_POST['show'])) {
       include_once 'fon.php';
   }
 }
+*/
 /***********************Вывод нужного блока при нажатии кнопок ЗАГРУЗКА или ПОИСК end******************/

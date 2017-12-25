@@ -1,11 +1,11 @@
-<!--<div id="forma">
+<div id="forma">
   <form method="post">
     <input type="button" value="Автомобили" name="auto" onclick="post_send(this.name);func_color();">
     <input type="button" value="Запчасти" name="zapcasti" onclick="post_send(this.name);">
   </form>
 </div>
-<script>-->
-  /*var req;
+<script>
+  var req;
   function post_send(name) {
     req = new XMLHttpRequest();//ajax js
     req.open('POST', 'algoritm.php', true);//connect to server - true == async - rabotaet tolko ukazanniy file
@@ -26,5 +26,5 @@
     for (var i = 0; i < elem_td.length; i++) {
       elem_td[i].setAttribute('style', 'background-color:lavender');
     }
-  }*/
+  }
 </script>

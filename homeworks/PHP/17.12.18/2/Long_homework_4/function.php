@@ -42,7 +42,7 @@ function tableDOM()
   }
   /************загрузка картинок и пуш их в массив + текущее время в следующий столбик*************/
   if (isset($_FILES)) {
-    $dir = "w:/domains/homeworks/2017.12.13/Long_homework_1/";
+    $dir = "/home/u500387065/public_html/homeworks/PHP/17.12.13";
     for ($i = 0; $i < count($_FILES['file']['tmp_name']); $i++) {
       if (strpos($_FILES['file']['name'][$i], 'jpg') !== false or strpos($_FILES['file']['name'][$i], 'gif') !== false or strpos($_FILES['file']['name'][$i], 'png') !== false) {
         if (copy($_FILES['file']['tmp_name'][$i], $dir . $_FILES['file']['name'][$i])) {

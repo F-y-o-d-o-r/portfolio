@@ -4,7 +4,7 @@
 
 <script>
   var mass_img = new Array();
-
+  var interv;
   <?php
 
   if(isset($_FILES['file']['name'])) {
@@ -17,7 +17,7 @@
   }
   ?>
 
-  var interv = setInterval('func_img()', 1500);
+  interv = setInterval('func_img()', 1500);
 
   <?php
   }
