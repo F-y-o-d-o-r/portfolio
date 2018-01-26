@@ -1,0 +1,375 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: local('Century Gothic'), local('CenturyGothic'),
+  url('../fonts/centurygothic/CenturyGothic.woff2') format('woff2'),
+  url('../fonts/centurygothic/CenturyGothic.woff') format('woff'),
+  url('../fonts/centurygothic/CenturyGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic Bold';
+  src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
+  url('../fonts/centurygothicbold/CenturyGothic-Bold.woff2') format('woff2'),
+  url('../fonts/centurygothicbold/CenturyGothic-Bold.woff') format('woff'),
+  url('../fonts/centurygothicbold/CenturyGothic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .menu ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  list-style: none;
+}
+
+header nav a {
+  text-decoration: none;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  color: #00623f;
+  transition: color .3s ease;
+  display: block;
+  border-left: 1px solid #e9e9e9;
+  padding: 27px 27px;
+}
+
+nav a:hover {
+  color: #00927c;
+}
+
+a#main {
+  color: #00927c;
+  margin-left: 35px;
+  border: none;
+}
+
+#ticket {
+  background-color: #00623f;
+  color: #ffffff;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: all .3s ease;
+}
+
+#ticket:hover {
+  background-color: #fff;
+  color: #00927c;
+}
+
+.fb_icon {
+  position: relative;
+  padding-left: 45px;
+}
+
+.fb_icon:before {
+  content: url('../icons/icons/fb_icon_15х15.png');
+  position: absolute;
+  left: 17px;
+  top: 28px
+}
+
+main {
+  background-image: url(../img/glacierreflection.jpg);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size:cover;
+  height: 768px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+main .menu_first_open .dots1 {
+  font-size:35px;
+  margin-top:-15px;
+  margin-bottom:0;
+}
+
+main .menu2 {
+  font-size: 18px;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  color: #fff;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  transition: all .3s ease;
+}
+
+main .menu2 div {
+  transition: all .5s ease-in-out;
+  position: relative;
+  padding-left: 80px;
+}
+
+main .menu2 div img {
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  bottom: -20px;
+}
+
+main .menu2 div:hover {
+  transform: scale(2, 2);
+  cursor: pointer;
+}
+
+.logo {
+  margin-left: 50%;
+  transform: translateX(-76px);
+
+}
+
+.logo img {
+  margin-top: 86px;
+}
+
+main .menu_first_open {
+  position: absolute;
+  left: 0;
+  bottom: -46%;
+  border-top: 4px solid #ff3a3a;
+  width: 380px;
+}
+
+.menu_first_open {
+  font-size: 12px;
+  font-family: 'Century Gothic', Arial, sans-serif;
+  color: #00927c;
+  padding: 30px 37px;
+  background-color: #fff;
+  text-align: center;
+  transfition: all .5s ease-in-out;
+  cursor: pointer;
+}
+
+.menu_first_open h4 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu_first_open p {
+  margin-top: 25px;
+}
+
+section {
+  font-size: 12px;
+  font-family: 'Century Gothic', Arial, sans-serif;
+  color: #00927c;
+  display: none;
+  opacity: 0;
+  transition: all 5s ease-in-out;
+}
+
+section h4 {
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-top: 100px;
+}
+
+section .onthetop {
+  font-size: 42px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-top: -15px;
+  padding-bottom: 230px;
+}
+
+article {
+  border-top: 7px solid #ff3a3a;
+  border-bottom: 7px solid #ff3a3a;
+  background-image: url(../icons/icons/active/img_backg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #00473c;
+  padding: 65px 65px 40px 65px;
+  overflow: hidden;
+}
+
+article h5 {
+  font-weight: normal;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: #ffa655;
+  text-align: center;
+}
+
+article .tree {
+  margin-left: 50%;
+  transform: translateX(-63px);
+  margin-top: 83px;
+}
+
+article .dots2 {
+  text-align: center;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  color: #ffa655;
+  font-size:50px;
+  letter-spacing: 4px;
+}
+
+article .inside_article1 {
+  border: 6.6px solid #ffa655;
+}
+
+article .inourcountry {
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #ffa655;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 88px;
+}
+
+article .big_dots {
+  margin-left: 50%;
+  transform: translateX(-544px);
+}
+
+article .beutiful {
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: 8px;
+  margin-top: 137px;
+  margin-bottom: 100px;
+}
+
+article .text_in_article {
+  display: flex;
+  padding: 0 50px;
+}
+
+article .text_in_article1 {
+  border-right: 2px solid #ffa655;
+  margin-bottom: 150px;
+}
+
+article .under_text {
+  text-align: center;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  font-size: 12px;
+  color: #ffa655;
+}
+
+.ticket p {
+  text-align: center;
+  font-family: 'Century Gothic', Arial, sans-serif;
+  font-size: 30px;
+  color: #00927c;
+  padding: 0;
+  margin-top: 107px;
+}
+.ticket{
+  overflow: hidden;
+}
+.ticket h4 {
+  text-align: center;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  font-size: 48px;
+  color: #00927c;
+  padding: 0;
+  margin-top: 75px;
+  margin-bottom: 98px;
+}
+
+.ticket button {
+  background-color: #00623f;
+  color: #ffffff;
+  padding: 20px 80px;
+  transition: all .3s ease;
+  text-align: center;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  font-size: 24px;
+  margin-left: 50%;
+  transform: translateX(-160px);
+  border: none;
+}
+
+.ticket button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #00927c;
+  transition: all .3s ease;
+  outline: 1px solid #00927c;
+}
+
+footer {
+  margin-top: 125px;
+  display: flex;
+  background-color: #00623f;
+  color: #fff;
+  justify-content: space-between;
+}
+
+footer nav a {
+  text-decoration: none;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  font-size: 16px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid #fff;
+  color: #fff;
+  transition: color .3s ease;
+  display: block;
+}
+
+footer nav li:last-child a {
+  border: none;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div {
+  padding-left: 10px;
+  padding-top: 10px;
+  position: relative;
+  margin-right: 30px;
+}
+
+footer div:before {
+  content: url('../icons/icons/active/rocket_icon.png');
+  position: absolute;
+  left: -20px;
+  bottom: 0px
+}
+
+footer div a {
+  text-decoration: none;
+  font-family: 'Century Gothic Bold', Arial, sans-serif;
+  font-size: 16px;
+  padding-right: 10px;
+  color: #fff;
+}
+
+#vverh {
+  cursor: pointer;
+}
+#vverh:hover {
+  color:#00927c;
+}
+
