@@ -1,0 +1,103 @@
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #e8ffc3;
+  height: 100vh;
+}
+
+td {
+  background-color: whitesmoke;
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+  float: left;
+  margin-bottom: -45px;
+}
+
+.submit {
+  display: none;
+}
+
+.button {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 5px;
+  background: #3279B6;
+  box-shadow: 0 -3px #3A8DD5 inset;
+  transition: 0.2s;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.button:hover {
+  background: #2B679C;
+}
+
+.button:active {
+  background: #22527C;
+  box-shadow: 0 3px #276095 inset;
+}
+.button2 {
+  font-weight: 700;
+  color: #3279B6;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 5px;
+  background: #C0C0C0;
+  box-shadow: 0 -3px #979797 inset;
+  transition: 0.2s;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.button2:hover {
+  background: #c1c1c1;
+}
+
+.button2:active {
+  background: #B5B5B5;
+  box-shadow: 0 3px #979797 inset;
+}
+
+.border-wrapper .button:first-child {
+  margin-right: 20px;
+}
+.border-wrapper .button2:first-child {
+  margin-right: 20px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.submit {
+  display: none;
+}
+
+input[type=text] {
+  width: 400px;
+}
+
+#content {
+  margin-top:70px;
+}
+
+#content table {
+  width: 1000px;
+}

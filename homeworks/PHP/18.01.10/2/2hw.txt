@@ -1,0 +1,45 @@
+-----select, where(like), order by, group by, count-----
+1.Из таблицы user конструкцией select выберите имя, телефон, адрес абонентов конкретного мобильного оператора (код которого, присутствует у вас в базе, для базы из лекционного материала, например, (050)… – «Vodafone»);
+
+ОТВЕТ:
+SELECT name,adr,tel FROM `user` WHERE tel LIKE "(050)%"
+
+2.Используя группировку, из таблицы pokup конструкцией select выберите все поля, сгруппированные по дате покупки. Затем, добавьте в выбираемый набор данных новое поле, отображающее количество покупок за определенную дату и  отсортируйте результирующий набор данных по этому новому полю по убыванию;
+
+ОТВЕТ:
+SELECT * FROM `pokup` GROUP BY dat
+SELECT id_pokup, id_user, id_tovar, dat, COUNT(*) AS dat_b FROM pokup GROUP BY dat ORDER BY dat_b DESC
+
+3.Используя предикат для группы having, откорректируйте запрос из предыдущего пункта так, чтобы он выводил только те даты покупок, когда их было, например, более одной;
+
+ОТВЕТ:
+SELECT id_pokup, id_user, id_tovar, dat, COUNT(*) AS dat_b FROM pokup GROUP BY dat HAVING COUNT(*)>1 ORDER BY dat_b DESC
+select id_pokup, id_user, id_tovar, dat, count(*) as itog from pokup group by dat having itog>1
+--------------------------------------------------------------------------------
+
+-----связи - where, join…on-----
+1.Используя «неявную» связь where между необходимыми таблицами, выберите дату покупки, наименование товара, если его(товара) приобретение произошло после определенной даты (например, после 01.03.2015 года), и отсортируйте результирующий набор данных по убыванию даты покупки;
+
+ОТВЕТ:
+SELECT pokup.dat, tovar.tov FROM pokup, tovar WHERE pokup.dat>"2015-03-01" ORDER BY dat DESC
+select dat, tov from pokup, tovar where pokup.id_tovar=tovar.id_tovar and dat>'2015-03-01' order by dat desc
+
+2.Используя «явную» связь join…on между необходимыми таблицами, выберите имя, телефон, адрес, наименование товара, дату покупки тех клиентов, которые покупали, например «брюки» (при этом, соответствующий товар должен выбираться по контексту (like) или по коду (указан в соответствующей таблице));
+
+ОТВЕТ:
+SELECT user.name, user.tel, user.adr, tovar.tov, pokup.dat FROM user JOIN pokup ON user.id_user=pokup.id_user JOIN tovar ON pokup.id_tovar=tovar.id_tovar WHERE tov LIKE "Брюки"
+select name, tel, adr, tov, dat from user join pokup on user.id_user=pokup.id_user join tovar on pokup.id_tovar=tovar.id_tovar and (tov like '%брюки%' or tovar.id_tovar=2)
+
+3.Используя «неявную» связь where между необходимыми таблицами, выберите наименование товара, количество его покупок и отсортируйте результирующий набор по убыванию такого количества. Затем, перепишите данный запрос с использованием «явной» связи join…on.
+
+ОТВЕТ 1:
+SELECT tov, COUNT(*) AS kolichestvo FROM pokup, tovar
+WHERE pokup.id_tovar=tovar.id_tovar
+GROUP BY tov ORDER BY kolichestvo DESC
+
+ОТВЕТ 2:
+SELECT tovar.tov, COUNT(*) AS kolichestvo
+FROM pokup JOIN tovar ON pokup.id_tovar=tovar.id_tovar
+GROUP BY tovar.tov ORDER BY kolichestvo DESC
+
+--------------------------------------------------------------------------------

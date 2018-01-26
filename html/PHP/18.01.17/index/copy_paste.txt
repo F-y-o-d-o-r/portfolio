@@ -1,0 +1,18 @@
+﻿select concat(user.id_user, '/', pokup.id_pokup) as up, name, tel, adr, tov, dat from user
+   join pokup on user.id_user=pokup.id_user
+   join tovar on pokup.id_tovar=tovar.id_tovar
+
+---
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'tbody_tovar',  '<td onmouseover=\'kursor_start(this);\' onmouseout=\'kursor_end(this);\'>', '</td>', "<tr style=\'cursor:pointer;\' onclick=\'tov_update_delete(this);\'>", '</tr>', '', '');
+
+---
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, '',  '<td onmouseover="kursor_start(this);" onmouseout="kursor_end(this);">', '</td>', '<tr style="cursor:pointer;" onclick="tov_update_delete(this);">', '</tr>', '', '');
+
+---
+echo '<script>
+var arr_tr=tbody_tovar.getElementsByTagName("tr");
+for(var i=0; i<arr_tr.length; i++) {
+arr_tr[i].childNodes[0].style.visibility="hidden";
+}
+</script>';
+

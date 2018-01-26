@@ -1,0 +1,19 @@
+INSERT INTO user(name, tel, adr) VALUES('Serg', '111-111-11', 'Kiev')
+
+CREATE TABLE user_tmp (
+    id_user int(12) not null primary key AUTO_INCREMENT,
+    name varchar(100) not null,
+    tel varchar(100) not null,
+    adr varchar(100) not null
+);
+
+INSERT INTO user_tmp SELECT * FROM user
+
+DELETE FROM user_tmp
+
+INSERT INTO user_tmp SELECT * FROM user WHERE id_user in (SELECT id_user FROM pokup WHERE id_tovar = 2)
+
+DELETE FROM user_tmp WHERE id_user IN (SELECT id_user FROM pokup WHERE id_tovar = 3)
+
+UPDATE `user_tmp` SET `adr`=upper(name) WHERE id_user >ALL (SELECT id_user FROM pokup WHERE id_tovar=2)
+

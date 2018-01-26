@@ -1,0 +1,3 @@
+<?php
+echo '<span style="color:red; font-size:25pt;">ВАС "ХАКЕРНУЛИ!!!"</span>';
+?>

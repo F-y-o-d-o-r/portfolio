@@ -1,0 +1,32 @@
+﻿SELECT user.* FROM user, pokup WHERE user.id_user=pokup.id_user AND pokup.id_tovar=3
+SELECT user.* FROM user WHERE id_user in (SELECT id_user FROM pokup WHERE id_tovar=3)
+SELECT user.* FROM user WHERE id_user >ALL (SELECT id_user FROM pokup WHERE id_tovar=3)
+SELECT user.* FROM user WHERE id_user IN (SELECT id_user FROM pokup WHERE id_tovar=2)
+
+---
+select min(name), tel, adr from user -
+select name, tel, adr from user WHERE name in (SELECT MIN(name) FROM user) +
+
+select min(name), tel, adr from user group by name
+select min(name), tel, adr from user group by adr -
+select name, tel, adr from user WHERE name IN (SELECT min(name) FROM user GROUP BY adr) +
+
+---
+SELECT name, adr, tel, tov, dat FROM user
+JOIN pokup ON user.id_user=pokup.id_user
+JOIN tovar ON pokup.id_tovar=tovar.id_tovar
+
+SELECT name, adr, tel, dat FROM user
+JOIN pokup ON user.id_user=pokup.id_user
+WHERE id_tovar IN (SELECT MAX(id_tovar) FROM tovar)
+
+SELECT name, adr, tel FROM user
+WHERE id_user IN (SELECT MAX(id_user) FROM pokup
+WHERE id_tovar IN (SELECT id_tovar FROM tovar))
+
+SELECT name, tel, adr FROM user
+WHERE !!!!id_user IN (SELECT !!!!id_user FROM pokup
+WHERE !!!!id_tovar IN (SELECT MAX(!!!!id_tovar) FROM pokup))
+
+SELECT name, tel, adr FROM user, pokup where user.id_user = pokup.id_user and id_tovar <> 2 -
+
