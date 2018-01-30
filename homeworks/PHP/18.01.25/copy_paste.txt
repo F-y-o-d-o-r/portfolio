@@ -1,0 +1,73 @@
+﻿if($k2=='up') {$mas2="<a href='#' id='$mas2' style='color:blue;' onclick='jquery_send(".$jq_se."); return false;'>".$mas2."</a>";}
+---
+      if(isset($_POST['name_select']) or isset($_POST['tov_insert']) or isset($_POST['tov_update']) or isset($_POST['tov_delete']) or isset($_POST['klient_insert']) or isset($_POST['klient_delete']) or isset($_POST['klient_update']) or isset($_POST['sort_top']) or isset($_POST['sort_bottom'])) {
+         $jq_se='"#okno", "post", "db_pokup_update_delete.php", ["pokup_update_delete"], ["'.$mas2.'"]';
+      }
+      else {
+         $jq_se='\"#okno\", \"post\", \"db_pokup_update_delete.php\", [\"pokup_update_delete\"], [\"'.$mas2.'\"]';
+      }
+
+--- pokup_update_delete
+$query="select name from user order by name";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'sel_name_id_pokup', '<option>', '</option>', '', '', '', '');
+$query="select tov from tovar order by tov";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'sel_tov_id_pokup', '<option>', '</option>', '', '', '', '');
+$query="select day from day order by day";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'day_pokup_id', '<option>', '</option>', '', '', '', '');
+$query="select month from month order by month";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'month_pokup_id', '<option>', '</option>', '', '', '', '');
+$query="select yar from yar order by yar";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'yar_pokup_id', '<option>', '</option>', '', '', '', '');
+
+--- pokup_update_delete - again
+$use=strstr($_POST['pokup_update_delete'], '/', true);
+$pok=substr($_POST['pokup_update_delete'], strpos($_POST['pokup_update_delete'], '/')+1);
+$use=intval($use);
+$pok=intval($pok);
+$obj->query="select user.id_user as id_use, name, tel, adr, tovar.id_tovar as id_tov, tov, image, pokup.id_pokup as id_pok, substring(dat,9,2) as day_substr, substring(dat,6,2) as month_substr, substring(dat,1,4) as yar_substr from user
+join pokup on user.id_user=pokup.id_user
+join tovar on pokup.id_tovar=tovar.id_tovar where
+user.id_user=".$use." and pokup.id_pokup=".$pok;
+$obj->DB_query_all();
+$obj->row_db[0]['tov']=str_replace("'", "", $obj->row_db[0]['tov']);
+
+--- name_pokup_select
+$name_pokup_sel=mysqli_real_escape_string($obj->link_db, $_POST['name_pokup_select']);
+$query="select tel from user where name='".$name_pokup_sel."'";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'tel_pole_pokup_id', '', '', '', '', '', '');
+$query="select adr from user where name='".$name_pokup_sel."'";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'adr_pole_pokup_id', '', '', '', '', '', '');
+$query="select id_user from user where name='".$name_pokup_sel."'";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'name_id', '', '', '', '', '', '');
+
+--- tov_pokup_select
+$tov_pokup_sel=mysqli_real_escape_string($obj->link_db, $_POST['tov_pokup_select']);
+$query="select id_tovar from tovar where tov='".$tov_pokup_sel."'";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'tov_id', '', '', '', '', '', '');  
+$query="select image from tovar where tov='".$tov_pokup_sel."'";
+$obj_query_tag->Query_Dom_all($obj->link_db, $query, 'pokup_img', '', '', '', '', '', '');
+
+--- pokup_update
+$pok_id=intval($_POST['pok_id']);
+$name_id=intval($_POST['name_id_new']);
+$tov_id=intval($_POST['tov_id_new']);
+$dat=mysqli_real_escape_string($obj->link_db, $_POST['dat_new']);
+$query="update pokup set id_user=".$name_id.", id_tovar=".$tov_id.", dat='".$dat."' where id_pokup=".$pok_id;
+mysqli_query($obj->link_db, $query);
+echo '<script>
+jquery_send("#okno", "post", "db_poisk.php", ["poisk"], []);
+</script>';
+
+--- update-bold-before
+jquery_send("#okno", "post", "db_poisk.php", ["poisk", "marker"], ["", "'.$name_id.'/'.$pok_id.'"]);
+
+if(isset($_POST['marker'])) {
+echo '<script>
+func_bold_before("'.$_POST['marker'].'");
+</script>';
+}
+
+
+
+
+

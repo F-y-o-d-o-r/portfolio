@@ -1,0 +1,42 @@
+﻿echo "<script>
+tbod.innerHTML='<tr><td>$robots_place</td><td>$robots_host</td><td>$robots_sitemap</td></tr>';
+var div_email=document.getElementById('forma_email');
+div_email.style.display='block';
+</script>";
+
+--- translate
+if($_POST['language']=='ua') {
+foreach($this->row_db as $k1=>$mas1) {
+   foreach($mas1 as $k2=>$mas2) {
+      $mas2_str.=$mas2.'|';
+   }
+   $mas2_str.='|';
+}
+$mas2_str=substr($mas2_str, 0, strlen($mas2_str)-2);
+print_r($mas2_str); echo '<br>';
+//...
+$mas2_ua=$mas2_str;
+//...
+print_r($mas2_ua); echo '<br>';
+$mas2_ua_arr1=explode('||', $mas2_ua);
+foreach($mas2_ua_arr1 as $k1=>$mas2_ua_arr11) {
+   $mas2_ua_arr2=explode('|', $mas2_ua_arr11);
+   foreach($mas2_ua_arr2 as $k2=>$mas2_ua_arr22) {
+      $mas2_ua_new[$k1][$k2]=$mas2_ua_arr22;
+   }
+}
+//print_r($mas2_ua_new); echo '<br>';
+$this->row_db=$mas2_ua_new;
+}
+
+---
+//$mas2_ua=$this->yandex_translate_file_get_contents($mas2_str);
+$mas2_ua=file_get_contents('http://translate.25one.com.ua/api_yandex_translate_file_get_contents.php?type_translate=uk&russian_sentence='.urlencode($mas2_str));
+//$mas2_ua=$this->yandex_translate_curl($mas2_str);
+//$mas2_ua=file_get_contents('http://translate.25one.com.ua/api_yandex_translate_curl.php?type_translate=uk&russian_sentence='.urlencode($mas2_str));
+//print_r($mas2_ua); echo '<br>';
+
+--- own api
+$connect_db_json=file_get_contents('http://connect_db/connect_db.php');
+
+

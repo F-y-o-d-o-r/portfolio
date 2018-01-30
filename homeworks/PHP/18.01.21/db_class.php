@@ -9,10 +9,10 @@ class DB_class
 //***********************************************************
   function DB_connect()
   {                                               // 15. МЕТОД ПОДКЛЮЧЕНИЯ К БД
-    $db_host = 'homeworks';
-    $db_user = 'root';
-    $db_password = '';
-    $db_name = 'stat_user';
+    $db_host = 'mysql.hostinger.com.ua';
+    $db_user = 'u978026000_fyod';
+    $db_password = 'woe3bdKiZ7hn';
+    $db_name = 'u978026000_stad';
     $link = mysqli_connect($db_host, $db_user, $db_password, $db_name);
     if (mysqli_connect_errno()) {
       echo "Ошибка подключения к БД: " . mysqli_connect_error();
