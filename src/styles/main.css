@@ -16,7 +16,20 @@
   src: local("Roboto Bold"), local("Roboto-Bold"), url("./fonts/roboto-v18-cyrillic_latin-700.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("./fonts/roboto-v18-cyrillic_latin-700.woff") format("woff"), url("./fonts/roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("./fonts/roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg"); }
 
 /*fonts*/
+header {
+  background-color: #DCD22C;
+  padding: 10px 0; }
+  header .header {
+    display: flex; }
+
+.App-logo {
+  height: 50px; }
+
 body {
   font-family: Roboto;
   font-weight: normal;
   font-size: 20px; }
+
+.container {
+  max-width: 1199px;
+  margin: 0 auto; }
