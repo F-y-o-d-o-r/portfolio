@@ -1,8 +1,38 @@
-header {
+/*fonts*/
+header.header {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
   background-color: #DCD22C;
   padding: 10px 0; }
-  header .header {
-    display: flex; }
+  header.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header.header nav {
+    justify-content: space-between; }
+    header.header nav a {
+      font-family: Roboto;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #2F247F;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-right: 3rem;
+      letter-spacing: .2rem;
+      position: relative;
+      display: inline-block; }
+      header.header nav a:after {
+        position: absolute;
+        content: '';
+        height: 3px;
+        background-color: #2F247F;
+        bottom: -1rem;
+        left: 0;
+        width: 0;
+        transition: all ease .4s; }
+      header.header nav a:hover:after {
+        width: 100%; }
 
 .App-logo {
   height: 50px; }

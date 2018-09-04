@@ -1,8 +1,39 @@
-header
+@import 'mixins.sass'
+header.header
+  z-index: 1
+  position: fixed
+  width: 100%
   background-color: #DCD22C
   padding: 10px 0
-  .header
+  .container
     display: flex
+    justify-content: space-between
+    align-items: center
+  nav
+    justify-content: space-between
+    a
+      +ffb(1.5)
+      text-decoration: none
+      text-transform: uppercase
+      margin-right: 3rem
+      letter-spacing: .2rem
+      position: relative
+      display: inline-block
+      &:after
+        position: absolute
+        content: ''
+        height: 3px
+        background-color: #2F247F
+        bottom: -1rem
+        left: 0
+        width: 0
+        +t
+      &:hover
+        //+hv()
+        &:after
+          width: 100%
+          //background-color: lighten(#2F247F, 10%) !important
+
 .App-logo
   height: 50px
 
