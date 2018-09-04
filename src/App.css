@@ -16,6 +16,7 @@
   src: local("Roboto Bold"), local("Roboto-Bold"), url("./fonts/roboto-v18-cyrillic_latin-700.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("./fonts/roboto-v18-cyrillic_latin-700.woff") format("woff"), url("./fonts/roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("./fonts/roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg"); }
 
 /*fonts*/
+/*fonts*/
 .holder {
   opacity: 1;
   transition: 1s all ease;
@@ -244,7 +245,7 @@
 
 /*fonts*/
 header.header {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   width: 100%;
   background-color: #DCD22C;
@@ -255,6 +256,10 @@ header.header {
     align-items: center; }
   header.header nav {
     justify-content: space-between; }
+    @media (max-width: 390px) {
+      header.header nav {
+        display: flex;
+        flex-direction: column; } }
     header.header nav a {
       font-family: Roboto;
       font-weight: bold;
@@ -266,6 +271,10 @@ header.header {
       letter-spacing: .2rem;
       position: relative;
       display: inline-block; }
+      @media (max-width: 390px) {
+        header.header nav a {
+          margin-bottom: 1rem;
+          margin-top: 1rem; } }
       header.header nav a:after {
         position: absolute;
         content: '';
@@ -281,22 +290,45 @@ header.header {
 .App-logo {
   height: 50px; }
 
+/*fonts*/
 section.first-screen {
   position: relative;
   padding-top: 7rem;
-  height: calc(100vh - 70px);
-  background-color: #dffdfd; }
+  min-height: calc(100vh - 70px);
+  background-image: url("./img/photo1.jpg");
+  background-position: center;
+  position: relative; }
+  section.first-screen:after {
+    position: absolute;
+    content: '';
+    background-color: rgba(47, 36, 122, 0.5);
+    height: 100%;
+    width: 100%; }
   section.first-screen .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #DCD22C; }
+
+/*fonts*/
+section.portfolio {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  background: url("./img/photo2.jpg") center; }
+  section.portfolio .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
 
-section.portfolio {
+/*fonts*/
+section.contacts {
   position: relative;
-  height: calc(100vh - 70px);
-  background-color: #1dfdfd; }
-  section.portfolio .container {
+  min-height: calc(100vh - 70px);
+  background: url("./img/photo3.jpg") center; }
+  section.contacts .container {
     position: absolute;
     top: 50%;
     left: 50%;

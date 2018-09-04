@@ -1,7 +1,23 @@
+@import "mixins.sass"
+
 section.first-screen
   position: relative
   padding-top: 7rem
-  height: calc(100vh - 70px)
-  background-color: #dffdfd
+  min-height: calc(100vh - 70px)
+  background-image: url('./img/photo1.jpg')
+  background-position: center
+  position: relative
+  &:after
+    position: absolute
+    content: ''
+    background-color: rgba(47, 36, 122,0.5)
+    height: 100%
+    width: 100%
+
+
   .container
     +vcenter
+    z-index: 1
+    color: #DCD22C
+
+

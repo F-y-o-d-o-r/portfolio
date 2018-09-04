@@ -1,3 +1,21 @@
+/*fonts*/
 section.first-screen {
+  position: relative;
   padding-top: 7rem;
-  height: calc(100vh - 70px); }
+  min-height: calc(100vh - 70px);
+  background-image: url("./img/photo1.jpg");
+  background-position: center;
+  position: relative; }
+  section.first-screen:after {
+    position: absolute;
+    content: '';
+    background-color: rgba(47, 36, 122, 0.5);
+    height: 100%;
+    width: 100%; }
+  section.first-screen .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #DCD22C; }

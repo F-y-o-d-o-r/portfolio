@@ -1,6 +1,6 @@
 @import 'mixins.sass'
 header.header
-  z-index: 1
+  z-index: 2
   position: fixed
   width: 100%
   background-color: #DCD22C
@@ -11,6 +11,9 @@ header.header
     align-items: center
   nav
     justify-content: space-between
+    @media (max-width: 390px)
+      display: flex
+      flex-direction: column
     a
       +ffb(1.5)
       text-decoration: none
@@ -19,6 +22,9 @@ header.header
       letter-spacing: .2rem
       position: relative
       display: inline-block
+      @media (max-width: 390px)
+        margin-bottom: 1rem
+        margin-top: 1rem
       &:after
         position: absolute
         content: ''

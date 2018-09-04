@@ -27,19 +27,26 @@ class Nav extends Component {
   componentDidMount() {
     this.animateNav();
   }
+  smothScroll(e) {
+    e.preventDefault();
+    document.querySelector(e.target.hash).scrollIntoView({
+      behavior: 'smooth',
+      block: 'end'
+    });
+  }
   state = {
     id: []
   };
   render() {
     return (
       <React.Fragment>
-        <a href="#about" className="navAnimate">
+        <a href="#about" onClick={(e) => this.smothScroll(e)} className="navAnimate">
           About
         </a>
-        <a href="#portfolio" className="navAnimate">
+        <a href="#portfolio" onClick={(e) => this.smothScroll(e)} className="navAnimate">
           Portfolio
         </a>
-        <a href="#contacts" className="navAnimate">
+        <a href="#contacts" onClick={(e) => this.smothScroll(e)} className="navAnimate">
           Contacts
         </a>
       </React.Fragment>

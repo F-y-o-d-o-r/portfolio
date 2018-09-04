@@ -1,6 +1,6 @@
 /*fonts*/
 header.header {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   width: 100%;
   background-color: #DCD22C;
@@ -11,6 +11,10 @@ header.header {
     align-items: center; }
   header.header nav {
     justify-content: space-between; }
+    @media (max-width: 390px) {
+      header.header nav {
+        display: flex;
+        flex-direction: column; } }
     header.header nav a {
       font-family: Roboto;
       font-weight: bold;
@@ -22,6 +26,10 @@ header.header {
       letter-spacing: .2rem;
       position: relative;
       display: inline-block; }
+      @media (max-width: 390px) {
+        header.header nav a {
+          margin-bottom: 1rem;
+          margin-top: 1rem; } }
       header.header nav a:after {
         position: absolute;
         content: '';
