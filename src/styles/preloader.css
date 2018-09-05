@@ -4,7 +4,7 @@
   transition: 1s all ease;
   visibility: visible;
   z-index: 2;
-  height: 100vh;
+  height: calc(100vh - 70px);
   position: absolute;
   left: 0px;
   top: 0px;

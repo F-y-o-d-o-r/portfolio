@@ -3,7 +3,7 @@ header.header
   z-index: 2
   position: fixed
   width: 100%
-  background-color: #DCD22C
+  background-color: rgba(220, 210, 44, 1)
   padding: 10px 0
   .container
     display: flex
@@ -11,7 +11,7 @@ header.header
     align-items: center
   nav
     justify-content: space-between
-    @media (max-width: 390px)
+    @media (max-width: 400px)
       display: flex
       flex-direction: column
     a
@@ -22,7 +22,7 @@ header.header
       letter-spacing: .2rem
       position: relative
       display: inline-block
-      @media (max-width: 390px)
+      @media (max-width: 400px)
         margin-bottom: 1rem
         margin-top: 1rem
       &:after
@@ -38,7 +38,8 @@ header.header
         //+hv()
         &:after
           width: 100%
-          //background-color: lighten(#2F247F, 10%) !important
+      &:last-child
+        margin-right: 0
 
 .App-logo
   height: 50px

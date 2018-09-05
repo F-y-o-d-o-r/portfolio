@@ -32,7 +32,7 @@ class App extends Component {
         <Header />
         <FirstScreen />
         <Portfolio />
-        <Contacts />
+        {/* <Contacts /> */}
       </React.Fragment>
     );
   }

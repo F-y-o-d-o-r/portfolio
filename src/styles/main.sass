@@ -13,8 +13,24 @@ body
   +ff(1.6)
   overflow: hidden
   
-
-
 .container
   max-width: 1199px
   margin: 0 auto
+  padding: 0 2rem
+
+  /* Safari */
+::selection
+  background: rgba(220, 210, 44, 0.3)
+/* Firefox */
+::-moz-selection
+  background: rgba(220, 210, 44, 0.3)
+
+.first-screen
+  a
+    text-decoration: none
+    color: rgba(47, 36, 127, 1)
+    background-color: rgba(220, 210, 44, 1)
+    +t
+    &:hover
+      color: rgba(220, 210, 44, 1)
+      background-color: rgba(47, 36, 127, 1)

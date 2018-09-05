@@ -18,7 +18,7 @@ class Header extends Component {
   }
 }
 
-class Nav extends Component {
+export class Nav extends Component {
   animateNav() {
     var tl = new TimelineLite();
     tl.from('.App-logo', 1.5, { opacity: 0, force3D: true }, 0.5);
@@ -27,11 +27,14 @@ class Nav extends Component {
   componentDidMount() {
     this.animateNav();
   }
+  testTest() {
+    alert('test');
+  }
   smothScroll(e) {
     e.preventDefault();
     document.querySelector(e.target.hash).scrollIntoView({
       behavior: 'smooth',
-      block: 'end'
+      block: 'start'
     });
   }
   state = {
@@ -40,13 +43,13 @@ class Nav extends Component {
   render() {
     return (
       <React.Fragment>
-        <a href="#about" onClick={(e) => this.smothScroll(e)} className="navAnimate">
+        <a href="#about" onClick={(e) => this.smothScroll(e)} className="navAnimate" title="Info about me">
           About
         </a>
-        <a href="#portfolio" onClick={(e) => this.smothScroll(e)} className="navAnimate">
+        <a href="#portfolio" onClick={(e) => this.smothScroll(e)} className="navAnimate" title="My portfolio">
           Portfolio
         </a>
-        <a href="#contacts" onClick={(e) => this.smothScroll(e)} className="navAnimate">
+        <a href="#contacts" onClick={(e) => this.smothScroll(e)} className="navAnimate" title="My contacts">
           Contacts
         </a>
       </React.Fragment>
