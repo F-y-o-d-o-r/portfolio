@@ -5,7 +5,6 @@ import Header from './components/Header';
 import FirstScreen from './components/FirstScreen';
 import Portfolio from './components/Portfolio';
 import Contacts from './components/Contacts';
-//import scrollF from './components/scroll';
 
 class App extends Component {
   constructor(props) {
