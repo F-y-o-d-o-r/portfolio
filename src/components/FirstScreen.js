@@ -22,12 +22,13 @@ class Info extends Component {
   }
   lettersAnimation() {
     var tl2 = new TimelineLite();
-    tl2.from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=1');
-    tl2.from('.info h1', 1.5, { opacity: 0, force3D: true, x: -100 }, '+=1');
-    tl2.from('.info h2', 1.5, { opacity: 0, force3D: true, x: 100 }, '-=1.5');
-    tl2.from('.info .text-wrapper', 1.5, { opacity: 0, force3D: true, y: 100, x: -100 }, '-=1.5');
-    tl2.from('.info .img-wrapper', 1.5, { opacity: 0, force3D: true, y: 100, x: 100 }, '-=1.5');
-    tl2.from('.info .second-info', 1.5, { opacity: 0, force3D: true, y: 100 }, '-=1.5');
+    tl2
+      .from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=1')
+      .from('.info h1', 0.7, { opacity: 0, force3D: true, x: -100 }, +2)
+      .from('.info h2', 0.7, { opacity: 0, force3D: true, x: 100 }, +2)
+      .from('.info .text-wrapper', 0.7, { opacity: 0, force3D: true, y: 100, x: -100 }, +2)
+      .from('.info .img-wrapper', 0.7, { opacity: 0, force3D: true, y: 100, x: 100 }, +2)
+      .from('.info .second-info', 0.7, { opacity: 0, force3D: true, y: 100 }, +2);
   }
   componentDidMount() {
     this.lettersAnimation();

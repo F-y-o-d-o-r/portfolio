@@ -416,7 +416,8 @@ body {
   font-weight: normal;
   font-size: 1.6rem;
   color: #2f247f;
-  overflow: hidden; }
+  overflow: hidden;
+  overflow-x: hidden !important; }
 
 .container {
   max-width: 1199px;

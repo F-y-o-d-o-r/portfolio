@@ -43,7 +43,7 @@ export class Nav extends Component {
   render() {
     return (
       <React.Fragment>
-        <a href="#about" onClick={(e) => this.smothScroll(e)} className="navAnimate" title="Info about me">
+        <a href="#about" id="top" onClick={(e) => this.smothScroll(e)} className="navAnimate" title="Info about me">
           About
         </a>
         <a href="#portfolio" onClick={(e) => this.smothScroll(e)} className="navAnimate" title="My portfolio">
