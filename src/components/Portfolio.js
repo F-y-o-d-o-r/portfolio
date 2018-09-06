@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import ScrollMagic from 'scrollmagic';
 
 class Portfolio extends Component {
   render() {
     return (
       <section className="portfolio" id="portfolio">
-        <div className="container">My Latest Work Take a look at some of my recent projects.</div>
+        <div className="container">
+          <div className="intro">
+            <h2>My Latest Work</h2>
+            <h3>Take a look at some of my recent projects.</h3>
+          </div>
+        </div>
       </section>
     );
   }
@@ -12,11 +18,11 @@ class Portfolio extends Component {
 
 export default Portfolio;
 
-class Belka extends Component {
+class Works extends Component {
   render() {
     return (
       <section className="portfolio" id="portfolio">
-        <div className="container">My Latest Work Take a look at some of my recent projects.</div>
+        <div className="container" />
       </section>
     );
   }

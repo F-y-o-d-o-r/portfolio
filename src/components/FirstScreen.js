@@ -22,7 +22,8 @@ class Info extends Component {
   }
   lettersAnimation() {
     var tl2 = new TimelineLite();
-    tl2.from('.info h1', 1.5, { opacity: 0, force3D: true, x: -100 }, '+=1.5');
+    tl2.from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=1');
+    tl2.from('.info h1', 1.5, { opacity: 0, force3D: true, x: -100 }, '+=1');
     tl2.from('.info h2', 1.5, { opacity: 0, force3D: true, x: 100 }, '-=1.5');
     tl2.from('.info .text-wrapper', 1.5, { opacity: 0, force3D: true, y: 100, x: -100 }, '-=1.5');
     tl2.from('.info .img-wrapper', 1.5, { opacity: 0, force3D: true, y: 100, x: 100 }, '-=1.5');
@@ -39,7 +40,7 @@ class Info extends Component {
     return (
       <div className="container">
         <div className="info">
-          <h1>Hello, my name is Fyodor. I am a Front End Web Developer living in Chernigov, Ukraine.</h1>
+          <h1>Hello, my name is Fyodor. I am a Front End Web Developer living in Chernigov, Ukraine</h1>
           <h2>
             Producing high quality responsive websites. I can help you to build your next product. Have a project you'd
             like to discuss? Let's{' '}

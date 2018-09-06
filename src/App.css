@@ -358,7 +358,7 @@ section.first-screen {
             width: 100%;
             padding-right: 0; } }
       section.first-screen .container .blocks-wrapper .img-wrapper {
-        width: 48rem;
+        width: 50rem;
         height: 50rem;
         overflow: hidden;
         position: relative; }
@@ -390,11 +390,12 @@ section.portfolio {
   position: relative;
   min-height: calc(100vh - 70px);
   background: url("./img/photo2.jpg") center; }
-  section.portfolio .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  section.portfolio .container .intro {
+    padding-top: 5rem;
+    color: #dcd22c; }
+    section.portfolio .container .intro h2 {
+      font-size: 32px;
+      margin: 0; }
 
 /*fonts*/
 section.contacts {
