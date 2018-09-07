@@ -23,8 +23,8 @@ class App extends Component {
     setTimeout(() => {
       //window.scrollTo(0, 0);
       let preloader = document.getElementsByClassName('holder')[0];
-      preloader.style.opacity = 0;
-      preloader.style.visibility = 'hidden';
+      //preloader.style.opacity = 0;
+      //preloader.style.visibility = 'hidden';
       document.body.style.overflow = 'auto';
     }, 2000);
   }
@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Preloader />
+        {/* <Preloader /> */}
         <Header />
         <FirstScreen />
         <Portfolio />

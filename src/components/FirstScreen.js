@@ -23,12 +23,12 @@ class Info extends Component {
   lettersAnimation() {
     var tl2 = new TimelineLite();
     tl2
-      .from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=1')
-      .from('.info h1', 0.7, { opacity: 0, force3D: true, x: -100 }, +2)
-      .from('.info h2', 0.7, { opacity: 0, force3D: true, x: 100 }, +2)
-      .from('.info .text-wrapper', 0.7, { opacity: 0, force3D: true, y: 100, x: -100 }, +2)
-      .from('.info .img-wrapper', 0.7, { opacity: 0, force3D: true, y: 100, x: 100 }, +2)
-      .from('.info .second-info', 0.7, { opacity: 0, force3D: true, y: 100 }, +2);
+      .from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=0.5')
+      .from('.info h1', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1')
+      .from('.info h2', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1.5')
+      .from('.info .text-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2')
+      .from('.info .img-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2.5')
+      .from('.info .second-info', 0.7, { opacity: 0, force3D: true, y: 100 }, '+3');
   }
   componentDidMount() {
     this.lettersAnimation();
@@ -41,18 +41,22 @@ class Info extends Component {
     return (
       <div className="container">
         <div className="info">
-          <h1>Hello, my name is Fyodor. I am a Front End Web Developer living in Chernigov, Ukraine</h1>
-          <h2>
-            Producing high quality responsive websites. I can help you to build your next product. Have a project you'd
-            like to discuss? Let's{' '}
-            <a onClick={(e) => this.smothScroll(e)} href="#contacts" title="Will scroll to my contacts">
-              chat
-            </a>
-          </h2>
+          <div className="info__header-wrapper">
+            <h1>
+              Hello, my name is Fyodor.<br />I am a Front End Web Developer living in Chernigov, Ukraine
+            </h1>
+            <h2>
+              Producing high quality responsive websites.<br />I can help you to build your next product.<br />Have a
+              project you'd like to discuss? Let's{' '}
+              <a onClick={(e) => this.smothScroll(e)} href="#contacts" title="Will scroll to my contacts">
+                chat
+              </a>
+            </h2>
+          </div>
           <div className="blocks-wrapper">
             <div className="text-wrapper">
-              <h3>Here’s a couple of things I’m good at:</h3>
               <p>
+                <span>Here’s a couple of things I’m good at: </span>
                 Communication I realize the importance of good communication. I use tools like Slack to make sure we’re
                 always on the same page. Organisation I believe it’s important to stay organised while working remotely.
                 I use the likes of Trello to help keep projects on-track and under control. Project Management I think
@@ -74,33 +78,35 @@ class Info extends Component {
                 capturing the moments with my family.
               </p>
             </div>
-            <div className="img-wrapper">
+            {/* <div className="img-wrapper">
               <img src={img} alt="Me" />
+            </div> */}
+            <div className="second-info">
+              <p>
+                <span>Languages I speak: </span>
+                HTML, Pug, CSS, Sass, JavaScript, jQuery, React, Php, Wordpress, OpenCart
+              </p>
+              <p>
+                <span>Dev Tools: </span>
+                Gulp, Npm, Webpack,{' '}
+                <a
+                  href="https://bitbucket.org/Fyodor_/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="My Bitbucket profile in new window"
+                >
+                  Bitbucket
+                </a>,{' '}
+                <a
+                  href="https://github.com/F-y-o-d-o-r"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="My Github profile in new window"
+                >
+                  Github
+                </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine
+              </p>
             </div>
-          </div>
-          <div className="second-info">
-            <h3>Languages I speak:</h3>
-            <p>HTML, Pug, CSS, Sass, JavaScript, jQuery, React, Php, Wordpress, OpenCart</p>
-            <h3>Dev Tools:</h3>
-            <p>
-              Gulp, Npm, Webpack,{' '}
-              <a
-                href="https://bitbucket.org/Fyodor_/"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="My Bitbucket profile in new window"
-              >
-                Bitbucket
-              </a>,{' '}
-              <a
-                href="https://github.com/F-y-o-d-o-r"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="My Github profile in new window"
-              >
-                Github
-              </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine
-            </p>
           </div>
         </div>
       </div>

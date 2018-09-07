@@ -1,14 +1,22 @@
 /*fonts*/
-=ff($size: 1)
-  font-family: Roboto
-  font-weight: normal
+=ff($size: 1, $lh: 4.2)
+  font-family: 'Source Sans Pro', sans-serif
+  font-weight: 300
   font-size: $size + rem
-  color: rgba(47, 36, 127, 1);
-=ffb($size)
-  font-family: Roboto
-  font-weight: bold
+  line-height: $lh + rem
+  color: rgba(44, 44, 44, 1.000)
+=ffb($size: 1, $lh: 1)
+  font-family: 'Source Sans Pro', sans-serif
+  font-weight: 600
   font-size: $size + rem
-  color: rgba(47, 36, 127, 1);
+  line-height: $lh + rem
+  color: rgba(44, 44, 44, 1.000)
+=ffh($size: 1, $lh: 1)
+  font-family: 'Abril Fatface', cursive
+  font-weight: 600
+  font-size: $size + rem
+  line-height: $lh + rem
+  color: rgba(44, 44, 44, 1.000)
 =t
   transition: all ease .4s
 

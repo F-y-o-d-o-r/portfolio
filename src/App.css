@@ -1,19 +1,27 @@
-/* roboto-regular - cyrillic_latin */
+/* source-sans-pro-300 - latin */
 @import url(~normalize.css/normalize.css);
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/source-sans-pro-v11-latin-300.eot");
+  src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url("./fonts/source-sans-pro-v11-latin-300.eot?#iefix") format("embedded-opentype"), url("./fonts/source-sans-pro-v11-latin-300.woff2") format("woff2"), url("./fonts/source-sans-pro-v11-latin-300.woff") format("woff"), url("./fonts/source-sans-pro-v11-latin-300.ttf") format("truetype"), url("./fonts/source-sans-pro-v11-latin-300.svg#SourceSansPro") format("svg"); }
+
+/* source-sans-pro-600 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/source-sans-pro-v11-latin-600.eot");
+  src: local("Source Sans Pro SemiBold"), local("SourceSansPro-SemiBold"), url("./fonts/source-sans-pro-v11-latin-600.eot?#iefix") format("embedded-opentype"), url("./fonts/source-sans-pro-v11-latin-600.woff2") format("woff2"), url("./fonts/source-sans-pro-v11-latin-600.woff") format("woff"), url("./fonts/source-sans-pro-v11-latin-600.ttf") format("truetype"), url("./fonts/source-sans-pro-v11-latin-600.svg#SourceSansPro") format("svg"); }
+
+/* abril-fatface-regular - latin */
+@font-face {
+  font-family: 'Abril Fatface';
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/roboto-v18-cyrillic_latin-regular.eot");
-  src: local("Roboto"), local("Roboto-Regular"), url("./fonts/roboto-v18-cyrillic_latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto-v18-cyrillic_latin-regular.woff2") format("woff2"), url("./fonts/roboto-v18-cyrillic_latin-regular.woff") format("woff"), url("./fonts/roboto-v18-cyrillic_latin-regular.ttf") format("truetype"), url("./fonts/roboto-v18-cyrillic_latin-regular.svg#Roboto") format("svg"); }
-
-/* roboto-700 - cyrillic_latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url("./fonts/roboto-v18-cyrillic_latin-700.eot");
-  src: local("Roboto Bold"), local("Roboto-Bold"), url("./fonts/roboto-v18-cyrillic_latin-700.eot?#iefix") format("embedded-opentype"), url("./fonts/roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("./fonts/roboto-v18-cyrillic_latin-700.woff") format("woff"), url("./fonts/roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("./fonts/roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg"); }
+  src: url("./fonts/abril-fatface-v9-latin-regular.eot");
+  src: local("Abril Fatface"), local("AbrilFatface-Regular"), url("./fonts/abril-fatface-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/abril-fatface-v9-latin-regular.woff2") format("woff2"), url("./fonts/abril-fatface-v9-latin-regular.woff") format("woff"), url("./fonts/abril-fatface-v9-latin-regular.ttf") format("truetype"), url("./fonts/abril-fatface-v9-latin-regular.svg#AbrilFatface") format("svg"); }
 
 /*fonts*/
 /*fonts*/
@@ -248,7 +256,7 @@ header.header {
   z-index: 2;
   position: fixed;
   width: 100%;
-  background-color: #dcd22c;
+  background-color: white;
   padding: 10px 0; }
   header.header .container {
     display: flex;
@@ -261,10 +269,11 @@ header.header {
         display: flex;
         flex-direction: column; } }
     header.header nav a {
-      font-family: Roboto;
-      font-weight: bold;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
       font-size: 1.5rem;
-      color: #2f247f;
+      line-height: 1rem;
+      color: #2c2c2c;
       text-decoration: none;
       text-transform: uppercase;
       margin-right: 3rem;
@@ -279,7 +288,7 @@ header.header {
         position: absolute;
         content: '';
         height: 3px;
-        background-color: #2F247F;
+        background-color: #2c2c2c;
         bottom: -1rem;
         left: 0;
         width: 0;
@@ -298,27 +307,48 @@ section.first-screen {
   padding-top: 7rem;
   padding-bottom: 7rem;
   min-height: calc(100vh - 70px);
-  background-image: linear-gradient(to bottom, rgba(47, 36, 127, 0.5), #2f247f 80%), url("./img/photo1.jpg");
-  background-position: center;
-  background-size: cover;
   position: relative; }
   @media (max-width: 1024px) {
     section.first-screen {
       padding-bottom: 3rem; } }
   section.first-screen .container {
-    padding-top: 7rem;
+    padding-top: 10rem;
     z-index: 1;
-    color: #dcd22c; }
+    color: #2c2c2c; }
     @media (max-width: 767px) {
       section.first-screen .container {
         padding-top: 3rem; } }
     @media (max-width: 400px) {
       section.first-screen .container {
         padding-top: 13.2rem; } }
+    section.first-screen .container .info__header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5.5rem; }
+    section.first-screen .container p {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      line-height: 4.2rem;
+      color: #2c2c2c;
+      margin: 0; }
+      section.first-screen .container p span {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 4.2rem;
+        color: #2c2c2c; }
     section.first-screen .container h1 {
-      text-align: center;
       margin: 0;
-      margin-bottom: 5rem; }
+      margin-bottom: 5rem;
+      font-family: 'Abril Fatface', cursive;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1rem;
+      color: #2c2c2c;
+      font-size: 5rem;
+      line-height: 6.4rem;
+      width: 50%; }
       @media (max-width: 767px) {
         section.first-screen .container h1 {
           margin-bottom: 2.5rem;
@@ -328,62 +358,30 @@ section.first-screen {
         transform: translateY(0px);
         padding: 0 0 0 0.5rem; }
     section.first-screen .container h2 {
-      text-align: center;
-      width: 80%;
-      margin: 0 auto 4rem;
-      line-height: 1.4; }
+      margin: 15rem auto 4rem;
+      line-height: 1.4;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      width: 40%; }
       @media (max-width: 767px) {
         section.first-screen .container h2 {
           font-size: 2rem;
           margin: 0 auto 3rem; } }
     section.first-screen .container h3 {
-      margin: 0; }
+      margin: 0;
+      font-size: 2.2rem; }
     section.first-screen .container .blocks-wrapper {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start; }
+      justify-content: space-between; }
       @media (max-width: 767px) {
         section.first-screen .container .blocks-wrapper {
-          flex-direction: column; } }
+          flex-direction: column;
+          justify-content: space-between; } }
       section.first-screen .container .blocks-wrapper .text-wrapper {
-        width: 50%;
-        padding-right: 2rem; }
-        section.first-screen .container .blocks-wrapper .text-wrapper p {
-          line-height: 1.4; }
-        @media (max-width: 1024px) {
-          section.first-screen .container .blocks-wrapper .text-wrapper {
-            width: 70%; } }
-        @media (max-width: 767px) {
-          section.first-screen .container .blocks-wrapper .text-wrapper {
-            width: 100%;
-            padding-right: 0; } }
-      section.first-screen .container .blocks-wrapper .img-wrapper {
-        width: 50rem;
-        height: 50rem;
-        overflow: hidden;
-        position: relative; }
-        section.first-screen .container .blocks-wrapper .img-wrapper img {
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          max-height: 100%;
-          max-width: 100%; }
-        @media (max-width: 1024px) {
-          section.first-screen .container .blocks-wrapper .img-wrapper {
-            width: 25rem;
-            height: 30rem; } }
-        @media (max-width: 767px) {
-          section.first-screen .container .blocks-wrapper .img-wrapper {
-            width: 100%;
-            margin-top: 2rem; } }
-        @media (max-width: 360px) {
-          section.first-screen .container .blocks-wrapper .img-wrapper {
-            height: 20rem; } }
-  section.first-screen .second-info {
-    margin-top: 3rem; }
+        width: 50%; }
+      section.first-screen .container .blocks-wrapper .second-info {
+        width: 40%;
+        margin-top: 10rem; }
 
 /*fonts*/
 section.portfolio {
@@ -499,10 +497,11 @@ html {
   font-size: 10px; }
 
 body {
-  font-family: Roboto;
-  font-weight: normal;
-  font-size: 1.6rem;
-  color: #2f247f;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 4.2rem;
+  color: #2c2c2c;
   overflow: hidden;
   overflow-x: hidden !important; }
 
@@ -526,4 +525,4 @@ body {
   transition: all ease .4s; }
   .first-screen a:hover {
     color: #dcd22c;
-    background-color: #2f247f; }
+    background-color: #2c2c2c; }

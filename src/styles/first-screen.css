@@ -4,27 +4,48 @@ section.first-screen {
   padding-top: 7rem;
   padding-bottom: 7rem;
   min-height: calc(100vh - 70px);
-  background-image: linear-gradient(to bottom, rgba(47, 36, 127, 0.5), #2f247f 80%), url("./img/photo1.jpg");
-  background-position: center;
-  background-size: cover;
   position: relative; }
   @media (max-width: 1024px) {
     section.first-screen {
       padding-bottom: 3rem; } }
   section.first-screen .container {
-    padding-top: 7rem;
+    padding-top: 10rem;
     z-index: 1;
-    color: #dcd22c; }
+    color: #2c2c2c; }
     @media (max-width: 767px) {
       section.first-screen .container {
         padding-top: 3rem; } }
     @media (max-width: 400px) {
       section.first-screen .container {
         padding-top: 13.2rem; } }
+    section.first-screen .container .info__header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5.5rem; }
+    section.first-screen .container p {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+      font-size: 2.2rem;
+      line-height: 4.2rem;
+      color: #2c2c2c;
+      margin: 0; }
+      section.first-screen .container p span {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 4.2rem;
+        color: #2c2c2c; }
     section.first-screen .container h1 {
-      text-align: center;
       margin: 0;
-      margin-bottom: 5rem; }
+      margin-bottom: 5rem;
+      font-family: 'Abril Fatface', cursive;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1rem;
+      color: #2c2c2c;
+      font-size: 5rem;
+      line-height: 6.4rem;
+      width: 50%; }
       @media (max-width: 767px) {
         section.first-screen .container h1 {
           margin-bottom: 2.5rem;
@@ -34,59 +55,27 @@ section.first-screen {
         transform: translateY(0px);
         padding: 0 0 0 0.5rem; }
     section.first-screen .container h2 {
-      text-align: center;
-      width: 80%;
-      margin: 0 auto 4rem;
-      line-height: 1.4; }
+      margin: 15rem auto 4rem;
+      line-height: 1.4;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      width: 40%; }
       @media (max-width: 767px) {
         section.first-screen .container h2 {
           font-size: 2rem;
           margin: 0 auto 3rem; } }
     section.first-screen .container h3 {
-      margin: 0; }
+      margin: 0;
+      font-size: 2.2rem; }
     section.first-screen .container .blocks-wrapper {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start; }
+      justify-content: space-between; }
       @media (max-width: 767px) {
         section.first-screen .container .blocks-wrapper {
-          flex-direction: column; } }
+          flex-direction: column;
+          justify-content: space-between; } }
       section.first-screen .container .blocks-wrapper .text-wrapper {
-        width: 50%;
-        padding-right: 2rem; }
-        section.first-screen .container .blocks-wrapper .text-wrapper p {
-          line-height: 1.4; }
-        @media (max-width: 1024px) {
-          section.first-screen .container .blocks-wrapper .text-wrapper {
-            width: 70%; } }
-        @media (max-width: 767px) {
-          section.first-screen .container .blocks-wrapper .text-wrapper {
-            width: 100%;
-            padding-right: 0; } }
-      section.first-screen .container .blocks-wrapper .img-wrapper {
-        width: 50rem;
-        height: 50rem;
-        overflow: hidden;
-        position: relative; }
-        section.first-screen .container .blocks-wrapper .img-wrapper img {
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          max-height: 100%;
-          max-width: 100%; }
-        @media (max-width: 1024px) {
-          section.first-screen .container .blocks-wrapper .img-wrapper {
-            width: 25rem;
-            height: 30rem; } }
-        @media (max-width: 767px) {
-          section.first-screen .container .blocks-wrapper .img-wrapper {
-            width: 100%;
-            margin-top: 2rem; } }
-        @media (max-width: 360px) {
-          section.first-screen .container .blocks-wrapper .img-wrapper {
-            height: 20rem; } }
-  section.first-screen .second-info {
-    margin-top: 3rem; }
+        width: 50%; }
+      section.first-screen .container .blocks-wrapper .second-info {
+        width: 40%;
+        margin-top: 10rem; }
