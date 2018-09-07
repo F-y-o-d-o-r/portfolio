@@ -323,7 +323,7 @@ section.first-screen {
         padding-top: 13.2rem; } }
     section.first-screen .container .info__header-wrapper {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin-bottom: 5.5rem; }
     section.first-screen .container p {
       font-family: 'Source Sans Pro', sans-serif;
@@ -348,7 +348,7 @@ section.first-screen {
       color: #2c2c2c;
       font-size: 5rem;
       line-height: 6.4rem;
-      width: 50%; }
+      width: 40%; }
       @media (max-width: 767px) {
         section.first-screen .container h1 {
           margin-bottom: 2.5rem;
@@ -358,7 +358,7 @@ section.first-screen {
         transform: translateY(0px);
         padding: 0 0 0 0.5rem; }
     section.first-screen .container h2 {
-      margin: 15rem auto 4rem;
+      margin: 15rem 0 4rem 0;
       line-height: 1.4;
       font-family: 'Source Sans Pro', sans-serif;
       font-weight: 600;
@@ -371,17 +371,14 @@ section.first-screen {
       margin: 0;
       font-size: 2.2rem; }
     section.first-screen .container .blocks-wrapper {
+      margin-top: 20rem;
       display: flex;
-      justify-content: space-between; }
-      @media (max-width: 767px) {
-        section.first-screen .container .blocks-wrapper {
-          flex-direction: column;
-          justify-content: space-between; } }
+      justify-content: space-around;
+      align-items: flex-end; }
       section.first-screen .container .blocks-wrapper .text-wrapper {
-        width: 50%; }
+        width: 40%; }
       section.first-screen .container .blocks-wrapper .second-info {
-        width: 40%;
-        margin-top: 10rem; }
+        width: 40%; }
 
 /*fonts*/
 section.portfolio {

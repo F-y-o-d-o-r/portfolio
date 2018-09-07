@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { TimelineLite } from 'gsap/TweenMax';
+import { gsap, TimelineMax, TweenMax } from 'gsap';
 import { Nav } from './Header';
+import ScrollMagic from 'scrollmagic';
 import img from '../img/photo_small.jpg';
+//const TweenMax = require('TweenMax');
+
+//const ScrollMagic = require('ScrollMagic');
+require('ScrollMagicIndicators');
+require('AnimationGsap');
 
 class FirstScreen extends Component {
   componentDidMount() {}
@@ -32,6 +39,22 @@ class Info extends Component {
   }
   componentDidMount() {
     this.lettersAnimation();
+    // add a timeline to a scene
+    // var controller = new ScrollMagic.Controller();
+    // var scene = new ScrollMagic.Scene().addTo(controller);
+    // var timeline = new TimelineMax();
+    // timeline.from('header', 1, { y: -100 }).from('.info h1', 1, { y: 100 });
+    // scene.addTween(timeline);
+    // //let tween = new TweenMax();
+    // let tween = TweenMax.from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=0.5');
+    // tween = TweenMax.from('.info h1', 0.7, { opacity: 0, force3D: true, y: 100 }, -2);
+    // new ScrollMagic.Scene({
+    //   triggerElement: '.info__header-wrapper',
+    //   duration: 0
+    // })
+    //   .setTween(tween)
+    //   .addIndicators({ name: 'My Latest Work' })
+    //   .addTo(controller);
   }
   smothScroll(e) {
     e.preventDefault();

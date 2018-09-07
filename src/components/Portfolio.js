@@ -21,8 +21,7 @@ class Portfolio extends Component {
     const tween = TweenMax.from('.my-work-header', 1, { x: -100, opacity: 0 });
     new ScrollMagic.Scene({
       triggerElement: '#portfolio',
-      duration: 0,
-      reverse: false
+      duration: 0
     })
       .setTween(tween)
       .addIndicators({ name: 'My Latest Work' })
