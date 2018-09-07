@@ -25,7 +25,7 @@ export class Nav extends Component {
     tl.staggerFrom('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, '-0.5');
   }
   componentDidMount() {
-    this.animateNav();
+    //this.animateNav();
   }
   testTest() {
     alert('test');
