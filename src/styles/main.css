@@ -397,10 +397,13 @@ section.portfolio {
       font-size: 32px;
       margin: 0; }
   section.portfolio .container .product-wrapper {
-    margin-top: 7rem; }
+    margin-top: 7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
     section.portfolio .container .product-wrapper .product-item {
       height: 40rem;
-      width: 40rem;
+      width: 35rem;
       border-radius: 0.5rem;
       background: url("https://unsplash.it/400/400/?random2");
       background-size: cover;
@@ -408,6 +411,7 @@ section.portfolio {
       overflow: hidden;
       position: relative; }
       section.portfolio .container .product-wrapper .product-item__hidden-window {
+        cursor: pointer;
         box-sizing: border-box;
         padding: 2.5rem;
         height: 60%;
@@ -428,7 +432,10 @@ section.portfolio {
           background-color: #313131;
           color: #999999;
           padding: 1rem;
-          border-radius: .5rem; }
+          border-radius: .5rem;
+          text-transform: uppercase;
+          margin-right: .15rem;
+          margin-left: .15rem; }
       section.portfolio .container .product-wrapper .product-item__show {
         top: 0 !important; }
       section.portfolio .container .product-wrapper .product-item .first-description {
@@ -439,7 +446,8 @@ section.portfolio {
         height: 40%;
         bottom: 0;
         background-color: #fff;
-        transition: all ease .4s; }
+        transition: all ease .4s;
+        border-radius: 0.5rem; }
         section.portfolio .container .product-wrapper .product-item .first-description .header {
           font-size: 24px;
           margin-bottom: 1.5rem; }
@@ -456,8 +464,7 @@ section.portfolio {
         section.portfolio .container .product-wrapper .product-item .first-description .description {
           line-height: 1.4; }
       section.portfolio .container .product-wrapper .product-item .first-description__full {
-        height: 100% !important;
-        border-radius: 0.5rem; }
+        height: 100% !important; }
 
 @keyframes effect {
   50% {

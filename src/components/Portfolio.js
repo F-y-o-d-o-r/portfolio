@@ -12,6 +12,10 @@ require('AnimationGsap');
 // require('GSAPEasePlagin');
 
 class Portfolio extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { itemHeader: [ 'First header', 'dadsf' ] };
+  }
   componentDidMount() {
     const controller = new ScrollMagic.Controller();
     const tween = TweenMax.from('.my-work-header', 1, { x: -100, opacity: 0 });
@@ -32,7 +36,7 @@ class Portfolio extends Component {
             <h2 className="my-work-header">My Latest Work</h2>
             <h3 className="my-work-header">Take a look at some of my recent projects.</h3>
           </div>
-          <Works />
+          <Works header={this.state.itemHeader} />
         </div>
       </section>
     );
@@ -47,12 +51,11 @@ class Works extends Component {
   }
   animateItem(event) {
     event.currentTarget.querySelector('.product-item__hidden-window').classList.add('product-item__show');
-    let thisTitles = event.currentTarget.querySelector('.product-item__hidden-window .title');
-    //console.log(object);
+    let thisTitles = event.currentTarget.querySelectorAll('.product-item__hidden-window .title');
     let tlItem = new TimelineLite();
     tlItem
-      .staggerFrom('.title', 0.5, { opacity: 0, y: -50, delay: 0.5, force3D: true }, '-0.5')
-      .staggerTo('.title', 0.5, { y: 20, delay: 0.5, force3D: true }, '+0.5');
+      .staggerFrom(thisTitles, 0.2, { opacity: 0, y: -50, delay: 0.5, force3D: true }, '-0.2')
+      .staggerTo(thisTitles, 0.2, { y: 10, delay: 0.5, force3D: true }, '+0.2');
   }
   stopAnimate(event) {
     event.currentTarget.querySelector('.product-item__hidden-window').classList.remove('product-item__show');
@@ -79,61 +82,29 @@ class Works extends Component {
       sDiv.top = e.clientY - rect.top - mValue / 2 + px;
       addDiv.classList.add('pulse');
       this.appendChild(addDiv);
-      //e.currentTarget.querySelector('.first-description').classList.add('first-description__full');
+      e.currentTarget.parentNode.querySelector('.first-description').classList.add('first-description__full');
       setTimeout(function() {
         addDiv.remove();
       }, 1000);
     }
   }
   render() {
+    const header = this.props.header;
+    // const titleItems = () => {
+    //   <div className="title">{this.props.header}</div>;
+    // };
+    var titleItems = header.map(function(one) {
+      return <div className="title">{one}</div>;
+    });
     return (
       <section className="product-wrapper">
         <div className="product-item" onMouseEnter={(event) => this.animateItem(event)} onMouseLeave={this.stopAnimate}>
-          <div className="product-item__hidden-window">
-            <div className="title">html</div>
-            <div className="title">css</div>
-            <div className="title">js</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-          </div>
+          <div className="product-item__hidden-window">{titleItems}</div>
           <div className="first-description">
-            <div className="header">Header</div>
+            <div className="header">{this.props.header}</div>
             <div className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, labore.</div>
             <i onClick={this.pulseClick} />
           </div>
-
-          <div className="full-description" />
-        </div>
-        <div className="product-item" onMouseEnter={(event) => this.animateItem(event)} onMouseLeave={this.stopAnimate}>
-          <div className="product-item__hidden-window">
-            <div className="title">html</div>
-            <div className="title">css</div>
-            <div className="title">js</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-            <div className="title">jquery</div>
-          </div>
-          <div className="first-description">
-            <div className="header">Header</div>
-            <div className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, labore.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-
           <div className="full-description" />
         </div>
       </section>
