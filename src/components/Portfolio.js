@@ -6,7 +6,7 @@ const ScrollMagic = require('ScrollMagic');
 const TweenMax = require('TweenMax');
 require('ScrollMagicIndicators');
 require('AnimationGsap');
-
+//https://www.iconfinder.com/icons/1214978/mouse_scroll_icon
 class Portfolio extends Component {
   constructor(props) {
     super(props);
