@@ -21,11 +21,15 @@ class Header extends Component {
 export class Nav extends Component {
   animateNav() {
     var tl = new TimelineLite();
-    tl.from('.App-logo', 1.5, { opacity: 0, force3D: true }, 0.5);
-    tl.staggerFrom('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, '-0.5');
+    tl
+      .from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=0.5')
+      .from('.App-logo', 1.5, { opacity: 0, force3D: true }, 0.5)
+      .staggerFrom('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, -0.5)
+      .from('.info h1', 0.5, { y: 100, opacity: 0 }, 3.5)
+      .from('.info h2', 0.5, { y: 100, opacity: 0 }, '-=0.2');
   }
   componentDidMount() {
-    //this.animateNav();
+    this.animateNav();
   }
   testTest() {
     alert('test');

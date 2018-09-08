@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap/TweenMax';
-import { gsap, TimelineMax, TweenMax } from 'gsap';
+import { TimelineMax } from 'gsap';
 import { Nav } from './Header';
 import img from '../img/photo_small.jpg';
 //const TweenMax = require('TweenMax');
@@ -39,21 +39,34 @@ class Info extends Component {
   componentDidMount() {
     //this.lettersAnimation();
     // add a timeline to a scene
-    var controller = new ScrollMagic.Controller({
-      globalSceneOptions: {
-        triggerHook: 'onLeave'
+    var controller = new ScrollMagic.Controller(
+      {
+        // globalSceneOptions: {
+        //   triggerHook: 'onLeave'
+        // }
       }
-    });
-    var timeline = new TimelineMax();
-    timeline.from('header', 3, { y: -100 }, '+=0.5').from('.info h1', 1, { y: 100, opacity: 0 }, '+=0.5');
+    );
+    var timeline = new TimelineMax(
+      {
+        // onUpdate: updateStats, - function
+        // onRepeat: updateReps,
+        // onComplete: restart
+      }
+    );
+    timeline
+      .to('.App-logo', 0.1, { opacity: 0, force3D: true }, +0.5)
+      .staggerTo('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, -0.5)
+      .to('header', 0.5, { y: -100, delay: 1 }, 0.5)
+      .to('.info h1', 0.5, { y: 100, opacity: 0 }, 1.5)
+      .to('.info h2', 0.5, { y: 100, opacity: 0 }, '-=0.2');
     var scene = new ScrollMagic.Scene({
       //triggerElement: '.info h2',
+      triggerHook: 'onCenter',
       offset: 200,
-      reverse: true,
       duration: 0
     })
       .setTween(timeline)
-      .addIndicators({ name: '111' })
+      .addIndicators({ name: 'First screen' })
       .addTo(controller);
 
     // //let tween = new TweenMax();
