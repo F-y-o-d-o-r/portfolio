@@ -50,8 +50,8 @@ class Info extends Component {
     for (var i = 0, max = all.length; i < max; i++) {
       const tween2 = TweenMax.from(all[i], 0.5, { y: 100, opacity: 0 });
       var myScene = new ScrollMagic.Scene({
-        triggerElement: all[i],
-        offset: -200
+        triggerElement: all[i]
+        //offset: -200
       })
         .setTween(tween2)
         .addTo(controller2);
