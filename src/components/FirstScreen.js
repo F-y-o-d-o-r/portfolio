@@ -26,18 +26,7 @@ class Info extends Component {
     console.log();
     this.Nav = new Nav();
   }
-  // lettersAnimation() {
-  //   var tl2 = new TimelineLite();
-  //   tl2
-  //     .from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=0.5')
-  //     .from('.info h1', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1')
-  //     .from('.info h2', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1.5')
-  //     .from('.info .text-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2')
-  //     .from('.info .img-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2.5')
-  //     .from('.info .second-info', 0.7, { opacity: 0, force3D: true, y: 100 }, '+3');
-  // }
   componentDidMount() {
-    //this.lettersAnimation();
     // FIRST SCREEN
     var controller = new ScrollMagic.Controller({});
     var timeline = new TimelineMax({});
@@ -59,25 +48,14 @@ class Info extends Component {
     var all = document.querySelectorAll('.animate');
     var controller2 = new ScrollMagic.Controller();
     for (var i = 0, max = all.length; i < max; i++) {
-      const tween2 = TweenMax.from(all[i], 1, { y: 100, opacity: 0 });
+      const tween2 = TweenMax.from(all[i], 0.5, { y: 100, opacity: 0 });
       var myScene = new ScrollMagic.Scene({
-        triggerElement: all[i]
+        triggerElement: all[i],
+        offset: -200
       })
-        //.setClassToggle(all[i], 'fade-in')
         .setTween(tween2)
         .addTo(controller2);
     }
-    //const controller2 = new ScrollMagic.Controller();
-    //const tween2 = TweenMax.from('.animate', 1, { y: 100, opacity: 0, delay: 1 });
-    // new ScrollMagic.Scene({
-    //   //triggerElement: '#portfolio',
-    //   triggerHook: 'onEnter',
-    //   offset: 200,
-    //   duration: 0
-    // })
-    //   .setTween(tween2)
-    //   .addIndicators({ name: 'SECOND TEXT SCREEN' })
-    //   .addTo(controller2);
   }
   smothScroll(e) {
     e.preventDefault();

@@ -9,11 +9,12 @@ import Portfolio from './components/Portfolio';
 class App extends Component {
   constructor(props) {
     super(props);
+
     // window.onbeforeunload = function() {
     //   window.scrollTo(0, 0);
     // };
     //window.location.hash = 'top';
-    window.scrollTo(0, 0); //! TODO for chrome
+    //window.scrollTo(0, 0); //! TODO for chrome
     //window.onbeforeunload = function() {
     //window.scrollTo(0, 0);
     //};
@@ -22,10 +23,10 @@ class App extends Component {
     }, 300);
     setTimeout(() => {
       //window.scrollTo(0, 0);
-      let preloader = document.getElementsByClassName('holder')[0];
+      //let preloader = document.getElementsByClassName('holder')[0];
       //preloader.style.opacity = 0;
       //preloader.style.visibility = 'hidden';
-      document.body.style.overflow = 'auto';
+      //document.body.style.overflow = 'auto';
     }, 2000);
   }
   componentDidMount() {
