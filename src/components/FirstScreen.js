@@ -19,7 +19,6 @@ class FirstScreen extends Component {
 class Info extends Component {
   constructor(props) {
     super(props);
-    console.log();
     this.Nav = new Nav();
   }
   componentDidMount() {

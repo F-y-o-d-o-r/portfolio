@@ -3,13 +3,9 @@ import { TimelineLite } from 'gsap/TweenMax';
 //import * as ScrollMagic from 'scrollmagic';
 //import { gsap, TimelineMax, TweenMax } from 'gsap';
 const ScrollMagic = require('ScrollMagic');
-//require('TimelineMax');
-// require('TweenLite');
 const TweenMax = require('TweenMax');
 require('ScrollMagicIndicators');
 require('AnimationGsap');
-// require('GSAPEase');
-// require('GSAPEasePlagin');
 
 class Portfolio extends Component {
   constructor(props) {
@@ -18,12 +14,13 @@ class Portfolio extends Component {
   }
   componentDidMount() {
     const controller = new ScrollMagic.Controller();
-    const tween = TweenMax.from('.my-work-header', 1, { x: -100, opacity: 0 });
+    //const tween = TweenMax.from('.my-work-header', 1, { x: -100, opacity: 0 });
     new ScrollMagic.Scene({
       triggerElement: '#portfolio',
       duration: 0
     })
-      .setTween(tween)
+      //.setTween(tween)
+      .setClassToggle('.intro', 'show-text')
       .addIndicators({ name: 'My Latest Work' })
       .addTo(controller);
   }
@@ -32,8 +29,12 @@ class Portfolio extends Component {
       <section className="portfolio" id="portfolio">
         <div className="container">
           <div className="intro">
-            <h2 className="my-work-header">My Latest Work</h2>
-            <h3 className="my-work-header">Take a look at some of my recent projects.</h3>
+            <div className="text-hide">
+              <h2 className="my-work-header">My Latest Work</h2>
+            </div>
+            <div className="text-hide">
+              <h3 className="my-work-header">Take a look at some of my recent projects.</h3>
+            </div>
           </div>
           <Works header={this.state.itemHeader} />
         </div>
@@ -41,9 +42,6 @@ class Portfolio extends Component {
     );
   }
 }
-
-export default Portfolio;
-
 class Works extends Component {
   componentDidMount() {
     this.pulseClick();
@@ -97,7 +95,11 @@ class Works extends Component {
     });
     return (
       <section className="product-wrapper">
-        <div className="product-item" onMouseEnter={(event) => this.animateItem(event)} onMouseLeave={this.stopAnimate}>
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
           <div className="product-item__hidden-window">{titleItems}</div>
           <div className="first-description">
             <div className="header">{this.props.header}</div>
@@ -110,3 +112,5 @@ class Works extends Component {
     );
   }
 }
+
+export default Portfolio;

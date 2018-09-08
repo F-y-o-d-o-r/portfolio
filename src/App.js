@@ -25,6 +25,7 @@ class App extends Component {
         <Photo />
         <Portfolio />
         {/* <Contacts /> */}
+        <Photo />
       </React.Fragment>
     );
   }

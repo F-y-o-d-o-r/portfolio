@@ -372,6 +372,7 @@ section.first-screen {
       font-size: 2.2rem; }
     section.first-screen .container .blocks-wrapper {
       margin-top: 20rem;
+      margin-bottom: 20rem;
       display: flex;
       justify-content: space-around;
       align-items: flex-end; }
@@ -383,13 +384,24 @@ section.first-screen {
 /*fonts*/
 section.portfolio {
   position: relative;
-  min-height: calc(100vh - 70px);
-  background: url("./img/photo2.jpg") center; }
+  min-height: calc(100vh - 70px); }
   section.portfolio .container .intro {
-    padding-top: 7rem;
+    padding-top: 10rem;
     color: #dcd22c; }
     section.portfolio .container .intro h2 {
+      font-family: 'Abril Fatface', cursive;
+      font-weight: 600;
+      font-size: 2.2rem;
+      line-height: 4.2rem;
+      color: #2c2c2c;
       font-size: 32px;
+      margin: 0; }
+    section.portfolio .container .intro h3 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 4.2rem;
+      color: #2c2c2c;
       margin: 0; }
   section.portfolio .container .product-wrapper {
     margin-top: 7rem;
@@ -460,6 +472,16 @@ section.portfolio {
           line-height: 1.4; }
       section.portfolio .container .product-wrapper .product-item .first-description__full {
         height: 100% !important; }
+  section.portfolio .container .text-hide {
+    overflow: hidden; }
+    section.portfolio .container .text-hide > * {
+      transform: translateY(100%); }
+    section.portfolio .container .text-hide h2 {
+      transition: all ease .4s; }
+    section.portfolio .container .text-hide h3 {
+      transition: all ease .4s .4s; }
+  section.portfolio .container .show-text .text-hide > * {
+    transform: translateY(0%); }
 
 @keyframes effect {
   50% {

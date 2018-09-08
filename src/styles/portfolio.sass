@@ -2,13 +2,16 @@
 section.portfolio
   position: relative
   min-height: calc(100vh - 70px)
-  background: url('./img/photo2.jpg') center
   .container
     .intro
-      padding-top: 7rem
+      padding-top: 10rem
       color: rgba(220, 210, 44, 1)
       h2
+        +ffh(2.2,4.2)
         font-size: 32px
+        margin: 0
+      h3
+        +ffb(2,4.2)
         margin: 0
     .product-wrapper
       margin-top: 7rem
@@ -80,7 +83,19 @@ section.portfolio
             line-height: 1.4
         .first-description__full
           height: 100%!important
-          
+    .text-hide
+      overflow: hidden
+      & > *
+        transform: translateY(100%)
+      h2
+        +t
+      h3
+        transition: all ease .4s .4s
+    .show-text
+      .text-hide > *
+        transform: translateY(0%)
+        
+
 
   @keyframes effect
     50% 
