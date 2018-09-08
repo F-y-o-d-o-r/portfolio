@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap/TweenMax';
-import { TimelineMax } from 'gsap';
+import { TimelineMax, TweenMax } from 'gsap';
 import { Nav } from './Header';
 import img from '../img/photo_small.jpg';
 //const TweenMax = require('TweenMax');
@@ -26,41 +26,28 @@ class Info extends Component {
     console.log();
     this.Nav = new Nav();
   }
-  lettersAnimation() {
-    var tl2 = new TimelineLite();
-    tl2
-      .from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=0.5')
-      .from('.info h1', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1')
-      .from('.info h2', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1.5')
-      .from('.info .text-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2')
-      .from('.info .img-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2.5')
-      .from('.info .second-info', 0.7, { opacity: 0, force3D: true, y: 100 }, '+3');
-  }
+  // lettersAnimation() {
+  //   var tl2 = new TimelineLite();
+  //   tl2
+  //     .from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=0.5')
+  //     .from('.info h1', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1')
+  //     .from('.info h2', 0.7, { opacity: 0, force3D: true, y: 100 }, '+1.5')
+  //     .from('.info .text-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2')
+  //     .from('.info .img-wrapper', 0.7, { opacity: 0, force3D: true, y: 100 }, '+2.5')
+  //     .from('.info .second-info', 0.7, { opacity: 0, force3D: true, y: 100 }, '+3');
+  // }
   componentDidMount() {
     //this.lettersAnimation();
-    // add a timeline to a scene
-    var controller = new ScrollMagic.Controller(
-      {
-        // globalSceneOptions: {
-        //   triggerHook: 'onLeave'
-        // }
-      }
-    );
-    var timeline = new TimelineMax(
-      {
-        // onUpdate: updateStats, - function
-        // onRepeat: updateReps,
-        // onComplete: restart
-      }
-    );
+    // FIRST SCREEN
+    var controller = new ScrollMagic.Controller({});
+    var timeline = new TimelineMax({});
     timeline
-      .to('.App-logo', 0.1, { opacity: 0, force3D: true }, +0.5)
+      .fromTo('.App-logo', 0.1, { opacity: 1, force3D: true }, { opacity: 0 }, +0.5)
       .staggerTo('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, -0.5)
-      .to('header', 0.5, { y: -100, delay: 1 }, 0.5)
-      .to('.info h1', 0.5, { y: 100, opacity: 0 }, 1.5)
-      .to('.info h2', 0.5, { y: 100, opacity: 0 }, '-=0.2');
+      .fromTo('header', 0.5, { y: 0, delay: 1 }, { y: -100, delay: 1 }, 0.5)
+      .fromTo('.info h1', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, 1.5)
+      .fromTo('.info h2', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, '-=0.2');
     var scene = new ScrollMagic.Scene({
-      //triggerElement: '.info h2',
       triggerHook: 'onCenter',
       offset: 200,
       duration: 0
@@ -68,17 +55,29 @@ class Info extends Component {
       .setTween(timeline)
       .addIndicators({ name: 'First screen' })
       .addTo(controller);
-
-    // //let tween = new TweenMax();
-    // let tween = TweenMax.from('header', 1.5, { opacity: 0, force3D: true, y: -100 }, '+=0.5');
-    // tween = TweenMax.from('.info h1', 0.7, { opacity: 0, force3D: true, y: 100 }, -2);
+    // SECOND TEXT SCREEN
+    var all = document.querySelectorAll('.animate');
+    var controller2 = new ScrollMagic.Controller();
+    for (var i = 0, max = all.length; i < max; i++) {
+      const tween2 = TweenMax.from(all[i], 1, { y: 100, opacity: 0 });
+      var myScene = new ScrollMagic.Scene({
+        triggerElement: all[i]
+      })
+        //.setClassToggle(all[i], 'fade-in')
+        .setTween(tween2)
+        .addTo(controller2);
+    }
+    //const controller2 = new ScrollMagic.Controller();
+    //const tween2 = TweenMax.from('.animate', 1, { y: 100, opacity: 0, delay: 1 });
     // new ScrollMagic.Scene({
-    //   triggerElement: '.info__header-wrapper',
+    //   //triggerElement: '#portfolio',
+    //   triggerHook: 'onEnter',
+    //   offset: 200,
     //   duration: 0
     // })
-    //   .setTween(tween)
-    //   .addIndicators({ name: 'My Latest Work' })
-    //   .addTo(controller);
+    //   .setTween(tween2)
+    //   .addIndicators({ name: 'SECOND TEXT SCREEN' })
+    //   .addTo(controller2);
   }
   smothScroll(e) {
     e.preventDefault();
@@ -101,7 +100,7 @@ class Info extends Component {
             </h2>
           </div>
           <div className="blocks-wrapper">
-            <div className="text-wrapper">
+            <div className="text-wrapper animate">
               <p>
                 <span>Here’s a couple of things I’m good at: </span>
                 Communication I realize the importance of good communication. I use tools like Slack to make sure we’re
@@ -128,7 +127,7 @@ class Info extends Component {
             {/* <div className="img-wrapper">
               <img src={img} alt="Me" />
             </div> */}
-            <div className="second-info">
+            <div className="second-info animate">
               <p>
                 <span>Languages I speak: </span>
                 HTML, Pug, CSS, Sass, JavaScript, jQuery, React, Php, Wordpress, OpenCart
