@@ -31,9 +31,6 @@ export class Nav extends Component {
   componentDidMount() {
     this.animateNav();
   }
-  testTest() {
-    alert('test');
-  }
   smothScroll(e) {
     e.preventDefault();
     document.querySelector(e.target.hash).scrollIntoView({

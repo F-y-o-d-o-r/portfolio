@@ -3,11 +3,7 @@ import ScrollMagic from 'scrollmagic';
 import { TimelineLite } from 'gsap/TweenMax';
 import { TimelineMax, TweenMax } from 'gsap';
 import { Nav } from './Header';
-import img from '../img/photo_small.jpg';
-//const TweenMax = require('TweenMax');
-//const ScrollMagic = require('ScrollMagic');
 require('ScrollMagicIndicators');
-require('AnimationGsap');
 
 class FirstScreen extends Component {
   componentDidMount() {}
@@ -27,7 +23,7 @@ class Info extends Component {
     this.Nav = new Nav();
   }
   componentDidMount() {
-    // FIRST SCREEN
+    // FIRST SCREEN - TimelineMax
     var controller = new ScrollMagic.Controller({});
     var timeline = new TimelineMax({});
     timeline
@@ -44,14 +40,13 @@ class Info extends Component {
       .setTween(timeline)
       .addIndicators({ name: 'First screen' })
       .addTo(controller);
-    // SECOND TEXT SCREEN
+    // SECOND TEXT SCREEN - TweenMax
     var all = document.querySelectorAll('.animate');
     var controller2 = new ScrollMagic.Controller();
     for (var i = 0, max = all.length; i < max; i++) {
       const tween2 = TweenMax.from(all[i], 0.5, { y: 100, opacity: 0 });
       var myScene = new ScrollMagic.Scene({
         triggerElement: all[i]
-        //offset: -200
       })
         .setTween(tween2)
         .addTo(controller2);
@@ -102,9 +97,6 @@ class Info extends Component {
                 capturing the moments with my family.
               </p>
             </div>
-            {/* <div className="img-wrapper">
-              <img src={img} alt="Me" />
-            </div> */}
             <div className="second-info animate">
               <p>
                 <span>Languages I speak: </span>
@@ -128,7 +120,7 @@ class Info extends Component {
                   title="My Github profile in new window"
                 >
                   Github
-                </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine
+                </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine, Photoshop, Avocode
               </p>
             </div>
           </div>

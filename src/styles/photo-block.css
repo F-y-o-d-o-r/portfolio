@@ -1,0 +1,22 @@
+section.photo {
+  height: 500px;
+  overflow: hidden;
+  position: relative; }
+  section.photo img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  section.photo .white-block-1,
+  section.photo .white-block-2 {
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  section.photo .white-block-2 {
+    left: auto;
+    right: 0; }
