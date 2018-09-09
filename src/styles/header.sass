@@ -1,0 +1,47 @@
+@import 'mixins.sass'
+header.header
+  z-index: 2
+  position: fixed
+  width: 100%
+  background-color: rgba(255, 255, 255, 1.000)
+  padding: 10px 0
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  nav
+    justify-content: space-between
+    @media (max-width: 400px)
+      display: flex
+      flex-direction: column
+    a
+      +ffb(1.5)
+      text-decoration: none
+      text-transform: uppercase
+      margin-right: 3rem
+      letter-spacing: .2rem
+      position: relative
+      display: inline-block
+      @media (max-width: 400px)
+        margin-bottom: 1rem
+        margin-top: 1rem
+      &:after
+        position: absolute
+        content: ''
+        height: 3px
+        background-color: rgba(44, 44, 44, 1.000)
+        bottom: -1rem
+        left: 0
+        width: 0
+        +t
+      &:hover
+        //+hv()
+        &:after
+          width: 100%
+      &:last-child
+        margin-right: 0
+
+.App-logo
+  height: 50px
+
+

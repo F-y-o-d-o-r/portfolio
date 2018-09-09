@@ -1,0 +1,77 @@
+@import "mixins.sass"
+  
+section.photo
+  height: 500px
+  overflow: hidden
+  position: relative
+  img
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+  .white-block-1,
+  .white-block-2
+    background-color: #fff
+    height: 100%
+    width: 50%
+    position: absolute
+    top: 0
+    left: 0
+    +t
+  .white-block-2
+    left: auto
+    right: 0
+  .name-letters
+    font-size: 50rem
+    color: white
+    position: absolute
+    text-transform: uppercase
+  .f
+    left: 0%
+    top: 30%
+    transition: all ease 1.4s
+  .y
+    left: 10%
+    top: 40%
+    transition: all ease 1.4s
+  .o
+    left: 20%
+    top: 50%
+    transition: all ease 1.4s
+  .d
+    left: 35%
+    top: 40%
+    transition: all ease 1.4s
+  .oo
+    left: 50%
+    top: 40%
+    transition: all ease 1.4s
+  .r
+    left: 70%
+    top: 40%
+    transition: all ease 1.4s
+.show-photo
+  .white-block-1
+    top: -100%!important
+  .white-block-2
+    top: 100%!important
+  .f
+    left: 0%!important
+    top: 70%!important
+  .y
+    left: 10%!important
+    top: 20%!important
+  .o
+    left: 20%!important
+    top: 80%!important
+  .d
+    left: 35%!important
+    top: 20%!important
+  .oo
+    left: 50%!important
+    top: 80%!important
+  .r
+    left: 70%!important
+    top: 20%!important

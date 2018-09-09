@@ -1,0 +1,10 @@
+/*fonts*/
+section.contacts {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  background: url("./img/photo3.jpg") center; }
+  section.contacts .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }

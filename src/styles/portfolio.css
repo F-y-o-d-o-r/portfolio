@@ -1,0 +1,119 @@
+/*fonts*/
+section.portfolio {
+  position: relative;
+  min-height: calc(100vh - 70px); }
+  section.portfolio .container .intro {
+    padding-top: 10rem;
+    color: #dcd22c; }
+    section.portfolio .container .intro h2 {
+      font-family: 'Abril Fatface', cursive;
+      font-weight: 600;
+      font-size: 2.2rem;
+      line-height: 4.2rem;
+      color: #2c2c2c;
+      font-size: 32px;
+      margin: 0; }
+    section.portfolio .container .intro h3 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 4.2rem;
+      color: #2c2c2c;
+      margin: 0; }
+  section.portfolio .container .product-wrapper {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    section.portfolio .container .product-wrapper .product-item {
+      height: 40rem;
+      width: 35rem;
+      border-radius: 0.5rem;
+      background: url("https://unsplash.it/400/400/?random2");
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative; }
+      section.portfolio .container .product-wrapper .product-item__hidden-window {
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 2.5rem;
+        height: 60%;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://unsplash.it/400/250/?random3");
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        transition: all ease .4s;
+        top: -100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: space-around; }
+        section.portfolio .container .product-wrapper .product-item__hidden-window .title {
+          display: inline-block;
+          background-color: #313131;
+          color: #999999;
+          padding: 1rem;
+          border-radius: .5rem;
+          text-transform: uppercase;
+          margin-right: .15rem;
+          margin-left: .15rem; }
+      section.portfolio .container .product-wrapper .product-item__show {
+        top: 0 !important; }
+      section.portfolio .container .product-wrapper .product-item .first-description {
+        box-sizing: border-box;
+        padding: 2.5rem;
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        bottom: 0;
+        background-color: #fff;
+        transition: all ease .4s;
+        border-radius: 0.5rem; }
+        section.portfolio .container .product-wrapper .product-item .first-description .header {
+          font-size: 24px;
+          margin-bottom: 1.5rem; }
+        section.portfolio .container .product-wrapper .product-item .first-description i {
+          position: absolute;
+          right: 2.5rem;
+          top: 2.7rem; }
+          section.portfolio .container .product-wrapper .product-item .first-description i:before {
+            position: absolute;
+            content: url(img/more.svg);
+            height: 2rem;
+            width: 2rem;
+            cursor: pointer; }
+        section.portfolio .container .product-wrapper .product-item .first-description .description {
+          line-height: 1.4; }
+      section.portfolio .container .product-wrapper .product-item .first-description__full {
+        height: 100% !important; }
+  section.portfolio .container .text-hide {
+    overflow: hidden; }
+    section.portfolio .container .text-hide > * {
+      transform: translateY(100%); }
+    section.portfolio .container .text-hide h2 {
+      transition: all ease .4s; }
+    section.portfolio .container .text-hide h3 {
+      transition: all ease .4s .4s; }
+  section.portfolio .container .show-text .text-hide > * {
+    transform: translateY(0%); }
+
+@keyframes effect {
+  50% {
+    transform: scale(1.5, 1.5);
+    opacity: 0; }
+  99% {
+    transform: scale(0.001, 0.001);
+    opacity: 0; }
+  100% {
+    transform: scale(0.001, 0.001);
+    opacity: 1; } }
+  section.portfolio .pulse {
+    background-color: #DBD131;
+    border-radius: 50%;
+    animation: effect 0.7s ease-out;
+    transform: scale(0);
+    position: absolute;
+    z-index: 11; }
