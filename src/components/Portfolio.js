@@ -45,6 +45,7 @@ class Portfolio extends Component {
 class Works extends Component {
   componentDidMount() {
     this.pulseClick();
+    this.checkTargetOnClick();
   }
   animateItem(event) {
     event.currentTarget.querySelector('.product-item__hidden-window').classList.add('product-item__show');
@@ -58,6 +59,15 @@ class Works extends Component {
     event.currentTarget.querySelector('.product-item__hidden-window').classList.remove('product-item__show');
     let tlItem = new TimelineLite();
     tlItem.staggerTo('.title', 0, { y: 0, delay: 0, opacity: 1, force3D: true }, 0);
+  }
+  checkTargetOnClick(e) {
+    document.body.addEventListener(
+      'click',
+      function(e) {
+        console.log(e.target.hasAttribute('class') === 'product-item');
+      },
+      false
+    );
   }
   pulseClick(e) {
     var item = document.getElementsByClassName('product-item__hidden-window'),
