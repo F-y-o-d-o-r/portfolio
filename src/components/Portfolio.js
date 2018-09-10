@@ -108,6 +108,110 @@ class Works extends Component {
           </div>
           <div className="full-description" />
         </div>
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>{' '}
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>{' '}
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>{' '}
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>{' '}
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>{' '}
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>{' '}
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>{' '}
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="first-description">
+            <div className="header">{this.props.header}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>
       </section>
     );
   }

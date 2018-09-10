@@ -387,7 +387,8 @@ section.portfolio {
   min-height: calc(100vh - 70px); }
   section.portfolio .container .intro {
     padding-top: 10rem;
-    color: #dcd22c; }
+    color: #dcd22c;
+    margin-left: 5%; }
     section.portfolio .container .intro h2 {
       font-family: 'Abril Fatface', cursive;
       font-weight: 600;
@@ -406,17 +407,20 @@ section.portfolio {
   section.portfolio .container .product-wrapper {
     margin-top: 7rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap; }
     section.portfolio .container .product-wrapper .product-item {
       height: 40rem;
       width: 35rem;
-      border-radius: 0.5rem;
       background: url("https://unsplash.it/400/400/?random2");
       background-size: cover;
       background-position: center;
       overflow: hidden;
-      position: relative; }
+      position: relative;
+      margin-bottom: 5rem;
+      transition: all ease .4s; }
+      section.portfolio .container .product-wrapper .product-item:hover {
+        box-shadow: 0 20px 30px 0 rgba(150, 150, 150, 0.5); }
       section.portfolio .container .product-wrapper .product-item__hidden-window {
         cursor: pointer;
         box-sizing: border-box;
@@ -437,12 +441,16 @@ section.portfolio {
         section.portfolio .container .product-wrapper .product-item__hidden-window .title {
           display: inline-block;
           background-color: #313131;
-          color: #999999;
-          padding: 1rem;
-          border-radius: .5rem;
+          padding: 0 1rem;
           text-transform: uppercase;
           margin-right: .15rem;
-          margin-left: .15rem; }
+          margin-left: .15rem;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 300;
+          font-size: 1.8rem;
+          line-height: 3.8rem;
+          color: #2c2c2c;
+          color: #999999; }
       section.portfolio .container .product-wrapper .product-item__show {
         top: 0 !important; }
       section.portfolio .container .product-wrapper .product-item .first-description {
@@ -453,11 +461,14 @@ section.portfolio {
         height: 40%;
         bottom: 0;
         background-color: #fff;
-        transition: all ease .4s;
-        border-radius: 0.5rem; }
+        transition: all ease .4s; }
         section.portfolio .container .product-wrapper .product-item .first-description .header {
-          font-size: 24px;
-          margin-bottom: 1.5rem; }
+          margin-bottom: 2.5rem;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600;
+          font-size: 2.4rem;
+          line-height: 1rem;
+          color: #2c2c2c; }
         section.portfolio .container .product-wrapper .product-item .first-description i {
           position: absolute;
           right: 2.5rem;
@@ -469,7 +480,11 @@ section.portfolio {
             width: 2rem;
             cursor: pointer; }
         section.portfolio .container .product-wrapper .product-item .first-description .description {
-          line-height: 1.4; }
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 300;
+          font-size: 2.2rem;
+          line-height: 1.4rem;
+          color: #2c2c2c; }
       section.portfolio .container .product-wrapper .product-item .first-description__full {
         height: 100% !important; }
   section.portfolio .container .text-hide {
