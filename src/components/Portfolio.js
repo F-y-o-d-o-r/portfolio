@@ -103,7 +103,7 @@ class Works extends Component {
           <div className="product-item__hidden-window">{titleItems}</div>
           <div className="first-description">
             <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, labore.</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
             <i onClick={this.pulseClick} />
           </div>
           <div className="full-description" />
