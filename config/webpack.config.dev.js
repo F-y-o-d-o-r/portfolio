@@ -87,11 +87,11 @@ module.exports = {
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
       ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-      ScrollMagicIndicators: path.resolve(
-        'node_modules',
-        'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
-      ),
-      AnimationGsap: path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
+      // ScrollMagicIndicators: path.resolve(
+      //   'node_modules',
+      //   'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
+      // ),
+      // AnimationGsap: path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js'),
       TimelineMax: path.resolve('node_modules', 'gsap/src/minified/TimelineMax.min.js'),
       TweenLite: path.resolve('node_modules', 'gsap/src/minified/TweenLite.min.js'),
       TweenMax: path.resolve('node_modules', 'gsap/src/minified/TweenMax.min.js')

@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import { TimelineLite } from 'gsap/TweenMax';
-//import * as ScrollMagic from 'scrollmagic';
+import portfolio from './portfolio.json';
+import 'gsap';
+import * as ScrollMagic from 'scrollmagic';
 //import { gsap, TimelineMax, TweenMax } from 'gsap';
-const ScrollMagic = require('ScrollMagic');
-const TweenMax = require('TweenMax');
-require('ScrollMagicIndicators');
-require('AnimationGsap');
+//const ScrollMagic = require('ScrollMagic');
+require('scrollmagic/scrollmagic/uncompressed/ScrollMagic.js');
+require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js');
+require('scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js');
 //https://www.iconfinder.com/icons/1214978/mouse_scroll_icon
 class Portfolio extends Component {
   constructor(props) {
     super(props);
-    this.state = { itemHeader: [ 'First header', 'dadsf' ] };
+    this.state = portfolio;
+    this.json = '';
   }
   componentDidMount() {
+    console.log(portfolio);
     const controller = new ScrollMagic.Controller();
     //const tween = TweenMax.from('.my-work-header', 1, { x: -100, opacity: 0 });
     new ScrollMagic.Scene({
@@ -36,7 +40,7 @@ class Portfolio extends Component {
               <h3 className="my-work-header">Take a look at some of my recent projects.</h3>
             </div>
           </div>
-          <Works header={this.state.itemHeader} />
+          <Works itemContent={this.state.item} />
         </div>
       </section>
     );
@@ -45,7 +49,6 @@ class Portfolio extends Component {
 class Works extends Component {
   componentDidMount() {
     this.pulseClick();
-    this.checkTargetOnClick();
   }
   animateItem(event) {
     event.currentTarget.querySelector('.product-item__hidden-window').classList.add('product-item__show');
@@ -59,15 +62,6 @@ class Works extends Component {
     event.currentTarget.querySelector('.product-item__hidden-window').classList.remove('product-item__show');
     let tlItem = new TimelineLite();
     tlItem.staggerTo('.title', 0, { y: 0, delay: 0, opacity: 1, force3D: true }, 0);
-  }
-  checkTargetOnClick(e) {
-    document.body.addEventListener(
-      'click',
-      function(e) {
-        console.log(e.target.hasAttribute('class') === 'product-item');
-      },
-      false
-    );
   }
   pulseClick(e) {
     var item = document.getElementsByClassName('product-item__hidden-window'),
@@ -96,132 +90,48 @@ class Works extends Component {
     }
   }
   render() {
-    const header = this.props.header;
-    // const titleItems = () => {
-    //   <div className="title">{this.props.header}</div>;
-    // };
-    var titleItems = header.map(function(one) {
-      return <div className="title">{one}</div>;
+    const itemContent = this.props.itemContent;
+    // var titleItems = itemContent.map(function(one) {
+    //   return <div className="title">{one}</div>;
+    // });
+    var item = itemContent.map((item, i, arr) => {
+      return (
+        <div
+          className="product-item animate"
+          onMouseEnter={(event) => this.animateItem(event)}
+          onMouseLeave={this.stopAnimate}
+        >
+          <div
+            className="product-item__hidden-window"
+            style={{ background: 'url(img/portfolio/' + this.props.itemContent[3] + ')' }}
+          >
+            ggg
+          </div>
+          <div className="first-description">
+            <div className="header">{this.props.itemContent[1]}</div>
+            <div className="description">Lorem ipsum dolor sit amet.</div>
+            <i onClick={this.pulseClick} />
+          </div>
+          <div className="full-description" />
+        </div>
+      );
     });
     return (
       <section className="product-wrapper">
-        <div
+        {item}
+        {/* <div
           className="product-item animate"
           onMouseEnter={(event) => this.animateItem(event)}
           onMouseLeave={this.stopAnimate}
         >
-          <div className="product-item__hidden-window">{titleItems}</div>
+          <div className="product-item__hidden-window">ggg</div>
           <div className="first-description">
-            <div className="header">{this.props.header}</div>
+            <div className="header">{this.props.itemContent[1]}</div>
             <div className="description">Lorem ipsum dolor sit amet.</div>
             <i onClick={this.pulseClick} />
           </div>
           <div className="full-description" />
-        </div>
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>{' '}
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>{' '}
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>{' '}
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>{' '}
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>{' '}
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>{' '}
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>{' '}
-        <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">{titleItems}</div>
-          <div className="first-description">
-            <div className="header">{this.props.header}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div>
+        </div> */}
       </section>
     );
   }

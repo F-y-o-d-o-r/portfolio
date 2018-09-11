@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
 import photo from '../img/photo1.jpg';
-require('ScrollMagicIndicators');
+//require('ScrollMagicIndicators');
 
 class Photo extends Component {
   componentDidMount() {
@@ -9,7 +9,7 @@ class Photo extends Component {
   }
   photoAnimation() {
     let controllerPhoto = new ScrollMagic.Controller();
-    let myScene = new ScrollMagic.Scene({
+    new ScrollMagic.Scene({
       triggerElement: '.photo'
     })
       .setClassToggle('.photo', 'show-photo')

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
-import { TimelineLite } from 'gsap/TweenMax';
+//import { TimelineLite } from 'gsap/TweenMax';
 import { TimelineMax, TweenMax } from 'gsap';
 import { Nav } from './Header';
-require('ScrollMagicIndicators');
+//require('ScrollMagicIndicators');
+require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js');
+require('scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js');
 
 class FirstScreen extends Component {
   componentDidMount() {}
@@ -31,7 +33,7 @@ class Info extends Component {
       .fromTo('header', 0.5, { y: 0, delay: 1 }, { y: -100, delay: 1 }, 0.5)
       .fromTo('.info h1', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, 1.5)
       .fromTo('.info h2', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, '-=0.2');
-    var scene = new ScrollMagic.Scene({
+    new ScrollMagic.Scene({
       triggerHook: 'onCenter',
       offset: 200,
       duration: 0
@@ -44,7 +46,7 @@ class Info extends Component {
     var controller2 = new ScrollMagic.Controller();
     for (var i = 0, max = all.length; i < max; i++) {
       const tween2 = TweenMax.from(all[i], 0.5, { y: 100, opacity: 0 });
-      var myScene = new ScrollMagic.Scene({
+      new ScrollMagic.Scene({
         triggerElement: all[i]
       })
         .setTween(tween2)
