@@ -38,7 +38,7 @@ class Portfolio extends Component {
               <h3 className="my-work-header">Take a look at some of my recent projects.</h3>
             </div>
           </div>
-          <Works itemContent={this.state.item} />
+          <Works itemContent={this.state.items} />
         </div>
       </section>
     );
@@ -93,24 +93,27 @@ class Works extends Component {
     //   return <div className="title">{one}</div>;
     // });
     var item = itemContent.map((item, i, arr) => {
+      console.log(item, i, arr);
       return (
         <div
           className="product-item animate"
           onMouseEnter={(event) => this.animateItem(event)}
           onMouseLeave={this.stopAnimate}
-          key={i}
+          key={this.props.itemContent[i]['key']}
         >
           <div
             className="product-item__hidden-window"
             style={{
               background:
                 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/portfolio/' +
-                this.props.itemContent[3] +
+                this.props.itemContent[i]['key'] +
                 ')'
             }}
-          />
+          >
+            <div className="title">{}</div>
+          </div>
           <div className="first-description">
-            <div className="header">{this.props.itemContent[1]}</div>
+            <div className="header">{}</div>
             <div className="description">Lorem ipsum dolor sit amet.</div>
             <i onClick={this.pulseClick} />
           </div>
