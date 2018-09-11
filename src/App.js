@@ -5,7 +5,7 @@ import Header from './components/Header';
 import FirstScreen from './components/FirstScreen';
 import Photo from './components/PhotoBlock';
 import Portfolio from './components/Portfolio';
-//import Contacts from './components/Contacts';
+import Contacts from './components/Contacts';
 
 class App extends Component {
   componentDidMount() {}
@@ -21,8 +21,8 @@ class App extends Component {
         <FirstScreen />
         <Photo />
         <Portfolio />
-        {/* <Contacts /> */}
-        <Photo />
+        <Contacts />
+        {/* <Photo /> */}
       </React.Fragment>
     );
   }

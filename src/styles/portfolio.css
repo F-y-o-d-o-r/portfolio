@@ -1,7 +1,8 @@
 /*fonts*/
 section.portfolio {
   position: relative;
-  min-height: calc(100vh - 70px); }
+  min-height: calc(100vh - 70px);
+  padding-bottom: 10rem; }
   section.portfolio .container .intro {
     padding-top: 10rem;
     color: #dcd22c;
@@ -29,9 +30,8 @@ section.portfolio {
     section.portfolio .container .product-wrapper .product-item {
       height: 40rem;
       width: 35rem;
-      background: url("https://unsplash.it/400/400/?random2");
-      background-size: cover;
-      background-position: center;
+      background-size: cover !important;
+      background-position: center !important;
       overflow: hidden;
       position: relative;
       margin-bottom: 5rem;
@@ -70,7 +70,8 @@ section.portfolio {
           color: #999999; }
       section.portfolio .container .product-wrapper .product-item__show {
         top: 0 !important; }
-      section.portfolio .container .product-wrapper .product-item .first-description {
+      section.portfolio .container .product-wrapper .product-item .first-description,
+      section.portfolio .container .product-wrapper .product-item .full-description {
         box-sizing: border-box;
         padding: 2.5rem;
         position: absolute;
@@ -79,31 +80,53 @@ section.portfolio {
         bottom: 0;
         background-color: #fff;
         transition: all ease .4s; }
-        section.portfolio .container .product-wrapper .product-item .first-description .header {
+        section.portfolio .container .product-wrapper .product-item .first-description .header,
+        section.portfolio .container .product-wrapper .product-item .full-description .header {
           margin-bottom: 2.5rem;
           font-family: 'Source Sans Pro', sans-serif;
           font-weight: 600;
           font-size: 2.4rem;
           line-height: 1rem;
           color: #2c2c2c; }
-        section.portfolio .container .product-wrapper .product-item .first-description i {
+        section.portfolio .container .product-wrapper .product-item .first-description i,
+        section.portfolio .container .product-wrapper .product-item .full-description i {
           position: absolute;
           right: 2.5rem;
           top: 2.7rem; }
-          section.portfolio .container .product-wrapper .product-item .first-description i:before {
+          section.portfolio .container .product-wrapper .product-item .first-description i:before,
+          section.portfolio .container .product-wrapper .product-item .full-description i:before {
             position: absolute;
             content: url(img/more.svg);
             height: 2rem;
             width: 2rem;
             cursor: pointer; }
-        section.portfolio .container .product-wrapper .product-item .first-description .description {
+        section.portfolio .container .product-wrapper .product-item .first-description .description,
+        section.portfolio .container .product-wrapper .product-item .full-description .description {
           font-family: 'Source Sans Pro', sans-serif;
           font-weight: 300;
           font-size: 2.2rem;
           line-height: 1.4rem;
           color: #2c2c2c; }
-      section.portfolio .container .product-wrapper .product-item .first-description__full {
-        height: 100% !important; }
+      section.portfolio .container .product-wrapper .product-item .full-description {
+        height: 100%;
+        bottom: -110%;
+        position: relative; }
+        section.portfolio .container .product-wrapper .product-item .full-description img {
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+          height: 2rem;
+          width: 2rem;
+          cursor: pointer; }
+        section.portfolio .container .product-wrapper .product-item .full-description ul {
+          margin-top: 3rem;
+          padding-left: 2.5rem; }
+          section.portfolio .container .product-wrapper .product-item .full-description ul li {
+            margin-bottom: 1.5rem; }
+      section.portfolio .container .product-wrapper .product-item .show-description__full {
+        bottom: 0 !important; }
+    section.portfolio .container .product-wrapper .show-shadow {
+      box-shadow: 0 20px 30px 0 rgba(150, 150, 150, 0.5); }
   section.portfolio .container .text-hide {
     overflow: hidden; }
     section.portfolio .container .text-hide > * {

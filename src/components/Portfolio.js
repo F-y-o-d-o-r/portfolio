@@ -3,10 +3,11 @@ import { TimelineLite } from 'gsap/TweenMax';
 import portfolio from './portfolio.json';
 import 'gsap';
 import * as ScrollMagic from 'scrollmagic';
+import close from '../img/close.svg';
+
 // require('scrollmagic/scrollmagic/uncompressed/ScrollMagic.js');
 // require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js');
 // require('scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js');
-//https://www.iconfinder.com/icons/1214978/mouse_scroll_icon
 class Portfolio extends Component {
   constructor(props) {
     super(props);
@@ -62,7 +63,9 @@ class Works extends Component {
     tlItem.staggerTo('.title', 0, { y: 0, delay: 0, opacity: 1, force3D: true }, 0);
   }
   pulseClick(e) {
-    var item = document.getElementsByClassName('product-item__hidden-window'),
+    var item1 = Array.prototype.slice.call(document.getElementsByClassName('product-item__hidden-window')),
+      itemOpenButt = Array.prototype.slice.call(document.getElementsByClassName('icon-open')),
+      item = item1.concat(itemOpenButt),
       forEach = Array.prototype.forEach;
     forEach.call(item, function(b) {
       b.addEventListener('click', addElement);
@@ -81,64 +84,74 @@ class Works extends Component {
       sDiv.top = e.clientY - rect.top - mValue / 2 + px;
       addDiv.classList.add('pulse');
       this.appendChild(addDiv);
-      e.currentTarget.parentNode.querySelector('.first-description').classList.add('first-description__full');
+      e.currentTarget
+        .closest('.product-item')
+        .querySelector('.full-description')
+        .classList.add('show-description__full');
+      e.currentTarget.closest('.product-item').classList.add('show-shadow');
       setTimeout(function() {
         addDiv.remove();
       }, 1000);
     }
   }
+  closeItem(e) {
+    e.currentTarget.closest('.full-description').classList.remove('show-description__full');
+    e.currentTarget.parentNode.parentNode.classList.remove('show-shadow');
+  }
   render() {
     const itemContent = this.props.itemContent;
-    // var titleItems = itemContent.map(function(one) {
-    //   return <div className="title">{one}</div>;
-    // });
     var item = itemContent.map((item, i, arr) => {
-      console.log(item, i, arr);
       return (
         <div
           className="product-item animate"
           onMouseEnter={(event) => this.animateItem(event)}
           onMouseLeave={this.stopAnimate}
-          key={this.props.itemContent[i]['key']}
+          key={itemContent[i]['key']}
+          style={{ background: 'url(img/portfolio/' + itemContent[i]['mainImageSrc'] + ')' }}
         >
           <div
             className="product-item__hidden-window"
             style={{
               background:
                 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/portfolio/' +
-                this.props.itemContent[i]['key'] +
+                itemContent[i]['hoverImageSrc'] +
                 ')'
             }}
           >
-            <div className="title">{}</div>
+            {itemContent[i]['technologies'].map((item, i, arr) => {
+              return (
+                <div className="title" key={i}>
+                  {item}
+                </div>
+              );
+            })}
           </div>
           <div className="first-description">
-            <div className="header">{}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
+            <div className="header">{itemContent[i]['firstHeader']}</div>
+            <div className="description">{itemContent[i]['firstDescription']}</div>
+            <i className="icon-open" />
           </div>
-          <div className="full-description" />
+          <div className="full-description">
+            <img
+              src={close}
+              alt="close item"
+              onClick={(e) => {
+                this.closeItem(e);
+              }}
+            />
+            <div className="header">{itemContent[i]['secondHeader']}</div>
+            <div className="description">
+              <ul>
+                {itemContent[i]['secondDescription'].map((item, i, arr) => {
+                  return <li key={i}>{item}</li>;
+                })}
+              </ul>
+            </div>
+          </div>
         </div>
       );
     });
-    return (
-      <section className="product-wrapper">
-        {item}
-        {/* <div
-          className="product-item animate"
-          onMouseEnter={(event) => this.animateItem(event)}
-          onMouseLeave={this.stopAnimate}
-        >
-          <div className="product-item__hidden-window">ggg</div>
-          <div className="first-description">
-            <div className="header">{this.props.itemContent[1]}</div>
-            <div className="description">Lorem ipsum dolor sit amet.</div>
-            <i onClick={this.pulseClick} />
-          </div>
-          <div className="full-description" />
-        </div> */}
-      </section>
-    );
+    return <section className="product-wrapper">{item}</section>;
   }
 }
 

@@ -48,15 +48,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- <img src="img/mouse_scroll.svg" alt="scroll now!" class="scroll-icon"> -->
   </body>
   <script>
       function testSp()
   {
     setTimeout(function() {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    //document.body.scrollTop = document.documentElement.scrollTop = 0;
+    window.location.href = '/';
     }, 1);
   }
-  window.onload=testSp;
+  //window.onbeforeunload=testSp;
     </script>
 </html>
 

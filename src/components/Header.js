@@ -26,7 +26,8 @@ export class Nav extends Component {
       .from('.App-logo', 1.5, { opacity: 0, force3D: true }, 0.5)
       .staggerFrom('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, -0.5)
       .from('.info h1', 0.5, { y: 100, opacity: 0 }, 3.5)
-      .from('.info h2', 0.5, { y: 100, opacity: 0 }, '-=0.2');
+      .from('.info h2', 0.5, { y: 100, opacity: 0 }, '-=0.2')
+      .from('.info .scroll-icon', 0.5, { y: 100, opacity: 0 }, '-=0.2');
   }
   componentDidMount() {
     this.animateNav();

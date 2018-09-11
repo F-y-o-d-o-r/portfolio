@@ -30,7 +30,8 @@ class Info extends Component {
       .staggerTo('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, -0.5)
       .fromTo('header', 0.5, { y: 0, delay: 1 }, { y: -100, delay: 1 }, 0.5)
       .fromTo('.info h1', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, 1.5)
-      .fromTo('.info h2', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, '-=0.2');
+      .fromTo('.info h2', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, '-=0.2')
+      .fromTo('.info .scroll-icon', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, '-=0.2');
     new ScrollMagic.Scene({
       triggerHook: 'onCenter',
       offset: 200,
@@ -70,6 +71,7 @@ class Info extends Component {
                 chat
               </a>
             </h2>
+            <img src="img/mouse_scroll.svg" alt="scroll now!" class="scroll-icon" />
           </div>
           <div className="blocks-wrapper">
             <div className="text-wrapper animate">
@@ -110,7 +112,7 @@ class Info extends Component {
                   target="_blank"
                   title="My Bitbucket profile in new window"
                 >
-                  Bitbucket
+                  Bitbucket, Bootstrap
                 </a>,{' '}
                 <a
                   href="https://github.com/F-y-o-d-o-r"

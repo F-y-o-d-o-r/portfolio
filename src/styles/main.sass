@@ -35,3 +35,19 @@ body
     &:hover
       color: rgba(220, 210, 44, 1)
       background-color: rgba(44, 44, 44, 1.000)
+
+.scroll-icon
+  position: fixed
+  height: 10rem
+  width: 10rem
+  bottom: 1rem
+  left: 50%
+  animation: scroll 3s ease-in-out infinite
+
+@keyframes scroll
+  0%
+    transform: scale(1) translateX(-50%)
+  50%
+    transform: scale(0.8) translateX(-65%)
+  100%
+    transform: scale(1) translateX(-50%)
