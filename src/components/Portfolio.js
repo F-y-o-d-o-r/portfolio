@@ -3,11 +3,9 @@ import { TimelineLite } from 'gsap/TweenMax';
 import portfolio from './portfolio.json';
 import 'gsap';
 import * as ScrollMagic from 'scrollmagic';
-//import { gsap, TimelineMax, TweenMax } from 'gsap';
-//const ScrollMagic = require('ScrollMagic');
-require('scrollmagic/scrollmagic/uncompressed/ScrollMagic.js');
-require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js');
-require('scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js');
+// require('scrollmagic/scrollmagic/uncompressed/ScrollMagic.js');
+// require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js');
+// require('scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js');
 //https://www.iconfinder.com/icons/1214978/mouse_scroll_icon
 class Portfolio extends Component {
   constructor(props) {
@@ -16,7 +14,7 @@ class Portfolio extends Component {
     this.json = '';
   }
   componentDidMount() {
-    console.log(portfolio);
+    //console.log(portfolio);
     const controller = new ScrollMagic.Controller();
     //const tween = TweenMax.from('.my-work-header', 1, { x: -100, opacity: 0 });
     new ScrollMagic.Scene({
@@ -70,7 +68,7 @@ class Works extends Component {
       b.addEventListener('click', addElement);
     });
     function addElement(e) {
-      console.log(e.currentTarget);
+      //console.log(e.currentTarget);
       let sDiv;
       let px;
       var addDiv = document.createElement('div'),
@@ -100,13 +98,17 @@ class Works extends Component {
           className="product-item animate"
           onMouseEnter={(event) => this.animateItem(event)}
           onMouseLeave={this.stopAnimate}
+          key={i}
         >
           <div
             className="product-item__hidden-window"
-            style={{ background: 'url(img/portfolio/' + this.props.itemContent[3] + ')' }}
-          >
-            ggg
-          </div>
+            style={{
+              background:
+                'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/portfolio/' +
+                this.props.itemContent[3] +
+                ')'
+            }}
+          />
           <div className="first-description">
             <div className="header">{this.props.itemContent[1]}</div>
             <div className="description">Lorem ipsum dolor sit amet.</div>

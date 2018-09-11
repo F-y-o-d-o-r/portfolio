@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
-//import { TimelineLite } from 'gsap/TweenMax';
 import { TimelineMax, TweenMax } from 'gsap';
 import { Nav } from './Header';
-//require('ScrollMagicIndicators');
 require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js');
 require('scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js');
 

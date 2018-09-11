@@ -45,8 +45,9 @@ section.portfolio {
         height: 60%;
         width: 100%;
         position: absolute;
-        background-size: cover;
-        background-position: center;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
         transition: all ease .4s;
         top: -100%;
         display: flex;
