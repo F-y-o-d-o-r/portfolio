@@ -47,7 +47,7 @@ class Contacts extends Component {
               Feel free to reach out at <b /> or follow me on
               <b>
                 {' '}
-                <a href="skype:f-y-od-o-r?chat" target="_blank" rel="noopener noreferrer">
+                <a href="skype:f-y-o-d-o-r?chat" target="_blank" rel="noopener noreferrer">
                   Skype
                 </a>
               </b>,{' '}
