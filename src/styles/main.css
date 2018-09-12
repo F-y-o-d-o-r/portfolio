@@ -372,12 +372,20 @@ section.first-screen {
       font-size: 2.2rem; }
     section.first-screen .container .blocks-wrapper {
       margin-top: 20rem;
-      margin-bottom: 20rem;
+      margin-bottom: 10rem;
       display: flex;
       justify-content: space-around;
       align-items: flex-end; }
-      section.first-screen .container .blocks-wrapper .text-wrapper {
+      section.first-screen .container .blocks-wrapper .text-and-header-wrapper {
         width: 40%; }
+        section.first-screen .container .blocks-wrapper .text-and-header-wrapper h3 {
+          font-family: 'Abril Fatface', cursive;
+          font-weight: 600;
+          font-size: 3.2rem;
+          line-height: 4.2rem;
+          color: #2c2c2c; }
+        section.first-screen .container .blocks-wrapper .text-and-header-wrapper .smoth-show-from-div {
+          margin-bottom: 3rem; }
       section.first-screen .container .blocks-wrapper .second-info {
         width: 40%; }
 
@@ -483,17 +491,34 @@ section.portfolio {
             height: 2rem;
             width: 2rem;
             cursor: pointer; }
+        section.portfolio .container .product-wrapper .product-item .first-description .date,
+        section.portfolio .container .product-wrapper .product-item .full-description .date {
+          position: absolute;
+          bottom: 1rem;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 1.3rem;
+          color: #2c2c2c; }
         section.portfolio .container .product-wrapper .product-item .first-description .description,
         section.portfolio .container .product-wrapper .product-item .full-description .description {
           font-family: 'Source Sans Pro', sans-serif;
           font-weight: 300;
           font-size: 2.2rem;
-          line-height: 1.4rem;
+          line-height: 2.4rem;
           color: #2c2c2c; }
+      section.portfolio .container .product-wrapper .product-item .first-description .description {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+        color: #2c2c2c; }
       section.portfolio .container .product-wrapper .product-item .full-description {
         height: 100%;
         bottom: -110%;
         position: relative; }
+        section.portfolio .container .product-wrapper .product-item .full-description .header {
+          margin-bottom: 2rem; }
         section.portfolio .container .product-wrapper .product-item .full-description img {
           position: absolute;
           top: 2rem;
@@ -505,7 +530,31 @@ section.portfolio {
           margin-top: 3rem;
           padding-left: 2.5rem; }
           section.portfolio .container .product-wrapper .product-item .full-description ul li {
-            margin-bottom: 1.5rem; }
+            margin-bottom: 1rem; }
+            section.portfolio .container .product-wrapper .product-item .full-description ul li span {
+              font-family: 'Source Sans Pro', sans-serif;
+              font-weight: 600;
+              font-size: 2.2rem;
+              line-height: 2.4rem;
+              color: #2c2c2c; }
+        section.portfolio .container .product-wrapper .product-item .full-description .links-wrapper {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          left: 0;
+          height: 20%;
+          border-top: 1px solid lightgrey;
+          display: flex;
+          justify-content: space-around; }
+          section.portfolio .container .product-wrapper .product-item .full-description .links-wrapper img {
+            height: 3rem;
+            width: auto;
+            right: auto;
+            top: 50%;
+            transform: translateY(-50%); }
+          section.portfolio .container .product-wrapper .product-item .full-description .links-wrapper .code {
+            margin-left: -2rem;
+            height: 2.5rem; }
       section.portfolio .container .product-wrapper .product-item .show-description__full {
         bottom: 0 !important; }
     section.portfolio .container .product-wrapper .show-shadow {
@@ -518,8 +567,6 @@ section.portfolio {
       transition: all ease .4s; }
     section.portfolio .container .text-hide h3 {
       transition: all ease .4s .4s; }
-  section.portfolio .container .show-text .text-hide > * {
-    transform: translateY(0%); }
 
 @keyframes effect {
   50% {
@@ -677,8 +724,23 @@ body {
 
 @keyframes scroll {
   0% {
-    transform: scale(1) translateX(-50%); }
+    transform: translate(-50%, -1rem); }
   50% {
-    transform: scale(0.8) translateX(-65%); }
+    transform: translate(-50%, 1rem); }
   100% {
-    transform: scale(1) translateX(-50%); } }
+    transform: translate(-50%, -1rem); } }
+
+/*all other*/
+.text-hide-all {
+  overflow: hidden; }
+
+.show-this-text {
+  transform: translateY(100%);
+  transition: all ease .4s; }
+
+.show-text {
+  transform: translateY(0%) !important; }
+
+/*portfolio*/
+.show-text .text-hide > * {
+  transform: translateY(0%) !important; }

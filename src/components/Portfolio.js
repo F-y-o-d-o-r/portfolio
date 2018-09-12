@@ -100,7 +100,7 @@ class Works extends Component {
   }
   render() {
     const itemContent = this.props.itemContent;
-    var item = itemContent.map((item, i, arr) => {
+    var item = itemContent.reverse().map((item, i, arr) => {
       return (
         <div
           className="product-item animate"
@@ -130,6 +130,7 @@ class Works extends Component {
             <div className="header">{itemContent[i]['firstHeader']}</div>
             <div className="description">{itemContent[i]['firstDescription']}</div>
             <i className="icon-open" />
+            <div className="date">{itemContent[i]['date']}</div>
           </div>
           <div className="full-description">
             <img
@@ -146,6 +147,36 @@ class Works extends Component {
                   return <li key={i}>{item}</li>;
                 })}
               </ul>
+              <div className="links-wrapper">
+                {itemContent[i]['webSite'] ? (
+                  <a href={itemContent[i]['webSite']} target="_blank">
+                    <img src="img/link.svg" alt="Go to website" title="Go to website" />
+                  </a>
+                ) : (
+                  ''
+                )}
+                {itemContent[i]['webSite2'] ? (
+                  <a href={itemContent[i]['webSite2']} target="_blank">
+                    <img src="img/link.svg" alt="Go to website" title="Go to website" />
+                  </a>
+                ) : (
+                  ''
+                )}
+                {itemContent[i]['code'] ? (
+                  <a href={itemContent[i]['code']} target="_blank">
+                    <img className="code" src="img/code.svg" alt="Wiev code" title="Wiev code" />
+                  </a>
+                ) : (
+                  ''
+                )}
+                {itemContent[i]['code2'] ? (
+                  <a href={itemContent[i]['code2']} target="_blank">
+                    <img className="code" src="img/code.svg" alt="Wiev code" title="Wiev code" />
+                  </a>
+                ) : (
+                  ''
+                )}
+              </div>
             </div>
           </div>
         </div>

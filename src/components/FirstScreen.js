@@ -51,6 +51,16 @@ class Info extends Component {
         .setTween(tween2)
         .addTo(controller2);
     }
+    /*Here’s a couple of skills I’m good at*/
+    let controllerFirstScreen = new ScrollMagic.Controller();
+    new ScrollMagic.Scene({
+      triggerElement: '.smoth-show-from-div',
+      duration: 0
+    })
+      //.setTween(tween)
+      .setClassToggle('.show-this-text', 'show-text')
+      .addIndicators({ name: 'smoth-show-from-div' })
+      .addTo(controllerFirstScreen);
   }
   smothScroll(e) {
     e.preventDefault();
@@ -71,32 +81,46 @@ class Info extends Component {
                 chat
               </a>
             </h2>
-            <img src="img/mouse_scroll.svg" alt="scroll now!" class="scroll-icon" />
+            <img src="img/mouse_scroll.svg" alt="scroll now!" className="scroll-icon" />
           </div>
           <div className="blocks-wrapper">
-            <div className="text-wrapper animate">
-              <p>
-                <span>Here’s a couple of skills I’m good at: </span>
-                Communication I realize the importance of well-built communication. I use tools like Slack to make sure
-                we’re always on the same page. Organisation I believe it’s important to stay organised while working
-                remotely. I use the likes of Trello to keep projects on-track and under control. Project Management I
-                think it’s important to identify the discrete stages of a project and work to a schedule around those.
-                Collaboration I play well with others. I'm happy to integrate into your existing team to help get your
-                project implemented. I have a High degree in Management and Web Development and recognize the importance
-                of applying proper software development techniques to the web. I'm not a graphic designer, but I have an
-                eye for a good design. I'm comfortable using Photoshop. Documentation Often overlooked, I think it's
-                incredibly important to leave clients with a clear picture of what's been done for the next round of
-                development.
-              </p>
-              <p>
-                My work is something I do with honesty, appetite and commitment. Over the past years I had the
-                opportunity to drive and do hands-on work for different firms from all over the world.
-              </p>
-              <p>
-                I’m currently self-employed and working as a Full Stack Web Developer for Belka-z Company. In my spare
-                time you’ll find me exploring and traveling the world. I love new adventures, meeting new people and
-                mostly capturing the moments with my family.
-              </p>
+            <div className="text-and-header-wrapper">
+              <div className="text-hide-all smoth-show-from-div">
+                <h3 className="show-this-text">Here’s a couple of skills I’m good at: </h3>
+              </div>
+              <div className="text-wrapper animate">
+                <p>
+                  <span>Communication.</span> I realize the importance of well-built communication. I use tools like
+                  Slack to make sure we’re always on the same page. <span>Organisation.</span> I believe it’s important
+                  to stay organised while working remotely. I use the likes of Trello to keep projects on-track and
+                  under control. Project Management I think it’s important to identify the discrete stages of a project
+                  and work to a schedule around those. <span>Collaboration.</span> I play well with others. I'm happy to
+                  integrate into your existing team to help get your project implemented. <span>Degree.</span> I have a
+                  High degree in{' '}
+                  <a href="img/diploma.jpg" target="_blank" title="Diploma">
+                    Management
+                  </a>{' '}
+                  and degree in{' '}
+                  <a href="img/diploma.jpg" target="_blank" title="Diploma">
+                    Web Development
+                  </a>{' '}
+                  and recognize the importance of applying proper software development techniques to the web.{' '}
+                  <span>Design.</span> I'm not a graphic designer, but I have an eye for a good design. I'm comfortable
+                  using Photoshop and other programs for web design. <span>Documentation.</span> Often overlooked, I
+                  think it's incredibly important to leave clients with a clear picture of what's been done for the next
+                  round of development.
+                </p>
+                <p>
+                  <span>All in all.</span> My work is something I do with honesty, appetite and commitment. Over the
+                  past year I had the opportunity to drive and do hands-on work with different firms from all over the
+                  world.
+                </p>
+                <p>
+                  I’m currently self-employed and working as a Full Stack Web Developer for Belka-z Company. In my spare
+                  time you’ll find me exploring and traveling the world. I love new adventures, meeting new people and
+                  mostly capturing the moments with my family.
+                </p>
+              </div>
             </div>
             <div className="second-info animate">
               <p>
@@ -112,7 +136,7 @@ class Info extends Component {
                   target="_blank"
                   title="My Bitbucket profile in new window"
                 >
-                  Bitbucket, Bootstrap
+                  Bitbucket
                 </a>,{' '}
                 <a
                   href="https://github.com/F-y-o-d-o-r"
@@ -121,7 +145,7 @@ class Info extends Component {
                   title="My Github profile in new window"
                 >
                   Github
-                </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine, Photoshop, Avocode
+                </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine, Photoshop, Avocode, Zeplin
               </p>
             </div>
           </div>

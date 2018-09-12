@@ -69,11 +69,19 @@ section.first-screen {
       font-size: 2.2rem; }
     section.first-screen .container .blocks-wrapper {
       margin-top: 20rem;
-      margin-bottom: 20rem;
+      margin-bottom: 10rem;
       display: flex;
       justify-content: space-around;
       align-items: flex-end; }
-      section.first-screen .container .blocks-wrapper .text-wrapper {
+      section.first-screen .container .blocks-wrapper .text-and-header-wrapper {
         width: 40%; }
+        section.first-screen .container .blocks-wrapper .text-and-header-wrapper h3 {
+          font-family: 'Abril Fatface', cursive;
+          font-weight: 600;
+          font-size: 3.2rem;
+          line-height: 4.2rem;
+          color: #2c2c2c; }
+        section.first-screen .container .blocks-wrapper .text-and-header-wrapper .smoth-show-from-div {
+          margin-bottom: 3rem; }
       section.first-screen .container .blocks-wrapper .second-info {
         width: 40%; }
