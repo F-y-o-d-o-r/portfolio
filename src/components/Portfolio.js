@@ -24,7 +24,7 @@ class Portfolio extends Component {
     })
       //.setTween(tween)
       .setClassToggle('.intro', 'show-text')
-      .addIndicators({ name: 'My Latest Work' })
+      //.addIndicators({ name: 'My Latest Work' })
       .addTo(controller);
   }
   render() {

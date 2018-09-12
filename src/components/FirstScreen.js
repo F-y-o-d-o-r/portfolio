@@ -38,7 +38,7 @@ class Info extends Component {
       duration: 0
     })
       .setTween(timeline)
-      .addIndicators({ name: 'First screen' })
+      //.addIndicators({ name: 'First screen' })
       .addTo(controller);
     // SECOND TEXT SCREEN - TweenMax
     var all = document.querySelectorAll('.animate');
@@ -61,7 +61,7 @@ class Info extends Component {
     })
       //.setTween(tween)
       .setClassToggle('.show-this-text', 'show-text')
-      .addIndicators({ name: 'smoth-show-from-div' })
+      //.addIndicators({ name: 'smoth-show-from-div' })
       .addTo(controllerFirstScreen);
   }
   smothScroll(e) {

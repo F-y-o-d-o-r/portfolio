@@ -15,7 +15,7 @@ class Contacts extends Component {
       duration: 0
     })
       .setClassToggle('.show-this-text2', 'show-text')
-      .addIndicators({ name: 'smoth-show-from-div' })
+      //.addIndicators({ name: 'smoth-show-from-div' })
       .addTo(controllerContacts);
     new ScrollMagic.Scene({
       triggerElement: '.contacts-links',
