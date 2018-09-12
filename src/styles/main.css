@@ -551,9 +551,9 @@ section.portfolio {
             width: auto;
             right: auto;
             top: 50%;
-            transform: translateY(-50%); }
+            transform: translateY(-50%);
+            margin-left: -2rem; }
           section.portfolio .container .product-wrapper .product-item .full-description .links-wrapper .code {
-            margin-left: -2rem;
             height: 2.5rem; }
       section.portfolio .container .product-wrapper .product-item .show-description__full {
         bottom: 0 !important; }
@@ -564,9 +564,9 @@ section.portfolio {
     section.portfolio .container .text-hide > * {
       transform: translateY(100%); }
     section.portfolio .container .text-hide h2 {
-      transition: all ease .4s; }
+      transition: all ease 1s; }
     section.portfolio .container .text-hide h3 {
-      transition: all ease .4s .4s; }
+      transition: all ease 1s .4s; }
 
 @keyframes effect {
   50% {
@@ -736,7 +736,7 @@ body {
 
 .show-this-text {
   transform: translateY(100%);
-  transition: all ease .4s; }
+  transition: all 1.5s ease; }
 
 .show-text {
   transform: translateY(0%) !important; }

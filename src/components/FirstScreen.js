@@ -72,7 +72,7 @@ class Info extends Component {
         <div className="info">
           <div className="info__header-wrapper">
             <h1>
-              Hello, my name is Fyodor.<br />I am a Front End Web Developer living in Chernigov, Ukraine
+              Hello, my name is Fyodor.<br />I am a Fullstack Web Developer living in Chernigov, Ukraine
             </h1>
             <h2>
               Producing high quality responsive websites.<br />I can help you to create your next product.<br />Have a
