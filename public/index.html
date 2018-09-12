@@ -54,8 +54,8 @@
       function testSp()
   {
     setTimeout(function() {
-    //document.body.scrollTop = document.documentElement.scrollTop = 0;
-    window.location.href = '/';
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    //window.location.href = '/';
     }, 1);
   }
   window.onbeforeunload=testSp;
