@@ -46,7 +46,8 @@ class Info extends Component {
     for (var i = 0, max = all.length; i < max; i++) {
       const tween2 = TweenMax.from(all[i], 0.5, { y: 100, opacity: 0 });
       new ScrollMagic.Scene({
-        triggerElement: all[i]
+        triggerElement: all[i],
+        offset: -200
       })
         .setTween(tween2)
         .addTo(controller2);
@@ -55,7 +56,8 @@ class Info extends Component {
     let controllerFirstScreen = new ScrollMagic.Controller();
     new ScrollMagic.Scene({
       triggerElement: '.smoth-show-from-div',
-      duration: 0
+      duration: 0,
+      offset: -100
     })
       //.setTween(tween)
       .setClassToggle('.show-this-text', 'show-text')

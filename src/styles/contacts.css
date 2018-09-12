@@ -2,9 +2,30 @@
 section.contacts {
   position: relative;
   min-height: calc(100vh - 70px);
-  background: url("./img/photo3.jpg") center; }
+  background-color: #fff;
+  transition: all 0.8s ease; }
   section.contacts .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    padding-top: 10rem; }
+    section.contacts .container h3 {
+      margin: 0;
+      font-family: 'Abril Fatface', cursive;
+      font-weight: 600;
+      font-size: 5rem;
+      line-height: 6rem;
+      color: #2c2c2c;
+      text-transform: uppercase; }
+    section.contacts .container .smoth-show-from-div-email {
+      margin-bottom: 7rem; }
+      section.contacts .container .smoth-show-from-div-email a {
+        color: #2c2c2c;
+        background-color: #fff; }
+    section.contacts .container .contacts-links {
+      margin-top: 5rem; }
+    section.contacts .container .top {
+      text-align: center; }
+      section.contacts .container .top a {
+        display: inline-block;
+        margin-top: 32.5rem; }
+
+.background-color {
+  background-color: #BFD7D9 !important; }
