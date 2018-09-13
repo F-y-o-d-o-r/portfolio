@@ -27,11 +27,11 @@ class Contacts extends Component {
   render() {
     return (
       <section className="contacts" id="contacts">
-        <div className="container">
+        <div className="container main-contacts-wrapper">
           <div className="text-hide-all smoth-show-from-div-email">
             <h3 className="show-this-text2">
               <a href="mailto:fyodor.work@gmail.com" title="Mail me!">
-                fyodor.work@gmail.com
+                fyodor.work&shy;@gmail.com
               </a>{' '}
             </h3>
           </div>
@@ -75,7 +75,7 @@ class Contacts extends Component {
             </p>
           </div>
         </div>
-        <div className="container">
+        <div className="container contacts-footer">
           <div className="top">
             <a onClick={(e) => this.Nav.smothScroll(e)} href="#top" title="To top" className="contacts-top">
               Top

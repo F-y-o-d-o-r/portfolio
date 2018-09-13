@@ -4,17 +4,27 @@ section.contacts
   min-height: calc(100vh - 70px)
   background-color: #fff
   transition: all 0.8s ease
-  .container
+  .main-contacts-wrapper
     padding-top: 10rem
+    @media (max-width: 1024px)
+      padding-top: 7rem
     h3
       margin: 0
       +ffh(5, 6)
       text-transform: uppercase
+      @media (max-width: 1024px)
+        +ffh(3, 4.5)
     .smoth-show-from-div-email
       margin-bottom: 7rem
+      @media (max-width: 1024px)
+        margin-bottom: 3rem
       a
         color: rgba(44, 44, 44, 1.000)
         background-color: #fff
+    p
+      @media (max-width: 1024px)
+        +ff(1.8, 3)
+  .contacts-footer
     .contacts-links
       margin-top: 5rem
     .top
@@ -24,6 +34,8 @@ section.contacts
       justify-content: space-around
       a
         display: inline-block
+        @media (max-width: 1024px)
+          +ff(1.8, 3)
 .background-color
   background-color: #BFD7D9!important
 

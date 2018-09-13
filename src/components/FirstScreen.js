@@ -28,7 +28,7 @@ class Info extends Component {
     timeline
       .fromTo('.App-logo', 0.1, { opacity: 1, force3D: true }, { opacity: 0 }, +0.5)
       .staggerTo('.navAnimate', 0.5, { opacity: 0, right: 30, delay: 0, force3D: true }, -0.5)
-      .fromTo('header', 0.5, { y: 0, delay: 1 }, { y: -100, delay: 1 }, 0.5)
+      .fromTo('header', 0.5, { y: 0, delay: 1 }, { y: -150, delay: 1 }, 0.5)
       .fromTo('.info h1', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, 1.5)
       .fromTo('.info h2', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, '-=0.2')
       .fromTo('.info .scroll-icon', 0.5, { y: 0, opacity: 1 }, { y: 100, opacity: 0 }, '-=0.2');

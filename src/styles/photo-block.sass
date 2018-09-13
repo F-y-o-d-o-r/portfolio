@@ -4,6 +4,8 @@ section.photo
   height: 500px
   overflow: hidden
   position: relative
+  @media (max-width: 767px)
+    height: 250px
   img
     position: absolute
     top: 0
@@ -28,6 +30,10 @@ section.photo
     color: white
     position: absolute
     text-transform: uppercase
+    @media (max-width: 767px)
+      font-size: 20rem 
+    @media (max-width: 575px)
+      font-size: 15rem
   .f
     left: 0%
     top: 30%
@@ -63,15 +69,21 @@ section.photo
   .y
     left: 10%!important
     top: 20%!important
+    @media (max-width: 767px)
+      top: 0%!important
   .o
     left: 20%!important
     top: 80%!important
   .d
     left: 35%!important
     top: 20%!important
+    @media (max-width: 767px)
+      top: 0%!important
   .oo
     left: 50%!important
     top: 80%!important
   .r
     left: 70%!important
     top: 20%!important
+    @media (max-width: 767px)
+      top: 0%!important

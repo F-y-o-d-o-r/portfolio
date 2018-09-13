@@ -8,18 +8,24 @@ section.first-screen
   position: relative
   @media (max-width: 1024px)
     padding-bottom: 3rem
+  @media (max-width: 767px)
+    padding-bottom: 1.5rem
   .container
     padding-top: 10rem
     z-index: 1
     color: rgba(44, 44, 44, 1.000)
-    @media (max-width: 767px) // TODO
-      padding-top: 3rem
+    @media (max-width: 575px)
+      padding-top: 5rem
     @media (max-width: 400px)
-      padding-top: 13.2rem
+      padding-top: 7rem
     .info__header-wrapper
       display: flex
       justify-content: space-around
       margin-bottom: 5.5rem
+      @media (max-width: 1024px)
+        justify-content: space-between
+      @media (max-width: 767px)
+        flex-direction: column
     p
       +ff(2.2, 4.2)
       margin: 0
@@ -28,13 +34,13 @@ section.first-screen
     h1
       margin: 0
       margin-bottom: 5rem
-      +ffh
-      font-size: 5rem
-      line-height: 6.4rem
+      +ffh(5, 6.4)
       width: 40%
+      @media (max-width: 1024px)
+        +ffh(3, 4.5)
+        width: 50%
       @media (max-width: 767px)
-        margin-bottom: 2.5rem
-        font-size: 3rem
+        width: 100%
       span
         display: inline-block
         transform: translateY(0px)
@@ -45,10 +51,12 @@ section.first-screen
       font-family: 'Source Sans Pro', sans-serif
       font-weight: 600
       width: 40%
+      @media (max-width: 1024px)
+        +ffb(1.8, 3)
+        width: 45%
       @media (max-width: 767px)
-        font-size: 2rem
-        margin: 0 auto 3rem
-      
+        width: 100%
+        margin: 0
     h3
       margin: 0
       font-size: 2.2rem
@@ -58,11 +66,40 @@ section.first-screen
       display: flex
       justify-content: space-around
       align-items: flex-end
+      @media (max-width: 1024px)
+        margin-top: 5rem
+      @media (max-width: 767px)
+        flex-direction: column
       .text-and-header-wrapper
         width: 40%
+        @media (max-width: 767px)
+          width: 100%
         h3
           +ffh(3.2, 4.2)
+          @media (max-width: 1024px)
+            +ffh(2.5, 3.5)
         .smoth-show-from-div
           margin-bottom: 3rem
+          @media (max-width: 1024px)
+            margin-bottom: 1rem
+          @media (max-width: 767px)
+            margin-bottom: 3rem
+        .text-wrapper
+          p
+            @media (max-width: 1024px)
+              +ff(1.8, 3)
+          span
+            @media (max-width: 1024px)
+              +ffb(1.8, 3)
       .second-info
         width: 40%
+        @media (max-width: 767px)
+          width: 100%
+          margin-top: 3rem
+        p
+          @media (max-width: 1024px)
+            +ff(1.8, 3)
+        span
+          @media (max-width: 1024px)
+            +ffb(1.8, 3)
+        

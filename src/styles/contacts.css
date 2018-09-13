@@ -4,9 +4,12 @@ section.contacts {
   min-height: calc(100vh - 70px);
   background-color: #fff;
   transition: all 0.8s ease; }
-  section.contacts .container {
+  section.contacts .main-contacts-wrapper {
     padding-top: 10rem; }
-    section.contacts .container h3 {
+    @media (max-width: 1024px) {
+      section.contacts .main-contacts-wrapper {
+        padding-top: 7rem; } }
+    section.contacts .main-contacts-wrapper h3 {
       margin: 0;
       font-family: 'Abril Fatface', cursive;
       font-weight: 600;
@@ -14,20 +17,44 @@ section.contacts {
       line-height: 6rem;
       color: #2c2c2c;
       text-transform: uppercase; }
-    section.contacts .container .smoth-show-from-div-email {
+      @media (max-width: 1024px) {
+        section.contacts .main-contacts-wrapper h3 {
+          font-family: 'Abril Fatface', cursive;
+          font-weight: 600;
+          font-size: 3rem;
+          line-height: 4.5rem;
+          color: #2c2c2c; } }
+    section.contacts .main-contacts-wrapper .smoth-show-from-div-email {
       margin-bottom: 7rem; }
-      section.contacts .container .smoth-show-from-div-email a {
+      @media (max-width: 1024px) {
+        section.contacts .main-contacts-wrapper .smoth-show-from-div-email {
+          margin-bottom: 3rem; } }
+      section.contacts .main-contacts-wrapper .smoth-show-from-div-email a {
         color: #2c2c2c;
         background-color: #fff; }
-    section.contacts .container .contacts-links {
-      margin-top: 5rem; }
-    section.contacts .container .top {
-      margin-top: 32.5rem;
-      text-align: center;
-      display: flex;
-      justify-content: space-around; }
-      section.contacts .container .top a {
-        display: inline-block; }
+    @media (max-width: 1024px) {
+      section.contacts .main-contacts-wrapper p {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 300;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        color: #2c2c2c; } }
+  section.contacts .contacts-footer .contacts-links {
+    margin-top: 5rem; }
+  section.contacts .contacts-footer .top {
+    margin-top: 32.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around; }
+    section.contacts .contacts-footer .top a {
+      display: inline-block; }
+      @media (max-width: 1024px) {
+        section.contacts .contacts-footer .top a {
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 300;
+          font-size: 1.8rem;
+          line-height: 3rem;
+          color: #2c2c2c; } }
 
 .background-color {
   background-color: #BFD7D9 !important; }
