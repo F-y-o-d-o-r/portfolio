@@ -121,14 +121,7 @@
       "firstHeader": "Infinity lashes",
       "firstDescription": "Online store (Frontend)",
       "secondHeader": "Accomplishments",
-      "secondDescription": [
-        "Frontend part",
-        "Various fixes after previous developers",
-        "Scroll animation with Scrollmagic",
-        "Sass",
-        "Gulp",
-        "Bootstrap 4"
-      ],
+      "secondDescription": [ "Frontend part", "Sass", "Gulp", "Bootstrap 4" ],
       "webSite": "http://test.belka-z.com",
       "webSite2": "https://infinity-lashes.de/",
       "code": "https://bitbucket.org/Fyodor_/kompetenzcenter/src/master/",
