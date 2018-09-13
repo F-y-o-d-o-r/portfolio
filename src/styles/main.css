@@ -393,7 +393,9 @@ section.first-screen {
 section.portfolio {
   position: relative;
   min-height: calc(100vh - 70px);
-  padding-bottom: 10rem; }
+  padding-bottom: 10rem;
+  background-color: #fff;
+  transition: all 0.8s ease; }
   section.portfolio .container .intro {
     padding-top: 10rem;
     color: #dcd22c;
@@ -610,10 +612,12 @@ section.contacts {
     section.contacts .container .contacts-links {
       margin-top: 5rem; }
     section.contacts .container .top {
-      text-align: center; }
+      margin-top: 32.5rem;
+      text-align: center;
+      display: flex;
+      justify-content: space-around; }
       section.contacts .container .top a {
-        display: inline-block;
-        margin-top: 32.5rem; }
+        display: inline-block; }
 
 .background-color {
   background-color: #BFD7D9 !important; }

@@ -18,10 +18,10 @@ class Contacts extends Component {
       //.addIndicators({ name: 'smoth-show-from-div' })
       .addTo(controllerContacts);
     new ScrollMagic.Scene({
-      triggerElement: '.contacts-links',
+      triggerElement: '.contacts',
       duration: 0
     })
-      .setClassToggle('.contacts, .contacts h3 a', 'background-color')
+      .setClassToggle('.contacts, .contacts h3 a, .portfolio', 'background-color')
       .addTo(controllerContacts);
   }
   render() {
@@ -36,13 +36,13 @@ class Contacts extends Component {
             </h3>
           </div>
           <div className="animate">
-            <p>
+            {/* <p>
               Are you looking for a professional, communicative & punctual software engineer with extensive full-stack
               web development skills for your next project? If you have an application you are interested in developing
               with web technology, I’d love to work with you on it. I’m a full-stack web developer which means I can
               bring your project from concept to completion. I work primarily with Php and Node.js on the back-end and
               JavaScript on the front-end but picking up new languages or frameworks isn’t a problem.
-            </p>
+            </p> */}
             <p className="contacts-links">
               Feel free to reach out at <b /> or follow me on
               <b>
@@ -77,8 +77,20 @@ class Contacts extends Component {
         </div>
         <div className="container">
           <div className="top">
-            <a onClick={(e) => this.Nav.smothScroll(e)} href="#top">
-              top
+            <a onClick={(e) => this.Nav.smothScroll(e)} href="#top" title="To top" className="contacts-top">
+              Top
+            </a>
+
+            <a href="#about" onClick={(e) => this.Nav.smothScroll(e)} title="Info about me" className="contacts-about">
+              About
+            </a>
+            <a
+              href="#portfolio"
+              onClick={(e) => this.Nav.smothScroll(e)}
+              title="My portfolio"
+              className="contacts-portfolio"
+            >
+              Portfolio
             </a>
           </div>
         </div>

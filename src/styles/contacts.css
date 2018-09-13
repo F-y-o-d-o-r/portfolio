@@ -22,10 +22,12 @@ section.contacts {
     section.contacts .container .contacts-links {
       margin-top: 5rem; }
     section.contacts .container .top {
-      text-align: center; }
+      margin-top: 32.5rem;
+      text-align: center;
+      display: flex;
+      justify-content: space-around; }
       section.contacts .container .top a {
-        display: inline-block;
-        margin-top: 32.5rem; }
+        display: inline-block; }
 
 .background-color {
   background-color: #BFD7D9 !important; }

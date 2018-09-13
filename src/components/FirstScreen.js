@@ -9,7 +9,7 @@ class FirstScreen extends Component {
   componentDidMount() {}
   render() {
     return (
-      <section className="first-screen" id="about">
+      <section className="first-screen">
         <Info />
       </section>
     );
@@ -85,7 +85,7 @@ class Info extends Component {
             </h2>
             <img src="img/mouse_scroll.svg" alt="scroll now!" className="scroll-icon" />
           </div>
-          <div className="blocks-wrapper">
+          <div className="blocks-wrapper" id="about">
             <div className="text-and-header-wrapper">
               <div className="text-hide-all smoth-show-from-div">
                 <h3 className="show-this-text">Here’s a couple of skills I’m good at: </h3>
