@@ -99,11 +99,11 @@ class Info extends Component {
                   and work to a schedule around those. <span>Collaboration.</span> I play well with others. I'm happy to
                   integrate into your existing team to help get your project implemented. <span>Degree.</span> I have a
                   High degree in{' '}
-                  <a href="img/diploma.jpg" target="_blank" title="Diploma">
+                  <a href="img/diplomas/institute_without_number.jpg" target="_blank" title="Diploma">
                     Management
                   </a>{' '}
                   and degree in{' '}
-                  <a href="img/diploma.jpg" target="_blank" title="Diploma">
+                  <a href="img/diplomas/itstep_without_number.jpg" target="_blank" title="Diploma">
                     Web Development
                   </a>{' '}
                   and recognize the importance of applying proper software development techniques to the web.{' '}
