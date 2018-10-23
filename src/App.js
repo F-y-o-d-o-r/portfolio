@@ -6,7 +6,6 @@ import FirstScreen from './components/FirstScreen';
 import Photo from './components/PhotoBlock';
 import Portfolio from './components/Portfolio';
 import Contacts from './components/Contacts';
-import BackForm from './components/BackForm';
 
 class App extends Component {
   componentDidMount() {}
@@ -23,7 +22,6 @@ class App extends Component {
         <Photo />
         <Portfolio />
         <Contacts />
-        <BackForm />
       </React.Fragment>
     );
   }

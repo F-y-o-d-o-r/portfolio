@@ -904,6 +904,48 @@ section.photo {
     .show-photo .r {
       top: 0% !important; } }
 
+form {
+  margin-bottom: 200px; }
+  form p {
+    margin: 0;
+    padding: 20px 0 0 0; }
+  form input,
+  form textarea,
+  form button {
+    display: block; }
+  form button {
+    color: #2f247f;
+    background-color: #dcd22c;
+    transition: all ease .4s;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px; }
+    form button:hover {
+      color: #dcd22c;
+      background-color: #2c2c2c; }
+  form .form-error {
+    font-size: 15px;
+    color: #E23137;
+    font-weight: bold; }
+  form .modal {
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.modal-button {
+  color: #2f247f;
+  background-color: #dcd22c;
+  transition: all ease .4s;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px; }
+  .modal-button:hover {
+    color: #dcd22c;
+    background-color: #2c2c2c; }
+
 html {
   font-size: 10px; }
 
