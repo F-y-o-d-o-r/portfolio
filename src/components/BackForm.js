@@ -22,7 +22,7 @@ class BackForm extends React.Component {
     if (true) {
       post_send('body', 'static/media/mail.php', [ 'email', 'message' ], [ this.state.email, this.state.message ]);
       this.setState({ showModal: true });
-      alert('sent');
+      alert(this.state.captcha);
     } else {
       alert('you are robot!');
     }
