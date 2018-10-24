@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import ReCAPTCHA from 'react-google-recaptcha';
 let autosize = require('autosize');
 require('../mail/php/mail.php');
 
@@ -10,14 +11,21 @@ class BackForm extends React.Component {
     this.state = {
       showModal: false,
       email: '',
-      message: ''
+      message: '',
+      captcha: false
     };
     this.handleShow = this.handleShow.bind(this);
     this.handleHide = this.handleHide.bind(this);
   }
   handleShow() {
-    post_send('body', 'static/media/mail.php', [ 'email', 'message' ], [ this.state.email, this.state.message ]);
-    this.setState({ showModal: true });
+    console.log(this.state.captcha);
+    if (true) {
+      post_send('body', 'static/media/mail.php', [ 'email', 'message' ], [ this.state.email, this.state.message ]);
+      this.setState({ showModal: true });
+      alert('sent');
+    } else {
+      alert('you are robot!');
+    }
   }
 
   handleHide() {
@@ -29,7 +37,27 @@ class BackForm extends React.Component {
   componentDidMount() {
     autosize(document.querySelector('textarea'));
   }
+  onChange(value) {
+    return new Promise(function(resolve, reject) {
+      //Your code logic goes here
+      console.log('Captcha value:', value);
+      console.log(this.state.captcha);
+      this.setState({ captcha: true });
+
+      console.log(this.state.captcha);
+      //Instead of using 'return false', use reject()
+      //Instead of using 'return' / 'return true', use resolve()
+      resolve();
+    });
+    //console.log(this.state.captcha);
+    //this.setState({ captcha: true });
+
+    //console.log(this.state.captcha);
+  }
   render() {
+    const capcha = (
+      <div>{<ReCAPTCHA sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG" onChange={this.onChange} />}</div>
+    );
     const modal = this.state.showModal ? (
       <ModalWindow domNode={document.querySelector('body')}>
         <div className="modal">
@@ -58,16 +86,12 @@ class BackForm extends React.Component {
         }}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            //console.log('values=>', values.email);
-            //console.log(JSON.stringify(values, null, 2));
             this.setState((state) => {
-              //state.message = JSON.stringify(values, null, 2);
               state.message = values.textarea;
               state.email = values.email;
             });
             this.handleShow();
             setSubmitting(false);
-            //console.log('this.state.message=>', this.state.message, 'this.state.email=>', this.state.email);
             values.email = '';
             values.textarea = '';
           }, 400);
@@ -81,6 +105,9 @@ class BackForm extends React.Component {
             <p>Message</p>
             <Field type="textarea" name="textarea" component="textarea" />
             <ErrorMessage name="textarea" component="div" className="form-error" />
+            {/* <div className="g-recaptcha" data-sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG" /> */}
+            {capcha}
+            <div className="text-danger" id="recaptchaError" />
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
@@ -133,7 +160,7 @@ function func_response() {
   if (req.readyState === 4 && req.status === 200) {
     //!!! - проверка условий "успех"// свойство readyState - код готовности сервера, значение 4 – «обработка запроса» (первое стандартное условие для получения ответа)
     // свойство status – код ответа сервера, значение 200 – «запрос обработан успешно» (второе стандартное условие для получения ответа)
-    // console.log('sent');
+    //console.log('sent');
     // let form = new BackForm();
     // form.handleShow();
     // console.log('sent2');
