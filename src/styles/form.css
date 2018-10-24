@@ -10,6 +10,8 @@ form {
   form input,
   form textarea {
     width: 100%; }
+  form textarea {
+    min-height: 100px; }
   form button {
     display: block;
     color: #2f247f;
