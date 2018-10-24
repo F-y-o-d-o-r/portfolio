@@ -1,13 +1,17 @@
 form
   margin-bottom: 200px
+  width: 50%
+  @media (max-width: 600px)
+    width: 100%
   p
     margin: 0
     padding: 20px 0 0 0
   input,
-  textarea,
+  textarea
+    width: 100%
+    
   button
     display: block
-  button
     color: #2f247f
     background-color: #dcd22c
     transition: all ease .4s
@@ -39,3 +43,15 @@ form
   &:hover
     color: #dcd22c
     background-color: #2c2c2c
+.modal
+  padding: 20px
+  width: 300px
+  position: fixed
+  top: 50%
+  background-color: #ffffff
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  outline: 1px solid #dcd22c
+  @media (max-width: 600px)
+    width: 80%
