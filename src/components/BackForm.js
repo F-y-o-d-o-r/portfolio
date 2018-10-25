@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import ReCAPTCHA from 'react-google-recaptcha';
 let autosize = require('autosize');
-require('../mail/php/mail.php');
+//require('../mail/php/mail.php');
+var phpmail = require('../mail/php/mail.php');
+var Recaptcha = require('react-recaptcha');
 
+let recaptchaInstance;
 class BackForm extends React.Component {
   constructor(props) {
     super(props);
@@ -16,16 +19,15 @@ class BackForm extends React.Component {
     };
     this.handleShow = this.handleShow.bind(this);
     this.handleHide = this.handleHide.bind(this);
+    this.callback = this.callback.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
+    this.expiredCallback = this.expiredCallback.bind(this);
+    this.resetRecaptcha = this.resetRecaptcha.bind(this);
   }
   handleShow() {
-    console.log(this.state.captcha);
-    if (true) {
-      post_send('body', 'static/media/mail.php', [ 'email', 'message' ], [ this.state.email, this.state.message ]);
-      this.setState({ showModal: true });
-      alert(this.state.captcha);
-    } else {
-      alert('you are robot!');
-    }
+    post_send('body', phpmail, [ 'email', 'message' ], [ this.state.email, this.state.message ]);
+    this.setState({ showModal: true });
+    console.log('handleShow: this.state.captcha =>', this.state.captcha);
   }
 
   handleHide() {
@@ -38,25 +40,68 @@ class BackForm extends React.Component {
     autosize(document.querySelector('textarea'));
   }
   onChange(value) {
-    return new Promise(function(resolve, reject) {
-      //Your code logic goes here
-      console.log('Captcha value:', value);
-      console.log(this.state.captcha);
-      this.setState({ captcha: true });
-
-      console.log(this.state.captcha);
-      //Instead of using 'return false', use reject()
-      //Instead of using 'return' / 'return true', use resolve()
-      resolve();
-    });
+    console.log('onchange this => ', this, ' value => ', value);
+    //this.setState({ captcha: true });
+    // console.log('value in start of onchange => ', value, thiss);
+    // return new Promise((resolve, reject) => {
+    //   if (value !== null) {
+    //     console.log('not null value of captha in promise => ', value);
+    //     resolve(true);
+    //   } else {
+    //     console.log('null value of captha in promise => ', value);
+    //     reject(false);
+    //   }
+    //   //Your code logic goes here
+    //   //console.log('new version in promise before setSate => Captcha value:', value);
+    //   //console.log('in promise before setSate =>', this.state.captcha);
+    //   //in promise before setSate => Captcha value: null
+    //   //console.log('in promise after setSate =>', this.state.captcha);
+    //   //Instead of using 'return false', use reject()
+    //   //Instead of using 'return' / 'return true', use resolve()
+    // })
+    //   .then((result) => {
+    //     console.log('result => ', result);
+    //     console.log('then this => ', this);
+    //     //this.setState({ captcha: true });
+    //   })
+    //   .catch((error) => {
+    //     console.log('error => ', error);
+    //   });
     //console.log(this.state.captcha);
     //this.setState({ captcha: true });
-
-    //console.log(this.state.captcha);
+  }
+  callback() {
+    console.log('callback => this => ', this);
+  }
+  verifyCallback(response) {
+    console.log('verifyCallback =>  this => ', this, 'verifyCallback => response => ', response);
+    this.setState({ captcha: true });
+  }
+  expiredCallback() {
+    console.log(`Recaptcha expired =>  this => `, this);
+    this.setState({ captcha: false });
+  }
+  resetRecaptcha() {
+    recaptchaInstance.reset();
+    this.setState({ captcha: false });
   }
   render() {
     const capcha = (
-      <div>{<ReCAPTCHA sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG" onChange={this.onChange} />}</div>
+      // <div>{<ReCAPTCHA sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG" onChange={this.onChange()} />}</div>
+      // <div>
+      //   <Recaptcha
+      //     sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG"
+      //     onloadCallback={this.callback()}
+      //     verifyCallback={this.verifyCallback()}
+      //   />
+      <div />
+      // <Recaptcha
+      //   sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG"
+      //   onloadCallback={callback()}
+      //   verifyCallback={verifyCallback()}
+      //   render="explicit"
+      //   theme="dark"
+      // />
     );
     const modal = this.state.showModal ? (
       <ModalWindow domNode={document.querySelector('body')}>
@@ -85,16 +130,24 @@ class BackForm extends React.Component {
           return errors;
         }}
         onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            this.setState((state) => {
-              state.message = values.textarea;
-              state.email = values.email;
-            });
-            this.handleShow();
+          console.log('onSubmit => ', this);
+          if (this.state.captcha === true) {
+            console.log('onSubmit if => ', this);
+            setTimeout(() => {
+              this.setState((state) => {
+                state.message = values.textarea;
+                state.email = values.email;
+              });
+              this.handleShow();
+              setSubmitting(false);
+              values.email = '';
+              values.textarea = '';
+              this.resetRecaptcha();
+            }, 400);
+          } else {
             setSubmitting(false);
-            values.email = '';
-            values.textarea = '';
-          }, 400);
+            console.log('you are robot!', this.state);
+          }
         }}
       >
         {({ isSubmitting, errors, touched }) => (
@@ -105,8 +158,21 @@ class BackForm extends React.Component {
             <p>Message</p>
             <Field type="textarea" name="textarea" component="textarea" />
             <ErrorMessage name="textarea" component="div" className="form-error" />
-            {/* <div className="g-recaptcha" data-sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG" /> */}
-            {capcha}
+            {/* <div
+              className="g-recaptcha"
+              data-sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG"
+              onChange={this.onChange()}
+            /> */}
+            {/* {capcha} */}
+            <Recaptcha
+              sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG"
+              onloadCallback={this.callback}
+              verifyCallback={this.verifyCallback}
+              expiredCallback={this.expiredCallback}
+              render="explicit"
+              ref={(e) => (recaptchaInstance = e)}
+            />
+
             <div className="text-danger" id="recaptchaError" />
             <button type="submit" disabled={isSubmitting}>
               Submit
