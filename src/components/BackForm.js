@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { post_send } from '../mail/mail';
-//import ReCAPTCHA from 'react-google-recaptcha';
+//import ReCAPTCHA from 'react-google-recaptcha'; //TODO remove all + json
 let autosize = require('autosize');
 var phpmail = require('../mail/php/mail.php');
 require('../mail/php/PHPMailer/Exception.php');
@@ -137,6 +137,7 @@ class BackForm extends React.Component {
           console.log('onSubmit => ', this);
           //if (this.state.captcha === true) {
           if (true) {
+            //TODO change
             console.log('onSubmit if => ', this);
             setTimeout(() => {
               this.setState((state) => {
@@ -169,7 +170,7 @@ class BackForm extends React.Component {
               onChange={this.onChange()}
             /> */}
             {/* {capcha} */}
-            {/* <Recaptcha
+            {/* <Recaptcha //TODO show
               sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG"
               onloadCallback={this.callback}
               verifyCallback={this.verifyCallback}
@@ -177,7 +178,7 @@ class BackForm extends React.Component {
               render="explicit"
               ref={(e) => (recaptchaInstance = e)}
             /> */}
-
+            {/* TODO ?? ad error field? */}
             <div className="text-danger" id="recaptchaError" />
             <button type="submit" disabled={isSubmitting}>
               Submit

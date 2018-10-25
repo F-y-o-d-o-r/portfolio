@@ -41,4 +41,5 @@ export function func_response() {
     document.body.innerHTML = req.responseText; //!!! - ВЫВОД В ЭЛЕМЕНТ (переданный в post_send(get_send) elemm)
     // свойство responseText – получение ответа сервера в виде строки и вывод
   }
+  //TODO else
 }
