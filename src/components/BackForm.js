@@ -29,7 +29,6 @@ class BackForm extends React.Component {
     post_send('body', phpmail, [ 'email', 'message' ], [ this.state.email, this.state.message ]);
     this.setState({ showModal: true });
     console.log('handleShow: this.state.captcha =>', this.state.captcha);
-    console.log('sent');
   }
 
   handleHide() {
