@@ -5,6 +5,9 @@ import { post_send } from '../mail/mail';
 //import ReCAPTCHA from 'react-google-recaptcha';
 let autosize = require('autosize');
 var phpmail = require('../mail/php/mail.php');
+require('../mail/php/PHPMailer/Exception.php');
+require('../mail/php/PHPMailer/PHPMailer.php');
+require('../mail/php/PHPMailer/SMTP.php');
 var Recaptcha = require('react-recaptcha');
 
 let recaptchaInstance;
@@ -83,7 +86,7 @@ class BackForm extends React.Component {
     this.setState({ captcha: false });
   }
   resetRecaptcha() {
-    recaptchaInstance.reset();
+    //recaptchaInstance.reset();
     this.setState({ captcha: false });
   }
   render() {
@@ -132,7 +135,8 @@ class BackForm extends React.Component {
         }}
         onSubmit={(values, { setSubmitting }) => {
           console.log('onSubmit => ', this);
-          if (this.state.captcha === true) {
+          //if (this.state.captcha === true) {
+          if (true) {
             console.log('onSubmit if => ', this);
             setTimeout(() => {
               this.setState((state) => {
@@ -165,14 +169,14 @@ class BackForm extends React.Component {
               onChange={this.onChange()}
             /> */}
             {/* {capcha} */}
-            <Recaptcha
+            {/* <Recaptcha
               sitekey="6Lern3YUAAAAAAnVS3n5dXC2cFo9ByOWmRpOQEJG"
               onloadCallback={this.callback}
               verifyCallback={this.verifyCallback}
               expiredCallback={this.expiredCallback}
               render="explicit"
               ref={(e) => (recaptchaInstance = e)}
-            />
+            /> */}
 
             <div className="text-danger" id="recaptchaError" />
             <button type="submit" disabled={isSubmitting}>
