@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
 import photo from '../img/photo1.jpg';
 //require('ScrollMagicIndicators');
-
+//
 class Photo extends Component {
   componentDidMount() {
     this.photoAnimation();
