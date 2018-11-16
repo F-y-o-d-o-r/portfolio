@@ -127,7 +127,7 @@ class Info extends Component {
             <div className="second-info animate">
               <p>
                 <span>Languages I speak: </span>
-                HTML, Pug, CSS, Sass, JavaScript, jQuery, React, Php, Wordpress, OpenCart
+                HTML, Pug, CSS, Sass, JavaScript, jQuery, React, Php, Wordpress, OpenCart, Laravel
               </p>
               <p>
                 <span>Dev Tools: </span>
@@ -147,7 +147,7 @@ class Info extends Component {
                   title="My Github profile in new window"
                 >
                   Github
-                </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine, Photoshop, Avocode, Zeplin
+                </a>, Bootstrap, Terminal, Vscode, PhpStorm, Trello, Redmine, Jira, Photoshop, Avocode, Zeplin, Figma
               </p>
             </div>
           </div>

@@ -38,7 +38,7 @@ export function func_response() {
     //var elem_r = document.getElementById(elem); //!!! - получаем элемен для вывода// ВТОРОЙ ЭТАП – получение ответа сервера
     //var elem_r = document.querySelector('body'); //!!! - получаем элемен для вывода// ВТОРОЙ ЭТАП – получение ответа сервера
     //elem_r.innerHTML = req.responseText; //!!! - ВЫВОД В ЭЛЕМЕНТ (переданный в post_send(get_send) elemm)
-    document.body.innerHTML = req.responseText; //!!! - ВЫВОД В ЭЛЕМЕНТ (переданный в post_send(get_send) elemm)
+    //document.body.innerHTML = req.responseText; //!!! - ВЫВОД В ЭЛЕМЕНТ (переданный в post_send(get_send) elemm)
     // свойство responseText – получение ответа сервера в виде строки и вывод
   }
   //TODO else
