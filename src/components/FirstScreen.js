@@ -74,7 +74,7 @@ class Info extends Component {
         <div className="info">
           <div className="info__header-wrapper">
             <h1>
-              Hello, my name is Fyodor.<br />I am a Fullstack Web Developer living in Chernigov, Ukraine
+              Hello, my name is Fyodor.<br />I am a Frontend Web Developer living in Chernigov, Ukraine
             </h1>
             <h2>
               Producing high quality responsive websites.<br />I can help you to create your next product.<br />Have a
@@ -122,12 +122,23 @@ class Info extends Component {
                   time you’ll find me exploring and traveling the world. I love new adventures, meeting new people and
                   mostly capturing the moments with my family.
                 </p>
+                <p>
+                  <span>More in my SV</span> in{' '}
+                  <a href="https://drive.google.com/open?id=1mKFQl-wROGFgczfcybfCOyedNeSPlwZd" target="_blank">
+                    EN
+                  </a>{' '}
+                  and in{' '}
+                  <a href="https://drive.google.com/open?id=1Y-FoAwrvmFb0LaqqzJn-Le8VA5yr63YZ" target="_blank">
+                    RUS
+                  </a>.
+                </p>
               </div>
             </div>
             <div className="second-info animate">
               <p>
                 <span>Languages I speak: </span>
-                HTML, Pug, CSS, Sass, JavaScript, jQuery, React, Php, Wordpress, OpenCart, Laravel
+                HTML, Pug, CSS, Sass, JavaScript, jQuery, Wordpress, OpenCart, React(basics), Php(basics),
+                Laravel(basics)
               </p>
               <p>
                 <span>Dev Tools: </span>
