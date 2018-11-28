@@ -123,20 +123,12 @@ class Info extends Component {
                   mostly capturing the moments with my family.
                 </p>
                 <p>
-                  <span>More in my SV</span> in{' '}
-                  <a
-                    href="https://drive.google.com/open?id=1mKFQl-wROGFgczfcybfCOyedNeSPlwZd"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <span>Ask me for my SV</span> in{' '}
+                  <a href="#contacts" onClick={(e) => this.smothScroll(e)} title="My contacts">
                     EN
                   </a>{' '}
-                  and in{' '}
-                  <a
-                    href="https://drive.google.com/open?id=1Y-FoAwrvmFb0LaqqzJn-Le8VA5yr63YZ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  or in{' '}
+                  <a href="#contacts" onClick={(e) => this.smothScroll(e)} title="My contacts">
                     RUS
                   </a>.
                 </p>
