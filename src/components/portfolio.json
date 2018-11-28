@@ -107,7 +107,7 @@
       "firstDescription": "New theme for wordpress",
       "secondHeader": "Accomplishments",
       "secondDescription": [ "Frontend part", "Backend part", "Wordpress", "Sass", "Gulp" ],
-      "webSite": "http://krasnodar-test.belka-z.com/",
+      "webSite": "http://www.kompetenzcenter.belka-z.pp.ua/",
       "code": "https://bitbucket.org/Fyodor_/kompetenzcenter/src/master/",
       "code2": "https://bitbucket.org/Fyodor_/kompetenzcenterwordpress/src",
       "date": "07.18 - 09.18"
@@ -121,7 +121,6 @@
       "firstDescription": "Online store (Frontend)",
       "secondHeader": "Accomplishments",
       "secondDescription": [ "Frontend part", "Sass", "Gulp", "Bootstrap 4" ],
-      "webSite": "http://test.belka-z.com",
       "webSite2": "https://infinity-lashes.de/",
       "code": "https://bitbucket.org/Fyodor_/kompetenzcenter/src/master/",
       "date": "07.18 - now"
