@@ -966,6 +966,12 @@ form {
     .modal {
       width: 80%; } }
 
+/*fonts*/
+.react-audio-player {
+  position: fixed;
+  left: 20px;
+  bottom: 20px; }
+
 html {
   font-size: 10px; }
 
