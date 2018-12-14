@@ -744,7 +744,6 @@ section.portfolio {
 /*fonts*/
 section.contacts {
   position: relative;
-  min-height: calc(100vh - 70px);
   background-color: #fff;
   transition: all 0.8s ease; }
   section.contacts .main-contacts-wrapper {
@@ -786,6 +785,7 @@ section.contacts {
     margin-top: 5rem; }
   section.contacts .contacts-footer .top {
     margin-top: 32.5rem;
+    margin-top: 60rem;
     text-align: center;
     display: flex;
     justify-content: space-around; }

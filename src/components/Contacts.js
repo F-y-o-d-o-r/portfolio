@@ -36,9 +36,9 @@ class Contacts extends Component {
               </a>{' '}
             </h3>
           </div>
-          <div className="animate">
+          {/* <div className="animate">
             <BackForm />
-          </div>
+          </div> */}
           <div className="animate">
             {/* <p>
               Are you looking for a professional, communicative & punctual software engineer with extensive full-stack

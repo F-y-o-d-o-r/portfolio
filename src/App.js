@@ -6,6 +6,7 @@ import FirstScreen from './components/FirstScreen';
 import Photo from './components/PhotoBlock';
 import Portfolio from './components/Portfolio';
 import Contacts from './components/Contacts';
+import AudioPlayer from './components/AudioPlayer';
 
 class App extends Component {
   componentDidMount() {}
@@ -22,6 +23,7 @@ class App extends Component {
         <Photo />
         <Portfolio />
         <Contacts />
+        <AudioPlayer />
       </React.Fragment>
     );
   }

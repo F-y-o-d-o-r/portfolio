@@ -1,0 +1,16 @@
+{
+      "key": "10",
+      "mainImageSrc": "portfolio_03_1.png",
+      "hoverImageSrc": "portfolio_03_2.png",
+      "technologies": [ "Laravel", "Voyajer", "Html", "Sass", "JavaScript" ],
+      "firstHeader": "Students website",
+      "firstDescription": "Website to help students (Backend)",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [
+        "Making new version of web site with new functionality",
+        "New cabinets for students and teachers"
+      ],
+      "webSite": "https://zachet.com.ua/",
+      "code": "https://bitbucket.org/Fyodor_/zachet.full/src/master/",
+      "date": "11.18"
+    },

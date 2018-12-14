@@ -83,22 +83,6 @@
       "date": "05.18"
     },
     {
-      "key": "03",
-      "mainImageSrc": "portfolio_03_1.png",
-      "hoverImageSrc": "portfolio_03_2.png",
-      "technologies": [ "Html", "Sass", "JavaScript", "OwlCarousel", "gulp" ],
-      "firstHeader": "Students website",
-      "firstDescription": "Website to help students (Frontend)",
-      "secondHeader": "Accomplishments",
-      "secondDescription": [
-        "Various fixes after previous developers on frontend part",
-        "Making new version of web site with new functionality"
-      ],
-      "webSite": "https://zachet.com.ua/",
-      "code": "https://bitbucket.org/Fyodor_/zachet_html/src/master/",
-      "date": "03.18 - now"
-    },
-    {
       "key": "04",
       "mainImageSrc": "portfolio_04_1.png",
       "hoverImageSrc": "portfolio_04_2.png",
@@ -191,20 +175,34 @@
       "date": "09.18"
     },
     {
-      "key": "10",
+      "key": "11",
+      "mainImageSrc": "portfolio_10_1.jpg",
+      "hoverImageSrc": "portfolio_10_2.jpg",
+      "technologies": [ "OpenCart", "Html", "Css", "JavaScript", "Adaptive" ],
+      "firstHeader": "Online shop (OpenCart)",
+      "firstDescription": "Diff changes, fixes + adaptive making",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "Fixing different mistakes", "adding adaptive" ],
+      "webSite": "https://konfuzbele.ru/",
+      "code": "https://bitbucket.org/Fyodor_/konfuzbele.loc/src/master/",
+      "date": "12.18"
+    },
+    {
+      "key": "03",
       "mainImageSrc": "portfolio_03_1.png",
       "hoverImageSrc": "portfolio_03_2.png",
-      "technologies": [ "Laravel", "Voyajer", "Html", "Sass", "JavaScript" ],
+      "technologies": [ "Pug", "Sass", "JavaScript", "OwlCarousel", "gulp" ],
       "firstHeader": "Students website",
-      "firstDescription": "Website to help students (Backend)",
+      "firstDescription": "Website to help students (Frontend)",
       "secondHeader": "Accomplishments",
       "secondDescription": [
-        "Making new version of web site with new functionality",
-        "New cabinets for students and teachers"
+        "Various fixes after previous developers on frontend part",
+        "Making new version of web site with new functionality"
       ],
       "webSite": "https://zachet.com.ua/",
-      "code": "https://bitbucket.org/Fyodor_/zachet.full/src/master/",
-      "date": "11.18 - now"
+      "webSite2": "https://zachet-front.netlify.com/orders.html",
+      "code": "https://bitbucket.org/Fyodor_/zachet_html/src/master/",
+      "date": "03.18 - now"
     }
   ]
 }
