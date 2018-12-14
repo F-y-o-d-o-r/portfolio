@@ -969,8 +969,14 @@ form {
 /*fonts*/
 .react-audio-player {
   position: fixed;
-  left: 20px;
-  bottom: 20px; }
+  left: 10px;
+  bottom: 10px; }
+  @media (max-width: 400px) {
+    .react-audio-player {
+      display: none;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px; } }
 
 html {
   font-size: 10px; }
