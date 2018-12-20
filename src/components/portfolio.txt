@@ -14,3 +14,16 @@
       "code": "https://bitbucket.org/Fyodor_/zachet.full/src/master/",
       "date": "11.18"
     },
+    {
+      "key": "11",
+      "mainImageSrc": "portfolio_10_1.jpg",
+      "hoverImageSrc": "portfolio_10_2.jpg",
+      "technologies": [ "OpenCart", "Html", "Css", "JavaScript", "Adaptive" ],
+      "firstHeader": "Online shop (OpenCart)",
+      "firstDescription": "Diff changes, fixes + adaptive making",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "Fixing different mistakes", "adding adaptive" ],
+      "webSite": "https://konfuzbele.ru/",
+      "code": "https://bitbucket.org/Fyodor_/konfuzbele.loc/src/master/",
+      "date": "12.18"
+    },
