@@ -73,11 +73,12 @@ class Contacts extends Component {
               <b>
                 <a href="viber://add?number=380936500011" target="_blank" rel="noopener noreferrer">
                   Viber
-                </a>{' '}
+                </a>
+                {/* {' '}
                 or{' '}
                 <a href="https://www.linkedin.com/in/fyodor-popov-8848098/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
-                </a>
+                </a> */}
               </b>.
             </p>
           </div>
