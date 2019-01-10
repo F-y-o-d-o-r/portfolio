@@ -195,11 +195,17 @@
       "key": "10",
       "mainImageSrc": "reactjs1-1.jpg",
       "hoverImageSrc": "reactjs1-2.jpg",
-      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
+      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "REACT ROUTER" ],
       "firstHeader": "ReactJS cabinet",
-      "firstDescription": "ReactJS some pages with json data",
+      "firstDescription": "",
       "secondHeader": "Accomplishments",
-      "secondDescription": [ "ReactJs project", "React router", "Sass" ],
+      "secondDescription": [
+        "First ReactJs project",
+        "Animation with GSAP",
+        "Scroll animation with Scrollmagic",
+        "Design",
+        "Webpack"
+      ],
       "webSite": "http://reactjs1.ititi.pp.ua/",
       "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
       "date": "01.19"

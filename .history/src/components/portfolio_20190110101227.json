@@ -193,15 +193,21 @@
     },
     {
       "key": "10",
-      "mainImageSrc": "reactjs1-1.jpg",
-      "hoverImageSrc": "reactjs1-2.jpg",
-      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
-      "firstHeader": "ReactJS cabinet",
-      "firstDescription": "ReactJS some pages with json data",
+      "mainImageSrc": "portfolio_09_1.png",
+      "hoverImageSrc": "portfolio_09_2.png",
+      "technologies": [ "ReactJs", "GSAP", "Html", "Sass", "Design", "Scrollmagic", "Webpack" ],
+      "firstHeader": "Portfolio website",
+      "firstDescription": "This website with information about me and my projects",
       "secondHeader": "Accomplishments",
-      "secondDescription": [ "ReactJs project", "React router", "Sass" ],
+      "secondDescription": [
+        "First ReactJs project",
+        "Animation with GSAP",
+        "Scroll animation with Scrollmagic",
+        "Design",
+        "Webpack"
+      ],
       "webSite": "http://reactjs1.ititi.pp.ua/",
-      "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
+      "code": "https://github.com/F-y-o-d-o-r/portfolio",
       "date": "01.19"
     }
   ]

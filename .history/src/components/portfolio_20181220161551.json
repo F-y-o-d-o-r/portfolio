@@ -190,19 +190,6 @@
       "webSite2": "https://zachet-front.netlify.com/orders.html",
       "code": "https://bitbucket.org/Fyodor_/zachet_html/src/master/",
       "date": "03.18 - now"
-    },
-    {
-      "key": "10",
-      "mainImageSrc": "reactjs1-1.jpg",
-      "hoverImageSrc": "reactjs1-2.jpg",
-      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
-      "firstHeader": "ReactJS cabinet",
-      "firstDescription": "ReactJS some pages with json data",
-      "secondHeader": "Accomplishments",
-      "secondDescription": [ "ReactJs project", "React router", "Sass" ],
-      "webSite": "http://reactjs1.ititi.pp.ua/",
-      "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
-      "date": "01.19"
     }
   ]
 }
