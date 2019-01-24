@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
 import { TimelineMax, TweenMax } from 'gsap';
 import { Nav } from './Header';
+import institute from '../img/institute.jpg';
+import academy from '../img/academy.jpg';
 require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js');
 require('scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js');
 
@@ -99,11 +101,11 @@ class Info extends Component {
                   and work to a schedule around those. <span>Collaboration.</span> I play well with others. I'm happy to
                   integrate into your existing team to help get your project implemented. <span>Degree.</span> I have a
                   High degree in{' '}
-                  <a href="img/diplomas/institute.jpg" target="_blank" title="Diploma">
+                  <a href={institute} target="_blank" title="Diploma">
                     Management
                   </a>{' '}
                   and degree in{' '}
-                  <a href="img/diplomas/academy.jpg" target="_blank" title="Diploma">
+                  <a href={academy} target="_blank" title="Diploma">
                     Web Development
                   </a>{' '}
                   and recognize the importance of applying proper software development techniques to the web.{' '}
