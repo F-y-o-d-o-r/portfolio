@@ -203,6 +203,39 @@
       "webSite": "http://reactjs1.ititi.pp.ua/",
       "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
       "date": "01.19"
+    },
+    {
+      "key": "11",
+      "mainImageSrc": "portfolio_11_1.png",
+      "hoverImageSrc": "portfolio_11_2.png",
+      "technologies": [ "React-native", "JSON", "JS", "API", "Sqlite", "IOS", "Android" ],
+      "firstHeader": "React-native application",
+      "firstDescription": "Scan products and get info from database",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [
+        "React-native",
+        "React navigation",
+        "Redux",
+        "API",
+        "Google, Facebook API",
+        "Android, IOS",
+        "Sqlite"
+      ],
+      "webSite": "https://drive.google.com/open?id=14cWUiowDiszsuiSkYwdAZYm9AGpusH-6",
+      "date": "02.19 - now"
+    },
+    {
+      "key": "12",
+      "mainImageSrc": "portfolio_12_1.png",
+      "hoverImageSrc": "portfolio_12_2.png",
+      "technologies": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
+      "firstHeader": "Website",
+      "firstDescription": "New website for wordpress",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
+      "webSite": "https://borsa.netlify.com/",
+      "code": "https://github.com/F-y-o-d-o-r/Borsa",
+      "date": "03.19 - now"
     }
   ]
 }
