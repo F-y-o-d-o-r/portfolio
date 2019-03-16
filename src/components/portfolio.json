@@ -105,8 +105,9 @@
       "firstDescription": "Online store (Frontend)",
       "secondHeader": "Accomplishments",
       "secondDescription": [ "Frontend part", "Sass", "Gulp", "Bootstrap 4" ],
+      "webSite": "http://infinity.ititi.pp.ua/",
       "webSite2": "https://infinity-lashes.de/",
-      "code": "https://bitbucket.org/Fyodor_/kompetenzcenter/src/master/",
+      "code": "https://bitbucket.org/Fyodor_/infinitylashes/src/master/",
       "date": "07.18 - now"
     },
     {
@@ -192,19 +193,6 @@
       "date": "03.18 - now"
     },
     {
-      "key": "10",
-      "mainImageSrc": "reactjs1-1.jpg",
-      "hoverImageSrc": "reactjs1-2.jpg",
-      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
-      "firstHeader": "ReactJS cabinet",
-      "firstDescription": "ReactJS some pages with json data",
-      "secondHeader": "Accomplishments",
-      "secondDescription": [ "ReactJs project", "React router", "Sass" ],
-      "webSite": "http://reactjs1.ititi.pp.ua/",
-      "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
-      "date": "01.19"
-    },
-    {
       "key": "11",
       "mainImageSrc": "portfolio_11_1.png",
       "hoverImageSrc": "portfolio_11_2.png",
@@ -223,19 +211,6 @@
       ],
       "webSite": "https://drive.google.com/open?id=14cWUiowDiszsuiSkYwdAZYm9AGpusH-6",
       "date": "02.19 - now"
-    },
-    {
-      "key": "12",
-      "mainImageSrc": "portfolio_12_1.png",
-      "hoverImageSrc": "portfolio_12_2.png",
-      "technologies": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
-      "firstHeader": "Website",
-      "firstDescription": "New website for wordpress",
-      "secondHeader": "Accomplishments",
-      "secondDescription": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
-      "webSite": "https://borsa.netlify.com/",
-      "code": "https://github.com/F-y-o-d-o-r/Borsa",
-      "date": "03.19 - now"
     }
   ]
 }

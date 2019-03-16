@@ -27,3 +27,29 @@
       "code": "https://bitbucket.org/Fyodor_/konfuzbele.loc/src/master/",
       "date": "12.18"
     },
+    {
+      "key": "10",
+      "mainImageSrc": "reactjs1-1.jpg",
+      "hoverImageSrc": "reactjs1-2.jpg",
+      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
+      "firstHeader": "ReactJS cabinet",
+      "firstDescription": "ReactJS some pages with json data",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "ReactJs project", "React router", "Sass" ],
+      "webSite": "http://reactjs1.ititi.pp.ua/",
+      "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
+      "date": "01.19"
+    },
+    {
+      "key": "12",
+      "mainImageSrc": "portfolio_12_1.png",
+      "hoverImageSrc": "portfolio_12_2.png",
+      "technologies": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
+      "firstHeader": "Website",
+      "firstDescription": "New website for wordpress",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
+      "webSite": "https://borsa.netlify.com/",
+      "code": "https://github.com/F-y-o-d-o-r/Borsa",
+      "date": "03.19 - now"
+    }
