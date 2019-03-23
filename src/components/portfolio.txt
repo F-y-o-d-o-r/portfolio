@@ -40,16 +40,3 @@
       "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
       "date": "01.19"
     },
-    {
-      "key": "12",
-      "mainImageSrc": "portfolio_12_1.png",
-      "hoverImageSrc": "portfolio_12_2.png",
-      "technologies": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
-      "firstHeader": "Website",
-      "firstDescription": "New website for wordpress",
-      "secondHeader": "Accomplishments",
-      "secondDescription": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
-      "webSite": "https://borsa.netlify.com/",
-      "code": "https://github.com/F-y-o-d-o-r/Borsa",
-      "date": "03.19 - now"
-    }
