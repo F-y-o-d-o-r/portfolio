@@ -216,13 +216,15 @@
       "key": "12",
       "mainImageSrc": "portfolio_12_1.png",
       "hoverImageSrc": "portfolio_12_2.png",
-      "technologies": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
+      "technologies": [ "PUG", "SASS", "JS", "Gulp", "Webpack", "Wordpress" ],
       "firstHeader": "Website",
-      "firstDescription": "New website for wordpress",
+      "firstDescription": "New wordpress theme",
       "secondHeader": "Accomplishments",
-      "secondDescription": [ "PUG", "SASS", "JS", "Gulp", "Webpack" ],
+      "secondDescription": [ "PUG", "SASS", "JS", "Gulp", "Webpack", "Wordpress" ],
       "webSite": "https://borsa.netlify.com/",
+      "webSite2": "http://borsa.belka-z.com/",
       "code": "https://github.com/F-y-o-d-o-r/Borsa",
+      "code2": "https://github.com/F-y-o-d-o-r/Borsawp",
       "date": "03.19 - now"
     }
   ]
