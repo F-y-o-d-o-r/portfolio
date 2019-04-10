@@ -157,6 +157,21 @@
       "date": "06.18 - 09.18"
     },
     {
+      "key": "081",
+      "mainImageSrc": "reactjs1-1.jpg",
+      "hoverImageSrc": "reactjs1-3.jpg",
+      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "React router", "Redux" ],
+      "firstHeader": "ReactJS practice",
+      "firstDescription": "ReactJS 2 types practice",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "ReactJs", "React router", "Redux", "Sass" ],
+      "webSite": "http://reactjs1.ititi.pp.ua/",
+      "webSite2": "http://code-review.ititi.pp.ua/",
+      "code": "https://github.com/F-y-o-d-o-r/react-orders-cabinet",
+      "code2": "https://github.com/F-y-o-d-o-r/code_review",
+      "date": "01.19, 04.19"
+    },
+    {
       "key": "09",
       "mainImageSrc": "portfolio_09_1.png",
       "hoverImageSrc": "portfolio_09_2.png",
@@ -222,7 +237,7 @@
       "secondHeader": "Accomplishments",
       "secondDescription": [ "PUG", "SASS", "JS", "Gulp", "Webpack", "Wordpress" ],
       "webSite": "https://borsa.netlify.com/",
-      "webSite2": "http://borsa.belka-z.com/",
+      "webSite2": "http://borsam.ru/",
       "code": "https://github.com/F-y-o-d-o-r/Borsa",
       "code2": "https://github.com/F-y-o-d-o-r/Borsawp",
       "date": "03.19 - now"
