@@ -209,8 +209,8 @@
     },
     {
       "key": "11",
-      "mainImageSrc": "portfolio_11_1.png",
-      "hoverImageSrc": "portfolio_11_2.png",
+      "mainImageSrc": "portfolio_11_1.jpg",
+      "hoverImageSrc": "portfolio_11_2.jpg",
       "technologies": [ "React-native", "JSON", "JS", "API", "Sqlite", "IOS", "Android" ],
       "firstHeader": "React-native application",
       "firstDescription": "Scan products and get info from database",
@@ -225,7 +225,7 @@
         "Sqlite"
       ],
       "webSite": "https://drive.google.com/open?id=14cWUiowDiszsuiSkYwdAZYm9AGpusH-6",
-      "date": "02.19 - now"
+      "date": "02.19 - 03.19"
     },
     {
       "key": "12",
@@ -240,7 +240,20 @@
       "webSite2": "http://borsam.ru/",
       "code": "https://github.com/F-y-o-d-o-r/Borsa",
       "code2": "https://github.com/F-y-o-d-o-r/Borsawp",
-      "date": "03.19 - now"
+      "date": "03.19 - 04.19"
+    },
+    {
+      "key": "13",
+      "mainImageSrc": "reactjs2-1.jpg",
+      "hoverImageSrc": "reactjs2-2.jpg",
+      "technologies": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
+      "firstHeader": "Website",
+      "firstDescription": "SPA for web studio",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
+      "webSite": "https://7degrees.netlify.com/",
+      "code": "https://github.com/F-y-o-d-o-r/7degrees",
+      "date": "04.19 - now"
     }
   ]
 }
