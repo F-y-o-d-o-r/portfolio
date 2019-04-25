@@ -139,7 +139,7 @@ class Info extends Component {
             <div className="second-info animate">
               <p>
                 <span>Languages I speak: </span>
-                HTML, Pug, CSS, Sass, JavaScript, jQuery, Wordpress, OpenCart, React(basics), React-native(basics),
+                HTML, Pug, CSS, Sass, JavaScript, jQuery, Wordpress, OpenCart, React, React-native,
                 Php(basics), Laravel(basics)
               </p>
               <p>
