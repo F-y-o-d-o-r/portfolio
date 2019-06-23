@@ -108,7 +108,7 @@
       "webSite": "http://infinity.ititi.pp.ua/",
       "webSite2": "https://infinity-lashes.de/",
       "code": "https://bitbucket.org/Fyodor_/infinitylashes/src/master/",
-      "date": "07.18 - now"
+      "date": "07.18 - 01.19"
     },
     {
       "key": "06",
@@ -205,7 +205,7 @@
       "webSite": "https://zachet.com.ua/",
       "webSite2": "https://zachet-front.netlify.com/orders.html",
       "code": "https://bitbucket.org/Fyodor_/zachet_html/src/master/",
-      "date": "03.18 - now"
+      "date": "03.18 - 02.19"
     },
     {
       "key": "11",
@@ -224,7 +224,6 @@
         "Android, IOS",
         "Sqlite"
       ],
-      "webSite": "https://drive.google.com/open?id=14cWUiowDiszsuiSkYwdAZYm9AGpusH-6",
       "date": "02.19 - 03.19"
     },
     {
@@ -253,7 +252,20 @@
       "secondDescription": [ "ReactJs", "JSON", "JS", "Sass", "React router" ],
       "webSite": "https://7degrees.netlify.com/",
       "code": "https://github.com/F-y-o-d-o-r/7degrees",
-      "date": "04.19 - now"
+      "date": "04.19 - 05.15"
+    },
+    {
+      "key": "14",
+      "mainImageSrc": "portfolio_14_1.png",
+      "hoverImageSrc": "portfolio_14_2.png",
+      "technologies": [ "Wordpress", "ACF", "CF7" ],
+      "firstHeader": "Landing on Wordpress",
+      "firstDescription": "New theme forwordpress",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "Wordpress", "ACF", "CF7" ],
+      "webSite": "https://bu-experten-online.de/",
+      "code": "https://github.com/F-y-o-d-o-r/experten-wp",
+      "date": "06.19"
     }
   ]
 }
