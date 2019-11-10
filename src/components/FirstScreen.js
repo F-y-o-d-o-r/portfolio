@@ -125,7 +125,7 @@ class Info extends Component {
                   mostly capturing the moments with my family.
                 </p>
                 <p>
-                  <span>Ask me for my SV</span> in{' '}
+                  <span>Ask me for my CV</span> in{' '}
                   <a href="#contacts" onClick={(e) => this.smothScroll(e)} title="My contacts">
                     EN
                   </a>{' '}
