@@ -69,17 +69,17 @@ class Contacts extends Component {
                 <a href="https://api.whatsapp.com/send?phone=380936500011" target="_blank" rel="noopener noreferrer">
                   WhatsApp
                 </a>
-              </b>,{' '}
-              <b>
-                <a href="viber://add?number=380936500011" target="_blank" rel="noopener noreferrer">
+              </b>.
+              {/*<b>*/}
+                {/*<a href="viber://add?number=380936500011" target="_blank" rel="noopener noreferrer">
                   Viber
-                </a>
+                </a>*/}
                 {/* {' '}
                 or{' '}
                 <a href="https://www.linkedin.com/in/fyodor-popov-8848098/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a> */}
-              </b>.
+              {/*</b>.*/}
             </p>
           </div>
         </div>

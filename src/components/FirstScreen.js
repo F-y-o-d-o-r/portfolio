@@ -110,17 +110,17 @@ class Info extends Component {
                   </a>{' '}
                   and recognize the importance of applying proper software development techniques to the web.{' '}
                   <span>Design.</span> I'm not a graphic designer, but I have an eye for a good design. I'm comfortable
-                  using Photoshop and other programs for web design. <span>Documentation.</span> Often overlooked, I
+                  using Photoshop, Figma and other programs for web design. <span>Documentation.</span> Often overlooked, I
                   think it's incredibly important to leave clients with a clear picture of what's been done for the next
                   round of development.
                 </p>
                 <p>
                   <span>All in all.</span> My work is something I do with honesty, appetite and commitment. Over the
-                  past year I had the opportunity to drive and do hands-on work with different firms from all over the
+                  past years I had the opportunity to drive and do hands-on work with different firms from all over the
                   world.
                 </p>
                 <p>
-                  I’m currently self-employed and working as a Full Stack Web Developer for Belka-z Company. In my spare
+                  I’m currently self-employed and working as a Frontend Web Developer for Snovio Company. In my spare
                   time you’ll find me exploring and traveling the world. I love new adventures, meeting new people and
                   mostly capturing the moments with my family.
                 </p>
@@ -139,7 +139,7 @@ class Info extends Component {
             <div className="second-info animate">
               <p>
                 <span>Languages I speak: </span>
-                HTML, Pug, CSS, Sass, JavaScript, jQuery, Wordpress, OpenCart, React, React-native,
+                HTML, Pug, CSS, Sass, JavaScript, jQuery, Wordpress, OpenCart, React, React-native, Vue.js,
                 Php(basics), Laravel(basics)
               </p>
               <p>
