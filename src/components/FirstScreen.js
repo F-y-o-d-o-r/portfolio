@@ -95,7 +95,7 @@ class Info extends Component {
               <div className="text-wrapper animate">
                 <p>
                   <span>Communication.</span> I realize the importance of well-built communication. I use tools like
-                  Slack to make sure we’re always on the same page. <span>Organisation.</span> I believe it’s important
+                  Telegram, Skype, Slack to make sure we’re always on the same page. <span>Organisation.</span> I believe it’s important
                   to stay organised while working remotely. I use the likes of Trello to keep projects on-track and
                   under control. Project Management I think it’s important to identify the discrete stages of a project
                   and work to a schedule around those. <span>Collaboration.</span> I play well with others. I'm happy to
@@ -116,7 +116,7 @@ class Info extends Component {
                 </p>
                 <p>
                   <span>All in all.</span> My work is something I do with honesty, appetite and commitment. Over the
-                  past years I had the opportunity to drive and do hands-on work with different firms from all over the
+                  past years I had the opportunity to do hands-on work with different firms from all over the
                   world.
                 </p>
                 <p>
