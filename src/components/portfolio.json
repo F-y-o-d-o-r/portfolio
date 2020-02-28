@@ -204,7 +204,23 @@
       ],
       "webSite": "https://zachet.com.ua/",
       "code": "https://bitbucket.org/Fyodor_/zachet.full/src/master/",
-      "date": "11.18 - now"
+      "date": "11.18 - 05.19"
+    },
+    {
+      "key": "11",
+      "mainImageSrc": "portfolio_11_1.jpg",
+      "hoverImageSrc": "portfolio_11_2.jpg",
+      "technologies": [ "Webpack", "Sass", "Pug", "JavaScript", "GSAP" ],
+      "firstHeader": "Students website",
+      "firstDescription": "Website to help students",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [
+        "Making frontend for the new version of web site with new functionality",
+        "Making GSAP animation"
+      ],
+      "webSite": "http://zachet.ititi.pp.ua/main.html",
+      "webSite2": "http://zachet.ititi.pp.ua",
+      "date": "01.20 - now"
     }
   ]
 }
