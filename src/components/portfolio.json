@@ -266,6 +266,19 @@
       "webSite": "https://bu-experten-online.de/",
       "code": "https://github.com/F-y-o-d-o-r/experten-wp",
       "date": "06.19"
+    },
+    {
+      "key": "15",
+      "mainImageSrc": "portfolio_15_1.png",
+      "hoverImageSrc": "portfolio_15_2.png",
+      "technologies": [ "Sass", "PUG", "Webpack", "JavaScript", "GSAP" ],
+      "firstHeader": "Students website",
+      "firstDescription": "New design of website for students (Frontend)",
+      "secondHeader": "Accomplishments",
+      "secondDescription": [ "Making new version of web site with new functionality", "GSAP animation" ],
+      "webSite": "http://zachet.ititi.pp.ua/",
+      "webSite2": "http://zachet.ititi.pp.ua/main.html",
+      "date": "06.19 - now"
     }
   ]
 }
