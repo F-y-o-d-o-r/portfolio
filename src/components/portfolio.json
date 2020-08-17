@@ -53,8 +53,8 @@
     },
     {
       "key": "01",
-      "mainImageSrc": "portfolio_01_1.jpg",
-      "hoverImageSrc": "portfolio_01_2.jpg",
+      "mainImageSrc": "portfolio_01_1_s.jpg",
+      "hoverImageSrc": "portfolio_01_2_s.jpg",
       "technologies": [ "Html", "Css", "JavaScript" ],
       "firstHeader": "Elevators",
       "firstDescription": "Integration of search on a website (Frontend, Fixes)",
