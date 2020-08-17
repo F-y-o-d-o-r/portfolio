@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ScrollMagic from 'scrollmagic';
 import { Nav } from './Header';
-import BackForm from './BackForm';
 
 class Contacts extends Component {
   constructor(props) {
@@ -36,9 +35,6 @@ class Contacts extends Component {
               </a>{' '}
             </h3>
           </div>
-          {/* <div className="animate">
-            <BackForm />
-          </div> */}
           <div className="animate">
             {/* <p>
               Are you looking for a professional, communicative & punctual software engineer with extensive full-stack
